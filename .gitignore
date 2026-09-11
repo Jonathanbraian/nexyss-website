@@ -1,0 +1,46 @@
+# ── Sistema operacional ──────────────────────────────────────
+.DS_Store
+.AppleDouble
+._*
+Thumbs.db
+Desktop.ini
+
+# ── Backups e temporários ────────────────────────────────────
+*.bak
+*.orig
+*.tmp
+*.swp
+*~
+-/
+
+# ── Backups manuais (devem ficar AO LADO da pasta, nunca dentro) ──
+Nexyss-backup-*/
+*-backup-*/
+
+# ── Saída de ferramentas locais (fingerprint) ────────────────
+# As baselines aprovadas em baselines/*.json SÃO versionadas.
+# Só a saída bruta de uma captura de verificação é ignorada.
+fp-check/
+fp-pre/
+fp-post/
+raw-*.html
+sum-*.json
+profile-*/
+
+# ── Segredos e config local ──────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.netlify/
+
+# ── Node (caso entre no futuro) ──────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ── Editores ─────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-workspace

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Seis módulos, um sistema. Conheça a camada compartilhada — dado, identidade, permissão e IA — que faz CRM, Educação, Marketing, Finance e HR operarem como uma plataforma só." />
+<title>A Plataforma Nexyss — Seis módulos, um sistema, nenhuma integração</title>
+<link rel="icon" type="image/png" href="../assets/nexyss-mark.png" />
+<meta name="theme-color" content="#0B1440" />
+
+<!-- TODO: confirmar dominio oficial antes de publicar (placeholder: nexyss.com) -->
+<link rel="canonical" href="https://www.nexyss.com/plataforma/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nexyss" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:url" content="https://www.nexyss.com/plataforma/" />
+<meta property="og:title" content="A Plataforma Nexyss — Seis módulos, um sistema, nenhuma integração" />
+<meta property="og:description" content="Os módulos não trocam dados: eles compartilham o mesmo dado. Conheça a camada de dado, identidade, permissão e IA que sustenta toda a operação." />
+<!-- TODO: substituir por og-cover 1200x630 dedicado -->
+<meta property="og:image" content="https://www.nexyss.com/assets/nexyss-logo.png" />
+<meta property="og:image:alt" content="A Plataforma Nexyss" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="A Plataforma Nexyss — Seis módulos, um sistema" />
+<meta name="twitter:description" content="Os módulos não trocam dados: eles compartilham o mesmo dado." />
+<meta name="twitter:image" content="https://www.nexyss.com/assets/nexyss-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/nexyss.css" />
+</head>
+<body class="page-institucional has-subnav">
+
+<a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Pular para o conteúdo</a>
+
+<header class="site" id="siteHeader">
+  <div class="container">
+    <nav class="nav">
+      <a href="/" class="brand" aria-label="Nexyss">
+        <img src="../assets/nexyss-logo-white.png" alt="Nexyss" />
+      </a>
+
+      <ul class="nav-menu">
+        <li>
+          <button>
+            Plataforma
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-plataforma">
+            <div class="mega-grid cols-2">
+              <a class="mega-item" href="#">
+                <div class="icn icn-crm">CRM</div>
+                <div class="txt"><div class="nm">Nexyss CRM</div><div class="ds">Vendas & relacionamento</div></div>
+              </a>
+              <a class="mega-item" href="#">
+                <div class="icn icn-edu">EDU</div>
+                <div class="txt"><div class="nm">Nexyss Educação</div><div class="ds">Gestão acadêmica completa</div></div>
+              </a>
+              <a class="mega-item" href="#">
+                <div class="icn icn-mkt">MKT</div>
+                <div class="txt"><div class="nm">Nexyss Marketing</div><div class="ds">Growth & campanhas</div></div>
+              </a>
+              <a class="mega-item" href="#">
+                <div class="icn icn-fin">FIN</div>
+                <div class="txt"><div class="nm">Nexyss Finance</div><div class="ds">Financeiro & controladoria</div></div>
+              </a>
+              <a class="mega-item" href="#">
+                <div class="icn icn-hr">HR</div>
+                <div class="txt"><div class="nm">Nexyss HR</div><div class="ds">Pessoas & talentos</div></div>
+              </a>
+              <a class="mega-item" href="#">
+                <div class="icn icn-ai">AI</div>
+                <div class="txt"><div class="nm">Nexyss AI</div><div class="ds">Motor de inteligência</div></div>
+              </a>
+              <a class="mega-item" href="#" style="grid-column:1/-1">
+                <div class="icn icn-neutral">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+                </div>
+                <div class="txt"><div class="nm">Integrações & API</div><div class="ds">Conecte a Nexyss ao seu stack existente</div></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button>
+            Soluções
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-solucoes">
+            <div class="mega-grid cols-3">
+              <div>
+                <div class="mega-col-head">Por Função</div>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h10M2 7h10M2 10h6"/></svg></div><div class="txt"><div class="nm">Comercial</div><div class="ds">Vendas, Marketing, CS</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M7 3v4l3 2"/></svg></div><div class="txt"><div class="nm">Operações</div><div class="ds">Processos, projetos, atendimento</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10V6l4-3 4 3v4"/><path d="M5 10V8h4v2"/></svg></div><div class="txt"><div class="nm">Financeiro</div><div class="ds">Finance, cobrança, FP&A</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="5" r="2.5"/><path d="M2.5 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg></div><div class="txt"><div class="nm">Pessoas</div><div class="ds">RH, cultura, aprendizagem</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12V7m4 5V4m4 8v-6"/></svg></div><div class="txt"><div class="nm">Dados & Performance</div><div class="ds">BI, analytics, KPIs</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 1l5 3v4c0 2-2 3.5-5 4-3-.5-5-2-5-4V4l5-3z"/></svg></div><div class="txt"><div class="nm">Governança</div><div class="ds">Compliance, segurança, ESG</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head">Por Objetivo</div>
+                <a class="mega-item" href="#"><div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l4-4 3 3 3-5"/><path d="M9 5h3v3"/></svg></div><div class="txt"><div class="nm">Crescer receita</div><div class="ds">Aquisição, retenção, LTV</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10M7 2c1.5 2 2.2 3.3 2.2 5S8.5 10 7 12"/></svg></div><div class="txt"><div class="nm">Expandir globalmente</div><div class="ds">Multi-país, multi-moeda</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M5 3v8M9 3v8"/></svg></div><div class="txt"><div class="nm">Consolidar unidades</div><div class="ds">M&A, franquia, rede</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-ai"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><path d="M7 2v2M7 10v2M2 7h2M10 7h2M4 4l1.5 1.5M8.5 8.5L10 10M4 10l1.5-1.5M8.5 5.5L10 4"/></svg></div><div class="txt"><div class="nm">Digitalizar com IA</div><div class="ds">Automação inteligente</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-hr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l3-3 2 2 5-5"/></svg></div><div class="txt"><div class="nm">Reduzir custo</div><div class="ds">Unificar sistemas fragmentados</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-fin"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><circle cx="7" cy="7" r="5"/></svg></div><div class="txt"><div class="nm">Visibilidade em tempo real</div><div class="ds">Decisões data-driven</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head">Por Porte & Setor</div>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2v6M4 5l3-3 3 3M2 12h10"/></svg></div><div class="txt"><div class="nm">Startups & Scale-ups</div><div class="ds">Crescimento rápido</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><path d="M3 6h8"/></svg></div><div class="txt"><div class="nm">Mid-Market</div><div class="ds">Profissionalização</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="10" height="7" rx="1"/><path d="M5 4V2h4v2"/></svg></div><div class="txt"><div class="nm">Enterprise</div><div class="ds">Múltiplas unidades, compliance</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10"/></svg></div><div class="txt"><div class="nm">Global & Multinacional</div><div class="ds">Operação distribuída</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2l5 3-5 3-5-3 5-3z"/><path d="M3 6v3c0 1.5 2 2.5 4 2.5s4-1 4-2.5V6"/></svg></div><div class="txt"><div class="nm">Educação</div><div class="ds">Vertical live</div></div></a>
+                <a class="mega-item" href="#"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M7 3v8M4.5 5l5 5M9.5 5l-5 5"/></svg></div><div class="txt"><div class="nm">Outros setores</div><div class="ds">Saúde · Varejo · Finance</div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="#consultoria">Consultoria</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#">Recursos</a></li>
+        <li><a href="#">Parceiros</a></li>
+        <li><a href="#">Sobre</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="lang-switch">
+          <span class="flag">🇧🇷</span>
+          <span>PT</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+        </button>
+        <a href="#" class="btn btn-primary">
+          Solicitar Demo
+          <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileDrawer"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+<aside class="drawer" id="mobileDrawer" aria-hidden="true" aria-label="Menu de navegação">
+  <div class="drawer-head">
+    <a href="/" class="brand" aria-label="Nexyss"><img src="../assets/nexyss-logo-white.png" alt="Nexyss" /></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Fechar menu">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <!-- Plataforma -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accPlataforma">
+      <span data-i18n="nav.plataforma">Plataforma</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accPlataforma">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="#">
+          <div class="icn icn-crm">CRM</div>
+          <div class="txt"><div class="nm" data-i18n="mod.crm.name">Nexyss CRM</div><div class="ds" data-i18n="mod.crm.tag">Vendas &amp; relacionamento</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-edu">EDU</div>
+          <div class="txt"><div class="nm" data-i18n="mod.edu.name">Nexyss Educação</div><div class="ds" data-i18n="mod.edu.tag">Gestão acadêmica completa</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-mkt">MKT</div>
+          <div class="txt"><div class="nm" data-i18n="mod.mkt.name">Nexyss Marketing</div><div class="ds" data-i18n="mod.mkt.tag">Growth &amp; campanhas</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-fin">FIN</div>
+          <div class="txt"><div class="nm" data-i18n="mod.fin.name">Nexyss Finance</div><div class="ds" data-i18n="mod.fin.tag">Financeiro &amp; controladoria</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-hr">HR</div>
+          <div class="txt"><div class="nm" data-i18n="mod.hr.name">Nexyss HR</div><div class="ds" data-i18n="mod.hr.tag">Pessoas &amp; talentos</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-ai">AI</div>
+          <div class="txt"><div class="nm" data-i18n="mod.ai.name">Nexyss AI</div><div class="ds" data-i18n="mod.ai.tag">Motor de inteligência</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-neutral">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+          </div>
+          <div class="txt"><div class="nm" data-i18n="mod.api.name">Integrações &amp; API</div><div class="ds" data-i18n="mod.api.tag">Conecte a Nexyss ao seu stack</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Soluções -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accSolucoes">
+      <span data-i18n="nav.solucoes">Soluções</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accSolucoes">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="#">
+          <div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.funcao.name">Por Função</div><div class="ds" data-i18n="sol.funcao.tag">Comercial · Operações · Financeiro · Pessoas</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="2"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.objetivo.name">Por Objetivo</div><div class="ds" data-i18n="sol.objetivo.tag">Crescer · Expandir · Consolidar · Digitalizar</div></div>
+        </a>
+        <a class="mega-item" href="#">
+          <div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 12V7l2.5-2M7 12V4.5l2.5-2M12 12V8.5"/><path d="M2 12h10"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.porte.name">Por Porte &amp; Setor</div><div class="ds" data-i18n="sol.porte.tag">Startups · Mid-Market · Enterprise · Global</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="drawer-sep"></div>
+
+    <a class="drawer-link" href="#consultoria" data-i18n="nav.consultoria">Consultoria</a>
+    <a class="drawer-link" href="#clientes" data-i18n="nav.clientes">Clientes</a>
+    <a class="drawer-link" href="#" data-i18n="nav.recursos">Recursos</a>
+    <a class="drawer-link" href="#" data-i18n="nav.parceiros">Parceiros</a>
+    <a class="drawer-link" href="#" data-i18n="nav.sobre">Sobre</a>
+  </nav>
+
+  <div class="drawer-foot">
+    <button class="lang-switch" aria-label="Idioma">
+      <span class="flag">🇧🇷</span>
+      <span>PT</span>
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+    </button>
+    <a href="#" class="btn btn-primary" data-i18n="cta.demo">
+      Solicitar Demo
+      <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+    </a>
+  </div>
+</aside>
+
+<!-- ============ HERO ============ -->
+<main id="conteudo">
+<section class="hero">
+  <div class="hero-layers">
+    <div class="hero-layer l1"></div>
+    <div class="hero-layer l2"></div>
+    <div class="hero-layer l3"></div>
+    <div class="hero-layer l4"></div>
+  </div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow" data-i18n="plat.hero.eyebrow">A Plataforma</span>
+
+        <h1 style="margin-top:26px" data-i18n="plat.hero.h1">
+          Seis módulos. <span class="accent">Um sistema.</span> Nenhuma integração.
+        </h1>
+
+        <p class="hero-sub" data-i18n="plat.hero.sub">
+          A maioria das empresas não tem um problema de software — tem um problema de costura. A Nexyss elimina a costura: os módulos não trocam dados entre si, eles compartilham o mesmo dado.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#demo" class="btn btn-primary" data-i18n="cta.demo">
+            Solicitar Demo
+            <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+          </a>
+          <a href="#modulos" class="btn btn-ghost" data-i18n="plat.hero.cta2">Ver os módulos</a>
+        </div>
+
+        <div class="hero-meta cols-2">
+          <div><div class="num">6</div><div class="lbl" data-i18n="plat.hero.m1">Módulos operacionais</div></div>
+          <div><div class="num">1</div><div class="lbl" data-i18n="plat.hero.m2">Base de dados compartilhada</div></div>
+        </div>
+      </div>
+
+      <!-- VISUAL A — PLATAFORMA EM CAMADAS -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="dash stack-viz">
+          <div class="dash-bar">
+            <div class="title">Nexyss &middot; Arquitetura</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="sv-chips reveal-stagger">
+            <span class="sv-chip c-crm"><i></i>CRM</span>
+            <span class="sv-chip c-edu"><i></i>Educação</span>
+            <span class="sv-chip c-mkt"><i></i>Marketing</span>
+            <span class="sv-chip c-fin"><i></i>Finance</span>
+            <span class="sv-chip c-hr"><i></i>HR</span>
+            <span class="sv-chip c-ai"><i></i>AI</span>
+          </div>
+
+          <div class="sv-links"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+          <div class="sv-plates">
+            <div class="sv-plate p1"><span class="lb">01</span>Dado compartilhado</div>
+            <div class="sv-plate p2"><span class="lb">02</span>Identidade única</div>
+            <div class="sv-plate p3"><span class="lb">03</span>Permissão global</div>
+          </div>
+
+          <div class="sv-ai"><span>Nexyss AI</span><b>atravessa tudo</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUBNAV ============ -->
+<div class="subnav">
+  <div class="container">
+    <div class="subnav-inner">
+      <span class="subnav-brand" data-i18n="plat.name">A Plataforma</span>
+      <nav class="subnav-nav" aria-label="Nesta página">
+        <ul class="subnav-links">
+          <li><a href="#camada" data-i18n="plat.nav.camada">Camada compartilhada</a></li>
+          <li><a href="#modulos" data-i18n="plat.nav.modulos">Módulos</a></li>
+          <li><a href="#fluxo" data-i18n="plat.nav.fluxo">Como funciona</a></li>
+          <li><a href="#ia" data-i18n="plat.nav.ia">Nexyss AI</a></li>
+          <li><a href="#integracoes" data-i18n="plat.nav.int">Integrações</a></li>
+        </ul>
+      </nav>
+      <a href="#demo" class="btn btn-primary" data-i18n="cta.demo">
+        Solicitar Demo
+        <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CAMADA COMPARTILHADA ============ -->
+<section class="block tinted" id="camada">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.cam.eyebrow">A camada compartilhada</span>
+      <h2 data-i18n="plat.cam.h2">O que os módulos têm em comum<br>é o produto.</h2>
+      <p data-i18n="plat.cam.sub">Trocar dado entre sistemas é integração. Nascer do mesmo dado é outra coisa. Quatro camadas que todo módulo herda no dia em que é ativado — sem configuração, sem projeto, sem fornecedor no meio.</p>
+    </div>
+
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num">01 &middot; Dado</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><ellipse cx="11" cy="6" rx="7" ry="3"/><path d="M4 6v10c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M4 11c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg></div>
+        <div class="consult-title" data-i18n="plat.cam.c1.t">Um cliente é um registro só</div>
+        <div class="consult-desc" data-i18n="plat.cam.c1.d">Não existe sincronização porque não existe segunda cópia. O que o Finance vê é literalmente o mesmo registro que o CRM edita.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">02 &middot; Identidade</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="7" r="3.5"/><path d="M4 19c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg></div>
+        <div class="consult-title" data-i18n="plat.cam.c2.t">Um login, uma sessão</div>
+        <div class="consult-desc" data-i18n="plat.cam.c2.d">Ninguém gerencia acesso em seis lugares. Entrada, saída e mudança de função acontecem uma vez e valem em toda a plataforma.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">03 &middot; Permissão</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="9" width="14" height="9" rx="2"/><path d="M7.5 9V6.5a3.5 3.5 0 017 0V9"/></svg></div>
+        <div class="consult-title" data-i18n="plat.cam.c3.t">A regra é definida uma vez</div>
+        <div class="consult-desc" data-i18n="plat.cam.c3.d">Quem vê o quê, por unidade, região e país. Vale em todos os módulos, inclusive nos que você ativar depois.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">04 &middot; Inteligência</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="3"/><path d="M11 3v3M11 16v3M3 11h3M16 11h3M5.5 5.5l2 2M14.5 14.5l2 2M5.5 16.5l2-2M14.5 7.5l2-2"/></svg></div>
+        <div class="consult-title" data-i18n="plat.cam.c4.t">A IA lê a operação inteira</div>
+        <div class="consult-desc" data-i18n="plat.cam.c4.d">Nexyss AI não recebe um recorte por integração. Ela lê tudo que a organização registra, em todos os módulos, o tempo todo.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OS 6 MODULOS ============ -->
+<section class="block" id="modulos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.mod.eyebrow">Os módulos</span>
+      <h2 data-i18n="plat.mod.h2">Cada módulo resolve sozinho.<br>Juntos, resolvem o que nenhum resolve.</h2>
+      <p data-i18n="plat.mod.sub">Você pode começar por um. O que muda quando o segundo entra não é a quantidade de recursos — é o fato de que ele já conhece tudo que o primeiro registrou.</p>
+    </div>
+
+    <div class="platform-grid reveal-stagger">
+      <article class="mod-card md crm">
+        <div class="mod-badge">Nexyss CRM</div>
+        <h3 class="mod-name">Vendas &amp; relacionamento</h3>
+        <p class="mod-sub">Pipeline, contas 360º e previsão contínua para times comerciais que operam em várias unidades e mercados.</p>
+        <div class="mod-conn">Fecha negócio e o Finance já cobra.</div>
+        <a href="crm/" class="mod-link">Explorar Nexyss CRM <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md edu">
+        <div class="mod-badge">Nexyss Educação</div>
+        <h3 class="mod-name">Gestão acadêmica completa</h3>
+        <p class="mod-sub">Admissões, acadêmico, financeiro e experiência do aluno em uma operação pensada para redes globais de ensino.</p>
+        <div class="mod-conn">Matricula e a mensalidade nasce no Finance.</div>
+        <a href="educacao/" class="mod-link">Explorar Nexyss Educação <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md mkt">
+        <div class="mod-badge">Nexyss Marketing</div>
+        <h3 class="mod-name">Growth &amp; campanhas</h3>
+        <p class="mod-sub">Campanhas multi-canal, lead scoring e atribuição multi-touch unificados já na fonte do dado.</p>
+        <div class="mod-conn">Gera lead que entra no pipeline com histórico.</div>
+        <a href="marketing/" class="mod-link">Explorar Nexyss Marketing <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md fin">
+        <div class="mod-badge">Nexyss Finance</div>
+        <h3 class="mod-name">Financeiro &amp; controladoria</h3>
+        <p class="mod-sub">Controladoria, cobrança e FP&amp;A como um sistema único — multi-moeda por natureza, não por configuração.</p>
+        <div class="mod-conn">Recebe e o CRM vê a saúde da conta.</div>
+        <a href="finance/" class="mod-link">Explorar Nexyss Finance <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md hr">
+        <div class="mod-badge">Nexyss HR</div>
+        <h3 class="mod-name">Pessoas &amp; talentos</h3>
+        <p class="mod-sub">Do recrutamento à performance, com aprendizagem corporativa e gestão de talentos integradas.</p>
+        <div class="mod-conn">Contrata e o acesso já existe no dia um.</div>
+        <a href="hr/" class="mod-link">Explorar Nexyss HR <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md ai">
+        <div class="mod-badge">Nexyss AI</div>
+        <h3 class="mod-name">Motor de inteligência</h3>
+        <p class="mod-sub">Previsões, automações e assistentes conversacionais disponíveis em cada módulo, workflow e decisão.</p>
+        <div class="mod-conn">Lê todos os módulos e devolve para todos.</div>
+        <a href="ai/" class="mod-link">Explorar Nexyss AI <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+
+      <div class="mod-seventh">
+        <span data-i18n="plat.mod.setimo">E um sétimo caminho, para tudo que vive fora:</span>
+        <a href="integracoes/">Integrações &amp; API <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA — CASCATA ============ -->
+<section class="block deeper" id="fluxo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.flx.eyebrow">Como funciona</span>
+      <h2 data-i18n="plat.flx.h2">Um aluno se matricula.<br>Veja o que acontece sem ninguém fazer nada.</h2>
+      <p data-i18n="plat.flx.sub">Em um stack montado, esse evento vira quatro tarefas manuais e três planilhas de reconciliação. Aqui ele é um evento só, propagado.</p>
+    </div>
+
+    <div class="cascade reveal" aria-hidden="true">
+      <div class="cas-trigger">
+        <div class="ct-badge">Evento</div>
+        <div class="ct-t">Matrícula confirmada</div>
+        <div class="ct-s">Atlas Academy &middot; Dublin</div>
+      </div>
+
+      <svg class="cas-lines" viewBox="0 0 96 340" preserveAspectRatio="none">
+        <path class="l1" d="M0,170 C48,170 48,42 96,42"/>
+        <path class="l2" d="M0,170 C48,170 48,128 96,128"/>
+        <path class="l3" d="M0,170 C48,170 48,212 96,212"/>
+        <path class="l4" d="M0,170 C48,170 48,298 96,298"/>
+      </svg>
+
+      <div class="cas-cards">
+        <div class="cas-card m-edu"><div class="src">Nexyss Educação</div><div class="tx">Vaga ocupada, turma atualizada e calendário do aluno gerado</div></div>
+        <div class="cas-card m-fin"><div class="src">Nexyss Finance</div><div class="tx">Mensalidade criada em EUR, com plano de pagamento e cobrança agendada</div></div>
+        <div class="cas-card m-crm"><div class="src">Nexyss CRM</div><div class="tx">Conta da instituição atualizada e negócio movido para ganho</div></div>
+        <div class="cas-card m-ai"><div class="src">Nexyss AI</div><div class="tx">Previsão de receita e risco de evasão recalculados na hora</div></div>
+      </div>
+    </div>
+
+    <p class="reveal" style="margin-top:48px;max-width:760px;color:var(--c-text-soft);font-size:1.02rem;line-height:1.65" data-i18n="plat.flx.geral">
+      Vale para qualquer evento: um contrato fechado (CRM &rarr; Finance &rarr; HR), um novo funcionário (HR &rarr; todos), um lead qualificado (Marketing &rarr; CRM). O padrão é o mesmo, a plataforma é a mesma.
+    </p>
+
+    <p class="impact-note reveal" style="margin-top:32px;max-width:760px" data-i18n="plat.flx.nota">
+      Exemplo ilustrativo da plataforma unificada em construção. Fluxos individuais dos módulos disponíveis hoje via consultoria e integrações personalizadas.
+    </p>
+  </div>
+</section>
+
+<!-- ============ NEXYSS AI ============ -->
+<section class="block tinted" id="ia">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="plat.ia.eyebrow">Nexyss AI</span>
+        <h2 style="margin-top:24px" data-i18n="plat.ia.h2">A vantagem de uma IA que enxerga a operação inteira.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="plat.ia.sub">
+          Uma IA que só lê o CRM prevê vendas. Uma IA que lê CRM, Finance, Marketing, HR e Educação prevê o negócio. A diferença não está no modelo — está no que ele consegue ver.
+        </p>
+
+        <div class="ai-products">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 16V9m4 7V5m4 11v-7m4 7V11"/></svg></div>
+            <div class="p-info"><div class="nm">Nexyss Insight</div><div class="ds" data-i18n="plat.ia.p1">Analytics preditivo, KPIs e detecção de sinais cruzando todos os módulos</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h12v9H7l-3 3V6z"/><path d="M7 10h6M7 12h4"/></svg></div>
+            <div class="p-info"><div class="nm">Nexyss Assist</div><div class="ds" data-i18n="plat.ia.p2">Assistentes conversacionais para cada time, com o contexto da operação toda</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5h10v10H5z"/><path d="M8 8l4 4M12 8l-4 4"/></svg></div>
+            <div class="p-info"><div class="nm">Nexyss Automate</div><div class="ds" data-i18n="plat.ia.p3">Workflows inteligentes sem código, atravessando módulos</div></div>
+          </div>
+        </div>
+
+        <a href="ai/" class="mod-link" style="margin-top:28px;color:var(--c-ai)">Conhecer Nexyss AI <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </div>
+
+      <div class="ai-visual reveal" aria-hidden="true">
+        <div class="ai-orbit"></div>
+        <div class="ai-orbit-2"></div>
+        <div class="ai-orbit-3"></div>
+        <div class="ai-center">AI</div>
+        <div class="ai-node n1">CRM</div>
+        <div class="ai-node n2">Finance</div>
+        <div class="ai-node n3">Educação</div>
+        <div class="ai-node n4">Marketing</div>
+        <div class="ai-node n5">HR</div>
+        <div class="ai-node n6">Operações</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRACOES ============ -->
+<section class="block" id="integracoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.int.eyebrow">Integrações &amp; API</span>
+      <h2 data-i18n="plat.int.h2">O que é módulo Nexyss não precisa<br>de conector nenhum.</h2>
+      <p data-i18n="plat.int.sub">Integração deixa de ser a cola entre as suas áreas e passa a ser só a ponte para o que está fora. É bem menos superfície para manter.</p>
+    </div>
+
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num">01 &middot; Dentro</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M11 6v10M6 11h10"/></svg></div>
+        <div class="consult-title" data-i18n="plat.int.i1.t">Entre módulos: zero</div>
+        <div class="consult-desc" data-i18n="plat.int.i1.d">Ativar um módulo novo não abre projeto de integração. Ele já enxerga tudo que a plataforma registrou até aqui.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">02 &middot; Fora</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 11h5M14 11h5M7 7l4 4-4 4M15 7l-4 4 4 4"/></svg></div>
+        <div class="consult-title" data-i18n="plat.int.i2.t">Conectores nativos</div>
+        <div class="consult-desc" data-i18n="plat.int.i2.d">E-mail, calendário, telefonia, assinatura eletrônica, ERPs e gateways de pagamento, prontos para ligar.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">03 &middot; Extensão</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4h6v6H4zM12 12h6v6h-6z"/><path d="M10 7h4v5"/></svg></div>
+        <div class="consult-title" data-i18n="plat.int.i3.t">API aberta e webhooks</div>
+        <div class="consult-desc" data-i18n="plat.int.i3.d">REST documentada, eventos em tempo real e ambiente de testes para o que o seu time precisar construir por cima.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num">04 &middot; Migração</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 3v10M7 9l4 4 4-4"/><path d="M4 17h14"/></svg></div>
+        <div class="consult-title" data-i18n="plat.int.i4.t">Saída dos legados</div>
+        <div class="consult-desc" data-i18n="plat.int.i4.d">A consultoria Nexyss conduz a migração dos sistemas que a plataforma vai substituir, com plano de corte e convivência.</div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:40px">
+      <a href="integracoes/" class="mod-link" style="color:var(--c-edu)">Ver Integrações &amp; API <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMECE POR UM ============ -->
+<section class="block tinted" id="adocao">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.ado.eyebrow">Adoção</span>
+      <h2 data-i18n="plat.ado.h2">Você não precisa trocar tudo<br>no primeiro dia.</h2>
+      <p data-i18n="plat.ado.sub">A plataforma não exige adoção total para entregar valor. Exige apenas que, quando você decidir crescer, nada precise ser refeito.</p>
+    </div>
+
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon" style="color:var(--c-crm)">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M11 7v8M7 11h8"/></svg>
+        </div>
+        <h3 data-i18n="plat.ado.c1.t">Comece por um módulo</h3>
+        <p data-i18n="plat.ado.c1.d">Resolva a dor mais urgente em semanas, não em trimestres. Sem comprometer o resto da operação.</p>
+        <div class="sol-tags"><span class="sol-tag">Implantação assistida</span><span class="sol-tag">Semanas, não meses</span></div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon" style="color:var(--c-edu)">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 17l5-5 3 3 8-9"/><path d="M14 6h5v5"/></svg>
+        </div>
+        <h3 data-i18n="plat.ado.c2.t">Ative o próximo</h3>
+        <p data-i18n="plat.ado.c2.d">Sem migração e sem projeto de integração: os dados que ele precisa já estão na plataforma.</p>
+        <div class="sol-tags"><span class="sol-tag">Zero migração</span><span class="sol-tag">Histórico preservado</span></div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon" style="color:var(--c-hr)">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="12" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="12" width="7" height="7" rx="1.5"/><rect x="12" y="12" width="7" height="7" rx="1.5"/></svg>
+        </div>
+        <h3 data-i18n="plat.ado.c3.t">Opere como um sistema</h3>
+        <p data-i18n="plat.ado.c3.d">Quando o sexto módulo entra, nada precisa ser refeito. A operação inteira passa a falar a mesma língua.</p>
+        <div class="sol-tags"><span class="sol-tag">Consolidação global</span><span class="sol-tag">Uma fonte da verdade</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARATIVO ============ -->
+<section class="block" id="comparativo">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="plat.vs.eyebrow">Comparativo</span>
+      <h2 data-i18n="plat.vs.h2">O mesmo resultado,<br>dois caminhos muito diferentes.</h2>
+      <p data-i18n="plat.vs.sub">Não é sobre ter mais recursos. É sobre onde o esforço da sua equipe vai parar todo mês.</p>
+    </div>
+
+    <div class="vs-wrap reveal">
+      <table class="vs-table">
+        <thead>
+          <tr>
+            <th scope="col"><span class="visually-hidden">Critério</span></th>
+            <th scope="col">Stack montado</th>
+            <th scope="col" class="vs-nx">Nexyss</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Cadastro de cliente</td>
+            <td class="vs-old" data-l="Stack montado"><span>Duplicado em cada ferramenta</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>Um registro só</span></td>
+          </tr>
+          <tr>
+            <td>Novo módulo</td>
+            <td class="vs-old" data-l="Stack montado"><span>Projeto de integração</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>Ativação</span></td>
+          </tr>
+          <tr>
+            <td>Relatório consolidado</td>
+            <td class="vs-old" data-l="Stack montado"><span>Exportar e reconciliar</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>Já é a tela</span></td>
+          </tr>
+          <tr>
+            <td>Acesso de um funcionário</td>
+            <td class="vs-old" data-l="Stack montado"><span>Configurado N vezes</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>Configurado uma vez</span></td>
+          </tr>
+          <tr>
+            <td>Escopo da IA</td>
+            <td class="vs-old" data-l="Stack montado"><span>Uma ferramenta por vez</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>A operação inteira</span></td>
+          </tr>
+          <tr>
+            <td>Custo e gestão</td>
+            <td class="vs-old" data-l="Stack montado"><span>N contratos, N fornecedores</span></td>
+            <td class="vs-nx" data-l="Nexyss"><span>Um contrato, um parceiro</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACTO ============ -->
+<section class="block deeper" style="padding:60px 0">
+  <div class="container">
+    <div class="impact-strip reveal-stagger">
+      <div class="impact-item"><div class="n">6</div><div class="l" data-i18n="plat.imp.1">Módulos sobre a mesma base</div></div>
+      <div class="impact-item"><div class="n">1</div><div class="l" data-i18n="plat.imp.2">Fonte da verdade</div></div>
+      <div class="impact-item"><div class="n">3</div><div class="l" data-i18n="plat.imp.3">Multi-idioma nativo</div></div>
+      <div class="impact-item"><div class="n">99.99<small>%</small></div><div class="l" data-i18n="plat.imp.4">Uptime garantido em SLA</div></div>
+    </div>
+    <p class="impact-note reveal" data-i18n="plat.imp.note">Novos idiomas em roadmap conforme demanda de clientes globais.</p>
+  </div>
+</section>
+
+<!-- ============ FOUNDING CUSTOMERS ============ -->
+<section class="block" id="clientes">
+  <div class="container">
+    <div class="founding founding-simple reveal">
+      <div class="founding-inner">
+        <div>
+          <div class="fbadge">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>
+            <span data-i18n="founding.badge">Programa Founding Customers</span>
+          </div>
+          <h2 data-i18n="founding.h2">Um convite raro.<br>Um lugar limitado.</h2>
+          <p data-i18n="founding.p">Estamos formando o círculo de primeiros clientes que ajudarão a moldar a próxima geração da Nexyss. Se você lidera uma organização que valoriza plataformas construídas em parceria, não em transação, vamos conversar.</p>
+        </div>
+
+        <div>
+          <a href="#" class="btn btn-primary" data-i18n="cta.candidatar">
+            Candidatar-se
+            <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="demo">
+  <div class="container">
+    <h2 class="reveal" data-i18n="plat.cta.h2">Pare de integrar.<br><span style="background:linear-gradient(120deg,var(--c-edu),var(--c-brand-light));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400;">Comece a operar.</span></h2>
+    <p class="reveal" data-i18n="plat.cta.sub">Agende uma demo e veja a plataforma inteira funcionando como um sistema só — com os módulos que fazem sentido para a sua operação.</p>
+    <div class="actions reveal">
+      <a href="#" class="btn btn-primary" data-i18n="cta.demo">Solicitar Demo <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+      <a href="#" class="btn btn-ghost" data-i18n="cta.vendas">Falar com Vendas</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/nexyss-logo-white.png" alt="Nexyss" />
+        <p>Plataforma operacional global com IA. Uma plataforma. Múltiplos módulos. Infinitas possibilidades.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Plataforma</h5>
+        <ul>
+          <li><a href="#">Nexyss CRM</a></li>
+          <li><a href="#">Nexyss Educação</a></li>
+          <li><a href="#">Nexyss Marketing</a></li>
+          <li><a href="#">Nexyss Finance</a></li>
+          <li><a href="#">Nexyss HR</a></li>
+          <li><a href="#">Nexyss AI</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Soluções</h5>
+        <ul>
+          <li><a href="#">Por Função</a></li>
+          <li><a href="#">Por Objetivo</a></li>
+          <li><a href="#">Por Porte / Setor</a></li>
+          <li><a href="#">Educação</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Consultoria</a></li>
+          <li><a href="#">Parceiros</a></li>
+          <li><a href="#">Clientes</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Recursos</h5>
+        <ul>
+          <li><a href="#">Blog & Insights</a></li>
+          <li><a href="#">Casos de sucesso</a></li>
+          <li><a href="#">Documentação</a></li>
+          <li><a href="#">Segurança</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal">© 2026 Nexyss Group. Todos os direitos reservados.</div>
+      <div class="links">
+        <a href="#">Privacidade</a>
+        <a href="#">Termos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../assets/nexyss.js"></script>
+</body>
+</html>

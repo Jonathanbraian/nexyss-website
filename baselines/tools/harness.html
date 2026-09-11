@@ -1,0 +1,47 @@
+<!doctype html><meta charset="utf-8"><title>fp</title>
+<style>html,body{margin:0;padding:0}#f{border:0;display:block}</style>
+<iframe id="f" scrolling="no"></iframe>
+<pre id="out">PENDING</pre>
+<script>
+const P = new URLSearchParams(location.search);
+const PAGE = P.get('page'), W = +P.get('w'), H = +P.get('h');
+const PROPS = ['display','position','width','height','margin-top','margin-right','margin-bottom','margin-left','padding-top','padding-right','padding-bottom','padding-left','font-family','font-size','font-weight','line-height','letter-spacing','color','background-color','border-top-width','border-bottom-width','border-radius','opacity','transform','z-index','overflow','text-align','grid-template-columns'];
+function fnv1a(s){let h=0x811c9dc5;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,0x01000193)>>>0;}return h.toString(16).padStart(8,'0');}
+const f = document.getElementById('f');
+f.width = W; f.height = H; f.style.width = W+'px'; f.style.height = H+'px';
+f.onload = () => { setTimeout(run, 1200); };
+f.src = PAGE;
+function run(){
+  try{
+    const d = f.contentDocument, w = f.contentWindow;
+    const st = d.createElement('style');
+    st.textContent = '*,*::before,*::after{animation:none!important;transition:none!important;animation-duration:0s!important}';
+    d.head.appendChild(st);
+    d.querySelectorAll('.reveal,.reveal-stagger').forEach(e=>e.classList.add('in'));
+    d.documentElement.offsetHeight;
+    const els = d.querySelectorAll('*');
+    const rows = [];
+    for (const el of els){
+      const r = el.getBoundingClientRect(), cs = w.getComputedStyle(el);
+      const row = {
+        t: el.tagName.toLowerCase(),
+        c: (el.getAttribute('class')||'').trim().replace(/\s+/g,' '),
+        i: el.id||'',
+        g: [Math.round(r.x), Math.round(r.y), Math.round(r.width), Math.round(r.height)],
+        s: {}
+      };
+      for (const p of PROPS) row.s[p] = cs.getPropertyValue(p);
+      rows.push(row);
+    }
+    const doc = { page: PAGE, viewport: W+'x'+H,
+      document: d.documentElement.scrollWidth + 'x' + d.documentElement.scrollHeight,
+      fontsLoaded: d.fonts ? d.fonts.status : 'n/a',
+      sora: d.fonts ? d.fonts.check('500 16px Sora') : null,
+      dmsans: d.fonts ? d.fonts.check('400 16px "DM Sans"') : null,
+      props: PROPS, count: rows.length, elements: rows };
+    const ser = rows.map(r => r.t+'|'+r.c+'|'+r.i+'|'+r.g.join(',')+'|'+PROPS.map(p=>r.s[p]).join('~')).join('\n');
+    doc.fingerprint = rows.length + ':' + fnv1a(ser);
+    document.getElementById('out').textContent = 'FP_START' + JSON.stringify(doc) + 'FP_END';
+  }catch(e){ document.getElementById('out').textContent = 'FP_ERROR '+e.message; }
+}
+</script>

@@ -1,0 +1,83 @@
+# ============================================================
+# Nexyss — configuração de deploy no Netlify
+# ============================================================
+# Site estático puro: sem build. O diretório de publicação é a
+# raiz do repositório, por isso TUDO que está versionado seria
+# servido publicamente — inclusive a documentação interna.
+# As regras abaixo fecham esses caminhos com 404.
+# ============================================================
+
+[build]
+  publish = "."
+  # Sem etapa de build: HTML/CSS/JS puros, sem dependências.
+
+# ------------------------------------------------------------
+# DOCUMENTAÇÃO INTERNA → 404
+# ------------------------------------------------------------
+# `force = true` é OBRIGATÓRIO: sem ele o Netlify ignora a regra
+# quando o arquivo existe no deploy e serve o arquivo normalmente.
+# `status = 404` (e não 301/302): o caminho deve parecer inexistente,
+# não redirecionar para outro lugar.
+# `to = "/404.html"`: quando a página 404 amigável for criada na
+# raiz, ela passa a ser usada automaticamente; até lá o Netlify
+# mostra a 404 padrão dele.
+#
+# ⚠️ O Netlify NÃO aceita glob no meio do caminho (`/*.md` não é
+# uma regra válida — só `:placeholder` e `/*` no fim). Por isso
+# cada .md da raiz é listado explicitamente. Ao criar um .md novo
+# na raiz, ADICIONAR uma regra aqui.
+
+[[redirects]]
+  from = "/CLAUDE.md"          # memória do projeto — decisões, regras, pendências
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/CLAIMS-AUDIT.md"    # auditoria de claims com 20 itens UNVALIDATED — nunca público
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/AUDIT-REPORT.md"    # relatório consolidado da auditoria
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"          # doc de desenvolvimento
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/baselines/*"        # 6,6 MB de fingerprint + ferramentas; cobre subpastas
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/netlify.toml"       # não expõe a própria configuração
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.gitignore"         # dotfile; fechado por precaução
+  to = "/404.html"
+  status = 404
+  force = true
+
+# ------------------------------------------------------------
+# HEADERS DE SEGURANÇA — aplicados a todas as respostas
+# ------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Impede que o site seja embutido em <iframe> de terceiros (clickjacking).
+    X-Frame-Options = "DENY"
+    # Impede o navegador de "adivinhar" o MIME type e executar algo como script.
+    X-Content-Type-Options = "nosniff"
+    # Envia só a origem (sem path) ao navegar para outro domínio; nada em HTTP→HTTPS downgrade.
+    Referrer-Policy = "strict-origin-when-cross-origin"
