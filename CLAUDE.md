@@ -289,7 +289,8 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
 /recursos/                 blog, casos, guias, webinars ⬜
 /parceiros/                                             ⬜
 /sobre/                                                 ⬜
-/contato/                                               ⬜
+/contato/                  formulário Netlify + canais   ✅ pronta (11/09/2026)
+  /contato/obrigado.html   página de sucesso (noindex)   ✅ pronta
 ```
 
 A Home já contém versões-resumo de `#plataforma`, `#solucoes`, `#ai`,
@@ -463,25 +464,33 @@ a Home aprovada.
 
 Fingerprint por elemento (geometria + 28 propriedades computadas, animações
 desligadas, `.reveal` forçado para `.in`). Depois de qualquer mexida em
-`assets/nexyss.css` ou `assets/nexyss.js`, as 4 páginas têm que continuar batendo.
+`assets/nexyss.css` ou `assets/nexyss.js`, as 6 páginas têm que continuar batendo.
 **Ver `baselines/` — JSON por página/viewport + o gerador em `baselines/tools/`.**
 
 | Página | 1280×800 | doc | 375×812 | doc |
 |---|---|---|---|---|
-| Home | `784:05e853da` | 1280×7777 | `784:f917d2d4` | 375×12724 |
-| Overview | `854:60db1f5d` | 1280×10661 | `854:3fdc840f` | 375×16982 |
-| CRM | `915:171660d1` | 1280×9574 | `915:8e8775d6` | 375×15692 |
-| Educação | `1062:c0084a19` | 1280×11767 | `1062:28bf25a5` | 375×19088 |
+| Home | `782:3c05db58` | 1280×7841 | `782:1107c885` | 375×12871 |
+| Overview | `854:2d8170bb` | 1280×10661 | `854:0c24e753` | 375×16982 |
+| CRM | `915:c44675df` | 1280×9574 | `915:f8f31696` | 375×15692 |
+| Educação | `1062:dff0ebc7` | 1280×11767 | `1062:5333e4f7` | 375×19088 |
+| Contato | `576:e2641d7b` | 1280×3677 | `576:ab9ec9e1` | 375×5646 |
+| Obrigado | `436:645a517a` | 1280×1250 | `436:2ae400ed` | 375×2167 |
 
-> **Baseline v3 — pós-correção do logo (11/09/2026).** Substitui os v2 de
-> 04/09. Delta em relação aos v2 verificado elemento a elemento: exatamente
-> **3 `<img>` por página, só `opacity 0.95→1`**; geometria, contagem e tamanho
-> de documento idênticos nas 8 capturas. Antes de aplicar a correção, os v2
-> foram recapturados e bateram 8/8 (referência confiável).
+> **Baseline v4 — página de contato + CTAs + logo wall (11/09/2026).** Substitui
+> os v3 do mesmo dia. Delta v3→v4 verificado elemento a elemento:
+> - **Overview, CRM, Educação:** só o botão "Falar com Especialista" (175→207px)
+>   e o botão vizinho deslocando 16px para manter o centro. Nada mais.
+> - **Home:** contagem 784→782 (logo wall: 6 `.logo-item` → 5 com classe de setor,
+>   layout 3+2). Antes do wall: só o botão renomeado do hero. Depois do wall,
+>   **todos os elementos deslocam +64px (1280) / +147px (375) em y** — translação
+>   pura, a segunda linha do wall; nenhuma outra mudança de tamanho além dos botões.
+> - **Contato / Obrigado:** baseline inicial.
+> - Verificação cruzada: depois dos ajustes finais no CSS compartilhado (wall 3+2,
+>   `.hero-inner` no form), Overview/CRM/Educação/Obrigado recapturados **idênticos**.
 >
-> Hashes v2 aposentados: Home `784:82af4c99`/`784:748535f5` · Overview
-> `854:8e96f774`/`854:cf1f4838` · CRM `915:f788cb3c`/`915:86526521` ·
-> Educação `1062:ecdc7c26`/`1062:6fe10d92`.
+> Hashes v3 aposentados: Home `784:05e853da`/`784:f917d2d4` · Overview
+> `854:60db1f5d`/`854:3fdc840f` · CRM `915:171660d1`/`915:8e8775d6` ·
+> Educação `1062:c0084a19`/`1062:28bf25a5`.
 
 > ⚠️ **O fingerprint não cobre `filter` nem `src` de `<img>`.** As 28
 > propriedades capturadas não incluem nenhum dos dois. Troca de asset ou de
@@ -503,12 +512,19 @@ em duas passagens independentes (8/8 idênticos).
 
 **Como regerar:**
 ```bash
-node baselines/tools/run.js <dir-de-trabalho>     # 4 páginas × 2 viewports, Chrome headless
+node baselines/tools/run.js <dir-de-trabalho>     # 6 páginas × 2 viewports, Chrome headless
 python3 baselines/tools/extract.py <dir> baselines run1
 ```
 Requer `/Applications/Google Chrome.app` e rede (as fontes do Google Fonts
 precisam carregar — o JSON grava `fontsLoaded` para flagrar uma captura offline,
 que mudaria a geometria).
+
+### Screenshots full-page (11/09/2026)
+Chrome headless `--screenshot` com `--window-size=<largura>,<altura do doc>` dá a
+página inteira — mas o Chrome **não aceita janela com menos de ~500px** de
+largura: um "375" sai cortado de um layout mais largo. Para mobile, embrulhar
+a página num `<iframe width="375">` (mesmo truque do `harness.html` do
+fingerprint) e recortar a imagem. Puppeteer não está instalado.
 
 ### Limitação do painel de preview
 
@@ -722,6 +738,122 @@ só `opacity`. Visual conferido em 1280 (header Home) e 375 (header CRM, drawer)
 **Backlog:** extrair vetor do `NEXYSS.pdf` → `nexyss-mark.svg` +
 `nexyss-wordmark.svg` com `currentColor` (nítido em retina, mais leve, colorível).
 
+## Página `/contato/` (11/09/2026)
+
+`<body class="page-institucional page-contato">` — 5 seções: hero compacto
+(1 coluna, sem CTA — a página inteira é o CTA) · `#formulario` (form + canais no
+**próprio `.hero-inner`** — zero componente novo; 1.45fr/1fr no desktop,
+1 coluna ≤1080; coluna direita sticky) · `#clientes`
+(3 setores) · `#faq` (4 `<details>` nativos, sem JS) · footer. Sem subnav.
+Sucesso: `/contato/obrigado.html` (`noindex`, reusa o hero, CTA WhatsApp + Home).
+
+### Contatos oficiais
+- E-mail: `contato@nexyss.com` · WhatsApp Business: `+353 83 094 7907` (Irlanda,
+  `wa.me/353830947907`) · LinkedIn: `linkedin.com/company/nexyss-group`.
+- **Na página só o e-mail está publicado** (decisão 11/09/2026): WhatsApp e
+  LinkedIn foram removidos da coluna de canais, do CTA da `obrigado.html` e da
+  resposta 1 da FAQ porque os dois links **não foram validados**. A coluna
+  direita ficou: e-mail · "Respondemos em até 24 horas úteis" · "O que acontece
+  depois" (3 passos, reusando `.founding-benefits`). Grid do form passou a
+  `1.45fr / 1fr` (form ganha peso) — e esse override **precisa ser repetido dentro
+  do `@media (max-width:1080px)` com `1fr`**, senão vence o colapso base do
+  `.hero-inner` (bug pego no screenshot mobile em 11/09, corrigido).
+
+### Netlify Forms — como está e o que precisa no painel
+`<form name="contato" method="POST" action="/contato/obrigado.html"
+data-netlify="true" netlify-honeypot="bot-field">` + `<input type="hidden"
+name="form-name" value="contato">` (explícito porque não há build) + honeypot
+como a doc pede: **input de texto** dentro de `<p class="visually-hidden">`
+(`type="hidden"` alguns bots ignoram). Campos: `nome` (req, minlength 3) ·
+`email` (req, type=email) · `empresa` (**opcional**, asterisco de "recomendado")
+· `interesse` (select req, 9 opções, valor = rótulo em PT) · `mensagem`
+(req, minlength 10) · hidden `origem`.
+
+**`/form-detect.html` na raiz** (comentário no topo: *do not link, do not delete*):
+cópia estática só com os campos do form, para o Netlify registrar "contato" no
+deploy mesmo que a página de contato mude. Mesmos 8 `name=` do form real —
+**se divergirem, o painel mostra o último conjunto lido**. Não linkado; 404 via
+`netlify.toml`. Redundante para site estático (o Netlify já lê `contato/index.html`),
+mas inofensivo.
+
+⚠️ **Detecção de formulário é opt-in no painel** (Site configuration → Forms →
+Enable form detection) **e exige redeploy depois de ativar**. Sem isso o POST
+retorna 404. Não existe chave no `netlify.toml` para isso. Free: 100 envios/mês.
+
+### `?interesse=` — pré-seleção (JS em `nexyss.js`, guardado por `if (form)`)
+`demo` e `founding` → "Plataforma completa" · `especialista` → "Ainda não tenho
+certeza" · slugs de módulo (`crm`, `educacao`, `marketing`, `finance`, `hr`,
+`ai`, `consultoria`, `plataforma`) → o módulo. O hidden `origem` recebe o
+valor cru (ou `direto`), para o painel dizer qual CTA gerou o lead.
+`founding` também pré-escreve na mensagem "Tenho interesse no programa
+Founding Customers." (editável).
+
+### Validação
+HTML5 nativa (bolha do navegador continua). Estilo de erro em **laranja
+`--c-mkt`** — aqui é *estado*, não a cor do módulo Marketing: a paleta não tem
+vermelho e não criamos token (decisão 11/09). `:user-invalid` e
+`.show-errors :invalid` em regras **separadas** (navegador sem `:user-invalid`
+descartaria a lista inteira). O JS liga `.show-errors` no evento `invalid`
+(capture) e desliga quando o form volta a ser válido.
+
+### CTAs unificadas (31 links nas 4 páginas + contato)
+| CTA | Destino (relativo à profundidade da página) |
+|---|---|
+| "Solicitar Demo" (18, inclui os 6 `#demo` de hero/subnav) | `contato/?interesse=demo` |
+| "Falar com Vendas" → **renomeado** "Falar com Especialista" (5, `data-i18n` `cta.especialista`) | `contato/?interesse=especialista` |
+| "Candidatar-se" (4) | `contato/?interesse=founding` |
+| Footer "Contato" (4) | `contato/` |
+
+Na própria `/contato/`, header e drawer apontam para `#formulario` (não
+recarregar a página com o form preenchido). Links **relativos** para continuar
+funcionando em `file://`; só o `action` do form é raiz-absoluto (POST não roda
+em `file://` de qualquer forma).
+
+### Clientes reais (fornecidos pelo Jonathan, 11/09/2026)
+| Setor | Cor (token existente) | Clientes |
+|---|---|---|
+| Educação | `--c-edu` ciano | NED College |
+| Esporte | `--c-crm` verde | Dublin Volleyball Club · Volley Point |
+| Turismo | `--c-ai` azul-elétrico | Excursion LTD · Eirway |
+
+Placeholders textuais (`.client-card > .logo-placeholder`, Sora 600 1.2rem) na
+página de contato e `.logo-item.{edu,sport,travel}` no logo wall da Home
+(`.logos-grid.centered` — **3 na primeira linha + 2 centralizados** no desktop,
+coluna única ≤760; sem card inventado para fechar 6, por R3). **Troca por logo
+real = substituir o `<span class="logo-placeholder">`/texto pelo
+`<img src="assets/clients/<slug>.svg">`**; o container fica igual. Slugs em `data-client`.
+FAQ: cada `<details class="faq-item">`.
+
+### Logo wall fictício da Home — violação de R3 corrigida
+A Home no ar exibia 6 clientes **inventados** (Globaledu, Atlas Academy, Vertex,
+Polaris, Meridian, Orbital) sob "Confiado por organizações inovadoras no mundo
+todo". A auditoria de 04/09 não pegou. Substituídos pelos 5 reais em 11/09 com
+o label "Organizações que operam com a Nexyss". (O "Meridian" que sobra no CRM é
+nome de negócio no mockup do pipeline, não claim de cliente.)
+
+### FAQ — compromissos operacionais do Jonathan Braian (não são claims auditáveis)
+"24 horas úteis", "minutos no horário comercial (Dublin, GMT)", "conversa de
+30–60 min", "proposta em até 7 dias úteis", "clientes na América Latina e
+Europa" são **compromissos de atendimento assumidos pelo Jonathan em 11/09/2026**,
+não métricas de produto. Fora do escopo de R3 e do CLAIMS-AUDIT. Se algum deixar
+de ser cumprível, mudar a FAQ — não badgear.
+
+### TODOs abertos desta página
+- **Reintroduzir WhatsApp Business e LinkedIn quando validar
+  `wa.me/353830947907` e `linkedin.com/company/nexyss-group`.** Endereços
+  exatos: `contato@nexyss.com` · `wa.me/353830947907` (+353 83 094 7907) ·
+  `linkedin.com/company/nexyss-group`. Onde voltam: coluna `.contact-side`
+  (dois `.ai-product` depois do e-mail — ícones já existiam no commit anterior
+  ao 11/09, ver histórico do git), CTA primário da `obrigado.html` ("Adiantar
+  pelo WhatsApp") e resposta 1 da FAQ ("Se é urgente, use o WhatsApp — atendemos
+  em minutos durante o horário comercial").
+- **Configurar a caixa `contato@nexyss.com`** (Google Workspace / Zoho) antes
+  de trocar o domínio placeholder pelo real — hoje o `mailto:` faz bounce.
+- **Substituir os placeholders textuais** dos 5 clientes por SVG/PNG quando chegarem
+  (`assets/clients/`, 7 pontos: 5 na contato + 5 no wall da Home — mesmo slug).
+- Menu do header nas páginas internas aponta para `#consultoria`/`#clientes`,
+  âncoras que só existem na Home — pré-existente, fora deste escopo.
+
 ## Regras de Conteúdo e Comercial (definidas em 04/09/2026)
 
 ### R1 — Naming e pricing de produtos
@@ -817,8 +949,9 @@ bullets voltam a ser badgeáveis**.
 5. **Uma página por vez**, validando com o Jonathan entre cada uma.
 6. Idioma de trabalho: **português**.
 7. Todo texto novo nasce com `data-i18n`.
-8. **Nunca inventar métrica de cliente.** Não há clientes reais ainda. Números
-   em página só podem ser fatos verificáveis (capacidade de produto, SLA,
-   cobertura) ou os já aprovados na Home. Na dúvida, perguntar ao Jonathan.
+8. **Nunca inventar métrica nem nome de cliente.** Os únicos clientes citáveis
+   são os 5 fornecidos pelo Jonathan em 11/09/2026 (ver "Clientes reais" abaixo).
+   Números em página só podem ser fatos verificáveis (capacidade de produto,
+   SLA, cobertura) ou os já aprovados na Home. Na dúvida, perguntar ao Jonathan.
 9. Testar sempre nos dois extremos: **375px** (drawer) e **1280px** (desktop),
    confirmando que o desktop não mudou.

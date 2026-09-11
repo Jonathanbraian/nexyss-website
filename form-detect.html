@@ -1,0 +1,38 @@
+<!-- Netlify Forms detection: do not link, do not delete -->
+<!--
+  Este arquivo existe só para o Netlify registrar o formulário "contato" no
+  deploy. Precisa ter EXATAMENTE os mesmos campos (name=) do <form> real em
+  /contato/index.html — se divergirem, o painel mostra o último conjunto lido.
+  Não é linkado em lugar nenhum e retorna 404 via netlify.toml.
+-->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Nexyss — form detection</title>
+</head>
+<body>
+<form name="contato" method="POST" action="/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contato" />
+  <input type="hidden" name="origem" value="" />
+  <input name="bot-field" />
+  <input name="nome" type="text" />
+  <input name="email" type="email" />
+  <input name="empresa" type="text" />
+  <select name="interesse">
+    <option value="Nexyss CRM">Nexyss CRM</option>
+    <option value="Nexyss Educação">Nexyss Educação</option>
+    <option value="Nexyss Marketing">Nexyss Marketing</option>
+    <option value="Nexyss Finance">Nexyss Finance</option>
+    <option value="Nexyss HR">Nexyss HR</option>
+    <option value="Nexyss AI">Nexyss AI</option>
+    <option value="Consultoria">Consultoria</option>
+    <option value="Plataforma completa">Plataforma completa</option>
+    <option value="Ainda não tenho certeza">Ainda não tenho certeza</option>
+  </select>
+  <textarea name="mensagem"></textarea>
+  <button type="submit">Enviar</button>
+</form>
+</body>
+</html>

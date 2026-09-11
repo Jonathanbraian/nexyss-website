@@ -141,3 +141,57 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   // Clique na ancora acende na hora, sem esperar o scroll terminar
   links.forEach(a => a.addEventListener('click', () => setActive(a)));
 })();
+
+// ============ CONTATO — pré-seleção via querystring + estado de erro ============
+// Só roda na página que tem o formulário. Nenhum efeito nas outras.
+(function () {
+  const form = document.querySelector('form[name="contato"]');
+  if (!form) return;
+
+  const params    = new URLSearchParams(location.search);
+  const interesse = (params.get('interesse') || '').trim().toLowerCase();
+
+  // ?interesse= (vindo das CTAs do site) → opção do dropdown.
+  // demo/founding → "Plataforma completa" · especialista → "Ainda não tenho certeza".
+  // Slugs de módulo também funcionam, para links futuros por produto.
+  const MAP = {
+    demo: 'Plataforma completa',
+    founding: 'Plataforma completa',
+    especialista: 'Ainda não tenho certeza',
+    plataforma: 'Plataforma completa',
+    crm: 'Nexyss CRM',
+    educacao: 'Nexyss Educação',
+    marketing: 'Nexyss Marketing',
+    finance: 'Nexyss Finance',
+    hr: 'Nexyss HR',
+    ai: 'Nexyss AI',
+    consultoria: 'Consultoria'
+  };
+
+  const sel    = form.querySelector('select[name="interesse"]');
+  const origem = form.querySelector('input[name="origem"]');
+  const msg    = form.querySelector('textarea[name="mensagem"]');
+
+  // Rastreia a CTA de origem no painel do Netlify (valor cru do parâmetro)
+  if (origem) origem.value = interesse || 'direto';
+
+  if (sel && MAP[interesse]) {
+    const opt = [...sel.options].find(o => o.value === MAP[interesse]);
+    if (opt) sel.value = opt.value;
+  }
+
+  // Founding Customers: abre a mensagem já contextualizada (editável)
+  if (interesse === 'founding' && msg && !msg.value) {
+    msg.value = 'Tenho interesse no programa Founding Customers.';
+  }
+
+  // Estado de erro: o evento "invalid" dispara por campo antes de o navegador
+  // bloquear o envio (não borbulha — por isso o capture: true). A classe
+  // liga o estilo .show-errors; a mensagem nativa do navegador continua.
+  form.addEventListener('invalid', () => form.classList.add('show-errors'), true);
+  form.addEventListener('input', () => {
+    if (form.classList.contains('show-errors') && form.checkValidity()) {
+      form.classList.remove('show-errors');
+    }
+  });
+})();

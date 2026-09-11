@@ -12,6 +12,14 @@
   # Sem etapa de build: HTML/CSS/JS puros, sem dependências.
 
 # ------------------------------------------------------------
+# NETLIFY FORMS — não há chave de configuração aqui
+# ------------------------------------------------------------
+# O <form name="contato"> em /contato/ é detectado no deploy, mas a detecção
+# é OPT-IN no painel: Site configuration → Forms → Enable form detection,
+# seguido de um novo deploy. Sem isso o POST retorna 404.
+# /contato/obrigado.html (action do form) NÃO é bloqueado por nenhuma regra abaixo.
+
+# ------------------------------------------------------------
 # DOCUMENTAÇÃO INTERNA → 404
 # ------------------------------------------------------------
 # `force = true` é OBRIGATÓRIO: sem ele o Netlify ignora a regra
@@ -65,6 +73,12 @@
 
 [[redirects]]
   from = "/.gitignore"         # dotfile; fechado por precaução
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/form-detect.html"   # só existe para o Netlify registrar o form "contato" no deploy; nunca servir
   to = "/404.html"
   status = 404
   force = true

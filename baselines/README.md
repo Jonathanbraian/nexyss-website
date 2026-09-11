@@ -5,11 +5,11 @@
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 8 arquivos — 4 páginas × 2 viewports:
+São 12 arquivos — 6 páginas × 2 viewports:
 
 ```
-home-1280.json      overview-1280.json    crm-1280.json     educacao-1280.json
-home-375.json       overview-375.json     crm-375.json      educacao-375.json
+home-1280.json      overview-1280.json    crm-1280.json     educacao-1280.json    contato-1280.json    obrigado-1280.json
+home-375.json       overview-375.json     crm-375.json      educacao-375.json     contato-375.json     obrigado-375.json
 ```
 
 Cada arquivo guarda, para **todo elemento** do DOM: tag, classe, id, geometria
@@ -34,7 +34,7 @@ No topo de cada JSON:
 ## 2. Como usar
 
 ```bash
-# 1) captura as 4 páginas × 2 viewports num diretório de trabalho
+# 1) captura as 6 páginas × 2 viewports num diretório de trabalho
 node baselines/tools/run.js /tmp/fp-check
 
 # 2) extrai os hashes (não grava baseline: use "-" como destino)
@@ -84,3 +84,8 @@ Para diff elemento a elemento entre um baseline e uma captura nova, os scripts e
 - **04/09/2026** — baselines v2 criados. Os hashes v1 da Home (`792:…`) foram
   aposentados: o script que os gerou nunca foi salvo e era irreproduzível.
   Ver `CLAUDE.md` → "Teste de regressão — baselines v2".
+- **11/09/2026** — v3: correção do logo (só `opacity` em 3 `<img>` por página).
+  v4 no mesmo dia: página `/contato/` + `obrigado.html` entram nas ferramentas
+  (`run.js`, `extract.py`); CTAs, "Falar com Especialista" e logo wall da Home.
+  `extract.py` deixou de criar o diretório `-` quando o destino é `-`.
+  `run.js` passou a derivar a raiz de `__dirname` (portátil).

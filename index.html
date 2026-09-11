@@ -134,7 +134,7 @@
           <span>PT</span>
           <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
         </button>
-        <a href="#" class="btn btn-primary">
+        <a href="contato/?interesse=demo" class="btn btn-primary">
           Solicitar Demo
           <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
         </a>
@@ -233,7 +233,7 @@
       <span>PT</span>
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
     </button>
-    <a href="#" class="btn btn-primary" data-i18n="cta.demo">
+    <a href="contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">
       Solicitar Demo
       <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
     </a>
@@ -273,7 +273,7 @@
             Explorar Plataforma
             <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
           </a>
-          <a href="#" class="btn btn-ghost">Falar com Vendas</a>
+          <a href="contato/?interesse=especialista" class="btn btn-ghost">Falar com Especialista</a>
         </div>
 
         <div class="hero-meta cols-2">
@@ -345,14 +345,15 @@
 <!-- ============ LOGO WALL ============ -->
 <section class="logos">
   <div class="container">
-    <div class="logos-label">Confiado por organizações inovadoras no mundo todo</div>
-    <div class="logos-grid">
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18"/></svg>Globaledu</div>
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 12h16M12 4v16"/></svg>Atlas Academy</div>
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 20l9-16 9 16H3z"/></svg>Vertex</div>
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>Polaris</div>
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7l9-4 9 4-9 4-9-4z"/></svg>Meridian</div>
-      <div class="logo-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>Orbital</div>
+    <div class="logos-label" data-i18n="home.logos.label">Organizações que operam com a Nexyss</div>
+    <!-- 5 clientes reais (11/09/2026). Placeholder textual: quando o logo chegar, trocar o texto
+         pelo <img src="assets/clients/<slug>.svg" alt="<Nome>" /> mantendo o .logo-item. -->
+    <div class="logos-grid centered">
+      <div class="logo-item edu" data-client="ned-college"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"><path d="M2 6l6-3 6 3-6 3-6-3z"/><path d="M4 7.5v2.8c0 1.2 1.8 2.2 4 2.2s4-1 4-2.2V7.5"/></svg>NED College</div>
+      <div class="logo-item sport" data-client="dublin-volleyball-club"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2c-2.5 2-2.5 10 0 12M2.6 5.5c3 1.2 7.8 1.2 10.8 0M2.6 10.5c3-1.2 7.8-1.2 10.8 0"/></svg>Dublin Volleyball Club</div>
+      <div class="logo-item sport" data-client="volley-point"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 2c-2.5 2-2.5 10 0 12M2.6 5.5c3 1.2 7.8 1.2 10.8 0M2.6 10.5c3-1.2 7.8-1.2 10.8 0"/></svg>Volley Point</div>
+      <div class="logo-item travel" data-client="excursion-ltd"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M14 2L2 7.2l5 1.8 1.8 5L14 2z"/><path d="M7 9l7-7"/></svg>Excursion LTD</div>
+      <div class="logo-item travel" data-client="eirway"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"><path d="M14 2L2 7.2l5 1.8 1.8 5L14 2z"/><path d="M7 9l7-7"/></svg>Eirway</div>
     </div>
   </div>
 </section>
@@ -646,7 +647,7 @@
         </div>
 
         <div>
-          <a href="#" class="btn btn-primary" data-i18n="cta.candidatar">
+          <a href="contato/?interesse=founding" class="btn btn-primary" data-i18n="cta.candidatar">
             Candidatar-se
             <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
           </a>
@@ -661,11 +662,11 @@
     <h2 class="reveal">Uma plataforma para operar como um só<br><span style="background:linear-gradient(120deg,var(--c-edu),var(--c-crm));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400;">sistema inteligente.</span></h2>
     <p class="reveal">Agende uma demo personalizada e descubra como a Nexyss pode se tornar a plataforma operacional da sua organização global.</p>
     <div class="actions reveal">
-      <a href="#" class="btn btn-primary">
+      <a href="contato/?interesse=demo" class="btn btn-primary">
         Solicitar Demo
         <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
       </a>
-      <a href="#" class="btn btn-ghost">Falar com Vendas</a>
+      <a href="contato/?interesse=especialista" class="btn btn-ghost">Falar com Especialista</a>
     </div>
   </div>
 </section>
@@ -705,7 +706,7 @@
           <li><a href="#">Consultoria</a></li>
           <li><a href="#">Parceiros</a></li>
           <li><a href="#">Clientes</a></li>
-          <li><a href="#">Contato</a></li>
+          <li><a href="contato/">Contato</a></li>
         </ul>
       </div>
       <div class="footer-col">

@@ -242,3 +242,28 @@ contato.
 1. O **domínio real** (`nexyss.com` é placeholder em canonical e og:url das 4 páginas)
 2. O **bloco Founding duplicado e desatualizado** em Overview, CRM e Educação
 3. O **backlog de 20 validações** da seção 3
+
+---
+
+## 8. Fase pós-auditoria — página de contato + correção do logo wall (11/09/2026)
+
+**Fecha o item 4 do backlog** ("toda CTA aponta para `href="#"`, nenhum lead é
+capturável") e a recomendação de inverter a prioridade 3↔4.
+
+| Entrega | Estado |
+|---|---|
+| `/contato/index.html` — formulário Netlify Forms (5 campos + honeypot + `origem`), canal de e-mail (WhatsApp/LinkedIn aguardam validação dos links), 5 clientes reais por setor, FAQ de 4 perguntas | ✅ |
+| `/contato/obrigado.html` — sucesso, `noindex` | ✅ |
+| 31 CTAs das 4 páginas ligadas a `contato/?interesse=…` (18 demo · 5 especialista · 4 founding · 4 footer) | ✅ |
+| "Falar com Vendas" → "Falar com Especialista" (R2) nos 5 pontos | ✅ |
+| **Logo wall fictício da Home** (6 organizações inventadas, no ar) → 5 clientes reais | ✅ — violação de R3 que a auditoria de 04/09 não cobriu; ver CLAIMS-AUDIT.md |
+| `/form-detect.html` (registro do form no deploy) + regra 404 | ✅ |
+| Baselines v4 (6 páginas × 2 viewports), delta v3→v4 contado elemento a elemento | ✅ |
+
+**Dependência de painel:** o formulário só recebe envios depois de
+*Site configuration → Forms → Enable form detection* + redeploy no Netlify.
+
+**Backlog que continua aberto:** domínio real · caixa `contato@nexyss.com` ·
+logos reais dos 5 clientes · bloco Founding duplicado (Overview/CRM/Educação) ·
+20 validações técnicas da seção 3 · página 404 · menu do header nas páginas
+internas apontando para âncoras que só existem na Home.

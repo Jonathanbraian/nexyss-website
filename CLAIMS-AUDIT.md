@@ -476,3 +476,39 @@ de nenhum componente novo.
 ## Números aprovados (Jonathan) — NÃO recebem badge
 120+ países · 9 idiomas nativos · 99.99% uptime · 3.4× ciclo de vendas · 87% redução de silos · $2.1M economia de stack · 40+ países atendidos · 360º · 6 módulos · 1 base de dados.
 > Nota: "99.99% Uptime **garantido em SLA**" repete o número aprovado com um qualificador de SLA — se um dia SLA virar claim badgeável, revisar.
+
+---
+
+## Descoberta pós-auditoria — logo wall fictício da Home (11/09/2026) ✅ FECHADA
+
+**Não constava neste documento.** A seção `.logos` da Home exibia 6 organizações
+inventadas — Globaledu · Atlas Academy · Vertex · Polaris · Meridian · Orbital —
+sob "Confiado por organizações inovadoras no mundo todo", e estava **no ar**.
+Violação direta de R3/R8, invisível para a auditoria de 04/09 porque o mapeamento
+cobriu `.mod-features`, `.consult-desc`, `.vs-table` e `.sol-tag`, não `.logo-item`.
+
+**Correção aplicada (aprovada pelo Jonathan):** os 6 fictícios substituídos pelos
+5 clientes reais fornecidos por ele, label "Organizações que operam com a Nexyss".
+
+| Setor | Cliente | Onde |
+|---|---|---|
+| Educação | NED College | Home `.logo-item.edu` · Contato `.client-card[data-client=ned-college]` |
+| Esporte | Dublin Volleyball Club | Home `.logo-item.sport` · Contato `dublin-volleyball-club` |
+| Esporte | Volley Point | Home `.logo-item.sport` · Contato `volley-point` |
+| Turismo | Excursion LTD | Home `.logo-item.travel` · Contato `excursion-ltd` |
+| Turismo | Eirway | Home `.logo-item.travel` · Contato `eirway` |
+
+**TODO de substituição:** os 5 são placeholders **textuais** (nome em Sora + ícone
+do setor). Quando os SVG/PNG chegarem: `assets/clients/<slug>.svg` e trocar o
+`<span class="logo-placeholder">` por `<img>` nos 10 pontos (5 Home + 5 Contato). Sem badge — nome de
+cliente não é claim de capacidade (R5.1).
+
+> Nota: "Meridian" continua em `plataforma/crm/index.html` como **nome de negócio
+> no mockup do pipeline** (`.pc-name`), não como cliente. Fora do escopo.
+
+## Página `/contato/` — fora do escopo de badges
+A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30–60 min",
+"proposta em até 7 dias úteis", "clientes na América Latina e Europa") definidos
+pelo Jonathan em 11/09/2026. **Não são claims de produto** — não recebem badge e
+não entram no backlog de validação. Registro em CLAUDE.md → "FAQ — compromissos
+operacionais".

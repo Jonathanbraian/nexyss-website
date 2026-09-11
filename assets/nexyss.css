@@ -2609,3 +2609,350 @@ body.drawer-open { overflow: hidden; }
   background: rgba(11, 20, 64, 0.35);
   border-color: rgba(255, 255, 255, 0.28);
 }
+
+/* ============================================================
+   PAGINA DE CONTATO — /contato/  (11/09/2026)
+   Institucional: eyebrow ciano, glows ciano + brand. Tudo escopado
+   em .page-contato, exceto os blocos de clientes (.clients-*,
+   .client-card) e o modificador .logos-grid.centered, que a Home
+   tambem usa no logo wall com os 5 clientes reais.
+   ============================================================ */
+
+/* ---------- Hero compacto: uma coluna, sem visual, sem CTA ---------- */
+.page-contato .hero { padding: 170px 0 90px; }
+.page-contato .hero .hero-inner { grid-template-columns: 1fr; max-width: 840px; gap: 0; }
+.page-contato .hero-sub { max-width: 640px; }
+
+/* ---------- Formulario + canais ----------
+   O grid e o proprio .hero-inner (1.05fr / 1fr, colapsa em 1 coluna <=1080px) —
+   decisao 11/09/2026: zero componente novo. Fora do hero ele nao precisa do
+   align-items:center nem do gap de 80px. */
+.page-contato #formulario .hero-inner { align-items: start; gap: 56px; grid-template-columns: 1.45fr 1fr; }
+/* 1.45fr/1fr em vez do 1.05fr/1fr do hero: com WhatsApp e LinkedIn fora (11/09/2026,
+   links nao validados), a coluna direita ficou mais curta e o form ganha peso. */
+.form-card {
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid var(--c-line-mid);
+  background: linear-gradient(160deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+}
+.form-card h2 {
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+.form-card .form-lead {
+  color: var(--c-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 30px;
+}
+.form-grid { display: grid; gap: 20px; }
+.form-grid .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.field { display: grid; gap: 8px; }
+.field label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-text-soft);
+}
+.field label .req { color: var(--c-edu); margin-left: 2px; }
+.field .hint {
+  font-size: 0.78rem;
+  color: var(--c-text-mute);
+  margin-top: -2px;
+  line-height: 1.4;
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--c-white);
+  background: var(--c-glass);
+  border: 1px solid var(--c-line-mid);
+  border-radius: 12px;
+  padding: 13px 16px;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.field textarea { resize: vertical; min-height: 148px; line-height: 1.5; }
+.field select {
+  padding-right: 44px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='rgba(255,255,255,0.6)' stroke-width='1.5'%3E%3Cpath d='M3 5l3 3 3-3'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 12px;
+}
+.field select option { background: var(--c-navy); color: var(--c-white); }
+.field select:invalid { color: var(--c-text-faint); }           /* placeholder "Selecione…" apagado */
+.field input::placeholder,
+.field textarea::placeholder { color: var(--c-text-faint); }
+.field input:hover,
+.field select:hover,
+.field textarea:hover { border-color: var(--c-line-strong); background: var(--c-glass-hover); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--c-edu);
+  background: rgba(3, 219, 255, 0.04);
+  box-shadow: 0 0 0 3px rgba(3, 219, 255, 0.15);
+}
+/* O foco global de .page-institucional (outline brand) dobraria com a borda
+   ciano do campo; nos controles do formulario a borda + glow ja e o foco. */
+.page-contato .field :focus-visible { outline: none; }
+
+/* Estado de erro — laranja --c-mkt.
+   Aqui o laranja e ESTADO de validacao, nao a cor do modulo Marketing:
+   a paleta nao tem vermelho e a decisao de 11/09/2026 foi nao criar token
+   novo. Duas regras separadas de proposito: navegador sem :user-invalid
+   descartaria a lista inteira se as duas estivessem juntas. */
+.field input:user-invalid,
+.field select:user-invalid,
+.field textarea:user-invalid {
+  border-color: var(--c-mkt);
+  box-shadow: 0 0 0 3px rgba(242, 93, 35, 0.15);
+}
+.show-errors .field :invalid {
+  border-color: var(--c-mkt);
+  box-shadow: 0 0 0 3px rgba(242, 93, 35, 0.15);
+}
+/* Alias manual: <div class="field error"> — mesmo estado, para uso sem JS/sem :user-invalid */
+.field.error input,
+.field.error select,
+.field.error textarea {
+  border-color: var(--c-mkt);
+  box-shadow: 0 0 0 3px rgba(242, 93, 35, 0.15);
+}
+.field .err { display: none; font-size: 0.78rem; color: var(--c-mkt); }
+.field.error .err { display: block; }
+.field :user-invalid ~ .err { display: block; }
+.show-errors .field :invalid ~ .err { display: block; }
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.form-note { font-size: 0.78rem; color: var(--c-text-mute); line-height: 1.45; max-width: 300px; }
+
+/* Coluna de canais — gruda abaixo do header no desktop */
+.contact-side { position: sticky; top: calc(var(--header-h) + 24px); }
+.contact-side h2 {
+  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  letter-spacing: -0.025em;
+  margin-bottom: 10px;
+}
+.contact-side .side-lead {
+  color: var(--c-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+.page-contato .ai-products { margin-top: 0; }
+.page-contato .ai-product { color: inherit; }
+/* Institucional: icone em ciano solido, nao no gradiente ai->brand da secao de IA */
+.page-contato .ai-product .p-icon { background: rgba(3, 219, 255, 0.12); color: var(--c-edu); }
+.page-contato .ai-product .p-info .nm { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.page-contato .ai-product .p-info .nm small {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--c-text-mute);
+  text-transform: uppercase;
+}
+.response-time {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--c-line);
+  background: var(--c-glass);
+  font-size: 0.9rem;
+  color: var(--c-text-soft);
+}
+.response-time::before {
+  content: "";
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--c-success);
+  box-shadow: 0 0 0 4px rgba(69, 229, 153, 0.2);
+  animation: pulse 2.2s infinite ease-in-out;
+}
+.response-time b { color: var(--c-white); font-weight: 500; }
+
+/* "O que acontece depois" — reusa .founding-benefits/.founding-benefit (checks verdes) */
+.next-steps { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--c-line); }
+.next-steps-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+  margin-bottom: 14px;
+}
+.page-contato .next-steps .founding-benefits { margin-bottom: 0; }
+.page-contato .next-steps .founding-benefit { color: var(--c-text-soft); font-size: 0.92rem; align-items: flex-start; }
+.page-contato .next-steps .founding-benefit svg { margin-top: 2px; }
+
+/* ---------- Clientes por setor ---------- */
+/* Cor do setor: apenas tokens existentes — Educacao ciano, Esporte verde CRM,
+   Turismo azul-eletrico AI (decisao 11/09/2026). Os icones reusam .icn-*. */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.clients-sector {
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid var(--c-line-mid);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0));
+}
+.sector-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--c-line);
+}
+.sector-head .icn { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; flex-shrink: 0; }
+.sector-head .icn svg { width: 15px; height: 15px; }
+.client-list { display: grid; gap: 10px; }
+/* .client-card e o container fixo; o que muda quando o logo real chegar e so
+   o filho: <span class="logo-placeholder"> vira <img>. Dimensoes ficam iguais. */
+.client-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 68px;
+  padding: 14px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--c-line);
+  background: var(--c-glass);
+  transition: background .2s ease, border-color .2s ease;
+}
+.client-card:hover { background: var(--c-glass-hover); border-color: var(--c-line-strong); }
+.logo-placeholder {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+  text-align: center;
+}
+.client-card img { height: 32px; width: auto; max-width: 180px; }
+
+/* Home — logo wall com contagem impar (5): 3 na primeira linha + 2 centralizados
+   na segunda no desktop; coluna unica no mobile. Sem card inventado para fechar 6 (R3). */
+.logos-grid.centered {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px 40px;
+  max-width: 820px;
+  margin: 0 auto;
+}
+.logos-grid.centered .logo-item { flex: 0 0 calc((100% - 80px) / 3); height: auto; min-height: 36px; }
+.logo-item.edu svg    { color: var(--c-edu); opacity: 1; }
+.logo-item.sport svg  { color: var(--c-crm); opacity: 1; }
+.logo-item.travel svg { color: var(--c-ai);  opacity: 1; }
+
+/* ---------- FAQ — <details> nativo, sem JS ---------- */
+.faq { max-width: 840px; display: grid; gap: 10px; }
+.faq .faq-item {
+  border: 1px solid var(--c-line-mid);
+  border-radius: 16px;
+  background: var(--c-glass);
+  transition: border-color .2s ease, background .2s ease;
+}
+.faq .faq-item[open] { border-color: var(--c-line-strong); background: var(--c-glass-hover); }
+.faq summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 24px;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: -0.015em;
+  color: var(--c-white);
+  border-radius: 16px;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "";
+  width: 9px; height: 9px;
+  margin-right: 4px;
+  flex-shrink: 0;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  opacity: 0.55;
+  transition: transform .25s ease, opacity .2s ease;
+}
+.faq .faq-item[open] summary::after { transform: rotate(225deg) translateY(-2px); opacity: 1; }
+.faq .faq-a {
+  padding: 0 24px 22px;
+  color: var(--c-text-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* ---------- Pagina de agradecimento ---------- */
+.page-obrigado .hero { min-height: 78vh; display: flex; align-items: center; }
+.page-obrigado .hero-inner { justify-items: center; text-align: center; margin: 0 auto; }
+.page-obrigado .hero-sub { margin-left: auto; margin-right: auto; }
+.page-obrigado .hero-cta { justify-content: center; }
+.thanks-mark {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  margin: 0 auto 28px;
+  background: rgba(69, 229, 153, 0.15);
+  color: var(--c-crm);
+  box-shadow: 0 0 0 8px rgba(69, 229, 153, 0.08);
+}
+.thanks-mark svg { width: 28px; height: 28px; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1080px) {
+  .page-contato #formulario .hero-inner { grid-template-columns: 1fr; gap: 40px; }   /* o 1.45fr/1fr do desktop tem especificidade maior que o colapso base do .hero-inner — precisa repetir aqui */
+  .contact-side { position: static; }
+  .clients-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  .page-contato .hero { padding: 130px 0 60px; }
+  .form-card { padding: 26px 20px; }
+  .form-grid .row-2 { grid-template-columns: 1fr; }
+  .form-actions .btn { width: 100%; justify-content: center; }
+  .form-note { max-width: none; }
+  .faq summary { padding: 18px 18px; font-size: 1rem; }
+  .faq .faq-a { padding: 0 18px 20px; }
+  .logos-grid.centered { flex-direction: column; align-items: center; gap: 22px; }
+  .logos-grid.centered .logo-item { flex: 0 0 auto; }
+}
