@@ -267,3 +267,39 @@ capturável") e a recomendação de inverter a prioridade 3↔4.
 logos reais dos 5 clientes · bloco Founding duplicado (Overview/CRM/Educação) ·
 20 validações técnicas da seção 3 · página 404 · menu do header nas páginas
 internas apontando para âncoras que só existem na Home.
+
+---
+
+## 9. Fase Marketing — `/plataforma/marketing/` + fix do `origem` (14/10/2026)
+
+**Fecha o item 2 do backlog de próximos passos** (`/plataforma/marketing/`).
+
+| Entrega | Estado |
+|---|---|
+| `/plataforma/marketing/index.html` — 12 seções, 788 linhas, `theme-mkt` | ✅ |
+| 22 bullets badgeados, **todos 🔵 Roadmap** + linha de disclosure em `#recursos` | ✅ |
+| Sem logo wall (nenhum cliente real usa Marketing) · mockups sem número | ✅ |
+| 2 componentes novos (`.wf-*`, `.attr-*`) + `.rm-note`, **zero keyframes novos**, tudo escopado | ✅ |
+| Fix: `nexyss.js` grava `origem` correta (`?origem=` > `?interesse=` > `direto`) | ✅ testado em 8 cenários |
+| 13 `href="#"` → Marketing (mega, drawer, footer × 4 páginas + card da Home) | ✅ |
+| Baselines: 6 páginas existentes **idênticas ao controle**; Marketing inicial (1280 + 375) | ✅ (Linux) |
+
+### Achados da fase (não estavam no escopo)
+
+1. **`.ai-visual` mede 0×0 em Home, Overview, CRM e Educação.** As órbitas e o
+   núcleo da Nexyss AI não aparecem; só os nós flutuam. O defeito está nas
+   baselines aprovadas (`ai-visual [x, y, 0, 0]`). Causa: item de grid com
+   `margin: 0 auto` + `aspect-ratio` e só filhos absolutos. Corrigido apenas na
+   Marketing (`.theme-mkt .ai-visual`). **O conserto global muda os fingerprints de
+   4 páginas, incluindo a Home — decisão do Jonathan.**
+2. **Logo wall fictício também na CRM e na Educação** (o da Home foi corrigido em
+   11/09). Registrado em CLAIMS-AUDIT.md.
+3. **Fingerprint não reproduz entre macOS e Linux** (font-family serializado +
+   subpixel). Controle feito antes de qualquer edição; ver `baselines/README.md`.
+4. **Links irmãos `href="#"`** (CRM↔Educação↔…) continuam; padronizar na criação de
+   Finance/HR/AI.
+
+**Backlog que continua aberto:** domínio real · caixa `contato@nexyss.com` · logos
+reais dos 5 clientes · Founding duplicado · validações técnicas (seção 3 + 22 da
+Marketing) · página 404 · menu do header apontando para âncoras só da Home ·
+WhatsApp/LinkedIn do contato.

@@ -2956,3 +2956,184 @@ body.drawer-open { overflow: hidden; }
   .logos-grid.centered { flex-direction: column; align-items: center; gap: 22px; }
   .logos-grid.centered .logo-item { flex: 0 0 auto; }
 }
+
+/* ============================================================
+   === PÁGINA MARKETING === /plataforma/marketing/  (14/10/2026)
+   body.theme-mkt.page-produto. Tudo escopado em .page-produto: o CSS
+   é compartilhado e regra sem escopo atinge a Home.
+   Zero keyframes novos — reusa draw, growX, floatA, floatB.
+   Componentes: .rm-note (disclosure de roadmap) · .wf-* (Visual A,
+   workflow do hero) · .attr-* (Visual B, atribuição).
+   Reusa .dash/.dash-bar, .pipe-ai, .acct360/.acct-tl/.fc-*.
+   ============================================================ */
+
+/* ---------- Disclosure de roadmap (abaixo do cabeçalho de #recursos) ----------
+   Não é claim: é aviso estratégico. Discreto por definição. */
+.page-produto .rm-note {
+  max-width: 640px;
+  margin-top: 28px;
+  padding-left: 14px;
+  border-left: 2px solid var(--c-color, var(--c-brand));
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  color: var(--c-text-mute);
+}
+
+/* ---------- Visual da Nexyss AI (#ia) ----------
+   .ai-visual é item de grid com margin:0 auto + aspect-ratio e só filhos
+   absolutos: sem width ele colapsa para 0x0 (bug pré-existente, presente
+   também em Home/Overview/CRM/Educação — ver AUDIT-REPORT). Corrigido
+   apenas aqui; o conserto global exige decisão sobre a Home. */
+.theme-mkt .ai-visual { width: 100%; }
+
+/* ---------- Visual A — WORKFLOW (hero) ----------
+   Canvas de 3 colunas x 3 linhas. Os conectores são um SVG de fundo
+   (viewBox 300x262, preserveAspectRatio none, traço non-scaling) que
+   corre de centro a centro de nó; os nós são opacos e cobrem o miolo,
+   então só o trecho entre eles aparece. ≤760px vira pilha vertical. */
+.page-produto .wf-board {
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.page-produto .wf-canvas { position: relative; height: 262px; margin: auto 0; }
+.page-produto .wf-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page-produto .wf-lines path {
+  fill: none;
+  stroke: var(--c-color, var(--c-brand));
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.8;
+  animation: draw 1.4s ease-out forwards;
+}
+.page-produto .wf-nodes {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 96px 1fr 96px;
+}
+.page-produto .wf-node {
+  position: relative;
+  margin: 0 8px;
+  padding: 10px 11px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 11px;
+  background: linear-gradient(160deg, var(--c-navy-mid), var(--c-navy));
+  border: 1px solid var(--c-line-mid);
+  border-left: 3px solid var(--c-mod, var(--c-color, var(--c-brand)));
+}
+.page-produto .wf-node.n1 { grid-area: 1 / 1; --c-mod: var(--c-mkt); }
+.page-produto .wf-node.n2 { grid-area: 1 / 2; --c-mod: var(--c-ai); }
+.page-produto .wf-node.n3 { grid-area: 1 / 3; --c-mod: var(--c-mkt); }
+.page-produto .wf-node.n4 { grid-area: 3 / 2; --c-mod: var(--c-brand-light); }
+.page-produto .wf-node.n5 { grid-area: 3 / 3; --c-mod: var(--c-crm); }
+.page-produto .wf-node.n6 { grid-area: 3 / 1; --c-mod: var(--c-mkt); }
+.page-produto .wf-k {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-mod);
+}
+.page-produto .wf-t {
+  margin-top: 4px;
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+}
+.page-produto .wf-d { margin-top: 3px; font-size: 0.62rem; line-height: 1.35; color: var(--c-text-mute); }
+.page-produto .wf-tag {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--c-navy-deep);
+  border: 1px solid var(--c-line-mid);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-mod);
+}
+.page-produto .wf-foot {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+
+/* ---------- Visual B — ATRIBUIÇÃO ----------
+   Dentro de .acct360: coluna 1 = linha do tempo (.acct-tl + .m-*),
+   coluna 2 = receita por canal. Barras sem valor numérico (R3):
+   a largura é proporção ilustrativa. */
+.page-produto .attr-bars { margin-top: 18px; display: grid; gap: 15px; }
+.page-produto .attr-row { display: grid; gap: 6px; }
+.page-produto .attr-lbl { font-size: 0.74rem; color: var(--c-text-soft); }
+.page-produto .attr-track {
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+.page-produto .attr-track i {
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--c-color-deep, var(--c-brand)), var(--c-color, var(--c-brand)));
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: growX 1.4s cubic-bezier(.2, .8, .2, 1) forwards;
+  animation-play-state: paused;                 /* o visual fica abaixo da dobra: só anima ao entrar */
+}
+.page-produto .reveal.in .attr-track i { animation-play-state: running; }
+.no-js .page-produto .attr-track i { transform: none; animation: none; }
+.page-produto .attr-note {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--c-line);
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  color: var(--c-text-mute);
+}
+.page-produto .attr-note b { color: var(--c-color, var(--c-brand)); font-weight: 500; }
+
+@media (max-width: 760px) {
+  .page-produto .hero-visual.wf-visual { height: auto; }
+  /* o chip de IA sai de cima do último nó: no mobile fica logo abaixo do quadro */
+  .page-produto .wf-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
+  .page-produto .wf-board { position: relative; inset: auto; padding: 14px; gap: 12px; }
+  .page-produto .wf-canvas { height: auto; margin: 0; }
+  .page-produto .wf-lines { display: none; }
+  .page-produto .wf-nodes { height: auto; grid-template-columns: 1fr; grid-template-rows: none; gap: 16px; }
+  .page-produto .wf-nodes > .wf-node { grid-area: auto; margin: 0; }   /* mesma especificidade de .wf-node.nN, e vem depois */
+  .page-produto .wf-node.n1::after,
+  .page-produto .wf-node.n2::after,
+  .page-produto .wf-node.n3::after,
+  .page-produto .wf-node.n4::after {
+    content: "";
+    position: absolute;
+    left: 22px; top: 100%;
+    width: 1px; height: 16px;
+    background: var(--c-color, var(--c-brand));
+    opacity: 0.6;
+  }
+}

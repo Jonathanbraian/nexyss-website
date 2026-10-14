@@ -5,7 +5,8 @@
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 12 arquivos — 6 páginas × 2 viewports:
+São 14 arquivos — 7 páginas × 2 viewports (a Marketing entrou em 14/10/2026,
+gerada em **Linux**, ver "Ambiente" abaixo):
 
 ```
 home-1280.json      overview-1280.json    crm-1280.json     educacao-1280.json    contato-1280.json    obrigado-1280.json
@@ -79,6 +80,32 @@ Para diff elemento a elemento entre um baseline e uma captura nova, os scripts e
 `tools/` produzem o JSON completo — compare os campos `elements[]` por
 `(tag, classe, id)`.
 
+## Ambiente: macOS vs Linux (14/10/2026)
+
+Os hashes dos JSON acima foram gerados no **Chrome do macOS**. No Chromium do
+Linux eles **não reproduzem**, mesmo com a árvore intacta: o nº de elementos e a
+altura do documento batem nas 12 capturas, mas o hash difere por (a)
+`font-family` serializado diferente (`BlinkMacSystemFont` → `"system-ui"`) e (b)
+subpixel em larguras de texto inline. Em Linux, compare **antes × depois no
+mesmo ambiente**, não contra o JSON do macOS. Use `CHROME=/caminho/do/chrome node
+baselines/tools/run.js <dir>`.
+
+Controle Linux (Chromium 1194, árvore a0ec890 intacta, fontes `loaded`) — e as
+mesmas 12 capturas depois da fase Marketing (**idênticas**):
+
+| Página | 1280×800 | 375×812 |
+|---|---|---|
+| Home | `782:43f4e338` | `782:d99c7f24` |
+| Overview | `854:b0b131d6` | `854:d7ec73ca` |
+| CRM | `915:c9eb3dd9` | `915:21db6a6c` |
+| Educação | `1062:17627d49` | `1062:7fd0c36a` |
+| Contato | `576:38db0954` | `576:8602edf7` |
+| Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
+| **Marketing** (baseline inicial) | `856:f5c3c742` (doc 1280×9401) | `856:27202f09` (doc 375×16253) |
+
+`marketing-*.json` foi capturado duas vezes em Linux com resultado idêntico.
+Regerar no macOS para uniformizar com os demais.
+
 ## Histórico
 
 - **04/09/2026** — baselines v2 criados. Os hashes v1 da Home (`792:…`) foram
@@ -89,3 +116,6 @@ Para diff elemento a elemento entre um baseline e uma captura nova, os scripts e
   (`run.js`, `extract.py`); CTAs, "Falar com Especialista" e logo wall da Home.
   `extract.py` deixou de criar o diretório `-` quando o destino é `-`.
   `run.js` passou a derivar a raiz de `__dirname` (portátil).
+- **14/10/2026** — `/plataforma/marketing/` entra nas ferramentas; `run.js` aceita
+  `CHROME=`. Baseline inicial da Marketing (Linux). Delta nas 6 páginas
+  existentes: **zero** (13 `href` + CSS/JS aditivos).
