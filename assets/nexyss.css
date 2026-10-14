@@ -31,6 +31,7 @@
   --c-fin-deep: #3C50D9;
   --c-hr: #B84FE5;           /* Magenta HR */
   --c-hr-deep: #8E37B8;
+  --c-hr-text: #CA7BEC;     /* tom de TEXTO do HR: o magenta puro reprova AA em texto pequeno (4,45:1). Usado so em .theme-hr */
   --c-ai: #37A7E2;           /* Azul-elétrico AI */
   --c-ai-deep: #1E7CB8;
 
@@ -3346,4 +3347,175 @@ body.drawer-open { overflow: hidden; }
   .page-produto .cf-chart { height: 130px; gap: 5px; }
   .page-produto .cf-axis { gap: 5px; }
   .page-produto .cf-today { left: calc(62.5% + 0.5px); }
+}
+
+/* ============================================================
+   === PÁGINA HR === /plataforma/hr/  (14/10/2026)
+   body.theme-hr.page-produto. Tudo escopado em .page-produto: o CSS
+   é compartilhado e regra sem escopo atinge a Home.
+   Zero keyframes novos: reusa draw, growX, floatA, floatB.
+   Componentes: .org-* (Visual A, organograma vivo no hero) e .hc-*
+   (Visual B, headcount em #panorama). Reusa .dash/.dash-bar, .pipe-ai,
+   .acct360, .acct-tl, .fc-head, .fc-legend, .attr-note e os tons cf-s*.
+   Mockups sem valor numérico: rótulos genéricos e marca ILUSTRATIVO.
+   ============================================================ */
+
+/* Tom de texto do magenta (--c-hr-text, definido em :root).
+   O magenta puro dá 4,45:1 sobre navy-deep, 3,99:1 sobre navy e 3,47:1
+   sobre navy-mid: passa para ícone e gráfico (3:1), mas reprova AA em texto
+   pequeno. O tom claro dá 6,4 / 5,7 / 5,0. Primeiro tom derivado de cor de
+   produto, criado por motivo técnico de contraste. Aplicado só aqui. */
+.theme-hr .eyebrow { color: var(--c-hr-text); }
+.theme-hr .impact-item .n small { color: var(--c-hr-text); }
+.theme-hr .attr-note b { color: var(--c-hr-text); }
+.theme-hr .sol-tag:hover { color: var(--c-hr-text); }
+.page-produto .acct-tl .m-hr { --c-mod: var(--c-hr); }
+.page-produto .acct-tl .m-hr .src { color: var(--c-hr-text); }
+
+/* Visual da Nexyss AI (#ia): mesmo conserto escopado de Marketing e Finance.
+   .ai-visual colapsa para 0x0 nas demais páginas (bug pré-existente, fix
+   global aguarda decisão porque muda os fingerprints de 4 páginas). */
+.theme-hr .ai-visual { width: 100%; }
+
+/* ---------- Visual A: ORGANOGRAMA VIVO (hero) ----------
+   Grid de 3 colunas e 7 linhas de altura fixa; os conectores são um SVG de
+   fundo (viewBox 300x282, preserveAspectRatio none, traço non-scaling) que
+   corre de centro a centro de nó. Os nós são opacos e cobrem o miolo, então
+   só aparece o trecho entre eles. Pessoas são pontos, sem número (R3). */
+.page-produto .org-board {
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.page-produto .org-canvas { position: relative; height: 282px; margin: auto 0; }
+.page-produto .org-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page-produto .org-lines path {
+  fill: none;
+  stroke: var(--c-color, var(--c-brand));
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.8;
+  animation: draw 1.2s ease-out forwards;
+}
+.page-produto .org-tree {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 52px 34px 52px 26px 54px 10px 54px;
+}
+.page-produto .org-node {
+  position: relative;
+  margin: 0 6px;
+  padding: 8px 10px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(160deg, var(--c-navy-mid), var(--c-navy));
+  border: 1px solid var(--c-line-mid);
+  border-left: 3px solid var(--c-mod, var(--c-color, var(--c-brand)));
+}
+.page-produto .org-node.dir { grid-area: 1 / 2; --c-mod: rgba(255, 255, 255, 0.55); }
+.page-produto .org-node.a1 { grid-area: 3 / 1; --c-mod: var(--c-color); }
+.page-produto .org-node.a2 { grid-area: 3 / 2; --c-mod: var(--c-color); }
+.page-produto .org-node.a3 { grid-area: 3 / 3; --c-mod: var(--c-color); }
+.page-produto .org-node.t1 { grid-area: 5 / 1; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-node.t2 { grid-area: 7 / 1; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-node.t3 { grid-area: 5 / 2; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-node.t4 { grid-area: 7 / 2; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-node.t5 { grid-area: 5 / 3; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-node.t6 { grid-area: 7 / 3; --c-mod: rgba(255, 255, 255, 0.3); }
+.page-produto .org-t {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.page-produto .org-d {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+}
+.page-produto .org-people { display: flex; gap: 4px; margin-top: 6px; }
+.page-produto .org-people i {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--c-color, var(--c-brand));
+}
+.page-produto .org-people i.open { background: transparent; border: 1px dashed var(--c-hr-text); }
+/* Vaga aberta: contorno pontilhado magenta. O fundo segue opaco, senão o
+   conector que corre por trás dos nós apareceria por dentro do cartão. */
+.page-produto .org-node.vaga {
+  background: var(--c-navy);
+  border: 1px dashed var(--c-color, var(--c-brand));
+}
+.page-produto .org-tag {
+  position: absolute;
+  top: -9px;
+  left: 8px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: var(--c-navy-deep);
+  border: 1px solid var(--c-color, var(--c-brand));
+  font-family: var(--font-mono);
+  font-size: 0.48rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-hr-text);
+  white-space: nowrap;
+}
+.page-produto .org-foot {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+
+/* ---------- Visual B: HEADCOUNT (#panorama) ----------
+   Dentro de .acct360: coluna 1 = barras horizontais por área, divididas por
+   senioridade (3 tons do magenta), coluna 2 = "quem muda, o que muda" em
+   .acct-tl. Sem eixo e sem valor: larguras são proporções ilustrativas.
+   Os tons vêm da mesma mecânica --cf do Finance (classes cf-s1 e cf-s2). */
+.page-produto .hc-light { --cf: var(--c-hr-text); }
+.page-produto .hc-rows { margin-top: 20px; display: grid; gap: 16px; }
+.page-produto .hc-row { display: grid; gap: 7px; }
+.page-produto .hc-lbl { font-size: 0.74rem; color: var(--c-text-soft); }
+.page-produto .hc-bar { display: flex; width: var(--tot, 100%); height: 10px; border-radius: 5px; overflow: hidden; background: rgba(255, 255, 255, 0.06); }
+.page-produto .hc-seg {
+  height: 100%;
+  background-color: var(--cf);
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: growX 1.2s cubic-bezier(.2, .8, .2, 1) forwards;
+  animation-play-state: paused;                 /* visual abaixo da dobra: anima ao entrar */
+}
+.page-produto .reveal.in .hc-seg { animation-play-state: running; }
+.no-js .page-produto .hc-seg { transform: none; animation: none; }
+.page-produto .fc-legend i.hc-light { background: var(--cf); }
+
+@media (max-width: 760px) {
+  .page-produto .hero-visual.org-visual { height: auto; }
+  .page-produto .org-board { position: relative; inset: auto; padding: 14px; gap: 12px; }
+  .page-produto .org-node { margin: 0 4px; padding: 7px 7px; }
+  .page-produto .org-t { font-size: 0.62rem; }
+  .page-produto .org-d { font-size: 0.46rem; letter-spacing: 0.06em; }
+  .page-produto .org-people { gap: 3px; }
+  .page-produto .org-tag { left: 4px; font-size: 0.44rem; padding: 2px 5px; }
+  /* o chip de IA sai de cima do organograma: fica logo abaixo do quadro */
+  .page-produto .org-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
 }

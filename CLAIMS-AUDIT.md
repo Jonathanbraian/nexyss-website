@@ -474,6 +474,7 @@ de nenhum componente novo.
 | "Boleto, cartão, PIX" | Educação 748 |
 | Marketing (22 bullets 🔵: workflow sem código, SMS/push, sync de anúncios, landing pages/blog/formulários, consentimento, multi-touch, API REST/webhooks…) | Marketing, ver seção "MARKETING" |
 | Finance (22 bullets 🔵: razão multi-entidade, DRE/balanço/DFC, notas e obrigações por país, alçadas, régua de cobrança, projeção de caixa, conciliação automática, API REST/webhooks...) | Finance, ver seção "FINANCE" |
+| HR (22 bullets 🔵: funil e triagem com IA, assinatura sem papel, acessos criados na admissão, folha por entidade e por país, férias e afastamentos, avaliação, desligamento com acessos revogados, ponto, benefícios, API REST/webhooks...) | HR, ver seção "HR" |
 
 ## Números aprovados (Jonathan) - NÃO recebem badge
 120+ países · 9 idiomas nativos · 99.99% uptime · 3.4× ciclo de vendas · 87% redução de silos · $2.1M economia de stack · 40+ países atendidos · 360º · 6 módulos · 1 base de dados.
@@ -628,6 +629,69 @@ Conciliação e fluxo de caixa usam rótulos genéricos ("Fornecedor 1", "Client
   (violação de R3/R8). Corrigir em sessão própria.
 - **Pendência aberta:** fix global do `.ai-visual` (0x0 em Home, Overview, CRM e
   Educação); muda os fingerprints de 4 páginas.
+
+## HR - `plataforma/hr/index.html`  (14/10/2026)
+
+**Regra aplicada: 100% 🔵 Roadmap, todos UNVALIDATED.** Sem validação do time técnico
+nada é 🟢 (R5). 22 bullets badgeados, mesma linha de disclosure do Marketing e do
+Finance em `#recursos` (não é claim, não leva badge).
+
+### 🔵 `#recursos` - `.mod-features` (15)
+| Card | Afirmação literal |
+|---|---|
+| Recrutamento e seleção | Vagas e funil de candidatos por área e por unidade |
+| Recrutamento e seleção | Triagem com apoio da IA e avaliação padronizada |
+| Recrutamento e seleção | Candidato aprovado vira funcionário sem redigitar |
+| Admissão e onboarding | Documentos e assinatura de contrato sem papel |
+| Admissão e onboarding | Trilha de onboarding com tarefas por área e prazo |
+| Admissão e onboarding | Acessos dos demais módulos criados na admissão |
+| Folha e benefícios | Folha de pagamento por entidade e por país |
+| Folha e benefícios | Férias e afastamentos com fluxo de aprovação |
+| Folha e benefícios | Benefícios por política e por elegibilidade |
+| Desempenho e desenvolvimento | Ciclos de avaliação e feedback contínuo |
+| Desempenho e desenvolvimento | Metas individuais e de equipe por ciclo |
+| Desempenho e desenvolvimento | Plano de desenvolvimento e trilhas de aprendizagem |
+| Desligamento | Fluxo de desligamento com checklist por área |
+| Desligamento | Acessos revogados e pendências encerradas na data |
+| Desligamento | Histórico preservado para recontratação |
+
+### 🔵 `#panorama` - `.ai-product` (3)
+Headcount e estrutura no estado de hoje · Custo de pessoas por área e por entidade
+(folha e benefícios lidos pelo Finance) · Rotatividade e movimentações do período.
+
+### 🔵 `#integracoes` - `.consult-desc` (4)
+Ponto e controle de jornada · Benefícios e operadoras · Migração assistida (cadastro e
+histórico, pela consultoria) · API aberta e webhooks (**REST documentada e eventos em
+tempo real**, mesma afirmação da lista UNVALIDATED abaixo).
+
+### Folha genérica, nada nomeado, sem claim de privacidade
+Folha depende do país e dado de funcionário é dado pessoal. A página diz "por
+entidade e por país", **não nomeia obrigação, encargo nem lei**, e **não afirma
+privacidade nem conformidade**. Qualquer nome específico ou claim desse tipo só entra
+depois da validação técnica e jurídica, como 🔵 com data.
+
+### ⛔ Sem badge por regra (R5.1)
+Hero e headlines · `#problema` (3 cards) · `#ia` (Insight/Assist/Automate, narrativa) ·
+`#para-quem` (3 personas e suas `.sol-tag`) · impacto (1 · 3 · 99.99%).
+
+### Mockups (Visual A e B): sem número, marcados "ILUSTRATIVO"
+Organograma ("Diretoria", "Área A", "Equipe 4", pessoas como pontos) e headcount (barras
+sem eixo nem valor). Nenhum número de desempenho (R3).
+
+### Decisões aplicadas - 14/10/2026
+- **Zero rebaixamento cross-módulo.** Varredura de todos os 🟢 (CRM 12, Educação 5,
+  demais 0): nenhum afirma capacidade de HR. "Permissões por unidade e por país" (CRM)
+  e "Permissão por campus, programa e função" (Educação) são da camada compartilhada de
+  identidade.
+- **Narrativas sem badge sobre HR ficam como estão** (precedente do Finance, R5.1):
+  Overview ("Contrata e o acesso já existe no dia um", "um novo funcionário (HR para
+  todos)", "um contrato fechado (CRM para Finance para HR)") e o card de HR da Home.
+- **As linhas 432 a 434 da Home** (Ciclo completo de talentos, Performance & feedback
+  contínuos, Aprendizagem corporativa), sugeridas como 🟢 na seção HOME acima, **nunca
+  foram aplicadas e não valem**. Se a Home um dia for badgeada, o status é 🔵.
+- **Sem logo wall** (nenhum cliente real usa HR, R8). **Sem concorrente nomeado.**
+- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**.
+- **Pendência aberta:** fix global do `.ai-visual` (0x0 em 4 páginas).
 
 ## Página `/contato/` - fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 min",

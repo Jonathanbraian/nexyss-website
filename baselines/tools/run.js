@@ -11,6 +11,7 @@ const pages = [
   ['educacao', ROOT + '/plataforma/educacao/index.html'],
   ['marketing', ROOT + '/plataforma/marketing/index.html'],
   ['finance', ROOT + '/plataforma/finance/index.html'],
+  ['hr', ROOT + '/plataforma/hr/index.html'],
   ['contato', ROOT + '/contato/index.html'],
   ['obrigado', ROOT + '/contato/obrigado.html'],
 ];

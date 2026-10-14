@@ -5,7 +5,7 @@
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 16 arquivos - 8 páginas × 2 viewports (Marketing e Finance entraram em 14/10/2026,
+São 18 arquivos - 9 páginas × 2 viewports (Marketing, Finance e HR entraram em 14/10/2026,
 geradas em **Linux**, ver "Ambiente" abaixo):
 
 ```
@@ -104,6 +104,7 @@ ambiente** contra esta tabela:
 | Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
 | **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
 | **Finance** (baseline inicial) | `931:09114386` (doc 1280×9449) | `931:7e2486dc` (doc 375×16102) |
+| **HR** (baseline inicial) | `896:540489f3` (doc 1280×9697) | `896:291637e0` (doc 375×15946) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -126,7 +127,8 @@ As demais páginas ficaram idênticas. `crm-*.json` continua sendo o do macOS.
 
 `marketing-*.json` foi regravado depois da troca e vale como baseline inicial em
 Linux. Regerar no macOS para uniformizar com os demais. `finance-*.json` segue o mesmo
-critério (baseline inicial em Linux, duas passadas idênticas).
+critério (baseline inicial em Linux, duas passadas idênticas). `hr-*.json` também.
+Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao controle.
 
 ## Histórico
 
@@ -146,3 +148,5 @@ critério (baseline inicial em Linux, duas passadas idênticas).
 - **14/10/2026** (3) - `/plataforma/finance/` entra nas ferramentas (`run.js`, `extract.py`).
   Delta nas páginas existentes: zero, exceto a CRM (badge rebaixado). Baseline inicial
   do Finance em Linux.
+- **14/10/2026** (4) - `/plataforma/hr/` entra nas ferramentas (`run.js`, `extract.py`).
+  Delta nas páginas existentes: **zero**. Baseline inicial do HR em Linux.
