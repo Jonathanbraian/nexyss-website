@@ -134,7 +134,7 @@ Linhas 576 ("Implantação assistida" / "Semanas, não meses"⚠️), 584 ("Zero
 
 ## CRM - `plataforma/crm/index.html`
 
-### ✅ Badgeadas - `.mod-features` em `#recursos`: **13 🟢 Ativo + 2 🔵 Roadmap** (Cat. 7A antecipada, 04/09)
+### ✅ Badgeadas - `.mod-features` em `#recursos`: **12 🟢 Ativo + 3 🔵 Roadmap** (Cat. 7A antecipada, 04/09; 1 bullet rebaixado em 14/10/2026, ver seção FINANCE)
 
 | Linha | Afirmação literal | Card | Status atual |
 |---|---|---|---|
@@ -149,7 +149,7 @@ Linhas 576 ("Implantação assistida" / "Semanas, não meses"⚠️), 584 ("Zero
 | 454 | Trilha de auditoria de cada execução | Automação | 🔵 **mantido** - ⚠️ UNVALIDATED |
 | 467 | Comprometido, provável e otimista | Previsão | 🟢 |
 | 468 | Comparação com o mesmo ponto do ciclo anterior | Previsão | 🟢 |
-| 469 | Fechamento reconhecido direto no Finance | Previsão | 🟡 |
+| 469 | Fechamento reconhecido direto no Finance | Previsão | 🔵 **rebaixado 14/10/2026** (consistência entre módulos: Finance declara Roadmap) |
 | 474 | **Português, Inglês e Espanhol na interface** | Global | 🟢 Ativo - **APLICADO 04/09** |
 | 475 | Residência de dado por região | Global | 🔵 **mantido** - ⚠️ UNVALIDATED |
 | 480 | Permissões por unidade e por país | Global | 🟢 |
@@ -473,6 +473,7 @@ de nenhum componente novo.
 | "Catraca e biometria" | Educação 742 |
 | "Boleto, cartão, PIX" | Educação 748 |
 | Marketing (22 bullets 🔵: workflow sem código, SMS/push, sync de anúncios, landing pages/blog/formulários, consentimento, multi-touch, API REST/webhooks…) | Marketing, ver seção "MARKETING" |
+| Finance (22 bullets 🔵: razão multi-entidade, DRE/balanço/DFC, notas e obrigações por país, alçadas, régua de cobrança, projeção de caixa, conciliação automática, API REST/webhooks...) | Finance, ver seção "FINANCE" |
 
 ## Números aprovados (Jonathan) - NÃO recebem badge
 120+ países · 9 idiomas nativos · 99.99% uptime · 3.4× ciclo de vendas · 87% redução de silos · $2.1M economia de stack · 40+ países atendidos · 360º · 6 módulos · 1 base de dados.
@@ -565,6 +566,68 @@ percentual ou valor**; o rótulo "ILUSTRATIVO" fica no cabeçalho dos dois pain�
   sugeria 🟢 por inferência. Ela **nunca foi aplicada** ao HTML e **não vale**: a
   página de Marketing declara 🔵 para as mesmas capacidades. Se a Home um dia for
   badgeada, o status é 🔵.
+
+## FINANCE - `plataforma/finance/index.html`  (14/10/2026)
+
+**Regra aplicada: 100% 🔵 Roadmap, todos UNVALIDATED.** Sem validação do time técnico
+nada é 🟢 (R5). 22 bullets badgeados, mesma linha de disclosure do Marketing em
+`#recursos` (não é claim, não leva badge).
+
+### 🔵 `#recursos` - `.mod-features` (15)
+| Card | Afirmação literal |
+|---|---|
+| Contábil | Plano de contas e razão por entidade, em várias moedas |
+| Contábil | DRE, balanço e DFC gerados do próprio razão |
+| Contábil | Fechamento de período com checklist e bloqueio de lançamentos |
+| Fiscal | Emissão de notas a partir do contrato ou da venda |
+| Fiscal | Apuração de impostos por entidade e por país |
+| Fiscal | Geração das obrigações acessórias do período |
+| Pagar e receber | Contas a pagar com alçadas de aprovação |
+| Pagar e receber | Contas a receber geradas do contrato fechado no CRM |
+| Pagar e receber | Régua de cobrança por canal |
+| Caixa | Posição de caixa por entidade e por moeda |
+| Caixa | Projeção alimentada por contratos, mensalidades e compromissos |
+| Caixa | Cenários de caixa comparados lado a lado |
+| Conciliação | Importação de extratos bancários |
+| Conciliação | Conciliação automática por regra e por sugestão da IA |
+| Conciliação | Fila de exceções com responsável |
+
+### 🔵 `#caixa` - `.ai-product` (3)
+Projeção alimentada pelos módulos · Cenários por entidade e moeda · Alerta de
+cobertura de caixa.
+
+### 🔵 `#integracoes` - `.consult-desc` (4)
+Bancos e meios de pagamento (extratos importados, pagamentos enviados) · Obrigações
+fiscais por país · Migração assistida (plano de contas, saldos iniciais e histórico,
+pela consultoria) · API aberta e webhooks (**REST documentada e eventos em tempo
+real**, mesma afirmação da lista UNVALIDATED abaixo).
+
+### Regra do fiscal: genérico, nada nomeado
+Fiscal é o claim de maior risco (depende do país). A página diz "por país" e **não
+nomeia obrigação, imposto nem padrão** de país nenhum. Qualquer nome específico só
+entra depois da validação técnica e entra como 🔵 com data.
+
+### ⛔ Sem badge por regra (R5.1)
+Hero e headlines · `#problema` (3 cards) · `#ia` (Insight/Assist/Automate, narrativa,
+como na CRM e no Marketing) · `#para-quem` (3 personas e suas `.sol-tag`) · impacto
+(1 · 3 · 99.99%: arquitetura, R4 e SLA aprovados pelo Jonathan).
+
+### Mockups (Visual A e B): sem número, marcados "ILUSTRATIVO"
+Conciliação e fluxo de caixa usam rótulos genéricos ("Fornecedor 1", "Cliente A",
+"Conta A") e barras sem valor. Nenhum número de desempenho (R3).
+
+### Decisões aplicadas - 14/10/2026
+- **CRM rebaixada por consistência entre módulos:** o bullet "Fechamento reconhecido
+  direto no Finance" (CRM `#recursos`, card Previsão) passou de 🟢 Ativo para 🔵
+  Roadmap. Motivo: o Finance declara a capacidade como Roadmap e a CRM seguia como
+  Ativo, o que fazia os dois módulos se contradizerem. CRM: **12 🟢 + 3 🔵**.
+  O "Financeiro acadêmico" da Educação continua 🟢: roda dentro do módulo Educação.
+- **Sem logo wall** (nenhum cliente real usa Finance, R8).
+- **"ERP financeiro"** só em title/meta e uma vez no corpo; nunca no H1.
+- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**
+  (violação de R3/R8). Corrigir em sessão própria.
+- **Pendência aberta:** fix global do `.ai-visual` (0x0 em Home, Overview, CRM e
+  Educação); muda os fingerprints de 4 páginas.
 
 ## Página `/contato/` - fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 min",

@@ -3137,3 +3137,213 @@ body.drawer-open { overflow: hidden; }
     opacity: 0.6;
   }
 }
+
+/* ============================================================
+   === PÁGINA FINANCE === /plataforma/finance/  (14/10/2026)
+   body.theme-fin.page-produto. Tudo escopado em .page-produto: o CSS
+   é compartilhado e regra sem escopo atinge a Home.
+   Zero keyframes novos: reusa draw, fadeIn, barGrow, floatA, floatB.
+   Componentes: .rec-* (Visual A, conciliação no hero) e .cf-* (Visual B,
+   fluxo de caixa em #caixa). Reusa .dash/.dash-bar, .pipe-ai, .acct360,
+   .acct-tl, .fc-head, .fc-legend e .attr-note.
+   Mockups sem valor numérico: rótulos genéricos e marca ILUSTRATIVO.
+   ============================================================ */
+
+/* Visual da Nexyss AI (#ia): mesmo conserto escopado da Marketing.
+   .ai-visual colapsa para 0x0 nas demais páginas (bug pré-existente, fix
+   global aguarda decisão porque muda os fingerprints de 4 páginas). */
+.theme-fin .ai-visual { width: 100%; }
+
+/* ---------- Visual A: CONCILIAÇÃO BANCÁRIA (hero) ----------
+   Linhas de 3 colunas (extrato | vínculo | lançamento). O vínculo é um
+   SVG por linha (traço que se desenha com `draw`) com o selo de match por
+   cima. Funciona igual no mobile: só encolhe, não reordena. */
+.page-produto .rec-board {
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.page-produto .rec-canvas { margin: auto 0; display: grid; gap: 12px; }
+.page-produto .rec-head,
+.page-produto .rec-row {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  min-width: 0;
+}
+.page-produto .rec-head span {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+}
+.page-produto .rec-head span:last-child { padding-left: 0; }
+.page-produto .rec-rows { display: grid; gap: 9px; }
+.page-produto .rec-item {
+  min-width: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  background: linear-gradient(160deg, var(--c-navy-mid), var(--c-navy));
+  border: 1px solid var(--c-line-mid);
+  border-left: 3px solid var(--c-mod, var(--c-color, var(--c-brand)));
+}
+.page-produto .rec-item.l { --c-mod: rgba(255, 255, 255, 0.38); }
+.page-produto .rec-item.r { --c-mod: var(--c-color); }
+.page-produto .rec-t {
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.page-produto .rec-d {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.page-produto .rec-bar {                       /* no lugar do valor: sem número (R3) */
+  width: var(--w, 50%);
+  height: 3px;
+  margin-top: 7px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.16);
+}
+.page-produto .rec-link { position: relative; display: grid; place-items: center; }
+.page-produto .rec-line { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page-produto .rec-line path {
+  fill: none;
+  stroke: var(--c-color, var(--c-brand));
+  stroke-width: 1.5;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 1s ease-out forwards;
+}
+.page-produto .rec-ok {
+  position: relative;
+  z-index: 1;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--c-color, var(--c-brand));
+  color: var(--c-navy-deep);
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+.page-produto .rec-ok svg { width: 10px; height: 10px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+/* Exceção: o laranja aqui é ESTADO de alerta (mesma lógica do formulário de
+   contato), não a cor do módulo Marketing. */
+.page-produto .rec-row.ex .rec-line path {
+  stroke: var(--c-mkt);
+  stroke-dasharray: 3 4;
+  stroke-dashoffset: 0;
+  animation: none;
+  opacity: 0.9;
+}
+.page-produto .rec-row.ex .rec-ok { background: var(--c-mkt); color: #fff; }
+.page-produto .rec-row.ex .rec-item.l { --c-mod: var(--c-mkt); }
+.page-produto .rec-item.empty {
+  background: transparent;
+  border: 1px dashed var(--c-mkt);
+  display: flex;
+  align-items: center;
+}
+.page-produto .rec-item.empty .rec-t { font-size: 0.66rem; font-weight: 400; color: var(--c-text-soft); white-space: normal; }
+.page-produto .rec-foot {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+
+/* ---------- Visual B: FLUXO DE CAIXA (#caixa) ----------
+   Dentro de .acct360: coluna 1 = barras empilhadas por período (realizado
+   sólido, projetado hachurado), coluna 2 = origem da projeção (.acct-tl).
+   Alturas são proporções ilustrativas, sem eixo nem valor. Tons da família
+   violeta para não misturar a semântica de cor dos outros módulos. */
+.page-produto .cf-s1 { --cf: var(--c-color); }
+.page-produto .cf-s2 { --cf: var(--c-color-deep); }
+.page-produto .cf-s3 { --cf: rgba(255, 255, 255, 0.3); }
+.page-produto .cf-chart {
+  position: relative;
+  margin-top: 22px;
+  height: 150px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 7px;
+}
+.page-produto .cf-col { height: 100%; display: flex; flex-direction: column-reverse; justify-content: flex-start; }
+.page-produto .cf-seg {
+  width: 100%;
+  background-color: var(--cf);
+  box-shadow: inset 0 1px 0 rgba(11, 20, 64, 0.55);
+  transform-origin: bottom;
+  transform: scaleY(0);
+  animation: barGrow 1.1s cubic-bezier(.2, .8, .2, 1) forwards;
+  animation-play-state: paused;                 /* visual abaixo da dobra: anima ao entrar */
+}
+.page-produto .reveal.in .cf-seg { animation-play-state: running; }
+.no-js .page-produto .cf-seg { transform: none; animation: none; }
+.page-produto .cf-col.proj .cf-seg {
+  background-image: repeating-linear-gradient(135deg, rgba(11, 20, 64, 0.55) 0 3px, transparent 3px 6px);
+  opacity: 0.92;
+}
+.page-produto .cf-today {
+  position: absolute;
+  top: -8px; bottom: 0;
+  left: calc(62.5% + 1px);                      /* fronteira entre o 5º e o 6º período */
+  width: 0;
+  border-left: 1px dashed rgba(255, 255, 255, 0.45);
+  pointer-events: none;
+}
+.page-produto .cf-today b {
+  position: absolute;
+  top: -14px; left: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-text-soft);
+}
+.page-produto .cf-axis {
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: var(--c-text-faint);
+}
+.page-produto .fc-legend i[class*="cf-s"] { background: var(--cf); }
+.page-produto .fc-legend i.cf-hatch {
+  background-color: var(--c-color);
+  background-image: repeating-linear-gradient(135deg, rgba(11, 20, 64, 0.6) 0 2px, transparent 2px 4px);
+}
+
+@media (max-width: 760px) {
+  .page-produto .hero-visual.rec-visual { height: auto; }
+  .page-produto .rec-board { position: relative; inset: auto; padding: 14px; gap: 12px; }
+  .page-produto .rec-head,
+  .page-produto .rec-row { grid-template-columns: 1fr 34px 1fr; }
+  .page-produto .rec-item { padding: 8px 8px; }
+  .page-produto .rec-t { font-size: 0.66rem; }
+  .page-produto .rec-d { font-size: 0.48rem; letter-spacing: 0.06em; }
+  .page-produto .rec-item.empty .rec-t { font-size: 0.6rem; }
+  /* o chip de IA sai de cima da última linha: fica logo abaixo do quadro */
+  .page-produto .rec-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
+  .page-produto .cf-chart { height: 130px; gap: 5px; }
+  .page-produto .cf-axis { gap: 5px; }
+  .page-produto .cf-today { left: calc(62.5% + 0.5px); }
+}

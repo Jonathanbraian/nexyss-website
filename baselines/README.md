@@ -5,8 +5,8 @@
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 14 arquivos - 7 páginas × 2 viewports (a Marketing entrou em 14/10/2026,
-gerada em **Linux**, ver "Ambiente" abaixo):
+São 16 arquivos - 8 páginas × 2 viewports (Marketing e Finance entraram em 14/10/2026,
+geradas em **Linux**, ver "Ambiente" abaixo):
 
 ```
 home-1280.json      overview-1280.json    crm-1280.json     educacao-1280.json    contato-1280.json    obrigado-1280.json
@@ -98,11 +98,12 @@ ambiente** contra esta tabela:
 |---|---|---|
 | Home | `782:43f4e338` | `782:d99c7f24` |
 | Overview | `854:9e1e965f` | `854:d7ec73ca` |
-| CRM | `915:e334705f` | `915:a2843876` |
+| CRM | `915:55bd3f7c` | `915:b10f55e3` |
 | Educação | `1062:17627d49` | `1062:8ab43d28` |
 | Contato | `576:38db0954` | `576:01a4e2b7` |
 | Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
 | **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
+| **Finance** (baseline inicial) | `931:09114386` (doc 1280×9449) | `931:7e2486dc` (doc 375×16102) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -118,8 +119,14 @@ houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca
 | Marketing | 375 | `856:27202f09` | `856:3aa08760` | largura do `.accent` (doc igual) |
 
 Home, Obrigado, Educação 1280, Contato 1280 e Overview 375 ficaram idênticas.
+**CRM mudou de novo em 14/10/2026 (fase Finance):** o bullet "Fechamento reconhecido
+direto no Finance" passou de Ativo para Roadmap (1280: `915:e334705f` para `915:55bd3f7c`,
+largura do badge; 375: `915:a2843876` para `915:b10f55e3`, bullet em 2 linhas, doc +22px).
+As demais páginas ficaram idênticas. `crm-*.json` continua sendo o do macOS.
+
 `marketing-*.json` foi regravado depois da troca e vale como baseline inicial em
-Linux. Regerar no macOS para uniformizar com os demais.
+Linux. Regerar no macOS para uniformizar com os demais. `finance-*.json` segue o mesmo
+critério (baseline inicial em Linux, duas passadas idênticas).
 
 ## Histórico
 
@@ -136,3 +143,6 @@ Linux. Regerar no macOS para uniformizar com os demais.
   existentes: **zero** (13 `href` + CSS/JS aditivos).
 - **14/10/2026** (2) - remoção de travessões (regra R6): 7 hashes Linux mudaram por
   reflow, `marketing-*.json` regravado, tabela Linux atualizada (ver "Ambiente").
+- **14/10/2026** (3) - `/plataforma/finance/` entra nas ferramentas (`run.js`, `extract.py`).
+  Delta nas páginas existentes: zero, exceto a CRM (badge rebaixado). Baseline inicial
+  do Finance em Linux.

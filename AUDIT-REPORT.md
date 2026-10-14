@@ -15,7 +15,7 @@
 | 4 | Founding Customers | ✅ Completa | Reescrita como convite enxuto; os 5 benefícios removidos |
 | 5 | Consultoria | ✅ Completa | Decisão: **sem badges** - descrição de serviço não é badgeável (R5.1) |
 | 6 | Cascata da Overview | ✅ Completa | Nunca teve badges; disclaimer de "exemplo ilustrativo" adicionado |
-| 7A | CRM features | ✅ Completa | 13 🟢 + 2 🔵 (os 2 não validados retidos) |
+| 7A | CRM features | ✅ Completa | 13 🟢 + 2 🔵 (os 2 não validados retidos); **hoje 12 🟢 + 3 🔵**, 1 rebaixado em 14/10/2026 (seção 10) |
 | 7B | Educação features | ✅ Completa | 5 🟢 + 13 🔵 (rigor máximo; 13 viraram backlog de validação) |
 
 **Nenhuma categoria bloqueada.** As pendências que sobraram são de conteúdo, não de execução.
@@ -303,3 +303,35 @@ internas apontando para âncoras que só existem na Home.
 reais dos 5 clientes · Founding duplicado · validações técnicas (seção 3 + 22 da
 Marketing) · página 404 · menu do header apontando para âncoras só da Home ·
 WhatsApp/LinkedIn do contato.
+
+---
+
+## 10. Fase Finance - `/plataforma/finance/` (14/10/2026)
+
+**Fecha o item 3 do backlog de próximos passos** (`/plataforma/finance/`).
+
+| Entrega | Estado |
+|---|---|
+| `/plataforma/finance/index.html` - 12 seções, 812 linhas, `theme-fin` | ✅ |
+| 22 bullets badgeados, **todos 🔵 Roadmap** + linha de disclosure em `#recursos` | ✅ |
+| Sem logo wall · mockups sem número ("ILUSTRATIVO") · fiscal genérico "por país" | ✅ |
+| 2 componentes novos (`.rec-*` conciliação, `.cf-*` fluxo de caixa), **zero keyframes novos**, tudo escopado | ✅ |
+| "ERP financeiro" em title/meta + 1 vez no corpo, fora do H1 | ✅ |
+| 16 `href="#"` para Finance (mega, drawer, footer × 5 páginas + card da Home) + card da Overview já ligado = 17 pontos | ✅ |
+| **CRM:** bullet "Fechamento reconhecido direto no Finance" rebaixado de 🟢 para 🔵 (consistência entre módulos) | ✅ |
+| Baselines: 6 páginas **idênticas ao controle**, CRM com delta esperado; Finance inicial (Linux, 2 passadas iguais) | ✅ |
+
+### Achados da fase
+1. **Contradição entre módulos:** a CRM declarava 🟢 uma capacidade que depende do
+   Finance, e o Finance é 100% Roadmap. Rebaixado. O rebaixamento teve efeito
+   um pouco maior que "só a cor": o rótulo "Roadmap" é mais largo e, no 375px, o
+   bullet da CRM quebra em 2 linhas (+22px no documento).
+2. **Fiscal por país:** nomear obrigações criaria claims sem validação. A página
+   fica genérica até o time técnico responder.
+3. **`.ai-visual` segue 0x0** em Home, Overview, CRM e Educação; escopado de novo em
+   `.theme-fin`. Fase dedicada ao fix global continua pendente.
+
+**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na
+CRM e na Educação · links irmãos `href="#"` · domínio real · caixa
+`contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
+Finance) · página 404 · definir o que a demo mostra para módulos em roadmap.
