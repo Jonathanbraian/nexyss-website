@@ -335,3 +335,39 @@ WhatsApp/LinkedIn do contato.
 CRM e na Educação · links irmãos `href="#"` · domínio real · caixa
 `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
 Finance) · página 404 · definir o que a demo mostra para módulos em roadmap.
+
+---
+
+## 11. Fase HR - `/plataforma/hr/` (14/10/2026)
+
+**Fecha o item 5 do backlog de próximos passos** (`/plataforma/hr/`).
+
+| Entrega | Estado |
+|---|---|
+| `/plataforma/hr/index.html` - 12 seções, 799 linhas, `theme-hr` | ✅ |
+| 22 bullets badgeados, **todos 🔵 Roadmap** + linha de disclosure em `#recursos` | ✅ |
+| Argumento "a organização viva" (distinto do eixo de duração da Educação) | ✅ |
+| Sem logo wall · mockups sem número ("ILUSTRATIVO") · folha genérica "por entidade e por país" · sem claim de privacidade | ✅ |
+| 2 componentes novos (`.org-*` organograma, `.hc-*` headcount) + regra `.m-hr`, **zero keyframes novos**, tudo escopado | ✅ |
+| Token `--c-hr-text: #CA7BEC` para contraste AA em texto pequeno (magenta puro 4,45:1) | ✅ |
+| 19 `href="#"` para HR (mega, drawer, footer × 6 páginas + card da Home) + card da Overview já ligado = 20 pontos | ✅ |
+| Varredura de consistência cross-módulo: **zero rebaixamento** necessário | ✅ |
+| Baselines: 16 capturas das 8 páginas anteriores **idênticas ao controle**; HR inicial (Linux, 2 passadas iguais) | ✅ |
+
+### Achados da fase
+1. **Eixo repetido:** o argumento sugerido ("o funcionário inteiro, da candidatura ao
+   desligamento") é o eixo da Educação, e a timeline do ciclo repetiria o hero `.jr-*`.
+   O eixo virou "a organização viva"; a frase original ficou como mecanismo.
+2. **Contraste do magenta:** 4,45:1 sobre navy-deep, 3,99 sobre navy, 3,47 sobre
+   navy-mid. Reprova AA em texto pequeno. Criado o primeiro tom derivado de cor de
+   produto (`--c-hr-text`), usado só sob `.theme-hr`.
+3. **Nenhum 🟢 afirma capacidade de HR.** As narrativas sem badge sobre HR na Overview e
+   na Home ficam como estão, pela precedente do Finance.
+4. **`.ai-visual` segue 0x0** em Home, Overview, CRM e Educação; escopado de novo em
+   `.theme-hr`.
+5. **H1 longo:** o H1 aprovado quebra em 6 a 7 linhas no desktop; é o hero mais alto.
+
+**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na CRM e
+na Educação · links irmãos `href="#"` (falta a página de AI) · domínio real · caixa
+`contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do Finance +
+22 do HR) · página 404 · definir o que a demo mostra para módulos em roadmap.

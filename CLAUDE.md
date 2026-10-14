@@ -54,6 +54,7 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 --c-mkt: #F25D23;  --c-mkt-deep: #C4451A;   /* Laranja - Marketing */
 --c-fin: #7C8CE8;  --c-fin-deep: #3C50D9;   /* Violeta - Finance */
 --c-hr:  #B84FE5;  --c-hr-deep:  #8E37B8;   /* Magenta - HR */
+--c-hr-text: #CA7BEC;   /* tom de TEXTO do HR (contraste AA), usado só em .theme-hr */
 --c-ai:  #37A7E2;  --c-ai-deep:  #1E7CB8;   /* Azul-elétrico - AI */
 
 /* Neutros dark (o site é dark-only) */
@@ -97,6 +98,10 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 
    O `g2` em brand é obrigatório: é o que impede a página de produto de perder
    o vínculo visual com a marca.
+8. **Tom de texto derivado do HR (14/10/2026).** O magenta puro reprova AA em texto
+   pequeno (4,45:1 sobre navy-deep). `--c-hr-text: #CA7BEC` (6,4:1) é o primeiro tom
+   derivado de cor de produto, criado por motivo técnico e usado só sob `.theme-hr`.
+   Ver a seção da página `/plataforma/hr/`.
 
 ### Escala, layout e sombras
 
@@ -277,7 +282,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/educacao/                                 ✅ pronta (sem #compliance)
   /plataforma/marketing/                                ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/finance/                                  ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
-  /plataforma/hr/                                       ⬜
+  /plataforma/hr/                                       ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/ai/                                       ⬜
   /plataforma/integracoes/                              ⬜
 /solucoes/                 overview                     ⬜
@@ -896,6 +901,100 @@ Tabela de referência atualizada em `baselines/README.md`.
 - **Validação técnica** dos 22 bullets do Finance antes de qualquer promoção a 🟢.
 - **Contraste do eyebrow violeta** sobre o ponto mais claro do `.tinted`: 4,44:1
   (abaixo de 4,5 por 0,06). Mesmo comportamento de outros temas; cosmético.
+
+## Página `/plataforma/hr/` (14/10/2026)
+
+`<body class="theme-hr page-produto has-subnav">` - 12 seções, 799 linhas. Molde: Finance.
+Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
+
+### Argumento central: "a organização viva"
+CRM argumenta largura, Educação duração, Marketing prestação de contas, Finance
+fechamento sem reconciliar. HR argumenta **a organização viva: quem está onde, quanto
+custa e quando muda, sempre no estado de hoje.**
+H1 aprovado: *"A organização inteira no mesmo registro, atualizada no dia em que muda."*
+
+**Por que não "o funcionário inteiro, da candidatura ao desligamento" como eixo:** esse
+é o eixo da Educação (uma pessoa acompanhada por anos), e a timeline do ciclo seria,
+na estrutura, o hero `.jr-*` da Educação. A frase fica como **mecanismo** (o registro
+único que não perde histórico), e o eixo passa a ser a organização inteira e o efeito
+de cada mudança nos demais módulos. Persona: **CHRO** pelo panorama (estrutura, custo,
+vagas, rotatividade); coordenador e business partner no dia a dia dos cards.
+
+### Seções
+Hero (**Visual A `.org-*`**) · `.subnav` (O problema · Recursos · Panorama · Nexyss AI
+· Integrações) · `#problema` (3 `.sol-card`) · `#recursos` (2 `lg` + 3 `md`:
+Recrutamento e seleção, Admissão e onboarding, Folha e benefícios, Desempenho e
+desenvolvimento, Desligamento, na ordem do ciclo) · `#panorama` (`.ai-inner` +
+**Visual B `.hc-*`**, no lugar do `#caixa` do Finance) · `#ia` · `#integracoes` (4) ·
+`#para-quem` (CHRO, business partner, departamento pessoal) · impacto (1 · 3 · 99.99%)
+· `#clientes` (Founding, sem recolorir) · `.cta-final`. **Sem logo wall** (R8).
+
+### Badges: 22 bullets, TODOS 🔵 Roadmap
+15 em `#recursos`, 3 em `#panorama`, 4 em `#integracoes`. Sem badge (R5.1): hero,
+headlines, `#problema`, `#ia` e `#para-quem`. Mesma linha de disclosure `.rm-note`.
+Inventário em CLAIMS-AUDIT.md.
+
+### Folha genérica e zero claim de privacidade
+Folha, encargos e obrigações trabalhistas variam por país e dado de funcionário é
+dado pessoal. A página diz "por entidade e por país", **não nomeia obrigação, encargo
+nem lei**, e **não afirma privacidade nem conformidade**. Sem concorrente nomeado.
+"RH" só em texto corrido; o módulo é "Nexyss HR".
+
+### Componentes novos (seção `=== PÁGINA HR ===` ao fim de `nexyss.css`)
+| Componente | Uso |
+|---|---|
+| `.org-*` (**Visual A**) | organograma vivo no hero: Diretoria, 3 áreas e 2 equipes por área. Pessoas são pontos, sem número. 1 equipe com **vaga aberta** (contorno pontilhado magenta, fundo opaco para o conector não aparecer por dentro). Grid de 7 linhas fixas + SVG de fundo com `draw`. No mobile mantém as 3 colunas e só encolhe; o chip `.pipe-ai` desce para baixo do quadro |
+| `.hc-*` (**Visual B**) | dentro de `.acct360`: barras horizontais por área divididas em Júnior, Pleno e Sênior (3 tons de magenta), sem eixo e sem valor, mais "quem muda, o que muda" em `.acct-tl`. Reusa `growX` e os tons `cf-s1/cf-s2` do Finance; anima só ao entrar na tela |
+| `.acct-tl .m-hr` | cor magenta na linha do tempo (a regra não existia) |
+
+**Zero keyframes novos.** Mockups sem número (rótulos "Área A", "Equipe 4") e marca
+ILUSTRATIVO. Tudo escopado em `.page-produto`.
+
+### Token novo: `--c-hr-text: #CA7BEC` (primeiro tom derivado de cor de produto)
+O magenta puro `#B84FE5` dá 4,45:1 sobre navy-deep, 3,99:1 sobre navy e 3,47:1 sobre
+navy-mid: passa para ícone e gráfico (3:1), mas **reprova AA em texto pequeno**
+(eyebrow de 12px). O tom `#CA7BEC` (75% magenta, 25% branco) dá 6,4 / 5,7 / 5,0.
+Declarado em `:root` junto de `--c-hr`, mas **só é usado sob `.theme-hr`**: eyebrow,
+`<small>` do impacto, `.attr-note b`, hover de `.sol-tag`, rótulo `.src` do `.m-hr`,
+e o texto das marcas do organograma. Foi criado por motivo técnico de contraste, não
+estético. Se outro tema de produto reprovar o contraste, a decisão é caso a caso.
+Contraste dos demais sobre navy-deep: Educação 10,6:1, Finance 5,7:1, Marketing 5,4:1 (passam).
+
+### Consistência entre módulos: zero rebaixamento
+Varredura de todos os 🟢 (CRM 12, Educação 5, demais 0): nenhum afirma capacidade de
+HR. "Permissões por unidade e por país" (CRM) e "Permissão por campus, programa e
+função" (Educação) são da camada compartilhada de identidade, não do HR. **Nenhum
+badge foi rebaixado.** Narrativas sem badge sobre HR na Overview ("Contrata e o
+acesso já existe no dia um", "um novo funcionário (HR para todos)") e o card de HR da
+Home ficam como estão, pela precedente do Finance e pela R5.1.
+
+### CTAs
+`../../contato/?interesse=hr&origem=demo|especialista|founding`. O select e o `MAP`
+do `nexyss.js` já aceitavam `hr`.
+
+### `.ai-visual` 0x0 continua nas 4 páginas
+`.theme-hr .ai-visual { width: 100% }` repete o conserto escopado. **Fase dedicada ao
+fix global pendente**: os fingerprints de 4 páginas vão mudar quando for resolvido.
+
+### Ligações de HR nas páginas existentes
+19 `href="#"` trocados pela página nova: mega-menu, drawer e footer de Home, Overview,
+CRM, Educação, Marketing e Finance (18) + card "Explorar" da Home. O card da Overview
+já apontava para `hr/`. Total: 20 pontos. Dos links irmãos, só o de AI continua `#`
+em todas as páginas (CRM e Educação seguem `#` nos próprios tiles).
+
+### Baselines (Linux)
+Controle capturado antes de editar: as 16 capturas das 8 páginas anteriores ficaram
+**idênticas** (zero delta, inclusive a CRM). `baselines/hr-*.json` são baseline inicial
+em Linux (duas passadas idênticas). Tabela de referência em `baselines/README.md`.
+
+### Pendências registradas aqui
+- **Fix global do `.ai-visual`** (acima).
+- **CRM e Educação ainda têm logo wall fictício** (violação de R3/R8).
+- **Links irmãos `href="#"`**: falta só a página de AI para padronizar tudo de uma vez.
+- **Demo de módulo em roadmap:** definir o que a demo do HR mostra.
+- **Validação técnica** dos 22 bullets do HR antes de qualquer promoção a 🟢.
+- **H1 longo:** com a copy aprovada o H1 quebra em 6 a 7 linhas no desktop (hero alto).
+  Funciona, mas é o hero mais comprido do site.
 
 ## Bug fix: logo em branco (11/09/2026)
 
