@@ -10,6 +10,7 @@ const pages = [
   ['crm', ROOT + '/plataforma/crm/index.html'],
   ['educacao', ROOT + '/plataforma/educacao/index.html'],
   ['marketing', ROOT + '/plataforma/marketing/index.html'],
+  ['finance', ROOT + '/plataforma/finance/index.html'],
   ['contato', ROOT + '/contato/index.html'],
   ['obrigado', ROOT + '/contato/obrigado.html'],
 ];

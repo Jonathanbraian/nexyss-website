@@ -276,7 +276,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/crm/           TEMPLATE de produto          ✅ pronta
   /plataforma/educacao/                                 ✅ pronta (sem #compliance)
   /plataforma/marketing/                                ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
-  /plataforma/finance/                                  ⬜
+  /plataforma/finance/                                  ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/hr/                                       ⬜
   /plataforma/ai/                                       ⬜
   /plataforma/integracoes/                              ⬜
@@ -807,6 +807,95 @@ Linux** - a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
   definição do que a demo mostra, já que 100% dos recursos são 🔵.
 - **Recorte do itálico** no último glifo de uma linha dentro de `.accent`
   (`background-clip: text`): pré-existente (Educação tem o mesmo), cosmético.
+
+## Página `/plataforma/finance/` (14/10/2026)
+
+`<body class="theme-fin page-produto has-subnav">` - 12 seções, 812 linhas. Molde: Marketing.
+Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
+
+### Argumento central
+CRM argumenta largura, Educação duração, Marketing prestação de contas. Finance
+argumenta **fechamento sem reconciliar**: o razão recebe, no instante em que acontecem,
+o que os demais módulos já registraram. Headline pensada para o **CFO** (visão
+estratégica, controle); o corpo convence o **Controller** (operacional, dia a dia).
+H1 aprovado: *"O fechamento que acontece durante o mês, não depois dele."*
+Posicionamento "ERP financeiro" **sem nomear concorrente** (mesma decisão do
+comparativo da Overview).
+
+### Regra de uso da palavra "ERP"
+Entra em `<title>`, `description`, `og:title`/`og:description` e
+`twitter:title`/`twitter:description`, e **uma única vez** no corpo (subtítulo de
+`#recursos`). **Nunca no H1.** Conferir: `grep -v '<meta\|<title' plataforma/finance/index.html | grep -c ERP` deve dar 1.
+
+### Seções
+Hero (**Visual A `.rec-*`**) · `.subnav` (O problema · Recursos · Fluxo de caixa ·
+Nexyss AI · Integrações) · `#problema` (3 `.sol-card`) · `#recursos` (2 `lg` + 3 `md`:
+Contábil, Fiscal, Pagar e receber, Caixa, Conciliação) · `#caixa` (`.ai-inner` +
+**Visual B `.cf-*`**, no lugar do `#atribuicao` do Marketing) · `#ia` · `#integracoes`
+(4 itens) · `#para-quem` (CFO, Controller, Tesouraria) · impacto (1 · 3 · 99.99%) ·
+`#clientes` (Founding, sem recolorir) · `.cta-final`. **Sem logo wall** (nenhum
+cliente real usa o Finance, R8).
+
+### Badges: 22 bullets, TODOS 🔵 Roadmap
+15 em `#recursos`, 3 em `#caixa`, 4 em `#integracoes`. Sem badge (R5.1): hero,
+headlines, `#problema`, `#ia` e `#para-quem`. Mesma linha de disclosure `.rm-note`
+do Marketing, texto idêntico. Inventário em CLAIMS-AUDIT.md.
+
+### Fiscal genérico (decisão de 14/10/2026)
+O módulo fiscal é o claim de maior risco: depende do país e a Nexyss opera na
+Irlanda, na América Latina e na Europa. A página diz apenas "por país" e
+**não nomeia nenhuma obrigação** (nem nota fiscal eletrônica, nem declaração
+acessória, nem imposto sobre valor agregado, nem padrão de pagamento europeu, nem
+open banking). Só entra nome específico depois que o time técnico validar.
+
+### CTAs
+`../../contato/?interesse=finance&origem=demo|especialista|founding`. O select do
+contato e o `MAP` do `nexyss.js` já aceitavam `finance`.
+
+### Componentes novos (seção `=== PÁGINA FINANCE ===` ao fim de `nexyss.css`)
+| Componente | Uso |
+|---|---|
+| `.rec-*` (**Visual A**) | conciliação bancária no hero: linhas de 3 colunas (extrato, vínculo, lançamento), 4 pares casados e 1 exceção (laranja = estado de alerta, como no formulário, não a cor do Marketing). Vínculo é SVG por linha com `draw`. Funciona igual no mobile, só encolhe; o chip `.pipe-ai` desce para baixo do quadro |
+| `.cf-*` (**Visual B**) | dentro de `.acct360`: barras empilhadas por período (realizado sólido, projetado hachurado, marcador "Hoje") com 3 contas em tons da família violeta, e ao lado a origem da projeção em `.acct-tl` (`.m-crm/.m-edu/.m-mkt/.m-fin`). Reusa `barGrow`; anima só ao entrar na tela |
+
+**Zero keyframes novos.** Mockups sem número: rótulos genéricos ("Fornecedor 1",
+"Cliente A", "Conta A") e marca ILUSTRATIVO. Barras de valor no lugar de valores.
+Tudo escopado em `.page-produto`, exceto `.theme-fin .ai-visual` (abaixo).
+
+### Rebaixamento de badge na CRM (consistência entre módulos)
+O bullet "Fechamento reconhecido direto no Finance" (CRM, `#recursos`, Previsão) era
+🟢 Ativo. Como o Finance declara tudo como Roadmap, a CRM passou a 🔵 Roadmap:
+rebaixo por consistência entre módulos. A CRM ficou com 12 🟢 + 3 🔵. O "Financeiro
+acadêmico" da Educação **não** foi rebaixado: roda dentro do módulo Educação.
+Efeito no fingerprint da CRM: rótulo "Roadmap" é mais largo que "Ativo" (+14px no
+badge) e no 375px o bullet quebra em 2 linhas (+22px no documento).
+
+### `.ai-visual` 0x0 continua nas 4 páginas
+`.theme-fin .ai-visual { width: 100% }` repete o conserto escopado do Marketing.
+**Fase dedicada ao fix global do `.ai-visual` pendente**: os fingerprints de 4
+páginas (Home, Overview, CRM, Educação) vão mudar quando for resolvido.
+
+### Ligações de Finance nas páginas existentes
+16 `href="#"` trocados pela página nova: mega-menu, drawer e footer de Home,
+Overview, CRM, Educação e Marketing (15) + card "Explorar" da Home. O card da
+Overview já apontava para `finance/`. Total coberto: 17 pontos. Os links irmãos
+(CRM, Educação, HR, AI) **continuam `href="#"`**; o Marketing agora também liga para
+o Finance e o Finance para o Marketing.
+
+### Baselines (Linux)
+Controle capturado antes de editar e comparado depois no mesmo ambiente: as 14
+capturas das 7 páginas anteriores ficaram **idênticas**, exceto a CRM (rebaixamento).
+`baselines/finance-*.json` são baseline inicial em Linux (duas passadas idênticas).
+Tabela de referência atualizada em `baselines/README.md`.
+
+### Pendências registradas aqui
+- **Fix global do `.ai-visual`** (acima).
+- **CRM e Educação ainda têm logo wall fictício** (violação de R3/R8).
+- **Links irmãos `href="#"`** no menu: padronizar de uma vez quando HR e AI existirem.
+- **Demo de módulo em roadmap:** definir o que a demo do Finance mostra.
+- **Validação técnica** dos 22 bullets do Finance antes de qualquer promoção a 🟢.
+- **Contraste do eyebrow violeta** sobre o ponto mais claro do `.tinted`: 4,44:1
+  (abaixo de 4,5 por 0,06). Mesmo comportamento de outros temas; cosmético.
 
 ## Bug fix: logo em branco (11/09/2026)
 
