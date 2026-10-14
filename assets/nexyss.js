@@ -1,5 +1,5 @@
 /* ============================================================
-   NEXYSS — Comportamento compartilhado
+   NEXYSS - Comportamento compartilhado
    Header scroll · Reveal on scroll · Drawer mobile
    Carregar no fim do <body>, sem defer.
    ============================================================ */
@@ -100,7 +100,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
 //
 // Por que nao "threshold: 0.4" puro: threshold mede a fracao DA SECAO que
 // esta visivel. Uma secao mais alta que 2.5x a viewport nunca alcanca 40%
-// visivel e a ancora nunca acenderia — o que acontece em varias secoes no
+// visivel e a ancora nunca acenderia - o que acontece em varias secoes no
 // mobile. A faixa de rootMargin abaixo reduz a viewport a uma linha fina
 // posicionada a 40% do topo, entregando o mesmo comportamento pretendido
 // e funcionando para secao de qualquer altura.
@@ -142,7 +142,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   links.forEach(a => a.addEventListener('click', () => setActive(a)));
 })();
 
-// ============ CONTATO — pré-seleção via querystring + estado de erro ============
+// ============ CONTATO - pré-seleção via querystring + estado de erro ============
 // Só roda na página que tem o formulário. Nenhum efeito nas outras.
 (function () {
   const form = document.querySelector('form[name="contato"]');
@@ -190,7 +190,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   }
 
   // Estado de erro: o evento "invalid" dispara por campo antes de o navegador
-  // bloquear o envio (não borbulha — por isso o capture: true). A classe
+  // bloquear o envio (não borbulha - por isso o capture: true). A classe
   // liga o estilo .show-errors; a mensagem nativa do navegador continua.
   form.addEventListener('invalid', () => form.classList.add('show-errors'), true);
   form.addEventListener('input', () => {

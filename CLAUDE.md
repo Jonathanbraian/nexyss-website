@@ -1,4 +1,4 @@
-# Nexyss — Memória do Projeto
+# Nexyss - Memória do Projeto
 
 Pasta do projeto: raiz do repositório `nexyss-website` (onde está este arquivo)
 Dono / interlocutor: **Jonathan**
@@ -37,24 +37,24 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 ### Tokens de cor
 
 ```css
-/* Navy scale — do brand book */
+/* Navy scale - do brand book */
 --c-navy-deep:  #0B1440;   /* fundo padrão do body, hero topo, footer, .deeper */
 --c-navy:       #131E4F;   /* logo wall, .consult-item, base do .tinted */
 --c-navy-mid:   #1E285F;   /* topo do gradiente .tinted, hover de consult-item */
 --c-navy-light: #2A3985;
 --c-navy-hi:    #3A5EAF;
 
-/* Brand blue-violet — wordmark Nexyss */
+/* Brand blue-violet - wordmark Nexyss */
 --c-brand:       #3C50D9;
 --c-brand-light: #5B6DE8;
 
 /* Sistema de cores por produto */
---c-crm: #45E599;  --c-crm-deep: #2D9768;   /* Verde   — CRM */
---c-edu: #03DBFF;  --c-edu-deep: #019EC2;   /* Ciano   — Educação */
---c-mkt: #F25D23;  --c-mkt-deep: #C4451A;   /* Laranja — Marketing */
---c-fin: #7C8CE8;  --c-fin-deep: #3C50D9;   /* Violeta — Finance */
---c-hr:  #B84FE5;  --c-hr-deep:  #8E37B8;   /* Magenta — HR */
---c-ai:  #37A7E2;  --c-ai-deep:  #1E7CB8;   /* Azul-elétrico — AI */
+--c-crm: #45E599;  --c-crm-deep: #2D9768;   /* Verde   - CRM */
+--c-edu: #03DBFF;  --c-edu-deep: #019EC2;   /* Ciano   - Educação */
+--c-mkt: #F25D23;  --c-mkt-deep: #C4451A;   /* Laranja - Marketing */
+--c-fin: #7C8CE8;  --c-fin-deep: #3C50D9;   /* Violeta - Finance */
+--c-hr:  #B84FE5;  --c-hr-deep:  #8E37B8;   /* Magenta - HR */
+--c-ai:  #37A7E2;  --c-ai-deep:  #1E7CB8;   /* Azul-elétrico - AI */
 
 /* Neutros dark (o site é dark-only) */
 --c-white:      #FFFFFF;
@@ -76,7 +76,7 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 2. **Ciano `--c-edu` é o acento institucional global**, não só a cor de Educação.
    Ele é usado em: `.eyebrow` (todos os kickers de seção), hover de links do
    footer, `<small>` dos números de impacto, ícone default de `.sol-icon`,
-   glows do hero/CTA/footer. Manter esse papel duplo — **não trocar por brand**.
+   glows do hero/CTA/footer. Manter esse papel duplo - **não trocar por brand**.
 3. `--c-fin-deep` é literalmente igual a `--c-brand` (#3C50D9). Intencional.
 4. `--c-success` é igual ao verde CRM. Estados positivos (deltas ↑, tags "Live",
    checkmarks) usam sempre esse verde.
@@ -117,7 +117,7 @@ dashboards **20px**, founding block **32px**, botões e pills **999px**.
 ### Tipografia
 
 Carregada via Google Fonts em uma chamada:
-`DM Sans (opsz 9..40, 300–700)` + `Sora (300–700)` + `DM Mono (400,500)`
+`DM Sans (opsz 9..40, 300-700)` + `Sora (300-700)` + `DM Mono (400,500)`
 
 ```css
 --font-sans:    "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -133,10 +133,10 @@ Carregada via Google Fonts em uma chamada:
 | `h3` | `clamp(1.2rem, 1.6vw, 1.5rem)` · `-0.018em` |
 | body | DM Sans, `line-height 1.55` |
 | `.eyebrow` | DM Mono 12px/500, **cor ciano**, `letter-spacing .16em`, uppercase, com `::before` = traço de 24×1px em 60% de opacidade |
-| labels de UI | DM Mono, 0.6–0.76rem, uppercase, `letter-spacing .06–.14em`, `--c-text-mute` |
+| labels de UI | DM Mono, 0.6-0.76rem, uppercase, `letter-spacing .06-.14em`, `--c-text-mute` |
 
 **Assinatura tipográfica:** headings sempre com letter-spacing negativo e peso
-médio (500) — nunca bold. Destaques dentro do h1/h2 usam **gradiente em texto +
+médio (500) - nunca bold. Destaques dentro do h1/h2 usam **gradiente em texto +
 itálico**:
 ```css
 background: linear-gradient(120deg, var(--c-edu), var(--c-brand-light) 60%, var(--c-crm));
@@ -173,45 +173,45 @@ font-style: italic;
 
 ### Animação e reveal
 
-**Reveal no scroll** — o único JS de animação da Home:
+**Reveal no scroll** - o único JS de animação da Home:
 ```css
 .reveal          { opacity:0; transform:translateY(24px); transition:.8s ease; }
 .reveal.in       { opacity:1; transform:translateY(0); }
 .reveal-stagger > *   { opacity:0; transform:translateY(20px); transition:.6s ease; }
 .reveal-stagger.in > * { opacity:1; transform:translateY(0); }
-/* delays: 0 / .08 / .16 / .24 / .32 / .4s — definidos até nth-child(6) */
+/* delays: 0 / .08 / .16 / .24 / .32 / .4s - definidos até nth-child(6) */
 ```
 ```js
 new IntersectionObserver(cb, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' })
 // dispara uma vez e chama io.unobserve(el)
 ```
 > Ao criar páginas novas com mais de 6 itens em um `.reveal-stagger`,
-> estender os `nth-child` — os itens 7+ herdam delay 0 hoje.
+> estender os `nth-child` - os itens 7+ herdam delay 0 hoje.
 
 **Keyframes existentes** (reutilizar, não inventar novos):
 
 | Nome | Duração | Onde |
 |---|---|---|
 | `pulse` | 2.2s ∞ | dot verde do `.hero-tag` |
-| `floatA` | 8s ∞ | `.dash-main` (−6px) |
+| `floatA` | 8s ∞ | `.dash-main` (-6px) |
 | `floatB` | 7s ∞, delay 1s | `.dash-side` (+8px) |
-| `floatC` | 9s ∞, delay .5s | `.dash-mini` (−10px, mantendo `rotate(-1.5deg)`) |
+| `floatC` | 9s ∞, delay .5s | `.dash-mini` (-10px, mantendo `rotate(-1.5deg)`) |
 | `draw` | 3s / 3s+.4s | linhas do gráfico via `stroke-dashoffset` |
 | `fadeIn` | 1.5s, delay 1.5s | área preenchida do gráfico |
 | `barGrow` | 2s | barras do `.dash-mini`, `scaleY` com delays .1s→.7s |
 | `nodeY` | 5s ∞ | 6 `.ai-node`, delays 0/.8/1.2/1.6/2/2.4s |
 
 **Padrão de transição geral:** `.2s` para hover de cor/fundo, `.25s` para
-sombra/mega-menu, `.3–.35s` para transform de card, `.6–.8s` para reveal.
+sombra/mega-menu, `.3-.35s` para transform de card, `.6-.8s` para reveal.
 
 ### Responsivo
 
 Desktop-first, **dois breakpoints apenas**:
 
-- `max-width: 1080px` — heros/grids de 2 colunas viram 1; `.mod-card` (todos os
+- `max-width: 1080px` - heros/grids de 2 colunas viram 1; `.mod-card` (todos os
   tamanhos) vira `span 12`; soluções 1 coluna; consultoria e impacto 2 colunas;
   footer 2 colunas; logos 3 colunas.
-- `max-width: 760px` — `.nav-menu`, o CTA do header e o `.lang-switch` são
+- `max-width: 760px` - `.nav-menu`, o CTA do header e o `.lang-switch` são
   escondidos e o `.nav-toggle` aparece; `section.block` cai para `80px 0`;
   hero para `130px 0 70px`; consultoria/impacto/footer em 1 coluna.
 
@@ -220,8 +220,8 @@ Desktop-first, **dois breakpoints apenas**:
 ## Arquitetura de arquivos
 
 ```
-index.html              # Home — apenas markup + <link> e <script src>
-assets/nexyss.css       # DESIGN SYSTEM COMPLETO — fonte unica de verdade
+index.html              # Home - apenas markup + <link> e <script src>
+assets/nexyss.css       # DESIGN SYSTEM COMPLETO - fonte unica de verdade
 assets/nexyss.js        # header scroll · reveal · drawer mobile
 ```
 
@@ -236,7 +236,7 @@ histórico de commits.
 <script src="assets/nexyss.js"></script>             <!-- fim do <body>, sem defer -->
 ```
 
-`<link rel="stylesheet">` e `<script src>` **funcionam normalmente em `file://`** —
+`<link rel="stylesheet">` e `<script src>` **funcionam normalmente em `file://`** -
 a restricao de `file://` vale para `fetch()`/XHR, nao para subrecursos. Por isso
 CSS e JS ja sao compartilhados, enquanto header e footer seguem duplicados inline
 (esses precisariam de `fetch`).
@@ -247,9 +247,9 @@ entra em `assets/nexyss.css` numa secao propria e comentada.
 ## Assets
 
 ```
-assets/nexyss-logo-white.png  # lockup p/ FUNDO ESCURO — header, drawer e footer (12 <img>)
-assets/nexyss-logo.png        # lockup p/ fundo claro — só og:image / twitter:image
-assets/nexyss-mark.png        # isotipo — favicon
+assets/nexyss-logo-white.png  # lockup p/ FUNDO ESCURO - header, drawer e footer (12 <img>)
+assets/nexyss-logo.png        # lockup p/ fundo claro - só og:image / twitter:image
+assets/nexyss-mark.png        # isotipo - favicon
 ```
 Os dois lockups são 1080×265 RGBA, pixel a pixel idênticos exceto o wordmark:
 **isotipo sempre colorido** (gradiente azul→ciano→verde); wordmark branco
@@ -257,7 +257,7 @@ Os dois lockups são 1080×265 RGBA, pixel a pixel idênticos exceto o wordmark:
 
 As duplicatas soltas da raiz (`Logo.png`, `Logo White.png`, `Isotipo.png`,
 `Background*.png`) e o `NEXYSS.pdf` (brand book, 5 MB) foram **removidos do
-repositório** na limpeza de 11/09/2026 — os PNGs eram cópias byte a byte das
+repositório** na limpeza de 11/09/2026 - os PNGs eram cópias byte a byte das
 versões em `assets/`. O brand book segue como referência externa, fora do git.
 
 > **Regra: nenhum `filter` sobre o logo.** `brightness(0) invert(1)` achata o
@@ -275,7 +275,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
 /plataforma/               overview da plataforma       ✅ pronta
   /plataforma/crm/           TEMPLATE de produto          ✅ pronta
   /plataforma/educacao/                                 ✅ pronta (sem #compliance)
-  /plataforma/marketing/                                ✅ pronta (14/10/2026 — 22 bullets, todos 🔵)
+  /plataforma/marketing/                                ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/finance/                                  ⬜
   /plataforma/hr/                                       ⬜
   /plataforma/ai/                                       ⬜
@@ -295,13 +295,13 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
 
 A Home já contém versões-resumo de `#plataforma`, `#solucoes`, `#ai`,
 `#consultoria` e `#clientes`. **As páginas internas devem aprofundar esses
-blocos, não repeti-los** — e a copy precisa permanecer consistente com a Home.
+blocos, não repeti-los** - e a copy precisa permanecer consistente com a Home.
 
 ---
 
 ## Requisitos Técnicos
 
-- **Stack:** HTML + CSS + JS puro. Sem framework, sem build step — por enquanto.
+- **Stack:** HTML + CSS + JS puro. Sem framework, sem build step - por enquanto.
 - **Responsivo:** desktop-first (breakpoints 1080 / 760), com mobile completo.
 - **Multi-idioma:** PT · EN · ES · FR · IT · DE · JA · ZH · MN
   - detecção pelo idioma do browser
@@ -331,30 +331,30 @@ blocos, não repeti-los** — e a copy precisa permanecer consistente com a Home
 
 | # | Pendência | Status |
 |---|---|---|
-| 1 | `.nav-toggle` sem JS | ✅ **Resolvido** — drawer mobile implementado (ver abaixo) |
-| 2 | `.lang-switch` estático | ⏸️ Adiado de propósito — fica só visual até fazermos i18n de fato |
-| 3 | Meta tags de SEO | ✅ **Mínimo essencial adicionado** — description mais rica, OG completo, Twitter card, canonical, theme-color. Structured data (JSON-LD) e hreflang ficam para quando o conteúdo estabilizar |
+| 1 | `.nav-toggle` sem JS | ✅ **Resolvido** - drawer mobile implementado (ver abaixo) |
+| 2 | `.lang-switch` estático | ⏸️ Adiado de propósito - fica só visual até fazermos i18n de fato |
+| 3 | Meta tags de SEO | ✅ **Mínimo essencial adicionado** - description mais rica, OG completo, Twitter card, canonical, theme-color. Structured data (JSON-LD) e hreflang ficam para quando o conteúdo estabilizar |
 | 4 | `href="#"` em todos os links | ⬜ Ligar conforme as páginas forem nascendo |
 | 5 | `<html lang="pt-BR">` fixo | ⬜ Dinamizar junto com o i18n |
 | 6 | `.reveal-stagger` só até o 6º filho | ⬜ Estender quando uma página precisar de 7+ |
 
-### TODO — Domínio oficial
+### TODO - Domínio oficial
 
 Substituir todas as ocorrências de `nexyss.com` (placeholder atual) pelo domínio
-real quando confirmado. **Buscar globalmente antes de aplicar** — a lista abaixo é
+real quando confirmado. **Buscar globalmente antes de aplicar** - a lista abaixo é
 de 04/09/2026 e pode ficar desatualizada conforme páginas novas nascerem.
 
-**20 ocorrências nas 4 páginas aprovadas — 5 por página, sempre nas mesmas linhas** (a lista é de 04/09; desde então `plataforma/marketing/` trouxe mais 5, no mesmo padrão, e `contato/` tem 7 + `obrigado.html` 5 — rodar o grep abaixo):
+**20 ocorrências nas 4 páginas aprovadas - 5 por página, sempre nas mesmas linhas** (a lista é de 04/09; desde então `plataforma/marketing/` trouxe mais 5, no mesmo padrão, e `contato/` tem 7 + `obrigado.html` 5 - rodar o grep abaixo):
 
 | Linha | Tag |
 |---|---|
 | 12 | comentário `<!-- TODO -->` |
 | 13 | `<link rel="canonical">` |
-| 18–19 | `<meta property="og:url">` |
-| 22–23 | `<meta property="og:image">` |
-| 28–30 | `<meta name="twitter:image">` |
+| 18-19 | `<meta property="og:url">` |
+| 22-23 | `<meta property="og:image">` |
+| 28-30 | `<meta name="twitter:image">` |
 
-> ⚠️ **`og:image` e `twitter:image` também carregam o domínio** — não estavam na
+> ⚠️ **`og:image` e `twitter:image` também carregam o domínio** - não estavam na
 > lista original ("canonical e og:url"). São 5 tags por página, não 2.
 
 Mais 4 ocorrências em documentação (`CLAUDE.md` ×3, `AUDIT-REPORT.md` ×1), que
@@ -365,7 +365,7 @@ Comando de conferência:
 grep -rn 'nexyss\.com' --include='*.html' --include='*.md' . | grep -v baselines/
 ```
 
-**TODO ABERTO — domínio oficial.** `nexyss.com` está em uso como *placeholder*
+**TODO ABERTO - domínio oficial.** `nexyss.com` está em uso como *placeholder*
 no `canonical` e no `og:url`. Jonathan precisa confirmar o domínio real antes de
 publicar; quando confirmar, atualizar em todas as páginas já criadas.
 
@@ -373,11 +373,10 @@ publicar; quando confirmar, atualizar em todas as páginas já criadas.
 domínio oficial no `canonical`/`og:url` (placeholder `https://www.nexyss.com/`)
 e uma `og:image` dedicada de 1200×630 (hoje aponta para `assets/nexyss-logo.png`).
 
-### Drawer mobile — padrão a reusar em todas as páginas
+### Drawer mobile - padrão a reusar em todas as páginas
 
 Implementado na Home, ativo **somente ≤ 760px**, isolado por
-`@media (min-width:761px){ .drawer,.drawer-overlay{display:none!important} }`
-— desktop verificado sem nenhuma alteração.
+`@media (min-width:761px){ .drawer,.drawer-overlay{display:none!important} }` - desktop verificado sem nenhuma alteração.
 
 - Markup: `.drawer-overlay#drawerOverlay` + `aside.drawer#mobileDrawer`
   (`.drawer-head` / `.drawer-nav` / `.drawer-foot`), inserido logo após `</header>`.
@@ -385,7 +384,7 @@ Implementado na Home, ativo **somente ≤ 760px**, isolado por
   `cubic-bezier(.4,0,.2,1)` em 350ms, sobre overlay com blur.
 - Acordeões `.drawer-acc` + `.drawer-panel` usando `grid-template-rows: 0fr → 1fr`
   (altura automática animável, sem `max-height` chutado). Os itens internos
-  reusam `.mega-item` e `.icn-*` do mega-menu — mesma linguagem visual.
+  reusam `.mega-item` e `.icn-*` do mega-menu - mesma linguagem visual.
 - Hambúrguer vira "X" via `.nav-toggle.open`.
 - **Regra de mega-menu no mobile (aprovada):** mega-menu denso no desktop vira,
   no drawer, **no máximo 3 categorias** com link "Ver todos" apontando para a
@@ -395,7 +394,7 @@ Implementado na Home, ativo **somente ≤ 760px**, isolado por
   fechar ao abrir e volta ao gatilho ao fechar, focus trap no Tab, fecha com
   Esc / clique no overlay / clique em qualquer link, trava o scroll do body
   (`body.drawer-open`) e fecha sozinho se a janela passar de 760px.
-- Backup pré-alteração ficou em `index.html.bak` até 11/09/2026; removido — git é o backup.
+- Backup pré-alteração ficou em `index.html.bak` até 11/09/2026; removido - git é o backup.
 
 ---
 
@@ -433,7 +432,7 @@ Header, drawer, bloco Founding e footer são **cópias exatas** da Home, com
 | `.subnav` / `.subnav-brand` / `.subnav-links` | navegação secundária sticky |
 | `.pipe-board` e filhos (**Visual A**) | quadro kanban do hero |
 | `.acct360` / `.acct-*` / `.fc-*` (**Visual B**) | ficha 360º + forecast |
-| `.prod-tint` | `.ai-products` reaproveitado fora da seção de IA — ícone assume a cor do produto |
+| `.prod-tint` | `.ai-products` reaproveitado fora da seção de IA - ícone assume a cor do produto |
 | `.skip-link` | pular para o conteúdo |
 | `.theme-*` | os 6 temas de produto |
 
@@ -441,11 +440,11 @@ Novos keyframes (os únicos criados além dos da Home): `growX` (barra de
 probabilidade), `pipeDrag` (card em trânsito, preserva o `rotate`) e
 `ringDraw` (anel de health score, para em 87%).
 
-### Scrollspy — por que não é `threshold: 0.4` puro
+### Scrollspy - por que não é `threshold: 0.4` puro
 
 `threshold` mede a fração **da seção** visível. Uma seção mais alta que 2.5× a
 viewport nunca chega a 40% visível e a âncora nunca acenderia. Medido em 375px:
-`#recursos` alcança no máximo **30%** — com threshold puro ficaria morta.
+`#recursos` alcança no máximo **30%** - com threshold puro ficaria morta.
 
 A implementação usa `rootMargin: '-40% 0px -59% 0px'`, que reduz a viewport a
 uma faixa fina posicionada a 40% do topo. Mesmo comportamento pretendido,
@@ -456,16 +455,16 @@ sequência das âncoras sai correta e monotônica.
 
 Todo seletor novo destinado a página de produto **precisa** ser prefixado com
 `.page-produto` ou uma classe própria. Um `section[id] { scroll-margin-top }`
-sem escopo vazou para a Home e alterou o comportamento das âncoras dela —
+sem escopo vazou para a Home e alterou o comportamento das âncoras dela -
 pego e corrigido. `assets/nexyss.css` é compartilhado: regra sem escopo atinge
 a Home aprovada.
 
-### Teste de regressão — baselines v2 (04/09/2026)
+### Teste de regressão - baselines v2 (04/09/2026)
 
 Fingerprint por elemento (geometria + 28 propriedades computadas, animações
 desligadas, `.reveal` forçado para `.in`). Depois de qualquer mexida em
 `assets/nexyss.css` ou `assets/nexyss.js`, as 6 páginas têm que continuar batendo.
-**Ver `baselines/` — JSON por página/viewport + o gerador em `baselines/tools/`.**
+**Ver `baselines/` - JSON por página/viewport + o gerador em `baselines/tools/`.**
 
 | Página | 1280×800 | doc | 375×812 | doc |
 |---|---|---|---|---|
@@ -476,13 +475,13 @@ desligadas, `.reveal` forçado para `.in`). Depois de qualquer mexida em
 | Contato | `576:e2641d7b` | 1280×3677 | `576:ab9ec9e1` | 375×5646 |
 | Obrigado | `436:645a517a` | 1280×1250 | `436:2ae400ed` | 375×2167 |
 
-> **Baseline v4 — página de contato + CTAs + logo wall (11/09/2026).** Substitui
+> **Baseline v4 - página de contato + CTAs + logo wall (11/09/2026).** Substitui
 > os v3 do mesmo dia. Delta v3→v4 verificado elemento a elemento:
 > - **Overview, CRM, Educação:** só o botão "Falar com Especialista" (175→207px)
 >   e o botão vizinho deslocando 16px para manter o centro. Nada mais.
 > - **Home:** contagem 784→782 (logo wall: 6 `.logo-item` → 5 com classe de setor,
 >   layout 3+2). Antes do wall: só o botão renomeado do hero. Depois do wall,
->   **todos os elementos deslocam +64px (1280) / +147px (375) em y** — translação
+>   **todos os elementos deslocam +64px (1280) / +147px (375) em y** - translação
 >   pura, a segunda linha do wall; nenhuma outra mudança de tamanho além dos botões.
 > - **Contato / Obrigado:** baseline inicial.
 > - Verificação cruzada: depois dos ajustes finais no CSS compartilhado (wall 3+2,
@@ -494,7 +493,7 @@ desligadas, `.reveal` forçado para `.in`). Depois de qualquer mexida em
 
 > ⚠️ **O fingerprint não cobre `filter` nem `src` de `<img>`.** As 28
 > propriedades capturadas não incluem nenhum dos dois. Troca de asset ou de
-> filtro CSS com geometria igual passa **invisível** pelo hash — verificar
+> filtro CSS com geometria igual passa **invisível** pelo hash - verificar
 > por screenshot/DOM à parte.
 
 Formato do hash: `<nº de elementos>:<FNV-1a 32 bits>`. Verificado **determinístico**
@@ -502,7 +501,7 @@ em duas passagens independentes (8/8 idênticos).
 
 > **Hashes v1 aposentados.** As baselines antigas da Home (`792:a53ba235` /
 > `792:54ebb72b`, doc 8161/13685) foram geradas por um script que **não foi
-> salvo** — algoritmo e critério de seleção de elementos desconhecidos (contam
+> salvo** - algoritmo e critério de seleção de elementos desconhecidos (contam
 > 792 elementos contra 820 de hoje; o bloco do drawer sozinho tem 99, então a
 > diferença não é só o drawer). São **irreproduzíveis** e por isso substituídas,
 > não comparadas. A integridade da Home foi confirmada por outro caminho: o texto
@@ -516,12 +515,12 @@ node baselines/tools/run.js <dir-de-trabalho>     # 6 páginas × 2 viewports, C
 python3 baselines/tools/extract.py <dir> baselines run1
 ```
 Requer `/Applications/Google Chrome.app` e rede (as fontes do Google Fonts
-precisam carregar — o JSON grava `fontsLoaded` para flagrar uma captura offline,
+precisam carregar - o JSON grava `fontsLoaded` para flagrar uma captura offline,
 que mudaria a geometria).
 
 ### Screenshots full-page (11/09/2026)
 Chrome headless `--screenshot` com `--window-size=<largura>,<altura do doc>` dá a
-página inteira — mas o Chrome **não aceita janela com menos de ~500px** de
+página inteira - mas o Chrome **não aceita janela com menos de ~500px** de
 largura: um "375" sai cortado de um layout mais largo. Para mobile, embrulhar
 a página num `<iframe width="375">` (mesmo truque do `harness.html` do
 fingerprint) e recortar a imagem. Puppeteer não está instalado.
@@ -529,7 +528,7 @@ fingerprint) e recortar a imagem. Puppeteer não está instalado.
 ### Limitação do painel de preview
 
 O painel do Claude Code mantém a aba como `document.visibilityState === "hidden"`,
-então **nenhum `IntersectionObserver` dispara** — todo conteúdo `.reveal` fica
+então **nenhum `IntersectionObserver` dispara** - todo conteúdo `.reveal` fica
 invisível e o screenshot não acompanha scroll programático. Para inspecionar
 visualmente: forçar `.in` em `.reveal/.reveal-stagger` e isolar a seção no topo
 com `display:none` nas irmãs. Não é bug do site.
@@ -539,13 +538,13 @@ com `display:none` nas irmãs. Não é bug do site.
 O conteúdo de seção nasce com `opacity: 0` e só aparece com o
 `IntersectionObserver`. Dois guards no CSS compartilhado:
 
-1. **Sem JS** — `<html class="no-js">` e um script inline logo após `<head>`
+1. **Sem JS** - `<html class="no-js">` e um script inline logo após `<head>`
    troca a classe para `js`. Se o JS estiver desligado ou falhar, `.no-js`
    permanece e `.reveal` entra visível e estático.
    > `@supports selector(:has())` foi considerado e descartado: feature query
    > de seletor testa suporte do navegador, não se o JS rodou. Não serve de
    > detector. `.no-js` é o mecanismo confiável.
-2. **`prefers-reduced-motion: reduce`** — conteúdo visível, animação zerada.
+2. **`prefers-reduced-motion: reduce`** - conteúdo visível, animação zerada.
    Como todas as animações usam `forwards`, colapsar a duração para `0.01ms`
    entrega o **estado final** em vez de congelar no inicial.
 
@@ -557,7 +556,7 @@ Aplicado na Home e na CRM. Toda página nova deve nascer com
 Cada página carrega `canonical`, `og:url`, `og:title`, `og:description` e
 `twitter:*` **apontando para si mesma**, nunca para a Home.
 Home → `https://www.nexyss.com/` · CRM → `https://www.nexyss.com/plataforma/crm/`.
-(Domínio ainda é placeholder — ver TODO acima.)
+(Domínio ainda é placeholder - ver TODO acima.)
 
 ### Pendências da página CRM
 
@@ -566,7 +565,7 @@ Home → `https://www.nexyss.com/` · CRM → `https://www.nexyss.com/plataforma
 
 ---
 
-## Overview `/plataforma/` — o hub
+## Overview `/plataforma/` - o hub
 
 Página **institucional** (`<body class="page-institucional has-subnav">`):
 sem `theme-*`, eyebrow ciano, `hero-glow` ciano + brand. É a única página onde
@@ -576,7 +575,7 @@ as 6 cores de produto aparecem lado a lado.
 
 A seção da Home responde **"o que existe?"**. A overview responde
 **"como isso funciona junto, e por onde eu entro?"**. O eixo dela é a
-**camada compartilhada** — dado, identidade, permissão, IA — que é o que a
+**camada compartilhada** - dado, identidade, permissão, IA - que é o que a
 Home afirma ("sem silos") sem provar. **A overview não repete card de módulo
 no formato da Home**; cada card ganha a linha `.mod-conn`, que diz com quem
 aquele módulo conversa.
@@ -602,18 +601,18 @@ aquele módulo conversa.
 
 Visual A ficou legível sem precisar do plano B (4 chips + 2 em silhueta).
 
-### Classes de página — resumo
+### Classes de página - resumo
 
 | Classe | O que faz |
 |---|---|
 | `theme-crm` … `theme-ai` | fornece `--c-color` e derivados |
 | `page-produto` | eyebrow/glow/ícones/tags herdam a cor do produto |
 | `page-institucional` | mantém o acento ciano; habilita `:focus-visible` |
-| `has-subnav` | ativa `scroll-margin-top` nas âncoras. **Não usar `page-produto` para isso** — a overview é institucional e também tem subnav |
+| `has-subnav` | ativa `scroll-margin-top` nas âncoras. **Não usar `page-produto` para isso** - a overview é institucional e também tem subnav |
 
 ### Decisões de conteúdo
 
-- **Comparativo genérico** — "Stack montado", sem nomear concorrente.
+- **Comparativo genérico** - "Stack montado", sem nomear concorrente.
 - **Evento-exemplo é matrícula** (Educação é o vertical live), seguido de uma
   frase generalizando o padrão para contrato fechado, novo funcionário e lead
   qualificado.
@@ -629,7 +628,7 @@ linkados na overview e retornam 404. Só `crm/` existe. Falta criar uma
 
 ## Página `/plataforma/educacao/`
 
-`<body class="theme-edu page-produto has-subnav">` — 13 seções publicadas.
+`<body class="theme-edu page-produto has-subnav">` - 13 seções publicadas.
 
 ### Argumento central (o que a separa da CRM)
 
@@ -650,13 +649,13 @@ implantação) é tranquilizada perto do fim. O `#para-quem` usa **4 personas em
 ### Vocabulário
 
 Aluno, trajetória, campus, rede, mantenedora, mensalidade, bolsa, evasão.
-**Nunca** cliente, pipeline, negócio, fatura — esse é o vocabulário da CRM.
+**Nunca** cliente, pipeline, negócio, fatura - esse é o vocabulário da CRM.
 
 ### O que difere estruturalmente da CRM
 
 - `#recursos` em **3 clusters** (Acadêmico · Financeiro acadêmico ·
   Experiência e rede) com `.cluster-label`, em vez de lista plana.
-- **`#rede` é seção nova** — multi-campus como narrativa central.
+- **`#rede` é seção nova** - multi-campus como narrativa central.
 - `#visao-360` virou **`#jornada`**: de "uma tela com tudo agora" para
   "uma pessoa ao longo de anos".
 - `#ia` foca **evasão**, o caso de uso mais forte do vertical.
@@ -676,11 +675,11 @@ Aluno, trajetória, campus, rede, mantenedora, mensalidade, bolsa, evasão.
 de ocupação; `draw`, `floatA`, `floatB` e `reveal-stagger` cobrem o resto.
 
 ⚠️ **`.reveal-stagger` só define delay até o 6º filho** e o `.platform-grid` da
-Home tem 7. Por isso a trajetória usa **6 semestres**, não 7 — estender os
+Home tem 7. Por isso a trajetória usa **6 semestres**, não 7 - estender os
 `nth-child` alteraria a animação da Home. Se algum dia precisar de 7+, tem que
 ser uma classe nova, não a extensão da existente.
 
-### `#compliance` — NÃO PUBLICADA
+### `#compliance` - NÃO PUBLICADA
 
 Bloqueada aguardando validação do Jonathan. Regra acordada: **SIM** → afirma ·
 **ROADMAP** → só com data · **NÃO** → não menciona. Sem as respostas não há o
@@ -705,23 +704,23 @@ confirmar antes de qualquer publicação:
 Números da Home (99.99%, 9 idiomas, 120+ países, 3.4×) são do Jonathan e estão
 fora dessa lista.
 
-### Baseline de regressão — resolvido em 04/09/2026
+### Baseline de regressão - resolvido em 04/09/2026
 
 As **4 páginas** (Home, Overview, CRM, Educação) têm fingerprint armazenado em
 `baselines/`, nos dois viewports, junto com o gerador. Ver
-"Teste de regressão — baselines v2" acima para os hashes e o procedimento.
+"Teste de regressão - baselines v2" acima para os hashes e o procedimento.
 
 
 ## Página `/plataforma/marketing/` (14/10/2026)
 
-`<body class="theme-mkt page-produto has-subnav">` — 12 seções, 788 linhas. Molde: CRM.
+`<body class="theme-mkt page-produto has-subnav">` - 12 seções, 788 linhas. Molde: CRM.
 Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
 
 ### Argumento central
 A CRM argumenta **largura** (um cliente visto por todos os módulos), a Educação
 **duração** (um aluno por anos). Marketing argumenta **prestação de contas**: o
 relatório de campanha que termina onde o contrato começa. O diferencial é a
-atribuição ligada a CRM e Finance — receita vinda do contrato e da fatura, não
+atribuição ligada a CRM e Finance - receita vinda do contrato e da fatura, não
 estimada. Posicionamento "hub completo" (automação, campanhas multi-canal,
 conteúdo/CMS, analytics e atribuição), **sem nomear concorrente** (mesma decisão
 do comparativo da Overview).
@@ -733,18 +732,18 @@ Nexyss AI · Integrações) · `#problema` (3 `.sol-card`) · `#recursos` (2 `lg
 (`.ai-inner` + **Visual B `.attr-*`**, no lugar do `#visao-360` da CRM) · `#ia` ·
 `#integracoes` (4 itens) · `#para-quem` (3 `.sol-card`) · impacto (1 · 3 ·
 99.99%) · `#clientes` (Founding, sem recolorir) · `.cta-final`.
-**Sem logo wall** — decisão de 14/10: nenhum cliente real usa o Marketing (R8), e
+**Sem logo wall** - decisão de 14/10: nenhum cliente real usa o Marketing (R8), e
 o bloco do molde era fictício.
 
 ### Badges: 22 bullets, TODOS 🔵 Roadmap
-Rigor máximo — sem validação do time técnico não há 🟢. Badgeados: 15 bullets de
+Rigor máximo - sem validação do time técnico não há 🟢. Badgeados: 15 bullets de
 `#recursos`, 3 itens de `#atribuicao`, 4 de `#integracoes`. **Sem badge** (R5.1):
 hero, headlines, `#problema`, `#ia` (descrições narrativas, como na CRM) e
 `#para-quem` (`.sol-tag` de persona, como na CRM). Inventário em CLAIMS-AUDIT.md.
 
 **Linha de disclosure** (`.rm-note`, DM Mono, `--c-text-mute`) abaixo do título de
 `#recursos`: *"Os recursos abaixo estão em roadmap. Founding Customers participam
-da definição da ordem de entrega."* Não é claim — é transparência estratégica, e
+da definição da ordem de entrega."* Não é claim - é transparência estratégica, e
 amarra o Founding ao produto. Texto aprovado literalmente.
 
 ### CTAs (padrão novo: módulo em `interesse`, CTA em `origem`)
@@ -761,7 +760,7 @@ Cobre header, drawer, subnav, hero, Founding e CTA final.
 **Zero keyframes novos** (`draw`, `growX`, `floatA`, `floatB`). Tudo escopado em
 `.page-produto` (exceto `.theme-mkt .ai-visual`, abaixo).
 Gotcha: no mobile o override do `grid-area` precisa de seletor de **mesma
-especificidade** que `.wf-node.nN` e vir depois (`.wf-nodes > .wf-node`) — com
+especificidade** que `.wf-node.nN` e vir depois (`.wf-nodes > .wf-node`) - com
 `.wf-node` simples o canvas não empilhava.
 
 ### 🐞 Bug pré-existente descoberto: `.ai-visual` colapsa para 0×0
@@ -770,7 +769,7 @@ O visual de órbitas da Nexyss AI mede **0×0 na Home, Overview, CRM e Educaçã
 `margin: 0 auto` + `aspect-ratio` e só filhos absolutos → encolhe a 0. Os
 `.ai-node` flutuam sem órbita nem núcleo. **Corrigido só na Marketing**
 (`.theme-mkt .ai-visual { width: 100% }`). O conserto global (`.ai-visual { width:
-100% }`) mexe na Home e muda os 8 fingerprints das páginas aprovadas —
+100% }`) mexe na Home e muda os 8 fingerprints das páginas aprovadas -
 **aguarda decisão do Jonathan**.
 
 ### Bug fix: `origem` do formulário (14/10/2026)
@@ -785,7 +784,7 @@ Founding dispara com `interesse=founding` **ou** `origem=founding`. As CTAs anti
 Educação (12) + card "Explorar" da Home. O card da Overview já apontava para
 `marketing/`. Os links irmãos (CRM, Educação…) **continuam `href="#"`**.
 
-### Baselines — ambiente Linux (14/10/2026)
+### Baselines - ambiente Linux (14/10/2026)
 O fingerprint rodou no Chromium do container, **não no Chrome do macOS**, e os
 hashes v4 **não reproduzem** em Linux mesmo com a árvore intacta: mesmo nº de
 elementos e mesma altura de documento nas 12 capturas, mas o hash difere por
@@ -794,13 +793,13 @@ subpixel em larguras de texto inline. Procedimento: controle **antes** de editar
 comparação por delta no mesmo ambiente. Resultado: as 12 capturas das páginas
 existentes ficaram **idênticas ao controle**. Os hashes Linux estão em
 `baselines/README.md`. `baselines/marketing-*.json` são **baseline inicial em
-Linux** — a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
+Linux** - a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
 `CHROME=/caminho/do/chrome`.
 
 ### Pendências registradas aqui
 - **CRM e Educação ainda têm logo wall fictício** (CRM: Globaledu, Atlas Academy,
   Vertex, Polaris, Meridian, Orbital; Educação: Globaledu, Polaris College, Rede
-  Meridian, Orbital Schools…). Violação de R3/R8 — corrigir na próxima sessão.
+  Meridian, Orbital Schools…). Violação de R3/R8 - corrigir na próxima sessão.
 - **Mega-menu de CRM/Educação/Overview ainda tem links irmãos como `href="#"`.**
   Corrigir de uma vez quando criarmos Finance/HR/AI (padronização única).
 - **`.ai-visual` 0×0** em 4 páginas (acima).
@@ -815,9 +814,9 @@ Linux** — a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
 
 **Causa raiz:** `.brand img` e `.footer-brand img` aplicavam
 `filter: brightness(0) invert(1)` sobre `nexyss-logo.png`. O filtro zera o RGB
-e inverte — alfa preservado, cor interna destruída. O wordmark azul virava
-branco (intenção original), mas o **isotipo** — octógono com gradiente
-azul→ciano→verde — virava um octógono branco chapado. Não era caminho quebrado
+e inverte - alfa preservado, cor interna destruída. O wordmark azul virava
+branco (intenção original), mas o **isotipo** - octógono com gradiente
+azul→ciano→verde - virava um octógono branco chapado. Não era caminho quebrado
 (4/4 resolviam) nem alfa mal configurado. O comportamento é idêntico em
 `file://` e HTTP.
 
@@ -825,7 +824,7 @@ azul→ciano→verde — virava um octógono branco chapado. Não era caminho qu
 - 12 `<img>` (header + drawer + footer × 4 páginas): `nexyss-logo.png` →
   `nexyss-logo-white.png`.
 - `assets/nexyss.css` linhas 200 e 1242: `filter` removido, `opacity 0.95 → 1`.
-- `og:image` / `twitter:image` **mantidos** em `nexyss-logo.png` — preview de
+- `og:image` / `twitter:image` **mantidos** em `nexyss-logo.png` - preview de
   link é sobre fundo claro; wordmark branco ficaria invisível ali.
 
 **Verificação:** fingerprint pré (8/8 = v2) → pós: 3 elementos por página,
@@ -837,9 +836,9 @@ só `opacity`. Visual conferido em 1280 (header Home) e 375 (header CRM, drawer)
 
 ## Página `/contato/` (11/09/2026)
 
-`<body class="page-institucional page-contato">` — 5 seções: hero compacto
-(1 coluna, sem CTA — a página inteira é o CTA) · `#formulario` (form + canais no
-**próprio `.hero-inner`** — zero componente novo; 1.45fr/1fr no desktop,
+`<body class="page-institucional page-contato">` - 5 seções: hero compacto
+(1 coluna, sem CTA - a página inteira é o CTA) · `#formulario` (form + canais no
+**próprio `.hero-inner`** - zero componente novo; 1.45fr/1fr no desktop,
 1 coluna ≤1080; coluna direita sticky) · `#clientes`
 (3 setores) · `#faq` (4 `<details>` nativos, sem JS) · footer. Sem subnav.
 Sucesso: `/contato/obrigado.html` (`noindex`, reusa o hero, CTA WhatsApp + Home).
@@ -852,11 +851,11 @@ Sucesso: `/contato/obrigado.html` (`noindex`, reusa o hero, CTA WhatsApp + Home)
   resposta 1 da FAQ porque os dois links **não foram validados**. A coluna
   direita ficou: e-mail · "Respondemos em até 24 horas úteis" · "O que acontece
   depois" (3 passos, reusando `.founding-benefits`). Grid do form passou a
-  `1.45fr / 1fr` (form ganha peso) — e esse override **precisa ser repetido dentro
+  `1.45fr / 1fr` (form ganha peso) - e esse override **precisa ser repetido dentro
   do `@media (max-width:1080px)` com `1fr`**, senão vence o colapso base do
   `.hero-inner` (bug pego no screenshot mobile em 11/09, corrigido).
 
-### Netlify Forms — como está e o que precisa no painel
+### Netlify Forms - como está e o que precisa no painel
 `<form name="contato" method="POST" action="/contato/obrigado.html"
 data-netlify="true" netlify-honeypot="bot-field">` + `<input type="hidden"
 name="form-name" value="contato">` (explícito porque não há build) + honeypot
@@ -868,7 +867,7 @@ como a doc pede: **input de texto** dentro de `<p class="visually-hidden">`
 
 **`/form-detect.html` na raiz** (comentário no topo: *do not link, do not delete*):
 cópia estática só com os campos do form, para o Netlify registrar "contato" no
-deploy mesmo que a página de contato mude. Mesmos 8 `name=` do form real —
+deploy mesmo que a página de contato mude. Mesmos 8 `name=` do form real -
 **se divergirem, o painel mostra o último conjunto lido**. Não linkado; 404 via
 `netlify.toml`. Redundante para site estático (o Netlify já lê `contato/index.html`),
 mas inofensivo.
@@ -877,7 +876,7 @@ mas inofensivo.
 Enable form detection) **e exige redeploy depois de ativar**. Sem isso o POST
 retorna 404. Não existe chave no `netlify.toml` para isso. Free: 100 envios/mês.
 
-### `?interesse=` — pré-seleção (JS em `nexyss.js`, guardado por `if (form)`)
+### `?interesse=` - pré-seleção (JS em `nexyss.js`, guardado por `if (form)`)
 `demo` e `founding` → "Plataforma completa" · `especialista` → "Ainda não tenho
 certeza" · slugs de módulo (`crm`, `educacao`, `marketing`, `finance`, `hr`,
 `ai`, `consultoria`, `plataforma`) → o módulo. O hidden `origem` recebe o
@@ -889,7 +888,7 @@ produto usam os dois: `?interesse=marketing&origem=demo`.
 
 ### Validação
 HTML5 nativa (bolha do navegador continua). Estilo de erro em **laranja
-`--c-mkt`** — aqui é *estado*, não a cor do módulo Marketing: a paleta não tem
+`--c-mkt`** - aqui é *estado*, não a cor do módulo Marketing: a paleta não tem
 vermelho e não criamos token (decisão 11/09). `:user-invalid` e
 `.show-errors :invalid` em regras **separadas** (navegador sem `:user-invalid`
 descartaria a lista inteira). O JS liga `.show-errors` no evento `invalid`
@@ -917,105 +916,105 @@ em `file://` de qualquer forma).
 
 Placeholders textuais (`.client-card > .logo-placeholder`, Sora 600 1.2rem) na
 página de contato e `.logo-item.{edu,sport,travel}` no logo wall da Home
-(`.logos-grid.centered` — **3 na primeira linha + 2 centralizados** no desktop,
+(`.logos-grid.centered` - **3 na primeira linha + 2 centralizados** no desktop,
 coluna única ≤760; sem card inventado para fechar 6, por R3). **Troca por logo
 real = substituir o `<span class="logo-placeholder">`/texto pelo
 `<img src="assets/clients/<slug>.svg">`**; o container fica igual. Slugs em `data-client`.
 FAQ: cada `<details class="faq-item">`.
 
-### Logo wall fictício da Home — violação de R3 corrigida
+### Logo wall fictício da Home - violação de R3 corrigida
 A Home no ar exibia 6 clientes **inventados** (Globaledu, Atlas Academy, Vertex,
 Polaris, Meridian, Orbital) sob "Confiado por organizações inovadoras no mundo
 todo". A auditoria de 04/09 não pegou. Substituídos pelos 5 reais em 11/09 com
 o label "Organizações que operam com a Nexyss". (O "Meridian" que sobra no CRM é
 nome de negócio no mockup do pipeline, não claim de cliente.)
 
-### FAQ — compromissos operacionais do Jonathan Braian (não são claims auditáveis)
+### FAQ - compromissos operacionais do Jonathan Braian (não são claims auditáveis)
 "24 horas úteis", "minutos no horário comercial (Dublin, GMT)", "conversa de
-30–60 min", "proposta em até 7 dias úteis", "clientes na América Latina e
+30-60 min", "proposta em até 7 dias úteis", "clientes na América Latina e
 Europa" são **compromissos de atendimento assumidos pelo Jonathan em 11/09/2026**,
 não métricas de produto. Fora do escopo de R3 e do CLAIMS-AUDIT. Se algum deixar
-de ser cumprível, mudar a FAQ — não badgear.
+de ser cumprível, mudar a FAQ - não badgear.
 
 ### TODOs abertos desta página
 - **Reintroduzir WhatsApp Business e LinkedIn quando validar
   `wa.me/353830947907` e `linkedin.com/company/nexyss-group`.** Endereços
   exatos: `contato@nexyss.com` · `wa.me/353830947907` (+353 83 094 7907) ·
   `linkedin.com/company/nexyss-group`. Onde voltam: coluna `.contact-side`
-  (dois `.ai-product` depois do e-mail — ícones já existiam no commit anterior
+  (dois `.ai-product` depois do e-mail - ícones já existiam no commit anterior
   ao 11/09, ver histórico do git), CTA primário da `obrigado.html` ("Adiantar
-  pelo WhatsApp") e resposta 1 da FAQ ("Se é urgente, use o WhatsApp — atendemos
+  pelo WhatsApp") e resposta 1 da FAQ ("Se é urgente, use o WhatsApp - atendemos
   em minutos durante o horário comercial").
 - **Configurar a caixa `contato@nexyss.com`** (Google Workspace / Zoho) antes
-  de trocar o domínio placeholder pelo real — hoje o `mailto:` faz bounce.
+  de trocar o domínio placeholder pelo real - hoje o `mailto:` faz bounce.
 - **Substituir os placeholders textuais** dos 5 clientes por SVG/PNG quando chegarem
-  (`assets/clients/`, 7 pontos: 5 na contato + 5 no wall da Home — mesmo slug).
+  (`assets/clients/`, 7 pontos: 5 na contato + 5 no wall da Home - mesmo slug).
 - Menu do header nas páginas internas aponta para `#consultoria`/`#clientes`,
-  âncoras que só existem na Home — pré-existente, fora deste escopo.
+  âncoras que só existem na Home - pré-existente, fora deste escopo.
 
 ## Regras de Conteúdo e Comercial (definidas em 04/09/2026)
 
-### R1 — Naming e pricing de produtos
+### R1 - Naming e pricing de produtos
 
 - **Nexyss CRM** é o único módulo com **pricing público**: €15,99 / €10,99 /
   Enterprise custom.
-- **Todos os outros** — Educação, Marketing, Finance, HR, AI — e a **Consultoria**
+- **Todos os outros** - Educação, Marketing, Finance, HR, AI - e a **Consultoria**
   são **venda por projeto / custom**.
 - Sempre escrever **"a partir de €X"**. Nunca preço fechado.
 
-### R2 — Preços não aparecem no site
+### R2 - Preços não aparecem no site
 
 - **Nenhuma página do site institucional expõe preço.** Inclusive a do CRM.
 - CTA padrão de todo módulo: **"Falar com Especialista"** ou **"Solicitar Demo"**.
-- Os preços do CRM vivem em **materiais comerciais externos** — banners, campanhas,
+- Os preços do CRM vivem em **materiais comerciais externos** - banners, campanhas,
   PDFs, propostas.
 - Racional: alinhamento com o posicionamento enterprise. Salesforce, HubSpot e
   Monday não expõem preço detalhado no site institucional.
 
-### R3 — Métricas quantitativas
+### R3 - Métricas quantitativas
 
-- **Proibido inventar número de impacto** — "X% de redução", "Y× mais rápido",
+- **Proibido inventar número de impacto** - "X% de redução", "Y× mais rápido",
   "$Z de economia". Sem case real medido, o número não existe.
 - Métrica de impacto só entra quando houver **case real, medido e publicável**.
 - **Métrica técnica verificável é permitida**: uptime/SLA, idiomas suportados,
   número de módulos, cobertura geográfica declarada.
 
-### R4 — Vocabulário de idiomas
+### R4 - Vocabulário de idiomas
 
 - Em **label numérico** (`.impact-strip`, `.hero-meta`): **"Multi-idioma nativo"**.
-  Sempre no singular — nunca "Multi-idioma nativos".
-- Em **texto corrido**: especificar — **"Português, Inglês e Espanhol"**.
+  Sempre no singular - nunca "Multi-idioma nativos".
+- Em **texto corrido**: especificar - **"Português, Inglês e Espanhol"**.
 - **Nunca usar `PT · EN · ES` como formato canônico.** (Foi testado em 04/09/2026
   nos labels e revertido: cabia, mas não é o vocabulário da marca.)
 - Em contexto muito estreito onde "Multi-idioma nativo" não couber, aceita-se
   **"Multi-idioma"**. Medido: o rótulo completo mede 148px em caixa alta e cabe
   na coluna mais estreita do site hoje (159,5px, `.hero-meta.cols-2` a 375px).
 
-### R5 — Sistema de badges de status
+### R5 - Sistema de badges de status
 
 Componente `.status-badge` (em `assets/nexyss.css`), 4 estados:
 
 | Badge | Modificador | Cor | Rótulo |
 |---|---|---|---|
-| 🟢 | `--live` | verde `--c-crm` | **Ativo** — existe e funciona hoje |
-| 🟡 | `--beta` | laranja `--c-mkt` | **Beta** — teste com Founding Customers |
-| 🔵 | `--roadmap` | azul `--c-ai` | **Roadmap** — comprometido, com data |
-| ⚪ | `--planned` | branco 40% | **Planejado** — no radar, sem data |
+| 🟢 | `--live` | verde `--c-crm` | **Ativo** - existe e funciona hoje |
+| 🟡 | `--beta` | laranja `--c-mkt` | **Beta** - teste com Founding Customers |
+| 🔵 | `--roadmap` | azul `--c-ai` | **Roadmap** - comprometido, com data |
+| ⚪ | `--planned` | branco 40% | **Planejado** - no radar, sem data |
 
-- O rótulo 🟢 é **"Ativo"**, nunca "Disponível" — 5 caracteres contra 10, mais
+- O rótulo 🟢 é **"Ativo"**, nunca "Disponível" - 5 caracteres contra 10, mais
   curto que "Roadmap" (7), o que evita reflow dos bullets. (Trocado em 04/09/2026.)
 - **`CLAIMS-AUDIT.md` é a fonte de verdade** de qual claim tem qual status.
   Consultar **antes** de aplicar qualquer badge novo.
 - **Sem validação do time técnico = fica 🔵.** Nunca 🟢 por inferência.
   Racional: em due diligence enterprise, afirmar 🟢 e não ter é muito pior que
   o contrário.
-- No bloco `.founding` — único fundo claro do site — usar a variante
+- No bloco `.founding` - único fundo claro do site - usar a variante
   `.founding .status-badge` (branco sobre navy 35%). O badge padrão reprova em
   contraste ali (1.57:1 a 2.12:1 contra os 4.5:1 de AA).
 
-#### R5.1 — Badge vs. descrição de serviço
+#### R5.1 - Badge vs. descrição de serviço
 
-Badge marca **feature específica verificável** — afirmação binária "faz X" /
+Badge marca **feature específica verificável** - afirmação binária "faz X" /
 "não faz X". **Descrição narrativa de serviço ou oferta** (o parágrafo que conta
 o que uma prática de consultoria entrega) **não recebe badge**: a existência dela
 no site já implica disponibilidade.
@@ -1027,21 +1026,43 @@ no site já implica disponibilidade.
 | ❌ Não badgeável | "Diagnóstico organizacional, roadmap de transformação digital e redesenho de processos com foco em dados e IA" |
 | ❌ Não badgeável | descrição institucional, tagline, proposta de valor |
 
-**Adendo — a distinção é a granularidade da afirmação, não o tipo da seção.**
+**Adendo - a distinção é a granularidade da afirmação, não o tipo da seção.**
 Se uma oferta de serviço passar a listar recursos específicos em bullets (dentro
 de Managed Services, por exemplo: "SLA 24/7", "monitoramento proativo"), **esses
 bullets voltam a ser badgeáveis**.
 
+### R6 - Sem travessões (definida em 14/10/2026)
+
+Nunca usar U+2014 (travessão longo), U+2013 (travessão curto), U+2015 (barra
+horizontal) nem U+2212 (sinal de menos tipográfico) em texto novo, nem as entidades
+HTML equivalentes (mdash, ndash, minus, horbar). Usar hífen ASCII simples (-).
+
+- **Motivo:** o travessão longo virou "assinatura visual" de texto gerado por AI, e
+  muitos leitores conservadores julgam negativamente sem conhecer os benefícios.
+- **Escopo:** copy visível, meta tags (SEO, og, twitter), comentários de HTML, CSS,
+  JS e toml, e documentação interna (`*.md`).
+- Em intervalos numéricos também vale o hífen: `30-60 min`, `300-700`.
+- Cuidado em markdown: linha que **começa** com hífen vira bullet. Se uma frase
+  continua na linha seguinte, juntar as linhas em vez de abrir a linha com `-`.
+- **Conferência** (tem que dar zero; os caracteres vão por escape para esta linha
+  não se autodenunciar):
+  ```bash
+  LC_ALL=C.UTF-8 grep -rnP '[\x{2013}\x{2014}\x{2015}\x{2212}]' --exclude-dir=.git --exclude='*.png' .
+  ```
+  O mesmo vale para as entidades `&` + `mdash;`/`ndash;`/`minus;`.
+- A remoção inicial (498 caracteres em 16 arquivos, mais 5 entidades) foi mecânica:
+  hífen é mais estreito que o travessão, então alguns títulos e parágrafos reflowaram.
+
 ## Regras de Trabalho
 
-1. **A Home é território protegido — mudança só por decisão explícita do Jonathan.**
+1. **A Home é território protegido - mudança só por decisão explícita do Jonathan.**
    Nada de refatorar, "melhorar" ou reorganizar o CSS existente por conta própria.
    > Histórico: a regra original era "NUNCA mudar o visual da Home". Ela foi
    > **superada em 04/09/2026** pela auditoria de claims, que o Jonathan mandou
    > aplicar também na Home (remoção do bloco de impacto, idiomas, alcance
    > geográfico, Founding Customers, consultoria). O baseline foi regerado depois.
    > A proteção continua valendo contra mudança **não solicitada**.
-2. **SEMPRE reutilizar o design system acima** — mesmos tokens, mesmas classes,
+2. **SEMPRE reutilizar o design system acima** - mesmos tokens, mesmas classes,
    mesmos keyframes. Nada de variantes novas sem combinar antes.
 3. **SEMPRE confirmar antes de criar qualquer arquivo ou página nova.**
 4. **SEMPRE mostrar preview/plano antes de gerar código longo.**

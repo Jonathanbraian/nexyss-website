@@ -1,11 +1,11 @@
-# Baselines de fingerprint — Nexyss
+# Baselines de fingerprint - Nexyss
 
 ## 1. O que são
 
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 14 arquivos — 7 páginas × 2 viewports (a Marketing entrou em 14/10/2026,
+São 14 arquivos - 7 páginas × 2 viewports (a Marketing entrou em 14/10/2026,
 gerada em **Linux**, ver "Ambiente" abaixo):
 
 ```
@@ -23,7 +23,7 @@ No topo de cada JSON:
 
 | Campo | Significado |
 |---|---|
-| `fingerprint` | `<nº de elementos>:<hash FNV-1a de 32 bits>` — a assinatura |
+| `fingerprint` | `<nº de elementos>:<hash FNV-1a de 32 bits>` - a assinatura |
 | `document` | dimensões totais do documento, ex. `1280x7768` |
 | `count` | número de elementos capturados |
 | `fontsLoaded` | `loaded` se as fontes do Google Fonts carregaram na captura |
@@ -42,7 +42,7 @@ node baselines/tools/run.js /tmp/fp-check
 python3 baselines/tools/extract.py /tmp/fp-check - check
 ```
 
-Requisitos: `/Applications/Google Chrome.app`, Node e **rede** — sem as fontes do
+Requisitos: `/Applications/Google Chrome.app`, Node e **rede** - sem as fontes do
 Google Fonts a geometria muda e o hash não bate (confira `fontsLoaded`).
 
 Para **regravar** os baselines depois de uma mudança aprovada, troque o `-` pelo
@@ -57,7 +57,7 @@ atualizado sem aprovação transforma regressão em "novo normal" silencioso.
 
 ## 3. Quando comparar
 
-- **Antes de qualquer commit que toque `assets/nexyss.css` ou `assets/nexyss.js`** —
+- **Antes de qualquer commit que toque `assets/nexyss.css` ou `assets/nexyss.js`** -
   são compartilhados: uma regra sem escopo atinge as 4 páginas de uma vez.
 - **Depois de aplicar retrofit de badges** ou qualquer edição em lote.
 - **Depois de mexer em componente reutilizado** (`.mod-card`, `.impact-strip`,
@@ -70,14 +70,14 @@ atualizado sem aprovação transforma regressão em "novo normal" silencioso.
 |---|---|---|
 | **Zero delta** ✅ | página intocada | seguir |
 | **Delta esperado** ✅ | bate com a mudança intencional e documentada | conferir elemento a elemento, depois regravar o baseline |
-| **Delta inesperado** ⚠️ | mudou algo que você não pediu | **investigar antes de commitar** — quase sempre é regra CSS sem escopo vazando |
+| **Delta inesperado** ⚠️ | mudou algo que você não pediu | **investigar antes de commitar** - quase sempre é regra CSS sem escopo vazando |
 
 Confirmar que o delta é o esperado quer dizer **contar**: remover um
 `.impact-item` tira 4 elementos (o item + `.n` + `<small>` + `.l`); remover a
 seção inteira tira 19. Se a conta não fecha, alguma outra coisa mudou junto.
 
 Para diff elemento a elemento entre um baseline e uma captura nova, os scripts em
-`tools/` produzem o JSON completo — compare os campos `elements[]` por
+`tools/` produzem o JSON completo - compare os campos `elements[]` por
 `(tag, classe, id)`.
 
 ## Ambiente: macOS vs Linux (14/10/2026)
@@ -90,32 +90,49 @@ subpixel em larguras de texto inline. Em Linux, compare **antes × depois no
 mesmo ambiente**, não contra o JSON do macOS. Use `CHROME=/caminho/do/chrome node
 baselines/tools/run.js <dir>`.
 
-Controle Linux (Chromium 1194, árvore a0ec890 intacta, fontes `loaded`) — e as
-mesmas 12 capturas depois da fase Marketing (**idênticas**):
+Referência Linux atual (Chromium 1194, fontes `loaded`, árvore depois da remoção
+dos travessões e da regra R6 de 14/10/2026). Compare **antes × depois no mesmo
+ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
 | Home | `782:43f4e338` | `782:d99c7f24` |
-| Overview | `854:b0b131d6` | `854:d7ec73ca` |
-| CRM | `915:c9eb3dd9` | `915:21db6a6c` |
-| Educação | `1062:17627d49` | `1062:7fd0c36a` |
-| Contato | `576:38db0954` | `576:8602edf7` |
+| Overview | `854:9e1e965f` | `854:d7ec73ca` |
+| CRM | `915:e334705f` | `915:a2843876` |
+| Educação | `1062:17627d49` | `1062:8ab43d28` |
+| Contato | `576:38db0954` | `576:01a4e2b7` |
 | Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
-| **Marketing** (baseline inicial) | `856:f5c3c742` (doc 1280×9401) | `856:27202f09` (doc 375×16253) |
+| **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
 
-`marketing-*.json` foi capturado duas vezes em Linux com resultado idêntico.
-Regerar no macOS para uniformizar com os demais.
+**7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
+houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
+
+| Página | Viewport | Antes | Depois | Causa |
+|---|---|---|---|---|
+| Overview | 1280 | `854:b0b131d6` | `854:9e1e965f` | `hero-sub` perdeu 1 linha (doc -30px) |
+| Educação | 375 | `1062:7fd0c36a` | `1062:8ab43d28` | 1 parágrafo de `section-head` perdeu 1 linha (doc -28px) |
+| Contato | 375 | `576:8602edf7` | `576:01a4e2b7` | `.hint` do formulário perdeu 1 linha (doc -17px) |
+| CRM | 1280 | `915:c9eb3dd9` | `915:e334705f` | largura do trecho `.accent` do h1 (doc igual) |
+| CRM | 375 | `915:21db6a6c` | `915:a2843876` | largura do `.accent` (doc igual) |
+| Marketing | 1280 | `856:f5c3c742` | `856:f5b18501` | largura do `.accent` (doc igual) |
+| Marketing | 375 | `856:27202f09` | `856:3aa08760` | largura do `.accent` (doc igual) |
+
+Home, Obrigado, Educação 1280, Contato 1280 e Overview 375 ficaram idênticas.
+`marketing-*.json` foi regravado depois da troca e vale como baseline inicial em
+Linux. Regerar no macOS para uniformizar com os demais.
 
 ## Histórico
 
-- **04/09/2026** — baselines v2 criados. Os hashes v1 da Home (`792:…`) foram
+- **04/09/2026** - baselines v2 criados. Os hashes v1 da Home (`792:…`) foram
   aposentados: o script que os gerou nunca foi salvo e era irreproduzível.
-  Ver `CLAUDE.md` → "Teste de regressão — baselines v2".
-- **11/09/2026** — v3: correção do logo (só `opacity` em 3 `<img>` por página).
+  Ver `CLAUDE.md` → "Teste de regressão - baselines v2".
+- **11/09/2026** - v3: correção do logo (só `opacity` em 3 `<img>` por página).
   v4 no mesmo dia: página `/contato/` + `obrigado.html` entram nas ferramentas
   (`run.js`, `extract.py`); CTAs, "Falar com Especialista" e logo wall da Home.
   `extract.py` deixou de criar o diretório `-` quando o destino é `-`.
   `run.js` passou a derivar a raiz de `__dirname` (portátil).
-- **14/10/2026** — `/plataforma/marketing/` entra nas ferramentas; `run.js` aceita
+- **14/10/2026** - `/plataforma/marketing/` entra nas ferramentas; `run.js` aceita
   `CHROME=`. Baseline inicial da Marketing (Linux). Delta nas 6 páginas
   existentes: **zero** (13 `href` + CSS/JS aditivos).
+- **14/10/2026** (2) - remoção de travessões (regra R6): 7 hashes Linux mudaram por
+  reflow, `marketing-*.json` regravado, tabela Linux atualizada (ver "Ambiente").

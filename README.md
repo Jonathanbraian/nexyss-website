@@ -1,4 +1,4 @@
-# Nexyss — site institucional
+# Nexyss - site institucional
 
 Site institucional da **Nexyss**, plataforma operacional global com IA
 (CRM, Educação, Marketing, Finance, HR e Nexyss AI em um único sistema).
@@ -10,7 +10,7 @@ Fontes via Google Fonts (Sora, DM Sans, DM Mono).
 
 ## Testar localmente
 
-Abra `index.html` direto no navegador — funciona em `file://`.
+Abra `index.html` direto no navegador - funciona em `file://`.
 CSS e JS são compartilhados por `<link>`/`<script src>`, que não dependem de servidor.
 
 Para simular produção:
@@ -29,10 +29,10 @@ plataforma/index.html         Overview da plataforma
 plataforma/crm/index.html     Nexyss CRM  (template das páginas de produto)
 plataforma/educacao/index.html
 plataforma/marketing/index.html  Nexyss Marketing
-contato/index.html            Contato — formulário (Netlify Forms) + canais diretos
+contato/index.html            Contato - formulário (Netlify Forms) + canais diretos
 contato/obrigado.html         Página de sucesso do formulário (noindex)
-form-detect.html              Só para o Netlify registrar o form — não linkar, não apagar
-assets/nexyss.css             Design system completo — fonte única de estilo
+form-detect.html              Só para o Netlify registrar o form - não linkar, não apagar
+assets/nexyss.css             Design system completo - fonte única de estilo
 assets/nexyss.js              Header, reveal on scroll, drawer mobile, scrollspy
 assets/nexyss-*.png           Logo, versão para fundo escuro e isotipo
 baselines/                    Fingerprints anti-regressão (7 páginas × 2 viewports)
@@ -54,7 +54,7 @@ Os hashes devem bater com `baselines/*.json`. Detalhes em `baselines/README.md`.
 
 ## Formulário de contato (Netlify Forms)
 
-O `<form name="contato">` em `contato/index.html` usa Netlify Forms nativo — sem
+O `<form name="contato">` em `contato/index.html` usa Netlify Forms nativo - sem
 backend próprio. Para funcionar em produção:
 
 1. No Netlify: **Site configuration → Forms → Enable form detection** (é opt-in).
@@ -71,8 +71,8 @@ Para receber por e-mail: Forms → Form notifications → Add notification.
 
 ## Documentação interna
 
-- `CLAUDE.md` — memória do projeto: design system, arquitetura, decisões e regras.
-- `CLAIMS-AUDIT.md` — status de cada afirmação de produto (🟢 Ativo · 🟡 Beta · 🔵 Roadmap · ⚪ Planejado).
-- `AUDIT-REPORT.md` — relatório da auditoria de claims.
+- `CLAUDE.md` - memória do projeto: design system, arquitetura, decisões e regras.
+- `CLAIMS-AUDIT.md` - status de cada afirmação de produto (🟢 Ativo · 🟡 Beta · 🔵 Roadmap · ⚪ Planejado).
+- `AUDIT-REPORT.md` - relatório da auditoria de claims.
 
 © Nexyss Group. Todos os direitos reservados.

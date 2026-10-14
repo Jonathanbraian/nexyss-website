@@ -1,22 +1,22 @@
 /* ============================================================
-   NEXYSS — Design System
+   NEXYSS - Design System
    Extraido do index.html aprovado. Fonte unica de verdade de
    tokens, componentes e animacoes para todo o site.
    ============================================================ */
 
 /* ============================================================
-   NEXYSS — Home v3 · Dark navy + geometric layers + brand-real
+   NEXYSS - Home v3 · Dark navy + geometric layers + brand-real
    ============================================================ */
 
 :root {
-  /* Navy scale — do brand book */
+  /* Navy scale - do brand book */
   --c-navy-deep: #0B1440;
   --c-navy: #131E4F;
   --c-navy-mid: #1E285F;
   --c-navy-light: #2A3985;
   --c-navy-hi: #3A5EAF;
 
-  /* Brand blue-violet — wordmark Nexyss */
+  /* Brand blue-violet - wordmark Nexyss */
   --c-brand: #3C50D9;
   --c-brand-light: #5B6DE8;
 
@@ -356,7 +356,7 @@ header.site.scrolled {
   background: linear-gradient(180deg, var(--c-navy-deep) 0%, var(--c-navy) 100%);
 }
 
-/* Camadas geométricas verticais — o "signature" do brand book */
+/* Camadas geométricas verticais - o "signature" do brand book */
 .hero-layers {
   position: absolute;
   inset: 0;
@@ -488,7 +488,7 @@ header.site.scrolled {
   letter-spacing: -0.03em;
   line-height: 1;
 }
-/* Modificador de 2 colunas — hero de produto que ficou com 2 metricas em vez de
+/* Modificador de 2 colunas - hero de produto que ficou com 2 metricas em vez de
    3 (CRM, apos a remocao do "3.4x" sem case real em 04/09/2026). O max-width
    menor preserva a densidade da versao de 3 colunas: 2 x ~176px contra 3 x 168px. */
 .hero-meta.cols-2 { grid-template-columns: repeat(2, 1fr); max-width: 380px; }
@@ -501,7 +501,7 @@ header.site.scrolled {
   letter-spacing: 0.08em;
 }
 
-/* ============ HERO VISUAL — Dashboard cards ============ */
+/* ============ HERO VISUAL - Dashboard cards ============ */
 .hero-visual { position: relative; height: 560px; }
 .dash {
   position: absolute;
@@ -742,7 +742,7 @@ section.block.deeper {
   background: var(--c-navy-deep);
 }
 
-/* ============ PLATAFORMA — Grid de módulos ============ */
+/* ============ PLATAFORMA - Grid de módulos ============ */
 .platform-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -865,7 +865,7 @@ section.block.deeper {
 .mod-link:hover { gap: 10px; }
 .mod-link svg { width: 12px; height: 12px; }
 
-/* ============ SOLUÇÕES — 3 eixos ============ */
+/* ============ SOLUÇÕES - 3 eixos ============ */
 .solucoes-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1085,12 +1085,12 @@ section.block.deeper {
   color: var(--c-text-soft);
   font-size: 0.92rem;
 }
-/* Modificador de 3 colunas — usado quando a strip tem 3 números em vez de 4
+/* Modificador de 3 colunas - usado quando a strip tem 3 números em vez de 4
    (CRM, depois da remocao das metricas sem case real em 04/09/2026).
    Precisa reafirmar o valor nos dois breakpoints porque `.impact-strip.cols-3`
    tem especificidade maior que `.impact-strip` dentro das media queries. */
 .impact-strip.cols-3 { grid-template-columns: repeat(3, 1fr); }
-/* Nota de rodape da faixa de numeros — sinalizacao de direcao, sem badge.
+/* Nota de rodape da faixa de numeros - sinalizacao de direcao, sem badge.
    Discreta por definicao: nao compete com o numeral. */
 .impact-note {
   margin-top: 20px;
@@ -1151,7 +1151,7 @@ section.block.deeper {
   line-height: 1.6;
   max-width: 480px;
 }
-/* Variante enxuta — convite sem lista de beneficios (04/09/2026).
+/* Variante enxuta - convite sem lista de beneficios (04/09/2026).
    O .founding-inner de 2 colunas existia para equilibrar texto x lista; sem a
    lista, a coluna da direita ficaria so com o botao. Aqui vira coluna unica
    centrada, e a mascara do padrao de pontos acompanha o novo eixo. */
@@ -1318,7 +1318,7 @@ footer.site::before {
   .cta-final { padding: 80px 0; }
 }
 /* ============================================================
-   MOBILE DRAWER — adicionado depois da aprovação da Home.
+   MOBILE DRAWER - adicionado depois da aprovação da Home.
    Ativo somente <= 760px. Zero impacto no layout desktop.
    ============================================================ */
 @media (min-width: 761px) {
@@ -1467,7 +1467,7 @@ body.drawer-open { overflow: hidden; }
   --c-color-a08: rgba(55, 167, 226, 0.08);  --c-color-a15: rgba(55, 167, 226, 0.15);  --c-color-a25: rgba(55, 167, 226, 0.25); }
 
 /* ============================================================
-   PAGINA DE PRODUTO — acentos herdam a cor do produto
+   PAGINA DE PRODUTO - acentos herdam a cor do produto
    Institucional (Home, Sobre, etc.) permanece ciano.
    ============================================================ */
 .page-produto .eyebrow { color: var(--c-color, var(--c-brand)); }
@@ -1489,7 +1489,7 @@ body.drawer-open { overflow: hidden; }
 .page-produto .impact-item .n small { color: var(--c-color, var(--c-brand)); }
 .page-produto .hero-tag .dot { background: var(--c-color, var(--c-success)); }
 
-/* Foco visivel — por enquanto escopado a paginas de produto.
+/* Foco visivel - por enquanto escopado a paginas de produto.
    Recomendado promover para global depois de validado. */
 .page-produto :focus-visible,
 .page-institucional :focus-visible {
@@ -1515,7 +1515,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   SUBNAV — navegacao secundaria das paginas de produto
+   SUBNAV - navegacao secundaria das paginas de produto
    ============================================================ */
 :root { --header-h: 84px; }
 @media (max-width: 760px) { :root { --header-h: 76px; } }
@@ -1609,7 +1609,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   VISUAL A — PIPELINE BOARD  (hero das paginas de produto CRM)
+   VISUAL A - PIPELINE BOARD  (hero das paginas de produto CRM)
    ============================================================ */
 .pipe-board {
   inset: 0;
@@ -1763,7 +1763,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   VISUAL B — CONTA 360 + FORECAST
+   VISUAL B - CONTA 360 + FORECAST
    ============================================================ */
 .acct360 {
   display: grid;
@@ -1981,7 +1981,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   VISUAL A (overview) — PLATAFORMA EM CAMADAS
+   VISUAL A (overview) - PLATAFORMA EM CAMADAS
    ============================================================ */
 .stack-viz {
   inset: 0;
@@ -2063,7 +2063,7 @@ body.drawer-open { overflow: hidden; }
 .sv-ai b { font-weight: 500; opacity: 0.75; letter-spacing: 0.08em; }
 
 /* ============================================================
-   VISUAL B (overview) — CASCATA DO EVENTO
+   VISUAL B (overview) - CASCATA DO EVENTO
    ============================================================ */
 .cascade {
   display: grid;
@@ -2140,7 +2140,7 @@ body.drawer-open { overflow: hidden; }
 .cas-card.m-ai  { --m: var(--c-ai); }
 
 /* ============================================================
-   MOD-CARD — extensoes da overview
+   MOD-CARD - extensoes da overview
    ============================================================ */
 .mod-conn {
   position: relative;
@@ -2178,7 +2178,7 @@ body.drawer-open { overflow: hidden; }
 .mod-seventh svg { width: 12px; height: 12px; }
 
 /* ============================================================
-   VS-TABLE — comparativo
+   VS-TABLE - comparativo
    ============================================================ */
 .vs-wrap { overflow-x: auto; margin-top: 60px; }
 .vs-table {
@@ -2308,7 +2308,7 @@ body.drawer-open { overflow: hidden; }
 @media (max-width: 760px) { .viz-box { height: 330px; } }
 
 /* ============================================================
-   VISUAL A (educacao) — TRAJETORIA DO ALUNO
+   VISUAL A (educacao) - TRAJETORIA DO ALUNO
    ============================================================ */
 .jr-board {
   inset: 0;
@@ -2451,7 +2451,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   VISUAL B (educacao) — PAINEL DA REDE
+   VISUAL B (educacao) - PAINEL DA REDE
    ============================================================ */
 .netpanel {
   position: relative;
@@ -2537,7 +2537,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   STATUS BADGE — indicador de disponibilidade de recurso
+   STATUS BADGE - indicador de disponibilidade de recurso
    ------------------------------------------------------------
    Marca afirmações de CAPACIDADE ESPECÍFICA (fatos verificáveis)
    em: listas de features (.mod-features), cards de recurso
@@ -2546,19 +2546,19 @@ body.drawer-open { overflow: hidden; }
    NÃO usar em headlines (h1/h2/h3), subtítulos, parágrafos de
    argumentação ou copy conceitual/de visão ("sem silos" etc.).
 
-   COMO USAR — inline, ANTES do texto, dentro do item:
+   COMO USAR - inline, ANTES do texto, dentro do item:
      <li class="...">
        <span class="status-badge status-badge--roadmap">Roadmap</span>
        Pipeline unificado entre times e regiões
      </li>
    (o rótulo textual é livre: "Ativo" / "Beta" / "Roadmap" /
-    "Planejado" — o modificador define a cor.)
+    "Planejado" - o modificador define a cor.)
 
    4 ESTADOS (cor da paleta existente; auxiliar, não compete):
-     --live     Ativo       · verde  (--c-crm  #45E599) — existe e funciona hoje
-     --beta     Beta        · laranja(--c-mkt  #F25D23) — teste c/ Founding Customers
-     --roadmap  Roadmap     · azul   (--c-ai   #37A7E2) — comprometido, com data
-     --planned  Planejado   · neutro (branco 40%)       — no radar, sem data
+     --live     Ativo       · verde  (--c-crm  #45E599) - existe e funciona hoje
+     --beta     Beta        · laranja(--c-mkt  #F25D23) - teste c/ Founding Customers
+     --roadmap  Roadmap     · azul   (--c-ai   #37A7E2) - comprometido, com data
+     --planned  Planejado   · neutro (branco 40%)       - no radar, sem data
 
    Tipografia DM Mono ~0.7rem, pill compacto, dot colorido (= cor
    do texto) + rótulo minúsculo. Herda a cor via `color`.
@@ -2591,14 +2591,14 @@ body.drawer-open { overflow: hidden; }
   background: currentColor;        /* o dot herda a cor do estado */
   flex-shrink: 0;
 }
-/* Modificadores — cor da paleta por status (rgba explícito, no idioma
+/* Modificadores - cor da paleta por status (rgba explícito, no idioma
    dos tints .icn-* / --c-color-a15 do design system). */
 .status-badge--live    { color: var(--c-crm); background: rgba(69, 229, 153, 0.12);  border-color: rgba(69, 229, 153, 0.38); }
 .status-badge--beta    { color: var(--c-mkt); background: rgba(242, 93, 35, 0.12);   border-color: rgba(242, 93, 35, 0.38); }
 .status-badge--roadmap { color: var(--c-ai);  background: rgba(55, 167, 226, 0.12);  border-color: rgba(55, 167, 226, 0.38); }
 .status-badge--planned { color: rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.16); }
 
-/* Variante para o bloco .founding — o unico fundo claro/colorido do site.
+/* Variante para o bloco .founding - o unico fundo claro/colorido do site.
    Sobre o gradiente brand -> ai-deep o badge padrao reprova em contraste:
    o azul --c-ai sobre o proprio tint da 1.57:1 a 2.12:1, muito abaixo dos
    4.5:1 de AA. Aqui o rotulo vira branco sobre navy 35%, que da 7.47:1 no
@@ -2611,7 +2611,7 @@ body.drawer-open { overflow: hidden; }
 }
 
 /* ============================================================
-   PAGINA DE CONTATO — /contato/  (11/09/2026)
+   PAGINA DE CONTATO - /contato/  (11/09/2026)
    Institucional: eyebrow ciano, glows ciano + brand. Tudo escopado
    em .page-contato, exceto os blocos de clientes (.clients-*,
    .client-card) e o modificador .logos-grid.centered, que a Home
@@ -2624,7 +2624,7 @@ body.drawer-open { overflow: hidden; }
 .page-contato .hero-sub { max-width: 640px; }
 
 /* ---------- Formulario + canais ----------
-   O grid e o proprio .hero-inner (1.05fr / 1fr, colapsa em 1 coluna <=1080px) —
+   O grid e o proprio .hero-inner (1.05fr / 1fr, colapsa em 1 coluna <=1080px) -
    decisao 11/09/2026: zero componente novo. Fora do hero ele nao precisa do
    align-items:center nem do gap de 80px. */
 .page-contato #formulario .hero-inner { align-items: start; gap: 56px; grid-template-columns: 1.45fr 1fr; }
@@ -2709,7 +2709,7 @@ body.drawer-open { overflow: hidden; }
    ciano do campo; nos controles do formulario a borda + glow ja e o foco. */
 .page-contato .field :focus-visible { outline: none; }
 
-/* Estado de erro — laranja --c-mkt.
+/* Estado de erro - laranja --c-mkt.
    Aqui o laranja e ESTADO de validacao, nao a cor do modulo Marketing:
    a paleta nao tem vermelho e a decisao de 11/09/2026 foi nao criar token
    novo. Duas regras separadas de proposito: navegador sem :user-invalid
@@ -2724,7 +2724,7 @@ body.drawer-open { overflow: hidden; }
   border-color: var(--c-mkt);
   box-shadow: 0 0 0 3px rgba(242, 93, 35, 0.15);
 }
-/* Alias manual: <div class="field error"> — mesmo estado, para uso sem JS/sem :user-invalid */
+/* Alias manual: <div class="field error"> - mesmo estado, para uso sem JS/sem :user-invalid */
 .field.error input,
 .field.error select,
 .field.error textarea {
@@ -2745,7 +2745,7 @@ body.drawer-open { overflow: hidden; }
 }
 .form-note { font-size: 0.78rem; color: var(--c-text-mute); line-height: 1.45; max-width: 300px; }
 
-/* Coluna de canais — gruda abaixo do header no desktop */
+/* Coluna de canais - gruda abaixo do header no desktop */
 .contact-side { position: sticky; top: calc(var(--header-h) + 24px); }
 .contact-side h2 {
   font-size: clamp(1.4rem, 2vw, 1.75rem);
@@ -2793,7 +2793,7 @@ body.drawer-open { overflow: hidden; }
 }
 .response-time b { color: var(--c-white); font-weight: 500; }
 
-/* "O que acontece depois" — reusa .founding-benefits/.founding-benefit (checks verdes) */
+/* "O que acontece depois" - reusa .founding-benefits/.founding-benefit (checks verdes) */
 .next-steps { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--c-line); }
 .next-steps-label {
   font-family: var(--font-mono);
@@ -2809,7 +2809,7 @@ body.drawer-open { overflow: hidden; }
 .page-contato .next-steps .founding-benefit svg { margin-top: 2px; }
 
 /* ---------- Clientes por setor ---------- */
-/* Cor do setor: apenas tokens existentes — Educacao ciano, Esporte verde CRM,
+/* Cor do setor: apenas tokens existentes - Educacao ciano, Esporte verde CRM,
    Turismo azul-eletrico AI (decisao 11/09/2026). Os icones reusam .icn-*. */
 .clients-grid {
   display: grid;
@@ -2863,7 +2863,7 @@ body.drawer-open { overflow: hidden; }
 }
 .client-card img { height: 32px; width: auto; max-width: 180px; }
 
-/* Home — logo wall com contagem impar (5): 3 na primeira linha + 2 centralizados
+/* Home - logo wall com contagem impar (5): 3 na primeira linha + 2 centralizados
    na segunda no desktop; coluna unica no mobile. Sem card inventado para fechar 6 (R3). */
 .logos-grid.centered {
   display: flex;
@@ -2878,7 +2878,7 @@ body.drawer-open { overflow: hidden; }
 .logo-item.sport svg  { color: var(--c-crm); opacity: 1; }
 .logo-item.travel svg { color: var(--c-ai);  opacity: 1; }
 
-/* ---------- FAQ — <details> nativo, sem JS ---------- */
+/* ---------- FAQ - <details> nativo, sem JS ---------- */
 .faq { max-width: 840px; display: grid; gap: 10px; }
 .faq .faq-item {
   border: 1px solid var(--c-line-mid);
@@ -2941,7 +2941,7 @@ body.drawer-open { overflow: hidden; }
 
 /* ---------- Responsivo ---------- */
 @media (max-width: 1080px) {
-  .page-contato #formulario .hero-inner { grid-template-columns: 1fr; gap: 40px; }   /* o 1.45fr/1fr do desktop tem especificidade maior que o colapso base do .hero-inner — precisa repetir aqui */
+  .page-contato #formulario .hero-inner { grid-template-columns: 1fr; gap: 40px; }   /* o 1.45fr/1fr do desktop tem especificidade maior que o colapso base do .hero-inner - precisa repetir aqui */
   .contact-side { position: static; }
   .clients-grid { grid-template-columns: 1fr; }
 }
@@ -2961,7 +2961,7 @@ body.drawer-open { overflow: hidden; }
    === PÁGINA MARKETING === /plataforma/marketing/  (14/10/2026)
    body.theme-mkt.page-produto. Tudo escopado em .page-produto: o CSS
    é compartilhado e regra sem escopo atinge a Home.
-   Zero keyframes novos — reusa draw, growX, floatA, floatB.
+   Zero keyframes novos - reusa draw, growX, floatA, floatB.
    Componentes: .rm-note (disclosure de roadmap) · .wf-* (Visual A,
    workflow do hero) · .attr-* (Visual B, atribuição).
    Reusa .dash/.dash-bar, .pipe-ai, .acct360/.acct-tl/.fc-*.
@@ -2984,11 +2984,11 @@ body.drawer-open { overflow: hidden; }
 /* ---------- Visual da Nexyss AI (#ia) ----------
    .ai-visual é item de grid com margin:0 auto + aspect-ratio e só filhos
    absolutos: sem width ele colapsa para 0x0 (bug pré-existente, presente
-   também em Home/Overview/CRM/Educação — ver AUDIT-REPORT). Corrigido
+   também em Home/Overview/CRM/Educação - ver AUDIT-REPORT). Corrigido
    apenas aqui; o conserto global exige decisão sobre a Home. */
 .theme-mkt .ai-visual { width: 100%; }
 
-/* ---------- Visual A — WORKFLOW (hero) ----------
+/* ---------- Visual A - WORKFLOW (hero) ----------
    Canvas de 3 colunas x 3 linhas. Os conectores são um SVG de fundo
    (viewBox 300x262, preserveAspectRatio none, traço non-scaling) que
    corre de centro a centro de nó; os nós são opacos e cobrem o miolo,
@@ -3080,7 +3080,7 @@ body.drawer-open { overflow: hidden; }
   color: var(--c-text-faint);
 }
 
-/* ---------- Visual B — ATRIBUIÇÃO ----------
+/* ---------- Visual B - ATRIBUIÇÃO ----------
    Dentro de .acct360: coluna 1 = linha do tempo (.acct-tl + .m-*),
    coluna 2 = receita por canal. Barras sem valor numérico (R3):
    a largura é proporção ilustrativa. */
