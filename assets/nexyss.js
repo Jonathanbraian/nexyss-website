@@ -150,6 +150,9 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
 
   const params    = new URLSearchParams(location.search);
   const interesse = (params.get('interesse') || '').trim().toLowerCase();
+  // ?origem= identifica a CTA que gerou o lead (demo, especialista, founding).
+  // Links por produto usam os dois: ?interesse=marketing&origem=demo.
+  const origemCta = (params.get('origem') || '').trim().toLowerCase();
 
   // ?interesse= (vindo das CTAs do site) → opção do dropdown.
   // demo/founding → "Plataforma completa" · especialista → "Ainda não tenho certeza".
@@ -172,8 +175,9 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   const origem = form.querySelector('input[name="origem"]');
   const msg    = form.querySelector('textarea[name="mensagem"]');
 
-  // Rastreia a CTA de origem no painel do Netlify (valor cru do parâmetro)
-  if (origem) origem.value = interesse || 'direto';
+  // Rastreia a CTA de origem no painel do Netlify (valor cru do parâmetro).
+  // ?origem= vence; sem ele vale ?interesse= (CTAs antigas); sem nenhum, 'direto'.
+  if (origem) origem.value = origemCta || interesse || 'direto';
 
   if (sel && MAP[interesse]) {
     const opt = [...sel.options].find(o => o.value === MAP[interesse]);
@@ -181,7 +185,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   }
 
   // Founding Customers: abre a mensagem já contextualizada (editável)
-  if (interesse === 'founding' && msg && !msg.value) {
+  if ((interesse === 'founding' || origemCta === 'founding') && msg && !msg.value) {
     msg.value = 'Tenho interesse no programa Founding Customers.';
   }
 

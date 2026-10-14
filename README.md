@@ -28,13 +28,14 @@ index.html                    Home
 plataforma/index.html         Overview da plataforma
 plataforma/crm/index.html     Nexyss CRM  (template das páginas de produto)
 plataforma/educacao/index.html
+plataforma/marketing/index.html  Nexyss Marketing
 contato/index.html            Contato — formulário (Netlify Forms) + canais diretos
 contato/obrigado.html         Página de sucesso do formulário (noindex)
 form-detect.html              Só para o Netlify registrar o form — não linkar, não apagar
 assets/nexyss.css             Design system completo — fonte única de estilo
 assets/nexyss.js              Header, reveal on scroll, drawer mobile, scrollspy
 assets/nexyss-*.png           Logo, versão para fundo escuro e isotipo
-baselines/                    Fingerprints anti-regressão (6 páginas × 2 viewports)
+baselines/                    Fingerprints anti-regressão (7 páginas × 2 viewports)
 ```
 
 Cada página carrega `assets/nexyss.css` e `assets/nexyss.js` com caminho relativo
@@ -62,7 +63,8 @@ backend próprio. Para funcionar em produção:
    `/contato/obrigado.html`.
 4. Ler os envios em **Forms → contato** no painel do site. Cada envio traz
    `nome`, `email`, `empresa`, `interesse`, `mensagem` e `origem` (qual CTA
-   gerou o lead: `demo`, `especialista`, `founding` ou `direto`).
+   gerou o lead: `demo`, `especialista`, `founding` ou `direto`; links por produto
+   passam `?interesse=<módulo>&origem=<cta>`).
 
 Plano gratuito: 100 envios/mês, filtro de spam (Akismet + honeypot) incluído.
 Para receber por e-mail: Forms → Form notifications → Add notification.

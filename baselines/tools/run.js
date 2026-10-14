@@ -3,12 +3,13 @@ const fs = require('fs');
 const path = require('path');
 // Raiz do projeto derivada da localização deste script (baselines/tools/ → ../..)
 const SP = path.resolve(process.argv[2]), ROOT = path.resolve(__dirname, '..', '..');
-const CHROME = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME = process.env.CHROME || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 const pages = [
   ['home', ROOT + '/index.html'],
   ['overview', ROOT + '/plataforma/index.html'],
   ['crm', ROOT + '/plataforma/crm/index.html'],
   ['educacao', ROOT + '/plataforma/educacao/index.html'],
+  ['marketing', ROOT + '/plataforma/marketing/index.html'],
   ['contato', ROOT + '/contato/index.html'],
   ['obrigado', ROOT + '/contato/obrigado.html'],
 ];

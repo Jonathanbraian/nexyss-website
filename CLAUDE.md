@@ -275,7 +275,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
 /plataforma/               overview da plataforma       ✅ pronta
   /plataforma/crm/           TEMPLATE de produto          ✅ pronta
   /plataforma/educacao/                                 ✅ pronta (sem #compliance)
-  /plataforma/marketing/                                ⬜
+  /plataforma/marketing/                                ✅ pronta (14/10/2026 — 22 bullets, todos 🔵)
   /plataforma/finance/                                  ⬜
   /plataforma/hr/                                       ⬜
   /plataforma/ai/                                       ⬜
@@ -344,7 +344,7 @@ Substituir todas as ocorrências de `nexyss.com` (placeholder atual) pelo domín
 real quando confirmado. **Buscar globalmente antes de aplicar** — a lista abaixo é
 de 04/09/2026 e pode ficar desatualizada conforme páginas novas nascerem.
 
-**20 ocorrências nas 4 páginas aprovadas — 5 por página, sempre nas mesmas linhas:**
+**20 ocorrências nas 4 páginas aprovadas — 5 por página, sempre nas mesmas linhas** (a lista é de 04/09; desde então `plataforma/marketing/` trouxe mais 5, no mesmo padrão, e `contato/` tem 7 + `obrigado.html` 5 — rodar o grep abaixo):
 
 | Linha | Tag |
 |---|---|
@@ -712,6 +712,103 @@ As **4 páginas** (Home, Overview, CRM, Educação) têm fingerprint armazenado 
 "Teste de regressão — baselines v2" acima para os hashes e o procedimento.
 
 
+## Página `/plataforma/marketing/` (14/10/2026)
+
+`<body class="theme-mkt page-produto has-subnav">` — 12 seções, 788 linhas. Molde: CRM.
+Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
+
+### Argumento central
+A CRM argumenta **largura** (um cliente visto por todos os módulos), a Educação
+**duração** (um aluno por anos). Marketing argumenta **prestação de contas**: o
+relatório de campanha que termina onde o contrato começa. O diferencial é a
+atribuição ligada a CRM e Finance — receita vinda do contrato e da fatura, não
+estimada. Posicionamento "hub completo" (automação, campanhas multi-canal,
+conteúdo/CMS, analytics e atribuição), **sem nomear concorrente** (mesma decisão
+do comparativo da Overview).
+
+### Seções
+Hero (**Visual A `.wf-*`**) · `.subnav` (O problema · Recursos · Atribuição ·
+Nexyss AI · Integrações) · `#problema` (3 `.sol-card`) · `#recursos` (2 `lg` + 3
+`md`: Automação, Campanhas, Conteúdo, Audiência, Relatórios) · `#atribuicao`
+(`.ai-inner` + **Visual B `.attr-*`**, no lugar do `#visao-360` da CRM) · `#ia` ·
+`#integracoes` (4 itens) · `#para-quem` (3 `.sol-card`) · impacto (1 · 3 ·
+99.99%) · `#clientes` (Founding, sem recolorir) · `.cta-final`.
+**Sem logo wall** — decisão de 14/10: nenhum cliente real usa o Marketing (R8), e
+o bloco do molde era fictício.
+
+### Badges: 22 bullets, TODOS 🔵 Roadmap
+Rigor máximo — sem validação do time técnico não há 🟢. Badgeados: 15 bullets de
+`#recursos`, 3 itens de `#atribuicao`, 4 de `#integracoes`. **Sem badge** (R5.1):
+hero, headlines, `#problema`, `#ia` (descrições narrativas, como na CRM) e
+`#para-quem` (`.sol-tag` de persona, como na CRM). Inventário em CLAIMS-AUDIT.md.
+
+**Linha de disclosure** (`.rm-note`, DM Mono, `--c-text-mute`) abaixo do título de
+`#recursos`: *"Os recursos abaixo estão em roadmap. Founding Customers participam
+da definição da ordem de entrega."* Não é claim — é transparência estratégica, e
+amarra o Founding ao produto. Texto aprovado literalmente.
+
+### CTAs (padrão novo: módulo em `interesse`, CTA em `origem`)
+`../../contato/?interesse=marketing&origem=demo|especialista|founding`.
+Cobre header, drawer, subnav, hero, Founding e CTA final.
+
+### Componentes novos (seção `=== PÁGINA MARKETING ===` ao fim de `nexyss.css`)
+| Componente | Uso |
+|---|---|
+| `.wf-*` (**Visual A**) | canvas de workflow no hero: gatilho → pontuação → e-mail → condição → CRM / reenvio. 3×3 no desktop, conectores em SVG de fundo (`draw`); ≤760px vira **pilha vertical** e o chip `.pipe-ai` desce para baixo do quadro |
+| `.attr-*` (**Visual B**) | dentro de `.acct360`: linha do tempo `.acct-tl` (`.m-mkt/.m-crm/.m-fin`) + barras de receita por canal (`growX`). **Sem valores numéricos** (R3) e marcado "ILUSTRATIVO". As barras só animam ao entrar na tela (`animation-play-state` ligado a `.reveal.in`) |
+| `.rm-note` | disclosure de roadmap |
+
+**Zero keyframes novos** (`draw`, `growX`, `floatA`, `floatB`). Tudo escopado em
+`.page-produto` (exceto `.theme-mkt .ai-visual`, abaixo).
+Gotcha: no mobile o override do `grid-area` precisa de seletor de **mesma
+especificidade** que `.wf-node.nN` e vir depois (`.wf-nodes > .wf-node`) — com
+`.wf-node` simples o canvas não empilhava.
+
+### 🐞 Bug pré-existente descoberto: `.ai-visual` colapsa para 0×0
+O visual de órbitas da Nexyss AI mede **0×0 na Home, Overview, CRM e Educação**
+(já nas baselines aprovadas: `ai-visual … [x, y, 0, 0]`). Causa: item de grid com
+`margin: 0 auto` + `aspect-ratio` e só filhos absolutos → encolhe a 0. Os
+`.ai-node` flutuam sem órbita nem núcleo. **Corrigido só na Marketing**
+(`.theme-mkt .ai-visual { width: 100% }`). O conserto global (`.ai-visual { width:
+100% }`) mexe na Home e muda os 8 fingerprints das páginas aprovadas —
+**aguarda decisão do Jonathan**.
+
+### Bug fix: `origem` do formulário (14/10/2026)
+`nexyss.js` gravava em `origem` o valor cru de `?interesse=`; com
+`?interesse=marketing&origem=demo` o painel registraria `marketing` e perderia a
+CTA. Agora `origem = ?origem= || ?interesse= || 'direto'`, e a mensagem do
+Founding dispara com `interesse=founding` **ou** `origem=founding`. As CTAs antigas
+(`?interesse=demo`) seguem iguais. Testado em 8 cenários no Chromium.
+
+### Ligações de Marketing nas páginas existentes
+13 `href="#"` → página nova: mega-menu, drawer e footer de Home, Overview, CRM e
+Educação (12) + card "Explorar" da Home. O card da Overview já apontava para
+`marketing/`. Os links irmãos (CRM, Educação…) **continuam `href="#"`**.
+
+### Baselines — ambiente Linux (14/10/2026)
+O fingerprint rodou no Chromium do container, **não no Chrome do macOS**, e os
+hashes v4 **não reproduzem** em Linux mesmo com a árvore intacta: mesmo nº de
+elementos e mesma altura de documento nas 12 capturas, mas o hash difere por
+(a) serialização de `font-family` (`BlinkMacSystemFont` → `"system-ui"`) e (b)
+subpixel em larguras de texto inline. Procedimento: controle **antes** de editar,
+comparação por delta no mesmo ambiente. Resultado: as 12 capturas das páginas
+existentes ficaram **idênticas ao controle**. Os hashes Linux estão em
+`baselines/README.md`. `baselines/marketing-*.json` são **baseline inicial em
+Linux** — a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
+`CHROME=/caminho/do/chrome`.
+
+### Pendências registradas aqui
+- **CRM e Educação ainda têm logo wall fictício** (CRM: Globaledu, Atlas Academy,
+  Vertex, Polaris, Meridian, Orbital; Educação: Globaledu, Polaris College, Rede
+  Meridian, Orbital Schools…). Violação de R3/R8 — corrigir na próxima sessão.
+- **Mega-menu de CRM/Educação/Overview ainda tem links irmãos como `href="#"`.**
+  Corrigir de uma vez quando criarmos Finance/HR/AI (padronização única).
+- **`.ai-visual` 0×0** em 4 páginas (acima).
+- **Demo de módulo em roadmap:** o CTA "Solicitar Demo" do Marketing precisa de
+  definição do que a demo mostra, já que 100% dos recursos são 🔵.
+- **Recorte do itálico** no último glifo de uma linha dentro de `.accent`
+  (`background-clip: text`): pré-existente (Educação tem o mesmo), cosmético.
+
 ## Bug fix: logo em branco (11/09/2026)
 
 **Sintoma reportado:** logo "em branco/quebrado" no navegador, nas 4 páginas.
@@ -784,9 +881,11 @@ retorna 404. Não existe chave no `netlify.toml` para isso. Free: 100 envios/mê
 `demo` e `founding` → "Plataforma completa" · `especialista` → "Ainda não tenho
 certeza" · slugs de módulo (`crm`, `educacao`, `marketing`, `finance`, `hr`,
 `ai`, `consultoria`, `plataforma`) → o módulo. O hidden `origem` recebe o
-valor cru (ou `direto`), para o painel dizer qual CTA gerou o lead.
-`founding` também pré-escreve na mensagem "Tenho interesse no programa
-Founding Customers." (editável).
+valor de `?origem=` se houver, senão o cru de `?interesse=`, senão `direto`
+(fix de 14/10/2026), para o painel dizer qual CTA gerou o lead. Links por
+produto usam os dois: `?interesse=marketing&origem=demo`.
+`founding` (em `interesse` **ou** em `origem`) também pré-escreve na mensagem
+"Tenho interesse no programa Founding Customers." (editável).
 
 ### Validação
 HTML5 nativa (bolha do navegador continua). Estilo de erro em **laranja

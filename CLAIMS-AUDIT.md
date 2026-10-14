@@ -472,6 +472,7 @@ de nenhum componente novo.
 | "Turma e docente sincronizados com o LMS" | Educação 736 |
 | "Catraca e biometria" | Educação 742 |
 | "Boleto, cartão, PIX" | Educação 748 |
+| Marketing (22 bullets 🔵: workflow sem código, SMS/push, sync de anúncios, landing pages/blog/formulários, consentimento, multi-touch, API REST/webhooks…) | Marketing, ver seção "MARKETING" |
 
 ## Números aprovados (Jonathan) — NÃO recebem badge
 120+ países · 9 idiomas nativos · 99.99% uptime · 3.4× ciclo de vendas · 87% redução de silos · $2.1M economia de stack · 40+ países atendidos · 360º · 6 módulos · 1 base de dados.
@@ -505,6 +506,65 @@ cliente não é claim de capacidade (R5.1).
 
 > Nota: "Meridian" continua em `plataforma/crm/index.html` como **nome de negócio
 > no mockup do pipeline** (`.pc-name`), não como cliente. Fora do escopo.
+
+## MARKETING — `plataforma/marketing/index.html`  (14/10/2026)
+
+**Regra aplicada: 100% 🔵 Roadmap, todos UNVALIDATED.** Sem validação do time técnico
+nada é 🟢 (R5). 22 bullets badgeados; a página abre `#recursos` com a linha de
+disclosure *"Os recursos abaixo estão em roadmap. Founding Customers participam da
+definição da ordem de entrega."* (não é claim, não leva badge).
+
+### 🔵 `#recursos` — `.mod-features` (15)
+| Card | Afirmação literal |
+|---|---|
+| Automação | Construtor visual de workflows, sem código |
+| Automação | Gatilhos por comportamento, estágio de ciclo de vida e evento de outro módulo |
+| Automação | Entrega do lead qualificado ao CRM com histórico completo |
+| Campanhas | E-mail, SMS e push na mesma campanha |
+| Campanhas | Públicos sincronizados com plataformas de anúncios |
+| Campanhas | Teste A/B de assunto e conteúdo |
+| Conteúdo | Landing pages em editor visual |
+| Conteúdo | Blog integrado |
+| Conteúdo | Formulários nativos que gravam direto no registro do lead |
+| Audiência | Segmentos dinâmicos com dado de todos os módulos |
+| Audiência | Lead scoring por perfil e comportamento |
+| Audiência | Registro de consentimento e preferências por contato |
+| Relatórios | Desempenho por campanha, canal e período |
+| Relatórios | Painéis por marca, unidade e país |
+| Relatórios | Custo por canal ao lado da receita fechada |
+
+### 🔵 `#atribuicao` — `.ai-product` (3)
+Atribuição multi-touch · Receita por canal e campanha (contrato no CRM + fatura no
+Finance ligados à campanha de origem) · Custo de aquisição por canal.
+
+### 🔵 `#integracoes` — `.consult-desc` (4)
+Plataformas de anúncios (públicos sincronizados + custo por campanha) · E-mail e SMS
+(provedores de envio, domínio autenticado, evento registrado no contato) · Site,
+pixel e UTM · API aberta e webhooks (**REST documentada e eventos em tempo real** —
+mesma afirmação da UNVALIDATED abaixo; fornecedores **não** são nomeados).
+
+### ⛔ Sem badge por regra (R5.1)
+Hero e headlines · `#problema` (3 cards) · `#ia` (Insight/Assist/Automate — descrição
+narrativa, mesmo critério da CRM) · `#para-quem` (3 personas e suas `.sol-tag`, como
+na CRM) · impacto (1 · 3 · 99.99%: arquitetura, R4 e SLA aprovados pelo Jonathan).
+
+### Mockups (Visual A e B) — sem número, marcados "ILUSTRATIVO"
+O workflow do hero e o painel de atribuição **não exibem valor numérico** (R3). As
+barras de "Receita por canal" têm largura proporcional ilustrativa e **nenhum
+percentual ou valor**; o rótulo "ILUSTRATIVO" fica no cabeçalho dos dois painéis.
+
+### Decisões aplicadas — 14/10/2026
+- **Sem logo wall** na página (nenhum cliente real usa Marketing — R8).
+- `origem` das CTAs corrigido em `nexyss.js` (ver CLAUDE.md → "Bug fix: `origem`").
+- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**
+  (`plataforma/crm/index.html` ~370-375: Globaledu, Atlas Academy, Vertex, Polaris,
+  Meridian, Orbital; `plataforma/educacao/index.html` 359-364: Globaledu, Polaris
+  College, Rede Meridian, Orbital Schools…). Mesma violação de R3/R8 corrigida na Home
+  em 11/09 — **corrigir na próxima sessão**.
+- Home, linhas 406-408 (Marketing `.mod-features`): a tabela acima na seção HOME
+  sugeria 🟢 por inferência. Ela **nunca foi aplicada** ao HTML e **não vale**: a
+  página de Marketing declara 🔵 para as mesmas capacidades. Se a Home um dia for
+  badgeada, o status é 🔵.
 
 ## Página `/contato/` — fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30–60 min",
