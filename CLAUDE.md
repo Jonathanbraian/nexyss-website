@@ -283,7 +283,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/marketing/                                ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/finance/                                  ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/hr/                                       ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
-  /plataforma/ai/                                       ⬜
+  /plataforma/ai/                                       ✅ pronta (15/10/2026 - 20 bullets, todos 🔵)
   /plataforma/integracoes/                              ⬜
 /solucoes/                 overview                     ⬜
   /solucoes/por-funcao/                                 ⬜
@@ -995,6 +995,104 @@ em Linux (duas passadas idênticas). Tabela de referência em `baselines/README.
 - **Validação técnica** dos 22 bullets do HR antes de qualquer promoção a 🟢.
 - **H1 longo:** com a copy aprovada o H1 quebra em 6 a 7 linhas no desktop (hero alto).
   Funciona, mas é o hero mais comprido do site.
+
+## Página `/plataforma/ai/` (15/10/2026)
+
+`<body class="theme-ai page-produto has-subnav">` - 12 seções, 731 linhas. Molde: HR.
+Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
+**Fecha as 6 páginas de módulo de produto** (CRM, Educação, Marketing, Finance, HR, AI).
+
+### Posicionamento e argumento central
+A Nexyss AI é o **motor da plataforma, não um módulo separado**: a camada que atravessa
+os demais módulos, não um produto de IA para vender à parte. Frase canônica aprovada:
+*"a IA que já está onde você trabalha, não a aba que você precisa abrir"*.
+H1 aprovado: *"A IA que mora dentro do seu CRM, do seu Finance e da sua gestão de pessoas
+- não em uma aba separada."* Persona: **CEO** na headline (diferencial estratégico) e
+**CTO** no corpo (uma camada em vez de uma integração por módulo).
+
+Nota de risco registrada: "mora dentro" e "já está" descrevem **arquitetura**, mas podem
+ser lidos como disponibilidade. A página inteira está sob a linha de disclosure de roadmap
+em `#recursos` e todos os 20 bullets são 🔵. Evitar reforçar a leitura de disponibilidade
+("desde o dia zero", "sem configurar", "já disponível") em qualquer texto novo.
+
+### Seções
+Hero (órbita `.ai-visual` + chip `.pipe-ai`) · `.subnav` (O problema · Capacidades · No
+registro · Módulos · Integrações) · `#problema` (3 `.sol-card`) · `#recursos` (**4 grupos
+pedagógicos** em 4 `.mod-card lg`: Entende, Acelera, Vigia, Decide) · `#registro`
+(`.ai-inner` + `.acct360` com `.acct-tl`) · `#modulos` (5 `.mod-card`, cada um na cor do
+módulo, **só com link para o `#ia` de cada página**) · `#integracoes` (4) · `#para-quem`
+(CEO, CTO, líder de área) · impacto (1 · 3 · 99.99%) · `#clientes` (Founding) ·
+`.cta-final`. **Sem logo wall** (R8).
+
+### Os 4 grupos (20 bullets, TODOS 🔵 Roadmap)
+- **Entende** (4): linguagem natural, classificação, extração de dados de documentos, busca por significado.
+- **Acelera** (4): rascunho, resumo, preenchimento sugerido, resposta a perguntas.
+- **Vigia** (4): anomalia, score por registro, previsão de risco e resultado, alertas.
+- **Decide** (4): recomendação, otimização, agente, ação registrada no mesmo histórico.
+- Mais 4 em `#integracoes` (fontes externas, sistemas do cliente, implantação assistida,
+  API e webhooks). Total 20 (16 + 4). Sem badge (R5.1): hero, headlines, `#problema`,
+  `#registro`, `#modulos` e `#para-quem`. Mesma linha `.rm-note` das demais páginas.
+
+### ZERO componentes CSS novos (decisão arquitetural)
+IA não é produto separado, então a página não tem visual próprio. Reusa `.ai-visual` +
+`.ai-orbit*` + `.ai-center` + `.ai-node` (4 nós: n1 a n4, um por grupo), `.pipe-ai`,
+`.mod-card`, `.acct360`, `.acct-tl`, `.consult-grid`, `.sol-card`, `.rm-note`. O único CSS
+novo é `.theme-ai .ai-visual { width: 100% }` (seção `=== PÁGINA AI ===`), o conserto
+escopado do bug 0x0, que aqui é o próprio visual do hero. **Zero keyframes novos.**
+O `.ai-chip` citado no briefing **não existe** no CSS; o chip é o `.pipe-ai`.
+
+### Compromisso implícito sobre dados (decisão de 15/10/2026)
+A página **não afirma nada sobre modelos, provedores ou armazenamento**. Não usa
+privacidade, LGPD, GDPR nem soberania, não nomeia fornecedor nem modelo, e não usa a
+palavra "modelo". A linguagem é "a IA opera dentro do mesmo registro que você vê" e
+"cada ação fica no mesmo lugar que todo o resto". Deixa porta aberta a qualquer
+arquitetura futura. Conferência: `grep -iE 'openai|anthropic|mistral|gemini|llama|gpt|claude|privacid|lgpd|gdpr|soberania|\bmodelo' plataforma/ai/index.html` só pode
+acertar o link legal "Privacidade" do rodapé compartilhado.
+
+### Limites de claim (regras que valem para qualquer texto de IA)
+Sem número de desempenho, sem "mais rápido" ou "mais barato", sem concorrente nomeado, sem
+modelo específico. A página **não reivindica o que a CRM tem como Ativo** ("Construtor
+visual, sem código", "Gatilhos entre módulos"): o Decide é agente e recomendação, não
+construtor de regra.
+
+### CTAs
+`../../contato/?interesse=ai&origem=demo|especialista|founding`. O select e o `MAP` do
+`nexyss.js` já aceitavam `ai`.
+
+### Ligações de AI nas páginas existentes
+22 `href="#"` trocados pela página nova: mega-menu, drawer e footer de Home, Overview,
+CRM, Educação, Marketing, Finance e HR (21) + card "Conhecer Nexyss AI" da Home. Na
+Overview o card e o link do `#ia` já apontavam para `ai/`. Total: 24 pontos. Continuam
+`href="#"` os tiles de CRM e Educação em todas as páginas e "Integrações & API".
+
+### Baselines (Linux)
+Controle capturado antes de editar: as 18 capturas das 9 páginas anteriores ficaram
+**idênticas** (zero delta). `baselines/ai-*.json` são baseline inicial em Linux (duas
+passadas idênticas). Tabela de referência em `baselines/README.md`.
+
+### Rebaixamento cross-módulo aplicado (15/10/2026)
+CRM, bullet "Health score calculado com dado de todos os módulos": 🟢 para 🔵. Motivo: o
+grupo Vigia da página de AI declara "Score por registro" como Roadmap, e o score da CRM
+depende de dado de Finance e Marketing (Roadmap). CRM: **11 🟢 + 4 🔵**. Mantidos 🟢 os
+limítrofes sem termo de IA (forecast em cenários, construtor sem código, gatilhos entre
+módulos). Educação, Marketing, Finance e HR: nada a rebaixar. O briefing citava 12 e depois
+14 rebaixamentos; a conferência achou 1 (os 2 itens do Finance não existem). Detalhes em
+CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
+
+### Pendências registradas aqui
+- **Home, hero:** "Nexyss AI agora disponível em todos os módulos" segue como afirmação de
+  disponibilidade, em contradição com uma página de AI 100% Roadmap. Mudança na Home
+  exige decisão explícita.
+- **Seções `#ia` de CRM e Educação** descrevem a IA no presente, sem linha de disclosure.
+- **Fix global do `.ai-visual`** (0x0 em Home, Overview, CRM e Educação).
+- **Logo wall fictício** na CRM e na Educação.
+- **Links irmãos `href="#"`:** só CRM, Educação e "Integrações & API" sobram.
+- **Contraste do link `.mod-link` por módulo** em `#modulos` (e na Overview): HR magenta
+  e Finance violeta ficam entre 3,5 e 4,4:1 em texto de 12px sobre o card. Padrão
+  pré-existente do `.mod-card`; o tom `--c-hr-text` só existe sob `.theme-hr`.
+- **H1 longo** (7 linhas no desktop), o hero mais alto do site.
+- **Perguntas técnicas de CTO sem resposta na página** (backlog de validação): uso de dado
+  do cliente em treinamento, retenção, residência, escolha e troca de modelo.
 
 ## Bug fix: logo em branco (11/09/2026)
 

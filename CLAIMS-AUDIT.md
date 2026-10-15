@@ -134,7 +134,7 @@ Linhas 576 ("Implantação assistida" / "Semanas, não meses"⚠️), 584 ("Zero
 
 ## CRM - `plataforma/crm/index.html`
 
-### ✅ Badgeadas - `.mod-features` em `#recursos`: **12 🟢 Ativo + 3 🔵 Roadmap** (Cat. 7A antecipada, 04/09; 1 bullet rebaixado em 14/10/2026, ver seção FINANCE)
+### ✅ Badgeadas - `.mod-features` em `#recursos`: **11 🟢 Ativo + 4 🔵 Roadmap** (Cat. 7A antecipada, 04/09; 1 bullet rebaixado em 14/10/2026, ver seção FINANCE, e 1 em 15/10/2026, ver seção AI)
 
 | Linha | Afirmação literal | Card | Status atual |
 |---|---|---|---|
@@ -142,7 +142,7 @@ Linhas 576 ("Implantação assistida" / "Semanas, não meses"⚠️), 584 ("Zero
 | 435 | Metas por vendedor, unidade, região e global | Pipeline | 🟢 |
 | 436 | Conversão entre moedas na taxa da data do fechamento | Pipeline | 🟡 |
 | 445 | Histórico unificado de cada interação, por origem | Contas 360º | 🟢 |
-| 446 | Health score calculado com dado de todos os módulos | Contas 360º | 🟡 |
+| 446 | Health score calculado com dado de todos os módulos | Contas 360º | 🔵 **rebaixado 15/10/2026** (consistência cross-módulo com a página AI) |
 | 447 | Hierarquia de grupo, matriz e filiais | Contas 360º | 🟢 |
 | 456 | Construtor visual, sem código | Automação | 🟢 |
 | 457 | Gatilhos entre módulos | Automação | 🟡 |
@@ -475,6 +475,7 @@ de nenhum componente novo.
 | Marketing (22 bullets 🔵: workflow sem código, SMS/push, sync de anúncios, landing pages/blog/formulários, consentimento, multi-touch, API REST/webhooks…) | Marketing, ver seção "MARKETING" |
 | Finance (22 bullets 🔵: razão multi-entidade, DRE/balanço/DFC, notas e obrigações por país, alçadas, régua de cobrança, projeção de caixa, conciliação automática, API REST/webhooks...) | Finance, ver seção "FINANCE" |
 | HR (22 bullets 🔵: funil e triagem com IA, assinatura sem papel, acessos criados na admissão, folha por entidade e por país, férias e afastamentos, avaliação, desligamento com acessos revogados, ponto, benefícios, API REST/webhooks...) | HR, ver seção "HR" |
+| AI (20 bullets 🔵: linguagem natural, classificação, extração de documentos, score e previsão por registro, detecção de anomalia, recomendação, otimização, agente entre módulos, REST/webhooks...) | AI, ver seção "AI" |
 
 ## Números aprovados (Jonathan) - NÃO recebem badge
 120+ países · 9 idiomas nativos · 99.99% uptime · 3.4× ciclo de vendas · 87% redução de silos · $2.1M economia de stack · 40+ países atendidos · 360º · 6 módulos · 1 base de dados.
@@ -692,6 +693,88 @@ sem eixo nem valor). Nenhum número de desempenho (R3).
 - **Sem logo wall** (nenhum cliente real usa HR, R8). **Sem concorrente nomeado.**
 - **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**.
 - **Pendência aberta:** fix global do `.ai-visual` (0x0 em 4 páginas).
+
+## AI - `plataforma/ai/index.html`  (15/10/2026)
+
+**Regra aplicada: 100% 🔵 Roadmap, todos UNVALIDATED.** Sem validação do time técnico nada é
+🟢 (R5). 20 bullets badgeados (16 em 4 grupos + 4 em `#integracoes`), mesma linha de
+disclosure das demais páginas em `#recursos` (não é claim, não leva badge).
+
+### 🔵 `#recursos` - os 4 grupos (16)
+| Grupo | Afirmação literal |
+|---|---|
+| Entende | Compreensão de pedidos em linguagem natural, no contexto do módulo |
+| Entende | Classificação de mensagens e registros por tipo e prioridade |
+| Entende | Extração de dados de documentos para os campos do registro |
+| Entende | Busca por significado nos registros que o usuário vê |
+| Acelera | Rascunho de mensagens, propostas e anúncios a partir do registro |
+| Acelera | Resumo de contas, conversas, campanhas e candidatos |
+| Acelera | Preenchimento sugerido dos campos de um registro |
+| Acelera | Resposta a perguntas sobre os dados do usuário, em linguagem natural |
+| Vigia | Detecção de anomalia em lançamentos, pipeline e frequência |
+| Vigia | Score por registro: conta, aluno, lead e candidato |
+| Vigia | Previsão de risco e de resultado por registro |
+| Vigia | Alertas enviados ao dono do registro, com a origem do sinal |
+| Decide | Recomendação de próximo passo por registro |
+| Decide | Otimização de prioridades e de alocação entre filas |
+| Decide | Agente que executa o próximo passo entre módulos |
+| Decide | Cada ação executada registrada no mesmo lugar que o restante do histórico |
+
+### 🔵 `#integracoes` - `.consult-desc` (4)
+Fontes de dados externas · Sistemas do cliente (ações da IA por API) · Implantação assistida
+(casos de uso ativados com a consultoria) · API aberta e webhooks (**REST documentada e
+eventos por webhook**, mesma afirmação da lista UNVALIDATED abaixo).
+
+### ⛔ Sem badge por regra (R5.1)
+Hero e headlines · `#problema` · `#registro` (mockup `.acct360` ILUSTRATIVO) · `#modulos`
+(resume e liga o `#ia` de cada página, sem claim novo) · `#para-quem` · impacto.
+
+### Compromisso implícito sobre dados
+A página não afirma nada sobre modelos, provedores ou armazenamento, não usa privacidade,
+LGPD, GDPR nem soberania e não nomeia fornecedor. **Backlog de perguntas técnicas que a
+página NÃO responde** (a validar antes de qualquer texto sobre o tema): uso de dado do
+cliente em treinamento, retenção de prompt e resposta, residência de dado, escolha e troca
+de modelo por caso de uso.
+
+### Varredura cross-módulo de afirmações de IA (15/10/2026)
+Varredura do miolo das 7 páginas (fora de menu e rodapé) por IA, previsão, score, sugestão,
+automático, inteligência, agente e assistente.
+- **🟢 com termo de IA ou previsão:** CRM "Health score calculado com dado de todos os
+  módulos" (conflito: tem "score" e depende de dado de cobrança e engajamento, módulos
+  Roadmap). Limítrofes: CRM "Comprometido, provável e otimista" (cenário de forecast) e,
+  sem termo de IA, "Construtor visual, sem código" e "Gatilhos entre módulos" (automação
+  por regra, que a página de AI **não** reivindica). Educação: 5 🟢, nenhum de IA.
+  Marketing, Finance, HR: 0 🟢.
+- **Sem badge, no presente:** Home hero "Nexyss AI agora disponível em todos os módulos";
+  Home e Overview ("Previsões, automações e assistentes disponíveis em cada módulo");
+  bullets da Home ("IA conversacional para follow-ups automáticos", "Lead scoring com IA",
+  "Analytics preditivo em cada módulo", "Workflows inteligentes sem código"); Overview
+  ("Previsão de receita e risco de evasão recalculados na hora"); seções `#ia` de CRM e
+  Educação (6 descrições de Insight, Assist e Automate, em páginas com 🟢 e sem disclosure).
+- **Chips `.pipe-ai` nos heros (mockups):** CRM (com números, pré-existente), Educação,
+  Marketing, Finance, HR.
+- **🔵 que já citam IA:** Finance "Conciliação automática por regra e por sugestão da IA";
+  HR "Triagem com apoio da IA e avaliação padronizada".
+
+### Decisões aplicadas - 15/10/2026
+- **Rebaixado na CRM (1 bullet):** "Health score calculado com dado de todos os módulos",
+  de 🟢 Ativo para 🔵 Roadmap. Motivo: rebaixo por consistência cross-módulo após a criação
+  da Nexyss AI. O grupo Vigia da página de AI declara "Score por registro" como Roadmap, e
+  o score da CRM depende de dado de cobrança (Finance) e de engajamento (Marketing), dois
+  módulos 100% Roadmap. CRM passa a **11 🟢 + 4 🔵**.
+- **Mantidos 🟢 na CRM (limítrofes, sem termo de IA):** "Comprometido, provável e otimista"
+  (cenário de forecast por cálculo), "Construtor visual, sem código" e "Gatilhos entre
+  módulos" (automação por regra, que a página de AI não reivindica). Reavaliar se o time
+  técnico disser que algum deles usa modelo.
+- **Sem rebaixamento** em Educação (5 🟢, nenhum de IA), Marketing, Finance e HR (0 🟢 cada).
+  O bullet 🔵 do Finance com "sugestão da IA" e o do HR com "apoio da IA" já eram Roadmap.
+- **O briefing falava em 12 e depois 14 rebaixamentos.** A conferência no código achou 1
+  conflito estrito. O número 12 coincide com o total de 🟢 da CRM, e os 2 itens adicionais
+  atribuídos ao Finance (um `attr-note` "A IA aprende com os pagamentos passados..." e um
+  bullet de conciliação com badge Ativo) **não existem**: o Finance tem 0 badges Ativo e a
+  palavra "aprende" não aparece em nenhuma página. Registro com o número real.
+- **Pendência aberta:** o hero da Home ("Nexyss AI agora disponível em todos os módulos") e
+  as seções `#ia` de CRM e Educação seguem descrevendo a IA no presente.
 
 ## Página `/contato/` - fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 min",

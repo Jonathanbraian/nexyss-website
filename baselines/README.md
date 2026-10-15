@@ -5,7 +5,7 @@
 Cada `.json` aqui é a **assinatura estrutural e visual** de uma página aprovada,
 capturada em dois breakpoints: **1280×800** (desktop) e **375×812** (mobile).
 
-São 18 arquivos - 9 páginas × 2 viewports (Marketing, Finance e HR entraram em 14/10/2026,
+São 20 arquivos - 10 páginas × 2 viewports (Marketing, Finance, HR e AI entraram em 14-15/10/2026,
 geradas em **Linux**, ver "Ambiente" abaixo):
 
 ```
@@ -98,13 +98,14 @@ ambiente** contra esta tabela:
 |---|---|---|
 | Home | `782:43f4e338` | `782:d99c7f24` |
 | Overview | `854:9e1e965f` | `854:d7ec73ca` |
-| CRM | `915:55bd3f7c` | `915:b10f55e3` |
+| CRM | `915:7e771a6d` | `915:fd098212` |
 | Educação | `1062:17627d49` | `1062:8ab43d28` |
 | Contato | `576:38db0954` | `576:01a4e2b7` |
 | Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
 | **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
 | **Finance** (baseline inicial) | `931:09114386` (doc 1280×9449) | `931:7e2486dc` (doc 375×16102) |
 | **HR** (baseline inicial) | `896:540489f3` (doc 1280×9697) | `896:291637e0` (doc 375×15946) |
+| **AI** (baseline inicial) | `769:30973f7e` (doc 1280×9484) | `769:608fe632` (doc 375×15826) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -127,7 +128,7 @@ As demais páginas ficaram idênticas. `crm-*.json` continua sendo o do macOS.
 
 `marketing-*.json` foi regravado depois da troca e vale como baseline inicial em
 Linux. Regerar no macOS para uniformizar com os demais. `finance-*.json` segue o mesmo
-critério (baseline inicial em Linux, duas passadas idênticas). `hr-*.json` também.
+critério (baseline inicial em Linux, duas passadas idênticas). `hr-*.json` e `ai-*.json` também.
 Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao controle.
 
 ## Histórico
@@ -150,3 +151,8 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   do Finance em Linux.
 - **14/10/2026** (4) - `/plataforma/hr/` entra nas ferramentas (`run.js`, `extract.py`).
   Delta nas páginas existentes: **zero**. Baseline inicial do HR em Linux.
+- **15/10/2026** - `/plataforma/ai/` entra nas ferramentas (`run.js`, `extract.py`).
+  Delta nas 9 páginas existentes: **zero** (18 capturas idênticas). Baseline inicial do AI em Linux.
+- **15/10/2026** (2) - CRM: bullet "Health score..." de Ativo para Roadmap. Delta: 1 elemento (o
+  badge), sem reflow. CRM 1280 `915:55bd3f7c` para `915:7e771a6d`; 375 `915:b10f55e3` para
+  `915:fd098212`. As demais 9 páginas seguem idênticas. `crm-*.json` continua sendo o do macOS.
