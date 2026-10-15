@@ -92,7 +92,7 @@ verdade** - ela é escrita depois da aplicação, conferida contra o arquivo.
 | 568 | Workflows inteligentes sem código, entre módulos | `.ai-product` (Automate) `#ai` | idem |
 | 614 | Deploy da plataforma, migração de legados, integração, change management | `.consult-desc` `#consultoria` | ⚠️ REVISAR - camada de serviço, não feature de produto |
 | 630 | Operação assistida, suporte enterprise 24/7, customer success com SLA | `.consult-desc` `#consultoria` | ⚠️ REVISAR - serviço (contém "24/7" e "SLA" verificáveis) |
-| 260 | Nexyss AI agora disponível em todos os módulos | `.hero-tag` "Novo" | ⚠️ REVISAR - é claim de disponibilidade, mas fica no hero (fora da regra) |
+| 260 | Nexyss AI em construção, chegando em todos os módulos (antes: "agora disponível...") | `.hero-tag` "Novo" | ✅ Suavizado em 15/10/2026: "Nexyss AI em construção, chegando em todos os módulos" |
 
 ---
 
@@ -773,8 +773,10 @@ automático, inteligência, agente e assistente.
   atribuídos ao Finance (um `attr-note` "A IA aprende com os pagamentos passados..." e um
   bullet de conciliação com badge Ativo) **não existem**: o Finance tem 0 badges Ativo e a
   palavra "aprende" não aparece em nenhuma página. Registro com o número real.
-- **Pendência aberta:** o hero da Home ("Nexyss AI agora disponível em todos os módulos") e
-  as seções `#ia` de CRM e Educação seguem descrevendo a IA no presente.
+- **Pendência fechada em 15/10/2026:** o hero da Home foi suavizado para "Nexyss AI em
+  construção, chegando em todos os módulos" e as seções `#ia` de CRM e Educação ganharam a
+  linha de disclosure de roadmap (`.rm-note`, texto idêntico ao da Marketing). A copy
+  descritiva dessas seções não foi reescrita; segue sem badge pela R5.1, agora sob o aviso.
 
 ## Página `/contato/` - fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 min",
