@@ -895,7 +895,7 @@ Tabela de referência atualizada em `baselines/README.md`.
 
 ### Pendências registradas aqui
 - **Fix global do `.ai-visual`** (acima).
-- **CRM e Educação ainda têm logo wall fictício** (violação de R3/R8).
+- ~~CRM e Educação ainda têm logo wall fictício~~ (removido em 15/10/2026).
 - **Links irmãos `href="#"`** no menu: padronizar de uma vez quando HR e AI existirem.
 - **Demo de módulo em roadmap:** definir o que a demo do Finance mostra.
 - **Validação técnica** dos 22 bullets do Finance antes de qualquer promoção a 🟢.
@@ -989,7 +989,7 @@ em Linux (duas passadas idênticas). Tabela de referência em `baselines/README.
 
 ### Pendências registradas aqui
 - **Fix global do `.ai-visual`** (acima).
-- **CRM e Educação ainda têm logo wall fictício** (violação de R3/R8).
+- ~~CRM e Educação ainda têm logo wall fictício~~ (removido em 15/10/2026).
 - **Links irmãos `href="#"`**: falta só a página de AI para padronizar tudo de uma vez.
 - **Demo de módulo em roadmap:** definir o que a demo do HR mostra.
 - **Validação técnica** dos 22 bullets do HR antes de qualquer promoção a 🟢.
@@ -1083,7 +1083,7 @@ CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
 - ~~Home, hero "agora disponível" e `#ia` de CRM e Educação sem disclosure~~ **Resolvido em
   15/10/2026** (seção seguinte).
 - **Fix global do `.ai-visual`** (0x0 em Home, Overview, CRM e Educação).
-- **Logo wall fictício** na CRM e na Educação.
+- ~~Logo wall fictício na CRM e na Educação~~ **Removido em 15/10/2026** (seção seguinte).
 - **Links irmãos `href="#"`:** só CRM, Educação e "Integrações & API" sobram.
 - **Contraste do link `.mod-link` por módulo** em `#modulos` (e na Overview): HR magenta
   e Finance violeta ficam entre 3,5 e 4,4:1 em texto de 12px sobre o card. Padrão
@@ -1108,6 +1108,27 @@ e a realidade Roadmap (a página de AI tem 20 bullets, todos 🔵).
 - **Fingerprint (Linux, controle antes de editar):** Home mesmo nº de elementos e mesma altura
   (só a largura do texto do hero muda); CRM e Educação +1 elemento cada. As outras 7 páginas
   (14 capturas) idênticas.
+
+## Remoção do logo wall fictício da CRM e da Educação (15/10/2026)
+
+As duas páginas exibiam 6 organizações inventadas cada (CRM: Globaledu, Atlas Academy, Vertex,
+Polaris, Meridian, Orbital; Educação: as mesmas com sufixos, como "Rede Meridian") sob
+"operam na Nexyss". Violação de R3 e R8, aberta desde a fase Marketing.
+
+- **Decisão:** remover a `<section class="logos">` inteira nas duas páginas, sem substituir.
+  Mesmo critério de Marketing, Finance, HR e AI: nenhum cliente real está confirmado como
+  usuário do módulo, e associar os 5 clientes reais sem confirmação repetiria a violação.
+  O `#clientes` (Founding) continua fechando a página.
+- **Escopo:** 14 linhas removidas em cada página. Zero CSS, zero mudança na Home. O CSS
+  `.logos` segue em uso pela Home. A ordem de seções do molde (item 3, `.logos`) passa a
+  valer só para quem tiver cliente real confirmado.
+- **Mockups preservados:** "Meridian", "Atlas Academy" etc. dentro do kanban e da ficha 360
+  da CRM são nomes de negócio de exemplo, não claim de cliente.
+- **Fingerprint (Linux, controle antes de editar):** CRM 916 para 890 elementos, doc 1280
+  -236px, 375 -302px. Educação 1063 para 1036, 1280 -236px, 375 -321px. As outras 8
+  páginas (16 capturas) idênticas.
+- **Para reintroduzir** quando houver cliente real do módulo: recriar a seção como na Home
+  (`.logos-grid.centered`, `data-client`, placeholder textual até chegar o logo).
 
 ## Bug fix: logo em branco (11/09/2026)
 

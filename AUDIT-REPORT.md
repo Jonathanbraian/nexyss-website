@@ -406,7 +406,7 @@ na Educação · links irmãos `href="#"` (falta a página de AI) · domínio re
 5. **H1 de 7 linhas** no desktop com a copy aprovada.
 6. **Contraste de `.mod-link` por módulo** (HR magenta, Finance violeta) entre 3,5 e 4,4:1.
 
-**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na CRM e na
+**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício (resolvido na seção 14) na CRM e na
 Educação · links `href="#"` dos tiles de CRM e Educação e "Integrações & API" · domínio real
 · caixa `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
 Finance + 22 do HR + 20 do AI) · página 404 · definir o que a demo mostra para módulos em
@@ -426,3 +426,17 @@ Correção pós página AI: resolve a contradição entre promessa de disponibil
 
 As outras 7 páginas (14 capturas) ficaram idênticas ao controle. Zero CSS novo, zero reescrita de
 copy existente. Sem concorrente, modelo ou métrica envolvidos.
+
+---
+
+## 14. Remoção do logo wall fictício, CRM e Educação (15/10/2026)
+
+Fecha o achado aberto desde a fase Marketing (violação de R3 e R8).
+
+| Página | Mudança | Delta de fingerprint (Linux) |
+|---|---|---|
+| CRM | seção `.logos` removida (6 nomes inventados) | 916 para 890 elementos; doc 1280: -236px; 375: -302px |
+| Educação | seção `.logos` removida (6 nomes inventados) | 1063 para 1036 elementos; doc 1280: -236px; 375: -321px |
+
+As outras 8 páginas (16 capturas) ficaram idênticas ao controle. Sem substituição por clientes
+reais: nenhum vínculo cliente-módulo está confirmado. Mockups com nomes de exemplo preservados.
