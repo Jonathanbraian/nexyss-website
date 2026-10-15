@@ -559,7 +559,7 @@ percentual ou valor**; o rótulo "ILUSTRATIVO" fica no cabeçalho dos dois pain�
 ### Decisões aplicadas - 14/10/2026
 - **Sem logo wall** na página (nenhum cliente real usa Marketing - R8).
 - `origem` das CTAs corrigido em `nexyss.js` (ver CLAUDE.md → "Bug fix: `origem`").
-- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**
+- **Pendência (FECHADA em 15/10/2026, wall removido):** CRM e Educação tinham logo wall **fictício**
   (`plataforma/crm/index.html` ~370-375: Globaledu, Atlas Academy, Vertex, Polaris,
   Meridian, Orbital; `plataforma/educacao/index.html` 359-364: Globaledu, Polaris
   College, Rede Meridian, Orbital Schools…). Mesma violação de R3/R8 corrigida na Home
@@ -626,7 +626,7 @@ Conciliação e fluxo de caixa usam rótulos genéricos ("Fornecedor 1", "Client
   O "Financeiro acadêmico" da Educação continua 🟢: roda dentro do módulo Educação.
 - **Sem logo wall** (nenhum cliente real usa Finance, R8).
 - **"ERP financeiro"** só em title/meta e uma vez no corpo; nunca no H1.
-- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**
+- **Pendência (FECHADA em 15/10/2026, wall removido):** CRM e Educação tinham logo wall **fictício**
   (violação de R3/R8). Corrigir em sessão própria.
 - **Pendência aberta:** fix global do `.ai-visual` (0x0 em Home, Overview, CRM e
   Educação); muda os fingerprints de 4 páginas.
@@ -691,7 +691,7 @@ sem eixo nem valor). Nenhum número de desempenho (R3).
   contínuos, Aprendizagem corporativa), sugeridas como 🟢 na seção HOME acima, **nunca
   foram aplicadas e não valem**. Se a Home um dia for badgeada, o status é 🔵.
 - **Sem logo wall** (nenhum cliente real usa HR, R8). **Sem concorrente nomeado.**
-- **Pendência aberta:** CRM e Educação ainda têm logo wall **fictício**.
+- **Pendência (FECHADA em 15/10/2026, wall removido):** CRM e Educação tinham logo wall **fictício**.
 - **Pendência aberta:** fix global do `.ai-visual` (0x0 em 4 páginas).
 
 ## AI - `plataforma/ai/index.html`  (15/10/2026)
