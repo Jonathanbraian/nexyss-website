@@ -1080,10 +1080,8 @@ módulos). Educação, Marketing, Finance e HR: nada a rebaixar. O briefing cita
 CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
 
 ### Pendências registradas aqui
-- **Home, hero:** "Nexyss AI agora disponível em todos os módulos" segue como afirmação de
-  disponibilidade, em contradição com uma página de AI 100% Roadmap. Mudança na Home
-  exige decisão explícita.
-- **Seções `#ia` de CRM e Educação** descrevem a IA no presente, sem linha de disclosure.
+- ~~Home, hero "agora disponível" e `#ia` de CRM e Educação sem disclosure~~ **Resolvido em
+  15/10/2026** (seção seguinte).
 - **Fix global do `.ai-visual`** (0x0 em Home, Overview, CRM e Educação).
 - **Logo wall fictício** na CRM e na Educação.
 - **Links irmãos `href="#"`:** só CRM, Educação e "Integrações & API" sobram.
@@ -1093,6 +1091,23 @@ CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
 - **H1 longo** (7 linhas no desktop), o hero mais alto do site.
 - **Perguntas técnicas de CTO sem resposta na página** (backlog de validação): uso de dado
   do cliente em treinamento, retenção, residência, escolha e troca de modelo.
+
+## Correção pós página AI: Home, CRM e Educação (15/10/2026)
+
+Correção pós página AI publicada: resolve a contradição entre a promessa de IA disponível
+e a realidade Roadmap (a página de AI tem 20 bullets, todos 🔵).
+
+- **Home, hero** (`.hero-tag`): "Nexyss AI agora disponível em todos os módulos" passou a
+  "Nexyss AI em construção, chegando em todos os módulos". Mantém a promessa, honesto sobre
+  o estado. Única mudança na Home (o pill "Novo" não foi tocado).
+- **CRM e Educação, `#ia`**: nova linha `.rm-note` (mesma classe e texto da Marketing, Finance,
+  HR e AI) logo abaixo do parágrafo de abertura da seção e antes de `.ai-products`. Chaves
+  `crm.ia.note` e `edu.ia.note`. Nenhuma copy existente foi reescrita; zero CSS novo.
+  Nesses `#ia` a estrutura é `.ai-inner`, não `.section-head`; o `.rm-note` herda a cor do
+  produto pela borda esquerda via `--c-color`, como nas demais páginas.
+- **Fingerprint (Linux, controle antes de editar):** Home mesmo nº de elementos e mesma altura
+  (só a largura do texto do hero muda); CRM e Educação +1 elemento cada. As outras 7 páginas
+  (14 capturas) idênticas.
 
 ## Bug fix: logo em branco (11/09/2026)
 

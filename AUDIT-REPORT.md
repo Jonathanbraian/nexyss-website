@@ -398,8 +398,8 @@ na Educação · links irmãos `href="#"` (falta a página de AI) · domínio re
 1. **A varredura de IA do site achou 1 conflito estrito, não 12.** Um bullet 🟢 da CRM
    ("Health score...") e 2 limítrofes, todos na CRM. Educação tem 5 🟢 sem IA; Marketing,
    Finance e HR têm 0 🟢. O número 12 coincide com o total de 🟢 da CRM.
-2. **A afirmação de IA mais forte do site é do hero da Home** ("agora disponível em todos os
-   módulos"), em contradição com uma página de AI 100% Roadmap. Pendente de decisão.
+2. **A afirmação de IA mais forte do site era do hero da Home** ("agora disponível em todos os
+   módulos"), em contradição com uma página de AI 100% Roadmap. Resolvido na seção 13.
 3. **`.ai-chip` não existe** no CSS; o chip dos heros é o `.pipe-ai`.
 4. **`.ai-visual` segue 0x0** em Home, Overview, CRM e Educação; escopado de novo em
    `.theme-ai`, onde é o visual do hero.
@@ -411,3 +411,18 @@ Educação · links `href="#"` dos tiles de CRM e Educação e "Integrações & 
 · caixa `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
 Finance + 22 do HR + 20 do AI) · página 404 · definir o que a demo mostra para módulos em
 roadmap · perguntas técnicas de CTO sobre dados e modelos.
+
+---
+
+## 13. Correção Home + CRM + Educação: disclosure de IA (15/10/2026)
+
+Correção pós página AI: resolve a contradição entre promessa de disponibilidade e realidade Roadmap.
+
+| Página | Mudança | Delta de fingerprint (Linux) |
+|---|---|---|
+| Home | hero: "agora disponível em todos os módulos" para "em construção, chegando em todos os módulos" | 782 elementos antes e depois; altura igual; hash muda (largura do texto) |
+| CRM | `#ia`: `.rm-note` de roadmap após o parágrafo de abertura | 915 para 916 elementos; doc 1280: +68px; 375: +86px |
+| Educação | `#ia`: `.rm-note` de roadmap após o parágrafo de abertura | 1062 para 1063 elementos; doc 1280: +67px; 375: +87px |
+
+As outras 7 páginas (14 capturas) ficaram idênticas ao controle. Zero CSS novo, zero reescrita de
+copy existente. Sem concorrente, modelo ou métrica envolvidos.
