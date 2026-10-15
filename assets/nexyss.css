@@ -3519,3 +3519,18 @@ body.drawer-open { overflow: hidden; }
   /* o chip de IA sai de cima do organograma: fica logo abaixo do quadro */
   .page-produto .org-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
 }
+
+/* ============================================================
+   === PÁGINA AI === /plataforma/ai/  (15/10/2026)
+   body.theme-ai.page-produto. Zero componentes novos: a IA é a camada
+   da plataforma, não um produto à parte, então a página reusa os
+   componentes existentes (.ai-visual, .pipe-ai, .mod-card, .acct360,
+   .acct-tl, .consult-grid) e não tem visual próprio.
+   O único ajuste é o conserto escopado do .ai-visual.
+   ============================================================ */
+
+/* .ai-visual é item de grid com margin:0 auto + aspect-ratio e só filhos
+   absolutos: sem width ele colapsa para 0x0 (bug pré-existente nas demais
+   páginas; mesmo conserto escopado de Marketing, Finance e HR). Aqui ele é
+   o visual do hero e precisa de tamanho de verdade. */
+.theme-ai .ai-visual { width: 100%; }

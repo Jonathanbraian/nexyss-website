@@ -15,7 +15,7 @@
 | 4 | Founding Customers | ✅ Completa | Reescrita como convite enxuto; os 5 benefícios removidos |
 | 5 | Consultoria | ✅ Completa | Decisão: **sem badges** - descrição de serviço não é badgeável (R5.1) |
 | 6 | Cascata da Overview | ✅ Completa | Nunca teve badges; disclaimer de "exemplo ilustrativo" adicionado |
-| 7A | CRM features | ✅ Completa | 13 🟢 + 2 🔵 (os 2 não validados retidos); **hoje 12 🟢 + 3 🔵**, 1 rebaixado em 14/10/2026 (seção 10) |
+| 7A | CRM features | ✅ Completa | 13 🟢 + 2 🔵 (os 2 não validados retidos); **hoje 11 🟢 + 4 🔵**, 1 rebaixado em 14/10/2026 (seção 10) e 1 em 15/10/2026 (seção 12) |
 | 7B | Educação features | ✅ Completa | 5 🟢 + 13 🔵 (rigor máximo; 13 viraram backlog de validação) |
 
 **Nenhuma categoria bloqueada.** As pendências que sobraram são de conteúdo, não de execução.
@@ -371,3 +371,43 @@ Finance) · página 404 · definir o que a demo mostra para módulos em roadmap.
 na Educação · links irmãos `href="#"` (falta a página de AI) · domínio real · caixa
 `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do Finance +
 22 do HR) · página 404 · definir o que a demo mostra para módulos em roadmap.
+
+---
+
+## 12. Fase AI - `/plataforma/ai/` (15/10/2026)
+
+**Fecha as 6 páginas de módulo de produto** (CRM, Educação, Marketing, Finance, HR, AI).
+
+| Entrega | Estado |
+|---|---|
+| `/plataforma/ai/index.html` - 12 seções, 731 linhas, `theme-ai` | ✅ |
+| 20 bullets badgeados, **todos 🔵 Roadmap**, em 4 grupos (Entende, Acelera, Vigia, Decide) + linha de disclosure | ✅ |
+| Posicionamento: motor da plataforma, não módulo separado | ✅ |
+| **Zero componentes CSS novos** (reusa `.ai-visual`, `.pipe-ai`, `.mod-card`, `.acct360`, `.acct-tl`, `.consult-grid`); único CSS: `.theme-ai .ai-visual { width: 100% }` | ✅ |
+| Compromisso implícito sobre dados: nada sobre modelos, provedores, armazenamento, privacidade ou conformidade | ✅ |
+| 22 `href="#"` para AI (mega, drawer, footer × 7 páginas + card da Home) + 2 já ligados na Overview = 24 pontos | ✅ |
+| **CRM:** bullet "Health score calculado com dado de todos os módulos" rebaixado de 🟢 para 🔵 (consistência cross-módulo). Delta no fingerprint da CRM: só o badge (1 elemento), sem reflow | ✅ |
+| Baselines: 18 capturas das 9 páginas anteriores **idênticas ao controle** antes do rebaixamento; depois dele, só a CRM muda; AI inicial (Linux, 2 passadas iguais) | ✅ |
+
+### Achados da fase
+0. **Rebaixamento aplicado: 1 bullet (CRM, Health score).** O briefing citava 12 e depois
+   14 rebaixamentos, incluindo 2 itens do Finance (um `attr-note` sobre "a IA aprende com os
+   pagamentos passados" e um bullet de conciliação com badge Ativo). A conferência no
+   código não os encontrou: o Finance tem 0 badges Ativo, o bullet de conciliação com IA já é
+   🔵 e a palavra "aprende" não aparece em página nenhuma. O registro usa o número real.
+1. **A varredura de IA do site achou 1 conflito estrito, não 12.** Um bullet 🟢 da CRM
+   ("Health score...") e 2 limítrofes, todos na CRM. Educação tem 5 🟢 sem IA; Marketing,
+   Finance e HR têm 0 🟢. O número 12 coincide com o total de 🟢 da CRM.
+2. **A afirmação de IA mais forte do site é do hero da Home** ("agora disponível em todos os
+   módulos"), em contradição com uma página de AI 100% Roadmap. Pendente de decisão.
+3. **`.ai-chip` não existe** no CSS; o chip dos heros é o `.pipe-ai`.
+4. **`.ai-visual` segue 0x0** em Home, Overview, CRM e Educação; escopado de novo em
+   `.theme-ai`, onde é o visual do hero.
+5. **H1 de 7 linhas** no desktop com a copy aprovada.
+6. **Contraste de `.mod-link` por módulo** (HR magenta, Finance violeta) entre 3,5 e 4,4:1.
+
+**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na CRM e na
+Educação · links `href="#"` dos tiles de CRM e Educação e "Integrações & API" · domínio real
+· caixa `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
+Finance + 22 do HR + 20 do AI) · página 404 · definir o que a demo mostra para módulos em
+roadmap · perguntas técnicas de CTO sobre dados e modelos.
