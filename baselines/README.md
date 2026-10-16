@@ -96,10 +96,10 @@ ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
-| Home | `782:43f4e338` | `782:d99c7f24` |
-| Overview | `854:9e1e965f` | `854:d7ec73ca` |
-| CRM | `915:7e771a6d` | `915:fd098212` |
-| Educação | `1062:17627d49` | `1062:8ab43d28` |
+| Home | `782:673e0b2a` | `782:d98afb57` (doc 375×13206) |
+| Overview | `854:6928ecec` | `854:38f4d2ff` (doc 375×17317) |
+| CRM | `890:23023168` (doc 1280×9406) | `890:3c6bcd9a` (doc 375×15833) |
+| Educação | `1036:c3d93314` (doc 1280×11598) | `1036:76da1dcb` (doc 375×19161) |
 | Contato | `576:38db0954` | `576:01a4e2b7` |
 | Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
 | **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
@@ -156,3 +156,11 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
 - **15/10/2026** (2) - CRM: bullet "Health score..." de Ativo para Roadmap. Delta: 1 elemento (o
   badge), sem reflow. CRM 1280 `915:55bd3f7c` para `915:7e771a6d`; 375 `915:b10f55e3` para
   `915:fd098212`. As demais 9 páginas seguem idênticas. `crm-*.json` continua sendo o do macOS.
+- **15/10/2026** (3) - Logo wall fictício removido da CRM e da Educação. CRM 915 para 890 elementos,
+  Educação 1062 para 1036 (a referência anterior já incluía o `.rm-note` de `#ia`, +1 elemento cada).
+  Docs: CRM 1280 9406, 375 15498; Educação 1280 11598, 375 18826. As outras 8 páginas idênticas.
+- **16/10/2026** - Fix global do `.ai-visual`: `width: 100%` na regra base, 4 regras escopadas
+  removidas. Home, Overview, CRM e Educação mudam de hash nos dois viewports; Marketing, Finance, HR,
+  AI, Contato e Obrigado idênticas. Em 1280 o doc não muda (a linha `.ai-inner` já era mais alta
+  que o visual); em 375 o doc cresce 335px nas 4 páginas. `home-*`, `overview-*`, `crm-*` e
+  `educacao-*.json` foram regravados em Linux (antes eram do macOS); os outros 16 não foram tocados.

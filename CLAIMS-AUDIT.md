@@ -628,7 +628,7 @@ Conciliação e fluxo de caixa usam rótulos genéricos ("Fornecedor 1", "Client
 - **"ERP financeiro"** só em title/meta e uma vez no corpo; nunca no H1.
 - **Pendência (FECHADA em 15/10/2026, wall removido):** CRM e Educação tinham logo wall **fictício**
   (violação de R3/R8). Corrigir em sessão própria.
-- **Pendência aberta:** fix global do `.ai-visual` (0x0 em Home, Overview, CRM e
+- **Pendência (FECHADA em 16/10/2026, regra global):** fix global do `.ai-visual` (0x0 em Home, Overview, CRM e
   Educação); muda os fingerprints de 4 páginas.
 
 ## HR - `plataforma/hr/index.html`  (14/10/2026)
@@ -692,7 +692,7 @@ sem eixo nem valor). Nenhum número de desempenho (R3).
   foram aplicadas e não valem**. Se a Home um dia for badgeada, o status é 🔵.
 - **Sem logo wall** (nenhum cliente real usa HR, R8). **Sem concorrente nomeado.**
 - **Pendência (FECHADA em 15/10/2026, wall removido):** CRM e Educação tinham logo wall **fictício**.
-- **Pendência aberta:** fix global do `.ai-visual` (0x0 em 4 páginas).
+- **Pendência (FECHADA em 16/10/2026, regra global):** fix global do `.ai-visual` (0x0 em 4 páginas).
 
 ## AI - `plataforma/ai/index.html`  (15/10/2026)
 

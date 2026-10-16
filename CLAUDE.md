@@ -807,7 +807,7 @@ Linux** - a regerar no macOS para entrar na tabela v4 acima. `run.js` aceita
   Meridian, Orbital Schools…). Violação de R3/R8 - corrigir na próxima sessão.
 - **Mega-menu de CRM/Educação/Overview ainda tem links irmãos como `href="#"`.**
   Corrigir de uma vez quando criarmos Finance/HR/AI (padronização única).
-- **`.ai-visual` 0×0** em 4 páginas (acima).
+- ~~`.ai-visual` 0×0 em 4 páginas~~ (corrigido globalmente em 16/10/2026).
 - **Demo de módulo em roadmap:** o CTA "Solicitar Demo" do Marketing precisa de
   definição do que a demo mostra, já que 100% dos recursos são 🔵.
 - **Recorte do itálico** no último glifo de uma linha dentro de `.accent`
@@ -894,7 +894,7 @@ capturas das 7 páginas anteriores ficaram **idênticas**, exceto a CRM (rebaixa
 Tabela de referência atualizada em `baselines/README.md`.
 
 ### Pendências registradas aqui
-- **Fix global do `.ai-visual`** (acima).
+- ~~Fix global do `.ai-visual`~~ (feito em 16/10/2026).
 - ~~CRM e Educação ainda têm logo wall fictício~~ (removido em 15/10/2026).
 - **Links irmãos `href="#"`** no menu: padronizar de uma vez quando HR e AI existirem.
 - **Demo de módulo em roadmap:** definir o que a demo do Finance mostra.
@@ -988,7 +988,7 @@ Controle capturado antes de editar: as 16 capturas das 8 páginas anteriores fic
 em Linux (duas passadas idênticas). Tabela de referência em `baselines/README.md`.
 
 ### Pendências registradas aqui
-- **Fix global do `.ai-visual`** (acima).
+- ~~Fix global do `.ai-visual`~~ (feito em 16/10/2026).
 - ~~CRM e Educação ainda têm logo wall fictício~~ (removido em 15/10/2026).
 - **Links irmãos `href="#"`**: falta só a página de AI para padronizar tudo de uma vez.
 - **Demo de módulo em roadmap:** definir o que a demo do HR mostra.
@@ -1082,7 +1082,7 @@ CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
 ### Pendências registradas aqui
 - ~~Home, hero "agora disponível" e `#ia` de CRM e Educação sem disclosure~~ **Resolvido em
   15/10/2026** (seção seguinte).
-- **Fix global do `.ai-visual`** (0x0 em Home, Overview, CRM e Educação).
+- ~~Fix global do `.ai-visual`~~ (feito em 16/10/2026).
 - ~~Logo wall fictício na CRM e na Educação~~ **Removido em 15/10/2026** (seção seguinte).
 - **Links irmãos `href="#"`:** CRM e Educação ligados em 16/10/2026 (mega-menu, drawer e cards). Sobram "Integrações & API", o item "Educação" do mega-menu Soluções e o footer inteiro de CRM e Educação.
 - **Contraste do link `.mod-link` por módulo** em `#modulos` (e na Overview): HR magenta
@@ -1153,6 +1153,39 @@ versionadas (`plataforma/crm/index.html` 51564 bytes e `plataforma/educacao/inde
 - **Validação:** script resolve cada href contra o disco: 46 links para CRM ou Educação fora
   do footer, todos resolvem (0 quebrados). Normalizando todos os `href`, as 10 páginas ficam
   byte a byte iguais ao antes. Fingerprint das 10 páginas, 20 capturas, idêntico ao controle.
+
+## Fix global do `.ai-visual` (16/10/2026)
+
+Fecha a dívida técnica do `.ai-visual` 0×0 (Home, Overview, CRM e Educação).
+
+- **Causa raiz (confirmada por medição):** `.ai-visual` é item de grid (`.ai-inner`) com
+  `margin: 0 auto` + `aspect-ratio: 1` e só filhos `position: absolute`. Sem largura
+  explícita, a largura vira "ajustar ao conteúdo" (zero) e a altura herda zero pelo ratio.
+- **Correção:** `width: 100%` na regra base `.ai-visual` (`assets/nexyss.css`), com
+  comentário explicando o porquê. O `max-width: 480px` existente limita no desktop.
+- **Removidas as 4 regras escopadas** (`.theme-mkt`, `.theme-fin`, `.theme-hr`, `.theme-ai`),
+  todas idênticas (`width: 100%`, uma linha cada) e agora redundantes. A seção `=== PÁGINA AI ===`
+  do CSS ficou só com o comentário de cabeçalho.
+- **Alternativa testada e descartada:** `min-height: 420px`. Medido em Chromium: funciona
+  só porque o `aspect-ratio` converte a altura mínima em largura mínima, encolhe Marketing,
+  Finance e HR de 480 para 420 e passa de 335px no container mobile. Não existe `.ai-stage`.
+- **Medição (computada, 8 páginas):** 480×480 em 1280 e 335×335 em 375, em todas. Sem
+  transbordo horizontal (`scrollWidth` igual à viewport).
+- **Fingerprint (Linux, controle antes de editar):** Home, Overview, CRM e Educação mudam de
+  hash nos dois viewports, sem mudar nº de elementos. Em 1280 o documento não muda de altura
+  (a linha do grid já era mais alta que o visual); em 375 cresce 335px nas 4. Marketing, Finance,
+  HR, AI, Contato e Obrigado idênticas.
+- **Baselines:** `home-*`, `overview-*`, `crm-*` e `educacao-*.json` regravados em Linux.
+- **Home:** mudança aprovada explicitamente pelo Jonathan nesta fase (a órbita passa a
+  aparecer na seção Nexyss AI).
+- **Registro de um erro de processo:** em sessão anterior a pendência foi descrita como
+  "fantasma" (já renderizando 480×480 e 335×335 nas 4 páginas antigas), com base em dados
+  que não correspondiam ao código (medidas, markup e versão de navegador citados não
+  existem). A medição real de 16/10/2026 na `main` `ce5bfb6` confirmou o bug: Home,
+  Overview, CRM e Educação em 0×0 nos dois viewports, e só Marketing, Finance, HR e AI em
+  480×480 e 335×335 (por causa das regras escopadas). Foi isso que viabilizou o fix.
+- **Medição pós-fix (8 páginas com `.ai-visual`):** 480×480 em 1280 e 335×335 em 375 em
+  todas, e `scrollWidth` igual à viewport (zero transbordo horizontal).
 
 ## Bug fix: logo em branco (11/09/2026)
 
