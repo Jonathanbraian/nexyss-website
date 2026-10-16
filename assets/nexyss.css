@@ -34,6 +34,9 @@
   --c-hr-text: #CA7BEC;     /* tom de TEXTO do HR: o magenta puro reprova AA em texto pequeno (4,45:1). Usado so em .theme-hr */
   --c-ai: #37A7E2;           /* Azul-elétrico AI */
   --c-ai-deep: #1E7CB8;
+  --c-int: #2E7BFF;          /* Azul elétrico saturado Integrações (matiz 218, distinto do AI 201) */
+  --c-int-deep: #2159B8;
+  --c-int-text: #629CFF;     /* tom de TEXTO de Integrações: o azul puro dá 4,54 / 4,07 / 3,54 sobre navy-deep / navy / navy-mid; este dá 6,5 / 5,8 / 5,1. Usado só sob .theme-int */
 
   /* Neutros dark */
   --c-white: #FFFFFF;
@@ -308,6 +311,7 @@ header.site.scrolled {
 .icn-fin { background: rgba(124, 140, 232, 0.18); color: var(--c-fin); }
 .icn-hr  { background: rgba(184, 79, 229, 0.15); color: var(--c-hr); }
 .icn-ai  { background: rgba(55, 167, 226, 0.15); color: var(--c-ai); }
+.icn-int { background: rgba(46, 123, 255, 0.15); color: var(--c-int); }
 .icn-neutral { background: var(--c-line-mid); color: var(--c-text-soft); }
 
 .nav-cta { display: flex; align-items: center; gap: 10px; }
@@ -790,6 +794,7 @@ section.block.deeper {
 .mod-card.fin { --c-color: var(--c-fin); }
 .mod-card.hr  { --c-color: var(--c-hr); }
 .mod-card.ai  { --c-color: var(--c-ai); }
+.mod-card.int { --c-color: var(--c-int); }
 
 .mod-card.lg { grid-column: span 6; }
 .mod-card.md { grid-column: span 4; }
@@ -1470,6 +1475,8 @@ body.drawer-open { overflow: hidden; }
   --c-color-a08: rgba(184, 79, 229, 0.08);  --c-color-a15: rgba(184, 79, 229, 0.15);  --c-color-a25: rgba(184, 79, 229, 0.25); }
 .theme-ai  { --c-color: var(--c-ai);  --c-color-deep: var(--c-ai-deep);
   --c-color-a08: rgba(55, 167, 226, 0.08);  --c-color-a15: rgba(55, 167, 226, 0.15);  --c-color-a25: rgba(55, 167, 226, 0.25); }
+.theme-int { --c-color: var(--c-int); --c-color-deep: var(--c-int-deep);
+  --c-color-a08: rgba(46, 123, 255, 0.08);  --c-color-a15: rgba(46, 123, 255, 0.15);  --c-color-a25: rgba(46, 123, 255, 0.25); }
 
 /* ============================================================
    PAGINA DE PRODUTO - acentos herdam a cor do produto
@@ -3518,4 +3525,171 @@ body.drawer-open { overflow: hidden; }
    .acct-tl, .consult-grid) e não tem visual próprio.
    Nenhum CSS próprio: o conserto do .ai-visual é a regra base global.
    ============================================================ */
+
+/* ============================================================
+   === PÁGINA INTEGRAÇÕES === /plataforma/integracoes/  (16/10/2026)
+   body.theme-int.page-produto. Tudo escopado em .page-produto (ou
+   .theme-int): o CSS é compartilhado e regra sem escopo atinge a Home.
+   Zero keyframes novos: reusa draw, floatA, floatB.
+   Componente novo: .br-* (Visual A, a ponte no hero). Reusa .dash/.dash-bar,
+   .pipe-ai, .acct360, .acct-tl, .fc-head, .attr-note, .mod-card, .sol-card,
+   .consult-grid, .rm-note, .ai-products, .ai-visual.
+   Mockups sem valor numérico: rótulos genéricos e marca ILUSTRATIVO.
+   ============================================================ */
+
+/* Tom de texto do azul de Integrações (--c-int-text, definido em :root).
+   Mesma mecânica do HR: o azul puro só passa AA em texto pequeno sobre
+   navy-deep. Aplicado só aqui. */
+.theme-int .eyebrow { color: var(--c-int-text); }
+.theme-int .impact-item .n small { color: var(--c-int-text); }
+.theme-int .attr-note b { color: var(--c-int-text); }
+.theme-int .sol-tag:hover { color: var(--c-int-text); }
+.page-produto .acct-tl .m-int { --c-mod: var(--c-int); }
+.page-produto .acct-tl .m-int .src { color: var(--c-int-text); }
+
+/* ---------- Visual A: A PONTE (hero) ----------
+   Canvas de 3 colunas e 3 linhas. Coluna 1: o núcleo Nexyss (os 6 módulos
+   no mesmo registro, sem conector entre eles). Coluna 2: a ponte, um SVG de
+   fundo (viewBox 300x282, preserveAspectRatio none, traço non-scaling) que
+   corre do núcleo até 3 sistemas de fora. Coluna 3: os sistemas, tracejados.
+   Os nós são opacos e cobrem o miolo dos conectores. Sem números (R3). */
+.page-produto .br-board {
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.page-produto .br-canvas { position: relative; height: 282px; margin: auto 0; }
+.page-produto .br-lines { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.page-produto .br-lines path {
+  fill: none;
+  stroke: var(--c-color, var(--c-brand));
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  opacity: 0.85;
+  animation: draw 1.2s ease-out forwards;
+}
+.page-produto .br-grid {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1.15fr 0.35fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10px;
+}
+.page-produto .br-core {
+  grid-area: 1 / 1 / 4 / 2;
+  margin: 0 6px 0 0;
+  padding: 12px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 12px;
+  background: linear-gradient(160deg, var(--c-navy-mid), var(--c-navy));
+  border: 1px solid var(--c-line-mid);
+  border-left: 3px solid rgba(255, 255, 255, 0.55);
+}
+.page-produto .br-t {
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.page-produto .br-d {
+  margin-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+}
+.page-produto .br-chips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.page-produto .br-chips span {
+  padding: 5px 4px;
+  text-align: center;
+  border-radius: 6px;
+  border-left: 2px solid var(--c-mod);
+  background: rgba(255, 255, 255, 0.05);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-text-soft);
+}
+.page-produto .br-chips .crm { --c-mod: var(--c-crm); }
+.page-produto .br-chips .edu { --c-mod: var(--c-edu); }
+.page-produto .br-chips .mkt { --c-mod: var(--c-mkt); }
+.page-produto .br-chips .fin { --c-mod: var(--c-fin); }
+.page-produto .br-chips .hr  { --c-mod: var(--c-hr); }
+.page-produto .br-chips .ai  { --c-mod: var(--c-ai); }
+.page-produto .br-hub {
+  position: absolute;
+  z-index: 2;
+  left: 53%; top: 50%;
+  width: 18px; height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--c-navy-deep);
+  border: 2px solid var(--c-color, var(--c-brand));
+  box-shadow: 0 0 18px var(--c-color-a25);
+}
+.page-produto .br-ext {
+  grid-column: 3;
+  margin: 0 0 0 6px;
+  padding: 8px 10px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--c-navy);
+  border: 1px dashed var(--c-color, var(--c-brand));
+}
+.page-produto .br-ext.e1 { grid-row: 1; }
+.page-produto .br-ext.e2 { grid-row: 2; }
+.page-produto .br-ext.e3 { grid-row: 3; }
+.page-produto .br-foot {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+
+@media (max-width: 760px) {
+  .page-produto .hero-visual.br-visual { height: auto; }
+  .page-produto .br-board { position: relative; inset: auto; padding: 14px; gap: 12px; }
+  .page-produto .br-core { padding: 9px; gap: 8px; }
+  .page-produto .br-chips { gap: 4px; }
+  .page-produto .br-chips span { padding: 4px 2px; font-size: 0.44rem; letter-spacing: 0.04em; }
+  .page-produto .br-ext { padding: 6px 7px; margin-left: 4px; }
+  .page-produto .br-t { font-size: 0.62rem; }
+  .page-produto .br-d { font-size: 0.44rem; letter-spacing: 0.06em; }
+  /* o chip de IA sai de cima do quadro: fica logo abaixo */
+  .page-produto .br-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
+}
+
+/* Disclosure de roadmap na Overview (página institucional, acento ciano).
+   Mesmo aviso discreto das páginas de produto, com a borda no acento do site. */
+.page-institucional .rm-note {
+  max-width: 640px;
+  margin-top: 28px;
+  padding-left: 14px;
+  border-left: 2px solid var(--c-edu);
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  line-height: 1.65;
+  letter-spacing: 0.04em;
+  color: var(--c-text-mute);
+}
 
