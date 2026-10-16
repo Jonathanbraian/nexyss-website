@@ -296,7 +296,7 @@ internas apontando para âncoras que só existem na Home.
    11/09). Registrado em CLAIMS-AUDIT.md.
 3. **Fingerprint não reproduz entre macOS e Linux** (font-family serializado +
    subpixel). Controle feito antes de qualquer edição; ver `baselines/README.md`.
-4. **Links irmãos `href="#"`** (CRM↔Educação↔…) continuam; padronizar na criação de
+4. **Links irmãos `href="#"`** (CRM↔Educação↔…): CRM e Educação ligados em 16/10/2026 (seção 16); padronizar na criação de
    Finance/HR/AI.
 
 **Backlog que continua aberto:** domínio real · caixa `contato@nexyss.com` · logos
@@ -440,3 +440,22 @@ Fecha o achado aberto desde a fase Marketing (violação de R3 e R8).
 
 As outras 8 páginas (16 capturas) ficaram idênticas ao controle. Sem substituição por clientes
 reais: nenhum vínculo cliente-módulo está confirmado. Mockups com nomes de exemplo preservados.
+
+---
+
+## 16. Fix de navegação CRM e Educação (16/10/2026)
+
+Relato do usuário: links de CRM e Educação no menu não abriam. Páginas existem e estão na `main`.
+
+| Item | Antes | Depois |
+|---|---|---|
+| Links CRM/Educação funcionais (10 páginas) | 4 de 88 | 46 fora do footer, 0 quebrados |
+| Mega-menu Plataforma, CRM e Educação | `#` em 10 de 10 páginas | caminho relativo correto |
+| Drawer, CRM e Educação | `#` em 10 de 10 páginas | caminho relativo correto |
+| Cards "Explorar" da Home | `#` | `plataforma/crm/` e `plataforma/educacao/` |
+| Footer, CRM e Educação | `#` | `#` (fora do escopo aprovado) |
+| Mega-menu Soluções, item Educação | `#` | `#` (página de Soluções não existe) |
+
+Mudança de 42 linhas, só atributo `href`. Com os `href` normalizados as 10 páginas ficam
+idênticas ao antes, e o fingerprint de 20 capturas é idêntico ao controle. Live: o ambiente de
+teste não alcança o domínio do Netlify, então 200 vs 404 não foi verificado.
