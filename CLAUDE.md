@@ -18,7 +18,7 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
   - `Nexyss Group` → razão social. **Apenas** em rodapé/legal/copyright/termos.
     Uso atual na Home: `© 2026 Nexyss Group. Todos os direitos reservados.`
   - Módulos: `Nexyss CRM`, `Nexyss Educação`, `Nexyss Marketing`,
-    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`.
+    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrações`.
   - Sub-produtos de IA: `Nexyss Insight`, `Nexyss Assist`, `Nexyss Automate`.
 - **Posicionamento:** enterprise. Padrão de referência = **Salesforce, HubSpot,
   Monday.com, Pipedrive, Stripe**. Copy institucional, densidade real de
@@ -56,6 +56,8 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 --c-hr:  #B84FE5;  --c-hr-deep:  #8E37B8;   /* Magenta - HR */
 --c-hr-text: #CA7BEC;   /* tom de TEXTO do HR (contraste AA), usado só em .theme-hr */
 --c-ai:  #37A7E2;  --c-ai-deep:  #1E7CB8;   /* Azul-elétrico - AI */
+--c-int: #2E7BFF;  --c-int-deep: #2159B8;   /* Azul saturado - Integrações (matiz 218, AI é 201) */
+--c-int-text: #629CFF;  /* tom de TEXTO de Integrações (AA), usado só em .theme-int */
 
 /* Neutros dark (o site é dark-only) */
 --c-white:      #FFFFFF;
@@ -284,7 +286,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/finance/                                  ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/hr/                                       ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/ai/                                       ✅ pronta (15/10/2026 - 20 bullets, todos 🔵)
-  /plataforma/integracoes/                              ⬜
+  /plataforma/integracoes/                              ✅ pronta (16/10/2026 - 22 bullets, todos 🔵)
 /solucoes/                 overview                     ⬜
   /solucoes/por-funcao/                                 ⬜
   /solucoes/por-objetivo/                               ⬜
@@ -1084,7 +1086,7 @@ CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
   15/10/2026** (seção seguinte).
 - ~~Fix global do `.ai-visual`~~ (feito em 16/10/2026).
 - ~~Logo wall fictício na CRM e na Educação~~ **Removido em 15/10/2026** (seção seguinte).
-- **Links irmãos `href="#"`:** CRM e Educação ligados em 16/10/2026 (mega-menu, drawer e cards). Sobram "Integrações & API", o item "Educação" do mega-menu Soluções e o footer inteiro de CRM e Educação.
+- **Links irmãos `href="#"`:** CRM e Educação ligados em 16/10/2026 (mega-menu, drawer e cards) e "Integrações & API" virou "Nexyss Integrações" ligada na mesma data. Sobram o item "Educação" do mega-menu Soluções e o footer inteiro de CRM e Educação.
 - **Contraste do link `.mod-link` por módulo** em `#modulos` (e na Overview): HR magenta
   e Finance violeta ficam entre 3,5 e 4,4:1 em texto de 12px sobre o card. Padrão
   pré-existente do `.mod-card`; o tom `--c-hr-text` só existe sob `.theme-hr`.
@@ -1186,6 +1188,89 @@ Fecha a dívida técnica do `.ai-visual` 0×0 (Home, Overview, CRM e Educação)
   480×480 e 335×335 (por causa das regras escopadas). Foi isso que viabilizou o fix.
 - **Medição pós-fix (8 páginas com `.ai-visual`):** 480×480 em 1280 e 335×335 em 375 em
   todas, e `scrollWidth` igual à viewport (zero transbordo horizontal).
+
+## Página `/plataforma/integracoes/` (16/10/2026)
+
+`<body class="theme-int page-produto has-subnav">` - 12 seções, 826 linhas. Molde: AI.
+Header, drawer, Founding e footer são cópias exatas (com `../../assets/`).
+**Sétimo módulo: fecha 7 de 7** (CRM, Educação, Marketing, Finance, HR, AI e Integrações).
+
+### Posicionamento e argumento central
+A tensão do site vira o argumento: **"Dentro da Nexyss, nenhuma integração. Fora dela,
+integração de verdade."** Os módulos nascem no mesmo registro, então não há conector entre eles
+(afirmação já feita na Overview e na Home, mantida sem suavizar). A Nexyss Integrações é a ponte
+única para o que vive fora da plataforma. Enquadramento comparativo só com "stack montado"
+(mesmo termo da Overview), sem nomear nem comparar terceiros.
+H1: *"Dentro da Nexyss, nenhuma integração. Fora dela, uma ponte de verdade."* Persona: CTO e
+arquitetura na headline, Head de Operações no corpo, líder de sistemas.
+
+### Cor (decisão de 16/10/2026)
+`--c-int #2E7BFF`, `--c-int-deep #2159B8`, `--c-int-text #629CFF`. Contraste do azul puro:
+4,54 / 4,07 / 3,54 sobre navy-deep / navy / navy-mid (só passa AA em texto pequeno no primeiro),
+por isso o tom de texto (75% azul, 25% branco, mesma fórmula do HR): 6,50 / 5,82 / 5,06.
+Matiz 218 contra 201 da AI (ΔE 50 na cor pura). **Proximidade conhecida e aceita:** o tom de
+texto fica a ΔE 11 do violeta do Finance (`#7C8CE8`); a cor pura a ΔE 25 do Finance e 20 do brand.
+`--c-int-text` só é usado sob `.theme-int` (eyebrow, `<small>` do impacto, `.attr-note b`, hover
+de `.sol-tag`, rótulo `.src` do `.m-int`).
+
+### Seções
+Hero (**Visual A `.br-*`**) · `.subnav` (O problema · Recursos · A fronteira · Nexyss AI ·
+Módulos) · `#problema` (3 `.sol-card`) · `#recursos` (2 `lg` + 3 `md`: Conectores, API aberta,
+Eventos, Dados, Operação) · `#fronteira` (`.ai-inner` + `.acct360` com `.acct-tl`, no lugar do
+`#caixa`/`#panorama`) · `#ia` (`.ai-inner` + `.ai-visual`, com `.rm-note`) · `#modulos` (6
+`.mod-card`, um por módulo, só com link para o `#integracoes` de cada página) · `#implantacao`
+(`.consult-grid`, 4 itens) · `#para-quem` (3 `.sol-card`) · impacto (6 · 3 · 99.99%) ·
+`#clientes` (Founding) · `.cta-final`. **Sem logo wall** (R8). O `#integracoes` do molde foi
+dividido em `#modulos` + `#implantacao` (seria redundante numa página de Integrações).
+
+### Badges: 22 bullets, TODOS 🔵 Roadmap
+15 em `#recursos` (3+3+3+3+3), 3 em `#fronteira`, 4 em `#implantacao`. Sem badge (R5.1): hero,
+headlines, `#problema`, `#ia`, `#modulos` e `#para-quem`. A linha `.rm-note` aparece em `#recursos`
+e em `#ia`. Inventário em CLAIMS-AUDIT.md.
+
+### Limites de claim
+**Nenhum conector nomeado** na página (só categorias: comunicação, assinatura, pagamentos,
+sistemas de gestão). Google Workspace, Microsoft 365, LMS, catraca e PIX continuam só onde já
+estavam (CRM e Educação). Sem concorrente, sem modelo, sem número de desempenho, sem "tempo
+real". Conferência: `grep -iE 'openai|anthropic|mistral|gemini|llama|gpt|claude|privacid|lgpd|gdpr|soberania|\bmodelo|criptograf|seguro|mais r.pido|tempo real|google|microsoft' plataforma/integracoes/index.html`
+só pode acertar `fonts.googleapis.com`, um item do menu Soluções e o link legal "Privacidade".
+
+### Componentes novos (seção `=== PÁGINA INTEGRAÇÕES ===` ao fim de `nexyss.css`)
+| Componente | Uso |
+|---|---|
+| `.br-*` (**Visual A**) | a ponte no hero: núcleo "Nexyss" com os 6 módulos em chips, ponte em SVG de fundo (`draw`) com um nó central, e 3 sistemas de fora tracejados ("Sistema A, B, C"; entrada, saída, dois sentidos). Sem número, marcado ILUSTRATIVO. Mantém o layout no mobile e só encolhe; o chip `.pipe-ai` desce para baixo do quadro |
+| `.theme-int`, `.icn-int`, `.mod-card.int`, `.acct-tl .m-int` | tema, ícone do menu, card e cor na linha do tempo |
+| `.page-institucional .rm-note` | o disclosure de roadmap na Overview (antes só existia sob `.page-produto`) |
+
+**Zero keyframes novos** (`draw`, `floatA`, `floatB`). Visual B reusa `.acct360`.
+
+### Infraestrutura
+- **Contato:** `Nexyss Integrações` no select (também em `form-detect.html`, mesmos 8 `name=`) e
+  `integracoes` no `MAP` do `nexyss.js`. Testado: `?interesse=integracoes&origem=demo` e `origem=founding`
+  pré-selecionam a opção e gravam `origem`; `?interesse=ai` segue igual.
+- **CTAs:** `../../contato/?interesse=integracoes&origem=demo|especialista|founding`.
+- **10 páginas:** item "Integrações & API" do mega-menu e do drawer virou **"Nexyss Integrações"**
+  (`.icn-int`, `href` correto, chaves i18n `mod.int.*`), mais link no footer, coluna Plataforma.
+- **Home:** o card "Conecte tudo" troca "Ver documentação" (`#`) por "Ver Nexyss Integrações".
+- **Overview:** `.rm-note` no `#integracoes`. **CRM e Educação:** `.rm-note` no `#integracoes`
+  (os 4 itens de cada uma ficaram intactos). Marketing, Finance, HR e AI já tinham.
+- **Não alterado, por decisão:** "Nenhuma integração" da Overview e da Home, o `0 Integrações
+  necessárias` da CRM e a faixa "sétimo caminho: Integrações & API" da Overview (nome antigo).
+
+### Baselines (Linux)
+Controle capturado na `main` antes de editar. Nas 10 páginas existentes: +2 elementos (footer) e
+2 trocados (ícone, só cor); documento +36/+37px pelo footer. Detalhes em `baselines/README.md`.
+`baselines/integracoes-*.json` são baseline inicial em Linux.
+
+### Pendências registradas aqui
+- **Validação técnica** dos 22 bullets (API, eventos, mapeamento, conectores por categoria) antes
+  de qualquer 🟢.
+- **Overview `#integracoes` e CRM/Educação `#integracoes`:** os itens seguem sem badge individual,
+  agora sob o `.rm-note`.
+- **Faixa "sétimo caminho" da Overview** ainda diz "Integrações & API".
+- **Footer de CRM e Educação** segue `href="#"` e "Integrações & API" do Soluções idem.
+- **Demo de módulo em roadmap:** definir o que a demo de Integrações mostra.
+- **Perguntas de CTO sem resposta:** limite de uso, retenção de log, residência, autenticação.
 
 ## Bug fix: logo em branco (11/09/2026)
 

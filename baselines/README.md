@@ -90,22 +90,22 @@ subpixel em larguras de texto inline. Em Linux, compare **antes × depois no
 mesmo ambiente**, não contra o JSON do macOS. Use `CHROME=/caminho/do/chrome node
 baselines/tools/run.js <dir>`.
 
-Referência Linux atual (Chromium 1194, fontes `loaded`, árvore depois da remoção
-dos travessões e da regra R6 de 14/10/2026). Compare **antes × depois no mesmo
+Referência Linux atual (Chromium 1194, fontes `loaded`, árvore de 16/10/2026 com a página Integrações). Compare **antes × depois no mesmo
 ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
-| Home | `782:673e0b2a` | `782:d98afb57` (doc 375×13206) |
-| Overview | `854:6928ecec` | `854:38f4d2ff` (doc 375×17317) |
-| CRM | `890:23023168` (doc 1280×9406) | `890:3c6bcd9a` (doc 375×15833) |
-| Educação | `1036:c3d93314` (doc 1280×11598) | `1036:76da1dcb` (doc 375×19161) |
-| Contato | `576:38db0954` | `576:01a4e2b7` |
-| Obrigado | `436:cbb4d7d0` | `436:17fa1d32` |
-| **Marketing** (baseline inicial) | `856:f5b18501` (doc 1280×9401) | `856:3aa08760` (doc 375×16253) |
-| **Finance** (baseline inicial) | `931:09114386` (doc 1280×9449) | `931:7e2486dc` (doc 375×16102) |
-| **HR** (baseline inicial) | `896:540489f3` (doc 1280×9697) | `896:291637e0` (doc 375×15946) |
-| **AI** (baseline inicial) | `769:30973f7e` (doc 1280×9484) | `769:608fe632` (doc 375×15826) |
+| Home | `784:d3ad6e48` (doc 1280x7877) | `784:885c6e50` (doc 375x13243) |
+| Overview | `857:5889c5e7` (doc 1280x10735) | `857:da3a09c6` (doc 375x17440) |
+| CRM | `893:bdfec214` (doc 1280x9510) | `893:85b820b5` (doc 375x15957) |
+| Educação | `1039:85f858ca` (doc 1280x11702) | `1039:df75c2d3` (doc 375x19284) |
+| Contato | `579:fb38290e` (doc 1280x3714) | `579:74eb5b84` (doc 375x5665) |
+| Obrigado | `438:382341d4` (doc 1280x1287) | `438:c044c0e7` (doc 375x2204) |
+| Marketing | `858:e39582d0` (doc 1280x9437) | `858:c02ce3e8` (doc 375x16290) |
+| Finance | `933:dba60ba9` (doc 1280x9485) | `933:a7bb1a99` (doc 375x16139) |
+| HR | `898:da261697` (doc 1280x9734) | `898:bbbf0534` (doc 375x15983) |
+| AI | `771:a0345d68` (doc 1280x9521) | `771:87b0db42` (doc 375x15863) |
+| **Integrações** (baseline inicial) | `859:1e4aa304` (doc 1280x10838) | `859:3dc4e2e0` (doc 375x17567) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -164,3 +164,11 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   AI, Contato e Obrigado idênticas. Em 1280 o doc não muda (a linha `.ai-inner` já era mais alta
   que o visual); em 375 o doc cresce 335px nas 4 páginas. `home-*`, `overview-*`, `crm-*` e
   `educacao-*.json` foram regravados em Linux (antes eram do macOS); os outros 16 não foram tocados.
+- **16/10/2026** (2) - `/plataforma/integracoes/` entra nas ferramentas (`run.js`, `extract.py`).
+  Baseline inicial da página (2 viewports). As 10 páginas existentes mudam de hash e de nº de elementos:
+  +2 (item novo no footer, `<li>` e `<a>`) e 2 elementos trocados (`.icn-neutral` para `.icn-int`
+  no mega-menu e no drawer, só cor). Overview, CRM e Educação ganham +1 (`.rm-note`) e Contato +1
+  (opção no select). Home muda o texto do link do card "Conecte tudo". Documento (medido): páginas só
+  com footer novo, +36 ou +37px em 1280 e +36 ou +37px em 375 (coluna Plataforma com 7 itens). Com
+  `.rm-note` somado: Overview +104 (1280) e +123 (375), CRM +104 e +124, Educação +104 e +123. Os 22
+  JSON foram regravados em Linux.

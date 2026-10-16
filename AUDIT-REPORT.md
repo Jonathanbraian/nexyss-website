@@ -497,3 +497,45 @@ Relato do usuário: links de CRM e Educação no menu não abriam. Páginas exis
 Mudança de 42 linhas, só atributo `href`. Com os `href` normalizados as 10 páginas ficam
 idênticas ao antes, e o fingerprint de 20 capturas é idêntico ao controle. Live: o ambiente de
 teste não alcança o domínio do Netlify, então 200 vs 404 não foi verificado.
+
+---
+
+## 17. Página Integrações, sétimo módulo (16/10/2026)
+
+| Item | Resultado |
+|---|---|
+| Página nova | `plataforma/integracoes/index.html`, 826 linhas, 12 seções, 22 bullets todos Roadmap |
+| Cor | `--c-int #2E7BFF`, `--c-int-text #629CFF` (AA sobre os 3 fundos), `--c-int-deep #2159B8` |
+| Argumento | "Dentro, nenhuma integração. Fora, integração de verdade" |
+| CSS novo | tokens, `.theme-int`, `.icn-int`, `.mod-card.int`, `.acct-tl .m-int`, `.br-*` (Visual A), `.page-institucional .rm-note`. Zero keyframes |
+| Infra | select de Contato e `form-detect.html` (+1 opção), `MAP` do `nexyss.js` (+1), mega-menu e drawer das 10 páginas, footer das 10, card da Home |
+| Disclosure | `.rm-note` em `#integracoes` da Overview, CRM e Educação |
+| Privacidade e claims | 0 conector nomeado, 0 concorrente, 0 modelo, 0 número de desempenho |
+| Links | 318 relativos verificados em 11 páginas; os 22 que falham são o `href="/"` do logo, pré-existente |
+
+Fingerprint (controle na `main` `8e89848`, mesmo Chromium):
+
+| Página | Elementos | Doc 1280 | Doc 375 |
+|---|---|---|---|
+| Home | 782 para 784 | 7841 para 7877 | 13206 para 13243 |
+| Overview | 854 para 857 | 10631 para 10735 | 17317 para 17440 |
+| CRM | 890 para 893 | 9406 para 9510 | 15833 para 15957 |
+| Educação | 1036 para 1039 | 11598 para 11702 | 19161 para 19284 |
+| Marketing | 856 para 858 | 9401 para 9437 | 16253 para 16290 |
+| Finance | 931 para 933 | 9449 para 9485 | 16102 para 16139 |
+| HR | 896 para 898 | 9697 para 9734 | 15946 para 15983 |
+| AI | 769 para 771 | 9484 para 9521 | 15826 para 15863 |
+| Contato | 576 para 579 | 3677 para 3714 | 5629 para 5665 |
+| Obrigado | 436 para 438 | 1250 para 1287 | 2167 para 2204 |
+| Integrações (nova) | 859 | 10838 | 17567 |
+
+Nas 10 páginas existentes o delta é só: footer (+2 elementos, coluna Plataforma com 7 itens),
+ícone do item de Integrações (2 elementos trocados, só cor), `.rm-note` (Overview, CRM, Educação),
+opção do select (Contato) e texto do link do card da Home. Nenhuma geometria mudou antes do
+footer, exceto nas seções após o `.rm-note` e no card da Home. Sem transbordo horizontal na
+página nova (375 e 1280).
+
+**Backlog que continua aberto:** validação técnica dos 22+22+22+20+22 bullets Roadmap (Marketing,
+Finance, HR, AI, Integrações) · faixa "sétimo caminho" da Overview ainda com o nome antigo · footer de
+CRM e Educação · demo dos módulos em Roadmap · perguntas de CTO sem resposta.
+

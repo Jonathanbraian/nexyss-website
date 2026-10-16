@@ -168,6 +168,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
     finance: 'Nexyss Finance',
     hr: 'Nexyss HR',
     ai: 'Nexyss AI',
+    integracoes: 'Nexyss Integrações',
     consultoria: 'Consultoria'
   };
 

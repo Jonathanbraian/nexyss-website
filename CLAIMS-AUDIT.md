@@ -778,6 +778,38 @@ automático, inteligência, agente e assistente.
   linha de disclosure de roadmap (`.rm-note`, texto idêntico ao da Marketing). A copy
   descritiva dessas seções não foi reescrita; segue sem badge pela R5.1, agora sob o aviso.
 
+## INTEGRAÇÕES - `plataforma/integracoes/index.html`  (16/10/2026)
+
+Módulo novo, **22 bullets, TODOS 🔵 Roadmap**. Nenhuma capacidade foi validada pelo time técnico,
+então nenhum bullet é 🟢. Linha de disclosure `.rm-note` em `#recursos` e em `#ia`.
+
+| Bloco | Bullets (🔵) |
+|---|---|
+| `#recursos` Conectores (3) | Catálogo por categoria: comunicação, assinatura, pagamentos e sistemas de gestão · Conexão com as credenciais do próprio cliente, com escopo por módulo · Ativação por módulo, sem projeto de integração entre módulos Nexyss |
+| `#recursos` API aberta (3) | REST documentada, com versionamento · Autenticação com escopo por módulo e pela permissão do registro · Ambiente de testes separado da produção |
+| `#recursos` Eventos (3) | Assinatura de eventos por módulo e por tipo de registro · Nova tentativa automática quando o destino não responde · Mensagem assinada, para o destino verificar a origem |
+| `#recursos` Dados (3) | Mapeamento de campos configurável · Importação em lote com validação antes de gravar · Atualização nos dois sentidos, com regra de conflito definida |
+| `#recursos` Operação (3) | Cada chamada e evento registrado no histórico do registro · Painel de falhas com reprocesso individual · Limite de uso configurável por conexão |
+| `#fronteira` (3) | Fronteira declarada em cada módulo · Entrada e saída no mesmo histórico, com origem · A permissão do registro vale também para quem chama por API |
+| `#implantacao` (4) | Migração assistida pela consultoria Nexyss, com plano de corte · Convivência com o sistema atual · Homologação antes de produção · Ativação conexão a conexão |
+
+- **Sem badge (R5.1):** hero, headlines, `#problema`, `#ia` (3 descrições narrativas sob `.rm-note`),
+  `#modulos` (6 cards de link, sem claim novo) e `#para-quem`.
+- **UNVALIDATED (backlog técnico):** os 22 bullets acima. Pontos de maior risco: REST com versionamento,
+  mensagem assinada de webhook, nova tentativa automática, atualização nos dois sentidos com regra de
+  conflito, ambiente de testes separado.
+- **Sem conector nomeado:** a página usa só categorias. Google Workspace, Microsoft 365, LMS, catraca
+  e PIX seguem apenas em CRM e Educação (decisão de 16/10/2026).
+- **Varredura cross-módulo:** nenhum 🟢 (CRM 11, Educação 5) afirma API, webhook, conector ou
+  sincronização com sistema de fora. **Zero rebaixamentos.**
+- **Disclosure adicionado em páginas existentes (16/10/2026):** `.rm-note` no `#integracoes` da Overview,
+  da CRM e da Educação. Os itens dessas seções seguem sem badge individual e ainda são UNVALIDATED
+  (REST e eventos em tempo real, conectores para ERPs, Google Workspace e Microsoft 365, LMS, catraca,
+  boleto/cartão/PIX): a linha de roadmap agora cobre a leitura de disponibilidade.
+- **Home, card "Conecte tudo":** o link "Ver documentação" (`#`) virou "Ver Nexyss Integrações"
+  (`plataforma/integracoes/`); o texto "API aberta e webhooks para integrar Nexyss ao seu stack
+  existente" segue sem badge, como "seção técnica".
+
 ## Página `/contato/` - fora do escopo de badges
 A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 min",
 "proposta em até 7 dias úteis", "clientes na América Latina e Europa") definidos
