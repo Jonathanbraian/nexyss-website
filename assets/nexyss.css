@@ -930,9 +930,13 @@ section.block.deeper {
   gap: 80px;
   align-items: center;
 }
+/* width: 100% é o que dá tamanho ao visual: ele é item de grid (.ai-inner) com
+   margin:0 auto + aspect-ratio e só filhos absolutos, então sem largura
+   explícita encolhe para 0x0. max-width mantém 480px no desktop. */
 .ai-visual {
   position: relative;
   aspect-ratio: 1;
+  width: 100%;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -2982,12 +2986,6 @@ body.drawer-open { overflow: hidden; }
   color: var(--c-text-mute);
 }
 
-/* ---------- Visual da Nexyss AI (#ia) ----------
-   .ai-visual é item de grid com margin:0 auto + aspect-ratio e só filhos
-   absolutos: sem width ele colapsa para 0x0 (bug pré-existente, presente
-   também em Home/Overview/CRM/Educação - ver AUDIT-REPORT). Corrigido
-   apenas aqui; o conserto global exige decisão sobre a Home. */
-.theme-mkt .ai-visual { width: 100%; }
 
 /* ---------- Visual A - WORKFLOW (hero) ----------
    Canvas de 3 colunas x 3 linhas. Os conectores são um SVG de fundo
@@ -3150,10 +3148,6 @@ body.drawer-open { overflow: hidden; }
    Mockups sem valor numérico: rótulos genéricos e marca ILUSTRATIVO.
    ============================================================ */
 
-/* Visual da Nexyss AI (#ia): mesmo conserto escopado da Marketing.
-   .ai-visual colapsa para 0x0 nas demais páginas (bug pré-existente, fix
-   global aguarda decisão porque muda os fingerprints de 4 páginas). */
-.theme-fin .ai-visual { width: 100%; }
 
 /* ---------- Visual A: CONCILIAÇÃO BANCÁRIA (hero) ----------
    Linhas de 3 colunas (extrato | vínculo | lançamento). O vínculo é um
@@ -3372,10 +3366,6 @@ body.drawer-open { overflow: hidden; }
 .page-produto .acct-tl .m-hr { --c-mod: var(--c-hr); }
 .page-produto .acct-tl .m-hr .src { color: var(--c-hr-text); }
 
-/* Visual da Nexyss AI (#ia): mesmo conserto escopado de Marketing e Finance.
-   .ai-visual colapsa para 0x0 nas demais páginas (bug pré-existente, fix
-   global aguarda decisão porque muda os fingerprints de 4 páginas). */
-.theme-hr .ai-visual { width: 100%; }
 
 /* ---------- Visual A: ORGANOGRAMA VIVO (hero) ----------
    Grid de 3 colunas e 7 linhas de altura fixa; os conectores são um SVG de
@@ -3526,11 +3516,6 @@ body.drawer-open { overflow: hidden; }
    da plataforma, não um produto à parte, então a página reusa os
    componentes existentes (.ai-visual, .pipe-ai, .mod-card, .acct360,
    .acct-tl, .consult-grid) e não tem visual próprio.
-   O único ajuste é o conserto escopado do .ai-visual.
+   Nenhum CSS próprio: o conserto do .ai-visual é a regra base global.
    ============================================================ */
 
-/* .ai-visual é item de grid com margin:0 auto + aspect-ratio e só filhos
-   absolutos: sem width ele colapsa para 0x0 (bug pré-existente nas demais
-   páginas; mesmo conserto escopado de Marketing, Finance e HR). Aqui ele é
-   o visual do hero e precisa de tamanho de verdade. */
-.theme-ai .ai-visual { width: 100%; }

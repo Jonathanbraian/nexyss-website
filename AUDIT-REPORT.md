@@ -331,7 +331,7 @@ WhatsApp/LinkedIn do contato.
 3. **`.ai-visual` segue 0x0** em Home, Overview, CRM e Educação; escopado de novo em
    `.theme-fin`. Fase dedicada ao fix global continua pendente.
 
-**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na
+**Backlog (atualizado na seção 15):** fix global do `.ai-visual` (fechado) · logo wall fictício na
 CRM e na Educação · links irmãos `href="#"` · domínio real · caixa
 `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
 Finance) · página 404 · definir o que a demo mostra para módulos em roadmap.
@@ -367,7 +367,7 @@ Finance) · página 404 · definir o que a demo mostra para módulos em roadmap.
    `.theme-hr`.
 5. **H1 longo:** o H1 aprovado quebra em 6 a 7 linhas no desktop; é o hero mais alto.
 
-**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício na CRM e
+**Backlog (atualizado na seção 15):** fix global do `.ai-visual` (fechado) · logo wall fictício na CRM e
 na Educação · links irmãos `href="#"` (falta a página de AI) · domínio real · caixa
 `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do Finance +
 22 do HR) · página 404 · definir o que a demo mostra para módulos em roadmap.
@@ -406,7 +406,7 @@ na Educação · links irmãos `href="#"` (falta a página de AI) · domínio re
 5. **H1 de 7 linhas** no desktop com a copy aprovada.
 6. **Contraste de `.mod-link` por módulo** (HR magenta, Finance violeta) entre 3,5 e 4,4:1.
 
-**Backlog que continua aberto:** fix global do `.ai-visual` · logo wall fictício (resolvido na seção 14) na CRM e na
+**Backlog (atualizado na seção 15):** fix global do `.ai-visual` (fechado) · logo wall fictício (resolvido na seção 14) na CRM e na
 Educação · links `href="#"` dos tiles de CRM e Educação e "Integrações & API" · domínio real
 · caixa `contato@nexyss.com` · validações técnicas (seção 3 + 22 do Marketing + 22 do
 Finance + 22 do HR + 20 do AI) · página 404 · definir o que a demo mostra para módulos em
@@ -440,6 +440,44 @@ Fecha o achado aberto desde a fase Marketing (violação de R3 e R8).
 
 As outras 8 páginas (16 capturas) ficaram idênticas ao controle. Sem substituição por clientes
 reais: nenhum vínculo cliente-módulo está confirmado. Mockups com nomes de exemplo preservados.
+
+---
+
+## 15. Fix global do `.ai-visual` via width: 100% (16/10/2026)
+
+Fecha o achado aberto desde a fase Marketing (visual da Nexyss AI medindo 0×0).
+
+| Item | Resultado |
+|---|---|
+| Causa | item de grid sem largura, `aspect-ratio` e filhos só absolutos: largura e altura zero |
+| Correção | `width: 100%` na regra base `.ai-visual`; 4 regras escopadas removidas |
+| Tamanho computado (8 páginas) | 480×480 em 1280; 335×335 em 375 |
+| Transbordo horizontal | nenhum (`scrollWidth` = viewport) nas 4 páginas corrigidas |
+
+| Página | Fingerprint | Doc 1280 | Doc 375 |
+|---|---|---|---|
+| Home | muda (782 elementos, igual) | 7841, igual | 12871 para 13206 |
+| Overview | muda (854, igual) | 10631, igual | 16982 para 17317 |
+| CRM | muda (890, igual) | 9406, igual | 15498 para 15833 |
+| Educação | muda (1036, igual) | 11598, igual | 18826 para 19161 |
+| Marketing, Finance, HR, AI, Contato, Obrigado | idênticas | igual | igual |
+
+Medição de `.ai-visual` antes e depois (Chromium Linux, `main` `ce5bfb6`):
+
+| Página | Antes 1280 | Depois 1280 | Antes 375 | Depois 375 |
+|---|---|---|---|---|
+| Home | 0×0 | 480×480 | 0×0 | 335×335 |
+| Overview | 0×0 | 480×480 | 0×0 | 335×335 |
+| CRM | 0×0 | 480×480 | 0×0 | 335×335 |
+| Educação | 0×0 | 480×480 | 0×0 | 335×335 |
+| Marketing, Finance, HR, AI | 480×480 | 480×480 | 335×335 | 335×335 |
+
+`scrollWidth` igual à viewport nas 8 páginas, nos dois viewports. Uma sessão anterior havia
+declarado a pendência "fantasma" com dados que não correspondiam ao código; a medição acima
+a refutou (ver `CLAUDE.md`).
+
+`min-height: 420px` foi testado e descartado (reduz Marketing, Finance e HR de 480 para 420 e
+estoura o container mobile).
 
 ---
 
