@@ -1084,7 +1084,7 @@ CLAIMS-AUDIT.md. Efeito no fingerprint da CRM: só o badge, sem reflow.
   15/10/2026** (seção seguinte).
 - **Fix global do `.ai-visual`** (0x0 em Home, Overview, CRM e Educação).
 - ~~Logo wall fictício na CRM e na Educação~~ **Removido em 15/10/2026** (seção seguinte).
-- **Links irmãos `href="#"`:** só CRM, Educação e "Integrações & API" sobram.
+- **Links irmãos `href="#"`:** CRM e Educação ligados em 16/10/2026 (mega-menu, drawer e cards). Sobram "Integrações & API", o item "Educação" do mega-menu Soluções e o footer inteiro de CRM e Educação.
 - **Contraste do link `.mod-link` por módulo** em `#modulos` (e na Overview): HR magenta
   e Finance violeta ficam entre 3,5 e 4,4:1 em texto de 12px sobre o card. Padrão
   pré-existente do `.mod-card`; o tom `--c-hr-text` só existe sob `.theme-hr`.
@@ -1129,6 +1129,30 @@ Polaris, Meridian, Orbital; Educação: as mesmas com sufixos, como "Rede Meridi
   páginas (16 capturas) idênticas.
 - **Para reintroduzir** quando houver cliente real do módulo: recriar a seção como na Home
   (`.logos-grid.centered`, `data-client`, placeholder textual até chegar o logo).
+
+## Fix de navegação CRM e Educação (16/10/2026)
+
+Relato: os links de CRM e Educação no menu não abriam. As duas páginas existem e estão
+versionadas (`plataforma/crm/index.html` 51564 bytes e `plataforma/educacao/index.html` 59519 bytes).
+
+- **Causa raiz:** os links nunca foram ligados. Estavam como `href="#"` desde a criação do
+  mega-menu e do drawer, deixados de propósito para "padronizar de uma vez" (pendência dos
+  links irmãos). Não era `href="./"` apontando para a página atual: o diagnóstico mediu `#`.
+- **Alcance antes:** 88 links com texto ou destino de CRM ou Educação nas 10 páginas
+  publicadas (as 9 do roteiro mais `contato/obrigado.html`). Só 4 funcionavam (cards
+  "Explorar" da Overview e links "Ver a IA no..." da página de AI).
+- **Correção (42 links, só o atributo `href`):** mega-menu Plataforma, drawer e cards
+  "Explorar" da Home, em todas as 10 páginas. Caminhos relativos pela profundidade:
+  Home `plataforma/crm/`; Overview `crm/`; páginas `plataforma/*/` `../crm/`; a própria
+  página usa `./`; `contato/` `../plataforma/crm/`. Mesma lógica para Educação.
+- **Não tocado, por decisão:** footer (ver abaixo), "Integrações & API", e o item "Educação"
+  do mega-menu Soluções (por setor, página ainda inexistente).
+- **Correção de premissa:** o briefing dizia que os links do footer já estavam corretos. A
+  medição mostrou que o footer de CRM e Educação também é `href="#"` (3 por página, nas 10
+  páginas). Ficou para decisão do Jonathan.
+- **Validação:** script resolve cada href contra o disco: 46 links para CRM ou Educação fora
+  do footer, todos resolvem (0 quebrados). Normalizando todos os `href`, as 10 páginas ficam
+  byte a byte iguais ao antes. Fingerprint das 10 páginas, 20 capturas, idêntico ao controle.
 
 ## Bug fix: logo em branco (11/09/2026)
 
