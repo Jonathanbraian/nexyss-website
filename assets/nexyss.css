@@ -2825,7 +2825,7 @@ body.drawer-open { overflow: hidden; }
    Turismo azul-eletrico AI (decisao 11/09/2026). Os icones reusam .icn-*. */
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
 }
 .clients-sector {
@@ -3693,3 +3693,20 @@ body.drawer-open { overflow: hidden; }
   color: var(--c-text-mute);
 }
 
+/* ============================================================
+   === PÁGINAS SOLUÇÕES === /solucoes/ e /solucoes/por-setor/  (22/10/2026)
+   body.page-institucional.page-solucoes: eixos de navegação, não conteúdo
+   novo. Cor institucional (ciano), zero token novo, zero cor nova, zero
+   keyframe. Reusa .mod-card, .sol-card, .consult-grid, .subnav, .founding
+   e .cta-final. Único CSS próprio: o hero compacto (uma coluna, sem visual),
+   no mesmo padrão do .page-contato.
+   ============================================================ */
+.page-solucoes .hero { padding: 170px 0 90px; }
+.page-solucoes .hero .hero-inner { grid-template-columns: 1fr; max-width: 840px; gap: 0; }
+.page-solucoes .hero-sub { max-width: 640px; }
+@media (max-width: 760px) {
+  .page-solucoes .hero { padding: 130px 0 60px; }
+}
+
+.page-solucoes .consult-grid.two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 760px) { .page-solucoes .consult-grid.two { grid-template-columns: 1fr; } }

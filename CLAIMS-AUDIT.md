@@ -500,7 +500,7 @@ cobriu `.mod-features`, `.consult-desc`, `.vs-table` e `.sol-tag`, não `.logo-i
 | Esporte | Dublin Volleyball Club | Home `.logo-item.sport` · Contato `dublin-volleyball-club` |
 | Esporte | Volley Point | Home `.logo-item.sport` · Contato `volley-point` |
 | Turismo | Excursion LTD | Home `.logo-item.travel` · Contato `excursion-ltd` |
-| Turismo | Eirway | Home `.logo-item.travel` · Contato `eirway` |
+| Tecnologia & Startups (corrigido em 22/10/2026) | Eirway | Home e Contato ajustados em 22/10/2026: fora de Turismo (Contato: card "Tecnologia") |
 
 **TODO de substituição:** os 5 são placeholders **textuais** (nome em Sora + ícone
 do setor). Quando os SVG/PNG chegarem: `assets/clients/<slug>.svg` e trocar o
@@ -816,3 +816,11 @@ A FAQ da página contém compromissos de atendimento ("24 horas úteis", "30-60 
 pelo Jonathan em 11/09/2026. **Não são claims de produto** - não recebem badge e
 não entram no backlog de validação. Registro em CLAUDE.md → "FAQ - compromissos
 operacionais".
+
+## Páginas de Soluções (22/10/2026)
+
+`/solucoes/` e `/solucoes/por-setor/` são **filtros de navegação**: não introduzem claim de produto.
+Descrevem necessidade típica de cada setor ("costumam", "tipicamente precisam") e apontam para as
+páginas de módulo, onde o status de cada recurso já está auditado. Nenhum badge R5 aplicado (R5.1:
+descrição narrativa) e nenhum cliente nomeado ou vinculado a módulo (R3, R8).
+

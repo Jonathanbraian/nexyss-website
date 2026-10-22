@@ -539,3 +539,19 @@ página nova (375 e 1280).
 Finance, HR, AI, Integrações) · faixa "sétimo caminho" da Overview ainda com o nome antigo · footer de
 CRM e Educação · demo dos módulos em Roadmap · perguntas de CTO sem resposta.
 
+## 18. Fase Soluções - `/solucoes/` e `/solucoes/por-setor/` (22/10/2026)
+
+Duas páginas novas, mais infraestrutura de navegação nas 11 existentes.
+
+- **Escopo:** índice dos 4 caminhos (só Por Setor disponível) e a página por setor (Educação, Esporte,
+  Turismo, Tecnologia). Por Função, Por Objetivo e Por Porte ficam para sessões futuras.
+- **Claims:** zero métrica, zero concorrente, zero cliente nomeado. Copy em linguagem de necessidade.
+- **Correção de registro:** Eirway é Tecnologia & Startups, não Turismo (`CLAUDE.md`, `CLAIMS-AUDIT.md`).
+  Corrigido no mesmo commit: logo wall da Home sem setor para o Eirway, card "Tecnologia" no Contato
+  (grid de 4 colunas). Card "Por Porte & Setor" da Home com 8 tags (4 setores, 4 portes).
+- **CSS:** seção `=== PÁGINAS SOLUÇÕES ===` (hero compacto e `.consult-grid.two`), escopada.
+- **Fingerprint (Linux, controle em worktree de `origin/main`):** +9 elementos em cada página existente
+  (7 do item novo do drawer, 2 do `li`+`a` do footer); Home -2 `.sol-tag`. Doc 1280 idêntico;
+  375 +37px (Home -3px). Páginas novas, 1280/375: Soluções 3909/5821px, Por Setor 8374/12474px,
+  sem transbordo horizontal.
+- **Backlog que continua aberto:** os mesmos da fase Integrações, mais as 3 páginas de eixo restantes.

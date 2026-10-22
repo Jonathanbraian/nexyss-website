@@ -16,6 +16,8 @@ const pages = [
   ['integracoes', ROOT + '/plataforma/integracoes/index.html'],
   ['contato', ROOT + '/contato/index.html'],
   ['obrigado', ROOT + '/contato/obrigado.html'],
+  ['solucoes', ROOT + '/solucoes/index.html'],
+  ['porsetor', ROOT + '/solucoes/por-setor/index.html'],
 ];
 const vps = [[1280, 800], [375, 812]];
 function one(name, page, w, h) {
