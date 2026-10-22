@@ -19,6 +19,9 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
     Uso atual na Home: `© 2026 Nexyss Group. Todos os direitos reservados.`
   - Módulos: `Nexyss CRM`, `Nexyss Educação`, `Nexyss Marketing`,
     `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrações`.
+  - Serviço: `Nexyss Consultoria` (página `/consultoria/`; não é módulo de software e não entra no
+    mega-menu Plataforma). **Sempre com o prefixo `Nexyss`** em identidade; "Consultoria" solto só como
+    título narrativo de seção.
   - Sub-produtos de IA: `Nexyss Insight`, `Nexyss Assist`, `Nexyss Automate`.
 - **Posicionamento:** enterprise. Padrão de referência = **Salesforce, HubSpot,
   Monday.com, Pipedrive, Stripe**. Copy institucional, densidade real de
@@ -58,6 +61,10 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
 --c-ai:  #37A7E2;  --c-ai-deep:  #1E7CB8;   /* Azul-elétrico - AI */
 --c-int: #2E7BFF;  --c-int-deep: #2159B8;   /* Azul saturado - Integrações (matiz 218, AI é 201) */
 --c-int-text: #629CFF;  /* tom de TEXTO de Integrações (AA), usado só em .theme-int */
+
+/* Nexyss Consultoria (serviço, não software): cinza-azul dessaturado */
+--c-con: #8FA6C7;  --c-con-deep: #4F6687;   /* deep só em gradiente decorativo */
+--c-con-text: #B3C4DE;  /* tom de TEXTO de Consultoria, usado só em .theme-con */
 
 /* Neutros dark (o site é dark-only) */
 --c-white:      #FFFFFF;
@@ -292,7 +299,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /solucoes/por-funcao/                                 ✅ pronta (22/10/2026)
   /solucoes/por-objetivo/                               ✅ pronta (22/10/2026)
   /solucoes/por-porte/                                  ✅ pronta (22/10/2026)
-/consultoria/                                           ⬜
+/consultoria/              Nexyss Consultoria           ✅ pronta (22/10/2026 - serviço, sem badges)
 /clientes/                 c/ Founding Customers        ⬜
 /recursos/                 blog, casos, guias, webinars ⬜
 /parceiros/                                             ⬜
@@ -1351,6 +1358,92 @@ Setor) continua em `por-setor/`. Índice: os 4 cards "Disponível" e com link.
 Home, card 3: só linka Por Setor; `por-porte/` é alcançada pelo menu, drawer, footer e índice. O header das
 páginas internas aponta `#consultoria` e `#clientes`, que só existem nas páginas de eixo e na Home (no índice
 `/solucoes/` os dois links não têm destino). Baselines em `baselines/README.md`.
+
+## Página `/consultoria/` (22/10/2026)
+
+`<body class="theme-con page-produto has-subnav">` - 12 seções, 697 linhas. Molde: AI/Integrações.
+Header, drawer, Founding e footer são cópias exatas (com `../`). **Nexyss Consultoria é um serviço, não
+um módulo de software:** não entra no mega-menu Plataforma nem no "Seis módulos" da Overview; aparece como
+o item de topo "Nexyss Consultoria" do header, do drawer e do footer.
+
+### Nome
+**`Nexyss Consultoria`** é o padrão de identidade (header, drawer, footer, `<title>`, meta, select do
+Contato, eyebrow da seção na Home). **"Consultoria" solto fica só como título narrativo** da seção
+`#consultoria` e na subnav das páginas de eixo, onde é nome de seção e não de produto. Chaves i18n:
+`nav.consultoria` (texto "Nexyss Consultoria"), `consultoria.cta.conhecer`.
+
+### Argumento central
+*"A consultoria que fica curta porque a plataforma já carrega o resto."* H1 com `fica curta` em
+`.accent`; repete em `<title>`, `description`, `og:*` e `twitter:*`. Risco registrado: "fica curta" e "já
+carrega" descrevem arquitetura, mas podem ser lidos como promessa de prazo ou de módulos disponíveis (a
+maioria dos módulos é Roadmap). Por isso a página diz no hero que "nenhum prazo ou resultado é prometido" e
+nunca usa faixa de tempo (a faixa "2-3 semanas" não existe em nenhum lugar do repositório).
+Persona dupla: Diretoria e CEO na headline (decide o que muda); Operações, CFO e CHRO no corpo (executam).
+
+### Seções
+Hero (**Visual A `.cw-*`**) · `.subnav` (O problema · Práticas · Como funciona · Quando faz sentido ·
+Contratação) · `#problema` (3 `.sol-card`) · `#praticas` (4 `.mod-card lg`, passos numerados e linha "quando
+faz sentido") · `#metodo` (`.ai-inner` + `.acct360` com `.acct-tl`, o que a Nexyss faz e o que o time faz) ·
+`#quando` (`.consult-grid.two`: "Quando faz sentido" e "Nós nunca") · `#contratacao` (4 `.consult-item`:
+conversa, proposta, projeto, operação) · `#modulos` (7 `.mod-card`, só link para o `#integracoes` ou
+`#implantacao` de cada módulo) · `#para-quem` (3 `.sol-card`) · impacto (4 · 7 · 30-60 min) · `#clientes`
+(Founding) · `.cta-final`. **Sem logo wall** (R8). Não tem `#ia` nem `#integracoes` próprios: não fazem
+sentido num serviço.
+
+### Práticas (sem badge, R5.1)
+Nomes iguais aos da Home, por consistência: Strategy & Transformation, Implementation & Enablement, Growth &
+Performance e Managed Services. **O nome "Strategy & Transformation" contém a palavra "transformação"**,
+vetada na copy nova; foi mantido por ser o nome da prática na Home (decisão pendente). Cada prática tem 3
+passos e uma linha "quando faz sentido". **Zero badge**, zero métrica de resultado, zero garantia, zero
+cliente nomeado, sem "24/7" nem "SLA".
+
+### Contratação e CTAs
+Venda por projeto, sem preço (R1, R2). "30-60 min" e "proposta em até 7 dias úteis" são compromissos do
+Jonathan registrados na FAQ do Contato (11/09/2026), não métricas de produto. CTAs:
+`../contato/?interesse=consultoria&origem=projeto|especialista|founding` ("Solicitar Projeto", "Falar com
+Especialista", "Candidatar-se"). O select do Contato passou a "Nexyss Consultoria" (também em
+`form-detect.html`) e o `MAP` do `nexyss.js` devolve esse rótulo; testado com `projeto`, `especialista`,
+`founding`, sem `origem` e com `?interesse=ai`.
+
+### Cor (decisão de 22/10/2026)
+`--c-con #8FA6C7`, `--c-con-deep #4F6687`, `--c-con-text #B3C4DE`. Contraste medido sobre navy-deep / navy /
+navy-mid: `--c-con` 7,11 / 6,37 / 5,54; `--c-con-deep` 3,02 / 2,70 / 2,35 (só gradiente decorativo);
+`--c-con-text` 9,99 / 8,95 / 7,79. **O tom de texto não é uma necessidade técnica de contraste** (o tom base já
+passa AA nos três fundos): é uma escolha de legibilidade. É o terceiro tom de texto derivado, depois de HR e
+Integrações. Distância de cor (ΔE) para os módulos: AI 22, Finance 35, Educação 36, Integrações 60, e a
+distância para o texto neutro (`--c-text-soft`) é 17 para a cor base e 8 para o tom de texto, ou seja, o acento
+se confunde com o cinza de interface. `--c-con-text` só é usado sob `.theme-con` (eyebrow, `<small>` do impacto,
+`.attr-note b`, hover de `.sol-tag`, número dos passos, rótulo `.src`).
+
+### Componentes novos (seção `=== PÁGINA CONSULTORIA ===` ao fim de `nexyss.css`)
+`.theme-con`, `.icn-con`, `.mod-card.con` · `.cw-*` (Visual A, duas pistas "Nexyss" e "Seu time" em 4 etapas,
+sem número, marca ILUSTRATIVO) · `.con-steps` (passos numerados) · `.con-when` · `.acct-tl .m-con/.m-time` ·
+`.consult-cta` (botão "Conhecer Nexyss Consultoria"). **Zero keyframes novos** (`floatA`). Os componentes
+`.consult-head`, `.consult-sub` e `.consult-time`, citados no briefing, **não existem** no CSS.
+
+### Botão "Conhecer Nexyss Consultoria"
+Entra ao fim de cada seção `#consultoria`. **Só 5 páginas têm essa seção** (Home e as 4 de eixo de Soluções),
+então são 5 botões, não 16. As outras 11 páginas chegam à Consultoria pelo header, drawer e footer, agora
+apontando para `/consultoria/` (os 16 `href` do header e do drawer e os 16 do footer eram `#consultoria` ou `#`).
+
+### Item do header e o logo
+O rótulo completo do header ("Nexyss Consultoria") deixa o menu com 725px e, abaixo de 1340px, espremia o
+logo (largura de 139 para 37px, imagem distorcida). O header usa `<span class="nav-nx">Nexyss </span>Consultoria` e
+omite o prefixo até 1340px; drawer e footer mostram o nome completo. **Bug pré-existente descoberto:** na `main`
+o logo do header já colapsa abaixo de 1280px (89px em 1180, 20px em 1100, 0px em 900), porque o menu de 672px
+não cabe; não foi tratado nesta fase.
+
+### Baselines (Linux)
+Controle capturado numa worktree de `e205c35`. `baselines/consultoria-*.json` são baseline inicial. Ver
+`baselines/README.md`.
+
+### Pendências registradas aqui
+- **Nome "Strategy & Transformation"** (contém a palavra vetada) e o texto "roadmap de transformação digital" da
+  Home.
+- **Overview `#adocao`** ("Semanas, não meses") e `#fluxo` ("disponíveis hoje via consultoria") seguem sem
+  validação; a página nova não os repete.
+- **As práticas existem como serviço contratável?** Sem registro seu de qual prática entrega o quê.
+- **Header em 761 a 1180px:** logo colapsado (pré-existente).
 
 ## Bug fix: logo em branco (11/09/2026)
 

@@ -95,35 +95,36 @@ ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
-| Home | `794:27471d88` (doc 1280x7877) | `794:2d4183b0` (doc 375x13319) |
-| Overview | `866:daa677f1` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
-| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
-| Educação | `1048:5647619c` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
-| Contato | `595:8a8127f6` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
-| Obrigado | `447:037bdd6f` (doc 1280x1287) | `447:82cd9a7d` (doc 375x2240) |
-| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
-| Finance | `942:cbeef137` (doc 1280x9485) | `942:90d115ef` (doc 375x16176) |
-| HR | `907:e979f105` (doc 1280x9734) | `907:2c0fee36` (doc 375x16019) |
-| AI | `780:2db55322` (doc 1280x9521) | `780:80595fff` (doc 375x15900) |
-| Integrações | `868:1540d75d` (doc 1280x10838) | `868:f3f34adc` (doc 375x17604) |
-| Soluções | `527:b1fe882a` (doc 1280x3906) | `527:c548a4f1` (doc 375x5839) |
-| Soluções por Setor | `656:bcebeb98` (doc 1280x8374) | `656:95b1d978` (doc 375x12474) |
-| **Soluções por Função** (baseline inicial) | `684:b034caf7` (doc 1280x9715) | `684:dec5d32d` (doc 375x13815) |
-| **Soluções por Objetivo** (baseline inicial) | `696:6a5f1e45` (doc 1280x9532) | `696:d31839aa` (doc 375x13638) |
-| **Soluções por Porte** (baseline inicial) | `648:eee186ac` (doc 1280x7909) | `648:fd13b144` (doc 375x11639) |
+| Home | `799:dd0853d2` (doc 1280x7961) | `799:72bccf40` (doc 375x13403) |
+| Overview | `867:69eebd38` (doc 1280x10735) | `867:416006f4` (doc 375x17477) |
+| CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
+| Educação | `1049:1372e9ed` (doc 1280x11702) | `1049:5b62a25b` (doc 375x19321) |
+| Contato | `596:ca9e8b0d` (doc 1280x3736) | `596:d2d6a8f7` (doc 375x5833) |
+| Obrigado | `448:be53e34c` (doc 1280x1287) | `448:6c494350` (doc 375x2240) |
+| Marketing | `868:175f8d9a` (doc 1280x9437) | `868:8dab60e4` (doc 375x16326) |
+| Finance | `943:b23ef52a` (doc 1280x9485) | `943:0e2989e2` (doc 375x16176) |
+| HR | `908:a1442c32` (doc 1280x9734) | `908:b9cf44c7` (doc 375x16019) |
+| AI | `781:a8aedd7d` (doc 1280x9521) | `781:b2319f2e` (doc 375x15900) |
+| Integrações | `869:80c999be` (doc 1280x10838) | `869:30a83001` (doc 375x17604) |
+| Soluções | `528:bc9ddfa5` (doc 1280x3906) | `528:f2ccf828` (doc 375x5839) |
+| Soluções por Setor | `661:32770f37` (doc 1280x8458) | `661:020b475c` (doc 375x12558) |
+| **Soluções por Função** (baseline inicial) | `689:762e9e8f` (doc 1280x9799) | `689:e2c53be7` (doc 375x13899) |
+| **Soluções por Objetivo** (baseline inicial) | `701:4b357b3d` (doc 1280x9616) | `701:097cc582` (doc 375x13722) |
+| **Soluções por Porte** (baseline inicial) | `653:601e2163` (doc 1280x7993) | `653:3e70aeaa` (doc 375x11723) |
+| **Nexyss Consultoria** (baseline inicial) | `780:54d73a47` (doc 1280x9858) | `780:0697fe52` (doc 375x16541) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
 
 | Página | Viewport | Antes | Depois | Causa |
 |---|---|---|---|---|
-| Overview | `866:daa677f1` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
-| Educação | `1048:5647619c` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
-| Contato | `595:8a8127f6` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
-| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
-| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
-| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
-| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
+| Overview | `867:69eebd38` (doc 1280x10735) | `867:416006f4` (doc 375x17477) |
+| Educação | `1049:1372e9ed` (doc 1280x11702) | `1049:5b62a25b` (doc 375x19321) |
+| Contato | `596:ca9e8b0d` (doc 1280x3736) | `596:d2d6a8f7` (doc 375x5833) |
+| CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
+| CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
+| Marketing | `868:175f8d9a` (doc 1280x9437) | `868:8dab60e4` (doc 375x16326) |
+| Marketing | `868:175f8d9a` (doc 1280x9437) | `868:8dab60e4` (doc 375x16326) |
 
 Home, Obrigado, Educação 1280, Contato 1280 e Overview 375 ficaram idênticas.
 **CRM mudou de novo em 14/10/2026 (fase Finance):** o bullet "Fechamento reconhecido
@@ -198,3 +199,11 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   idênticos. Home tem ainda 1 `.sol-tag` (148 para 91px, "Visibilidade"). Em 375 só a Home muda (essa tag).
   `/solucoes/`: +9 elementos (3 links nos cards), doc 1280 de 3909 para 3906 e 375 de 5821 para 5839.
   A página AI em 1280 varia 0,015px em larguras de texto entre capturas (ruído subpixel, não estrutural).
+- **22/10/2026** (4) - `/consultoria/` entra nas ferramentas (`run.js`, `extract.py`). Baseline inicial (2
+  viewports). Controle capturado numa worktree limpa de `e205c35`. Nas 16 páginas existentes: +1 elemento
+  (`span.nav-nx` no item "Nexyss Consultoria" do header) e 1 elemento com geometria alterada (o próprio link). Nas
+  5 páginas com seção `#consultoria` (Home e as 4 de eixo de Soluções) mais +4 elementos (o botão "Conhecer Nexyss
+  Consultoria": `div`, `a`, `svg`, `path`) e documento +84px em 1280 e em 375; o resto dessas páginas desce 84px.
+  Antes de limitar o prefixo do header a 1340px, o rótulo completo reduzia o logo de 139 para 37px entre 1181 e
+  1299px (medido); a captura final já reflete a correção. `.nav-menu .nav-con` e o `.consult-cta` ficam no CSS
+  compartilhado.

@@ -571,3 +571,20 @@ Duas páginas novas, mais infraestrutura de navegação nas 11 existentes.
   Páginas novas: 9715, 9532 e 7909px em 1280, 13815, 13638 e 11639px em 375, sem transbordo horizontal.
 - **Backlog:** o mesmo da fase anterior; header das páginas internas aponta `#consultoria` e `#clientes`
   sem destino no índice `/solucoes/`.
+
+## 20. Página Nexyss Consultoria (22/10/2026)
+
+- **Página:** `/consultoria/`, tema `theme-con` (cinza-azul `#8FA6C7`), 12 seções, serviço e não módulo. Argumento
+  "A consultoria que fica curta porque a plataforma já carrega o resto".
+- **Nome:** "Nexyss Consultoria" no header, drawer, footer (16 páginas), select do Contato, `form-detect.html`,
+  `MAP` do `nexyss.js` e eyebrow da Home. "Consultoria" solto só como título narrativo de seção.
+- **Navegação:** 48 `href` (header, drawer e footer das 16 páginas) passam a apontar para `/consultoria/`. Botão
+  "Conhecer Nexyss Consultoria" em 5 seções (só 5 páginas têm `#consultoria`).
+- **Cor:** contrastes medidos; o `--c-con-text` não era necessário por contraste e o cinza-azul fica a ΔE 17 do
+  texto neutro (ver CLAUDE.md).
+- **Honestidade:** sem badge, sem métrica de resultado, sem prazo, sem cliente. A prática 01 mantém o nome
+  "Strategy & Transformation" da Home.
+- **Achado fora do escopo:** o logo do header colapsa abaixo de 1280px na `main` (pré-existente).
+- **Correção nesta fase:** o rótulo completo no header espremia o logo até 1340px; resolvido omitindo o prefixo
+  "Nexyss " nessa faixa.
+- **Backlog:** o mesmo da fase anterior, mais o nome da prática 01 e a validação das práticas como serviço.

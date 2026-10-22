@@ -3,7 +3,7 @@ sp, outdir, tag = sys.argv[1], sys.argv[2], sys.argv[3]
 if outdir != '-':
     os.makedirs(outdir, exist_ok=True)
 res = {}
-for name in ['home','overview','crm','educacao','marketing','finance','hr','ai','integracoes','contato','obrigado','solucoes','porsetor','porfuncao','porobjetivo','porporte']:
+for name in ['home','overview','crm','educacao','marketing','finance','hr','ai','integracoes','contato','obrigado','solucoes','porsetor','porfuncao','porobjetivo','porporte','consultoria']:
     for w in ['1280','375']:
         f = f'{sp}/raw-{name}-{w}.html'
         s = open(f, encoding='utf-8').read()
