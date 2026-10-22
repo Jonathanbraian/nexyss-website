@@ -95,32 +95,35 @@ ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
-| Home | `794:2e659598` (doc 1280x7877) | `794:81042cbd` (doc 375x13319) |
-| Overview | `866:9417ceb0` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
-| CRM | `902:7e6d6a61` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
-| Educação | `1048:62bb01ef` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
-| Contato | `595:8f91074b` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
-| Obrigado | `447:f5fd2928` (doc 1280x1287) | `447:82cd9a7d` (doc 375x2240) |
-| Marketing | `867:071d2bbc` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
-| Finance | `942:57d0e804` (doc 1280x9485) | `942:90d115ef` (doc 375x16176) |
-| HR | `907:a1ad50ba` (doc 1280x9734) | `907:2c0fee36` (doc 375x16019) |
-| AI | `780:5ce32281` (doc 1280x9521) | `780:80595fff` (doc 375x15900) |
-| Integrações | `868:32f09424` (doc 1280x10838) | `868:f3f34adc` (doc 375x17604) |
-| **Soluções** (baseline inicial) | `518:bd21afab` (doc 1280x3909) | `518:e8f54afe` (doc 375x5821) |
-| **Soluções por Setor** (baseline inicial) | `656:1a5926c1` (doc 1280x8374) | `656:95b1d978` (doc 375x12474) |
+| Home | `794:27471d88` (doc 1280x7877) | `794:2d4183b0` (doc 375x13319) |
+| Overview | `866:daa677f1` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
+| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
+| Educação | `1048:5647619c` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
+| Contato | `595:8a8127f6` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
+| Obrigado | `447:037bdd6f` (doc 1280x1287) | `447:82cd9a7d` (doc 375x2240) |
+| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
+| Finance | `942:cbeef137` (doc 1280x9485) | `942:90d115ef` (doc 375x16176) |
+| HR | `907:e979f105` (doc 1280x9734) | `907:2c0fee36` (doc 375x16019) |
+| AI | `780:2db55322` (doc 1280x9521) | `780:80595fff` (doc 375x15900) |
+| Integrações | `868:1540d75d` (doc 1280x10838) | `868:f3f34adc` (doc 375x17604) |
+| Soluções | `527:b1fe882a` (doc 1280x3906) | `527:c548a4f1` (doc 375x5839) |
+| Soluções por Setor | `656:bcebeb98` (doc 1280x8374) | `656:95b1d978` (doc 375x12474) |
+| **Soluções por Função** (baseline inicial) | `684:b034caf7` (doc 1280x9715) | `684:dec5d32d` (doc 375x13815) |
+| **Soluções por Objetivo** (baseline inicial) | `696:6a5f1e45` (doc 1280x9532) | `696:d31839aa` (doc 375x13638) |
+| **Soluções por Porte** (baseline inicial) | `648:eee186ac` (doc 1280x7909) | `648:fd13b144` (doc 375x11639) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
 
 | Página | Viewport | Antes | Depois | Causa |
 |---|---|---|---|---|
-| Overview | 1280 | `854:b0b131d6` | `854:9e1e965f` | `hero-sub` perdeu 1 linha (doc -30px) |
-| Educação | 375 | `1062:7fd0c36a` | `1062:8ab43d28` | 1 parágrafo de `section-head` perdeu 1 linha (doc -28px) |
-| Contato | 375 | `576:8602edf7` | `576:01a4e2b7` | `.hint` do formulário perdeu 1 linha (doc -17px) |
-| CRM | 1280 | `915:c9eb3dd9` | `915:e334705f` | largura do trecho `.accent` do h1 (doc igual) |
-| CRM | 375 | `915:21db6a6c` | `915:a2843876` | largura do `.accent` (doc igual) |
-| Marketing | 1280 | `856:f5c3c742` | `856:f5b18501` | largura do `.accent` (doc igual) |
-| Marketing | 375 | `856:27202f09` | `856:3aa08760` | largura do `.accent` (doc igual) |
+| Overview | `866:daa677f1` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
+| Educação | `1048:5647619c` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
+| Contato | `595:8a8127f6` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
+| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
+| CRM | `902:5bf31a8c` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
+| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
+| Marketing | `867:bae38eb7` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
 
 Home, Obrigado, Educação 1280, Contato 1280 e Overview 375 ficaram idênticas.
 **CRM mudou de novo em 14/10/2026 (fase Finance):** o bullet "Fechamento reconhecido
@@ -186,3 +189,12 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   794 elementos (+3), doc 1280 inalterado (7877), 375 de 13240 para 13319. Contato: novo `.clients-sector.tech`
   (+7 elementos), `.clients-grid` de 3 para 4 colunas, h2 com "tecnologia": 595 elementos, doc 1280 de 3714
   para 3736 e 375 de 5702 para 5833. As outras 11 páginas (22 capturas) idênticas à captura anterior.
+- **22/10/2026** (3) - `/solucoes/por-funcao/`, `/solucoes/por-objetivo/` e `/solucoes/por-porte/` entram nas
+  ferramentas (`run.js`, `extract.py`). Baseline inicial das 3 páginas (6 capturas), em Linux. Controle capturado
+  numa worktree limpa de `origin/main` (`9cc4b83`); um primeiro controle rodado em paralelo com a edição foi
+  descartado por contaminação. Delta nas 12 páginas existentes em 1280: 41 elementos do mega-menu Soluções
+  (a coluna Porte ganha uma linha porque "Múltiplas unidades e regras de acesso" quebra; `.mega-solucoes`
+  491,9 para 511,2px de altura e colunas de 145,5 para 151px), nº de elementos e altura do documento
+  idênticos. Home tem ainda 1 `.sol-tag` (148 para 91px, "Visibilidade"). Em 375 só a Home muda (essa tag).
+  `/solucoes/`: +9 elementos (3 links nos cards), doc 1280 de 3909 para 3906 e 375 de 5821 para 5839.
+  A página AI em 1280 varia 0,015px em larguras de texto entre capturas (ruído subpixel, não estrutural).

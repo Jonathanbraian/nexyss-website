@@ -35,6 +35,9 @@ plataforma/ai/index.html         Nexyss AI
 plataforma/integracoes/index.html  Nexyss Integrações
 solucoes/index.html           Soluções - índice dos quatro caminhos (função, objetivo, porte, setor)
 solucoes/por-setor/index.html Soluções por setor (Educação, Esporte, Turismo, Tecnologia)
+solucoes/por-funcao/index.html Soluções por função (Comercial, Operações, Financeiro, Pessoas, Dados, Governança)
+solucoes/por-objetivo/index.html Soluções por objetivo (Crescer, Expandir, Consolidar, Digitalizar, Custo, Visibilidade)
+solucoes/por-porte/index.html  Soluções por porte (Startups, Mid-Market, Enterprise, Global)
 contato/index.html            Contato - formulário (Netlify Forms) + canais diretos
 contato/obrigado.html         Página de sucesso do formulário (noindex)
 form-detect.html              Só para o Netlify registrar o form - não linkar, não apagar

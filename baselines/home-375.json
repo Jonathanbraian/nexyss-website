@@ -24398,13 +24398,13 @@
    "g": [
     57,
     6845,
-    148,
+    91,
     31
    ],
    "s": {
     "display": "block",
     "position": "static",
-    "width": "147.938px",
+    "width": "90.6719px",
     "height": "31.3438px",
     "margin-top": "0px",
     "margin-right": "0px",
@@ -32592,5 +32592,5 @@
    }
   }
  ],
- "fingerprint": "794:81042cbd"
+ "fingerprint": "794:2d4183b0"
 }
