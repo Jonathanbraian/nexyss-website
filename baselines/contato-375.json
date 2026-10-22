@@ -1,7 +1,7 @@
 {
  "page": "file:///home/user/nexyss-website/contato/index.html",
  "viewport": "375x812",
- "document": "375x5665",
+ "document": "375x5833",
  "fontsLoaded": "loaded",
  "sora": true,
  "dmsans": true,
@@ -35,7 +35,7 @@
   "text-align",
   "grid-template-columns"
  ],
- "count": 579,
+ "count": 595,
  "elements": [
   {
    "t": "html",
@@ -45,13 +45,13 @@
     0,
     0,
     375,
-    5665
+    5833
    ],
    "s": {
     "display": "block",
     "position": "static",
     "width": "375px",
-    "height": "5665.34px",
+    "height": "5833.14px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -1152,13 +1152,13 @@
     0,
     0,
     375,
-    5665
+    5833
    ],
    "s": {
     "display": "block",
     "position": "static",
     "width": "375px",
-    "height": "5665.34px",
+    "height": "5833.14px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -13691,6 +13691,293 @@
    }
   },
   {
+   "t": "a",
+   "c": "mega-item",
+   "i": "",
+   "g": [
+    388,
+    449,
+    305,
+    65
+   ],
+   "s": {
+    "display": "flex",
+    "position": "static",
+    "width": "305px",
+    "height": "64.6719px",
+    "margin-top": "2px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "11px",
+    "padding-right": "12px",
+    "padding-bottom": "11px",
+    "padding-left": "12px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "10px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "icn icn-neutral",
+   "i": "",
+   "g": [
+    400,
+    460,
+    32,
+    32
+   ],
+   "s": {
+    "display": "grid",
+    "position": "static",
+    "width": "32px",
+    "height": "32px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "12px",
+    "font-weight": "500",
+    "line-height": "18.6px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(255, 255, 255, 0.14)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "8px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "32px"
+   }
+  },
+  {
+   "t": "svg",
+   "c": "",
+   "i": "",
+   "g": [
+    409,
+    469,
+    14,
+    14
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "14px",
+    "height": "14px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "12px",
+    "font-weight": "500",
+    "line-height": "18.6px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "hidden",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "path",
+   "c": "",
+   "i": "",
+   "g": [
+    412,
+    473,
+    8,
+    6
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "12px",
+    "font-weight": "500",
+    "line-height": "18.6px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "txt",
+   "i": "",
+   "g": [
+    444,
+    460,
+    145,
+    43
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "145.359px",
+    "height": "42.6719px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "nm",
+   "i": "",
+   "g": [
+    444,
+    460,
+    145,
+    22
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "145.359px",
+    "height": "22.3281px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "500",
+    "line-height": "22.32px",
+    "letter-spacing": "-0.144px",
+    "color": "rgb(255, 255, 255)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "ds",
+   "i": "",
+   "g": [
+    444,
+    483,
+    145,
+    19
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "145.359px",
+    "height": "19.3438px",
+    "margin-top": "1px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "12.48px",
+    "font-weight": "400",
+    "line-height": "19.344px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
    "t": "div",
    "c": "drawer-sep",
    "i": "",
@@ -14313,13 +14600,13 @@
     0,
     0,
     375,
-    4250
+    4381
    ],
    "s": {
     "display": "block",
     "position": "static",
     "width": "375px",
-    "height": "4249.81px",
+    "height": "4380.81px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -18741,13 +19028,13 @@
     0,
     2375,
     375,
-    1146
+    1277
    ],
    "s": {
     "display": "block",
     "position": "relative",
     "width": "375px",
-    "height": "1145.58px",
+    "height": "1276.58px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -18782,13 +19069,13 @@
     0,
     2455,
     375,
-    986
+    1117
    ],
    "s": {
     "display": "block",
     "position": "relative",
     "width": "375px",
-    "height": "985.578px",
+    "height": "1116.58px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -18946,13 +19233,13 @@
     20,
     2677,
     335,
-    763
+    894
    ],
    "s": {
     "display": "grid",
     "position": "static",
     "width": "335px",
-    "height": "763px",
+    "height": "894px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -19889,13 +20176,13 @@
     20,
     3173,
     335,
-    267
+    189
    ],
    "s": {
     "display": "block",
     "position": "static",
     "width": "335px",
-    "height": "267px",
+    "height": "189px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -20176,13 +20463,13 @@
     49,
     3265,
     277,
-    146
+    68
    ],
    "s": {
     "display": "grid",
     "position": "static",
     "width": "277px",
-    "height": "146px",
+    "height": "68px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -20293,11 +20580,298 @@
   },
   {
    "t": "div",
+   "c": "clients-sector tech",
+   "i": "",
+   "g": [
+    20,
+    3382,
+    335,
+    189
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "335px",
+    "height": "189px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "28px",
+    "padding-right": "28px",
+    "padding-bottom": "28px",
+    "padding-left": "28px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "1px",
+    "border-bottom-width": "1px",
+    "border-radius": "24px",
+    "opacity": "1",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "sector-head",
+   "i": "",
+   "g": [
+    49,
+    3411,
+    277,
+    47
+   ],
+   "s": {
+    "display": "flex",
+    "position": "static",
+    "width": "277px",
+    "height": "47px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "16px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "16px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.2px",
+    "font-weight": "500",
+    "line-height": "17.36px",
+    "letter-spacing": "1.568px",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "1px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "span",
+   "c": "icn icn-neutral",
+   "i": "",
+   "g": [
+    49,
+    3411,
+    30,
+    30
+   ],
+   "s": {
+    "display": "grid",
+    "position": "static",
+    "width": "30px",
+    "height": "30px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.2px",
+    "font-weight": "500",
+    "line-height": "17.36px",
+    "letter-spacing": "1.568px",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(255, 255, 255, 0.14)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "8px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "30px"
+   }
+  },
+  {
+   "t": "svg",
+   "c": "",
+   "i": "",
+   "g": [
+    57,
+    3419,
+    15,
+    15
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "15px",
+    "height": "15px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.2px",
+    "font-weight": "500",
+    "line-height": "17.36px",
+    "letter-spacing": "1.568px",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "hidden",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "path",
+   "c": "",
+   "i": "",
+   "g": [
+    58,
+    3423,
+    11,
+    7
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.2px",
+    "font-weight": "500",
+    "line-height": "17.36px",
+    "letter-spacing": "1.568px",
+    "color": "rgba(255, 255, 255, 0.72)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "span",
+   "c": "",
+   "i": "",
+   "g": [
+    91,
+    3418,
+    83,
+    17
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "82.8125px",
+    "height": "17.3594px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.2px",
+    "font-weight": "500",
+    "line-height": "17.36px",
+    "letter-spacing": "1.568px",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "client-list",
+   "i": "",
+   "g": [
+    49,
+    3474,
+    277,
+    68
+   ],
+   "s": {
+    "display": "grid",
+    "position": "static",
+    "width": "277px",
+    "height": "68px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "277px"
+   }
+  },
+  {
+   "t": "div",
    "c": "client-card",
    "i": "",
    "g": [
     49,
-    3343,
+    3474,
     277,
     68
    ],
@@ -20338,7 +20912,7 @@
    "i": "",
    "g": [
     156,
-    3363,
+    3494,
     63,
     30
    ],
@@ -20379,7 +20953,7 @@
    "i": "faq",
    "g": [
     0,
-    3520,
+    3651,
     375,
     729
    ],
@@ -20420,7 +20994,7 @@
    "i": "",
    "g": [
     0,
-    3600,
+    3731,
     375,
     569
    ],
@@ -20461,7 +21035,7 @@
    "i": "",
    "g": [
     20,
-    3600,
+    3731,
     335,
     117
    ],
@@ -20502,7 +21076,7 @@
    "i": "",
    "g": [
     20,
-    3608,
+    3739,
     216,
     19
    ],
@@ -20543,7 +21117,7 @@
    "i": "",
    "g": [
     20,
-    3650,
+    3781,
     335,
     67
    ],
@@ -20584,7 +21158,7 @@
    "i": "",
    "g": [
     20,
-    3789,
+    3920,
     335,
     380
    ],
@@ -20625,7 +21199,7 @@
    "i": "",
    "g": [
     20,
-    3789,
+    3920,
     335,
     88
    ],
@@ -20666,7 +21240,7 @@
    "i": "",
    "g": [
     21,
-    3790,
+    3921,
     333,
     86
    ],
@@ -20707,7 +21281,7 @@
    "i": "",
    "g": [
     21,
-    3876,
+    4007,
     333,
     93
    ],
@@ -20748,7 +21322,7 @@
    "i": "",
    "g": [
     20,
-    3887,
+    4018,
     335,
     88
    ],
@@ -20789,7 +21363,7 @@
    "i": "",
    "g": [
     21,
-    3888,
+    4019,
     333,
     86
    ],
@@ -20830,7 +21404,7 @@
    "i": "",
    "g": [
     21,
-    3974,
+    4105,
     333,
     93
    ],
@@ -20871,7 +21445,7 @@
    "i": "",
    "g": [
     20,
-    3985,
+    4116,
     335,
     88
    ],
@@ -20912,7 +21486,7 @@
    "i": "",
    "g": [
     21,
-    3986,
+    4117,
     333,
     86
    ],
@@ -20953,7 +21527,7 @@
    "i": "",
    "g": [
     21,
-    4071,
+    4202,
     333,
     142
    ],
@@ -20994,7 +21568,7 @@
    "i": "",
    "g": [
     20,
-    4082,
+    4213,
     335,
     88
    ],
@@ -21035,7 +21609,7 @@
    "i": "",
    "g": [
     21,
-    4083,
+    4214,
     333,
     86
    ],
@@ -21076,7 +21650,7 @@
    "i": "",
    "g": [
     21,
-    4169,
+    4300,
     333,
     142
    ],
@@ -21117,15 +21691,15 @@
    "i": "",
    "g": [
     0,
-    4250,
+    4381,
     375,
-    1416
+    1452
    ],
    "s": {
     "display": "block",
     "position": "relative",
     "width": "375px",
-    "height": "1415.53px",
+    "height": "1452.33px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -21158,15 +21732,15 @@
    "i": "",
    "g": [
     0,
-    4331,
+    4462,
     375,
-    1295
+    1331
    ],
    "s": {
     "display": "block",
     "position": "relative",
     "width": "375px",
-    "height": "1294.53px",
+    "height": "1331.33px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -21199,15 +21773,15 @@
    "i": "",
    "g": [
     20,
-    4331,
+    4462,
     335,
-    1208
+    1245
    ],
    "s": {
     "display": "grid",
     "position": "relative",
     "width": "335px",
-    "height": "1207.84px",
+    "height": "1244.64px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -21240,7 +21814,7 @@
    "i": "",
    "g": [
     20,
-    4331,
+    4462,
     335,
     140
    ],
@@ -21281,7 +21855,7 @@
    "i": "",
    "g": [
     20,
-    4331,
+    4462,
     139,
     34
    ],
@@ -21322,7 +21896,7 @@
    "i": "",
    "g": [
     20,
-    4387,
+    4518,
     320,
     69
    ],
@@ -21363,7 +21937,7 @@
    "i": "",
    "g": [
     20,
-    4510,
+    4641,
     335,
     285
    ],
@@ -21404,7 +21978,7 @@
    "i": "",
    "g": [
     20,
-    4510,
+    4641,
     335,
     18
    ],
@@ -21445,7 +22019,7 @@
    "i": "",
    "g": [
     20,
-    4550,
+    4681,
     335,
     246
    ],
@@ -21486,7 +22060,7 @@
    "i": "",
    "g": [
     20,
-    4550,
+    4681,
     335,
     25
    ],
@@ -21527,7 +22101,7 @@
    "i": "",
    "g": [
     20,
-    4553,
+    4684,
     82,
     18
    ],
@@ -21568,7 +22142,7 @@
    "i": "",
    "g": [
     20,
-    4587,
+    4718,
     335,
     25
    ],
@@ -21609,7 +22183,7 @@
    "i": "",
    "g": [
     20,
-    4590,
+    4721,
     117,
     18
    ],
@@ -21650,7 +22224,7 @@
    "i": "",
    "g": [
     20,
-    4624,
+    4755,
     335,
     25
    ],
@@ -21691,7 +22265,7 @@
    "i": "",
    "g": [
     20,
-    4627,
+    4758,
     116,
     18
    ],
@@ -21732,7 +22306,7 @@
    "i": "",
    "g": [
     20,
-    4661,
+    4792,
     335,
     25
    ],
@@ -21773,7 +22347,7 @@
    "i": "",
    "g": [
     20,
-    4664,
+    4795,
     103,
     18
    ],
@@ -21814,7 +22388,7 @@
    "i": "",
    "g": [
     20,
-    4697,
+    4828,
     335,
     25
    ],
@@ -21855,7 +22429,7 @@
    "i": "",
    "g": [
     20,
-    4700,
+    4831,
     69,
     18
    ],
@@ -21896,7 +22470,7 @@
    "i": "",
    "g": [
     20,
-    4734,
+    4865,
     335,
     25
    ],
@@ -21937,7 +22511,7 @@
    "i": "",
    "g": [
     20,
-    4737,
+    4868,
     64,
     18
    ],
@@ -21978,7 +22552,7 @@
    "i": "",
    "g": [
     20,
-    4771,
+    4902,
     335,
     25
    ],
@@ -22019,7 +22593,7 @@
    "i": "",
    "g": [
     20,
-    4774,
+    4905,
     129,
     18
    ],
@@ -22060,458 +22634,7 @@
    "i": "",
    "g": [
     20,
-    4836,
-    335,
-    175
-   ],
-   "s": {
-    "display": "block",
-    "position": "static",
-    "width": "335px",
-    "height": "175.031px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "h5",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4836,
-    335,
-    18
-   ],
-   "s": {
-    "display": "block",
-    "position": "static",
-    "width": "335px",
-    "height": "17.8438px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "22px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
-    "font-size": "11.52px",
-    "font-weight": "500",
-    "line-height": "17.856px",
-    "letter-spacing": "1.6128px",
-    "color": "rgb(255, 255, 255)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "ul",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4876,
-    335,
-    135
-   ],
-   "s": {
-    "display": "grid",
-    "position": "static",
-    "width": "335px",
-    "height": "135.188px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "335px"
-   }
-  },
-  {
-   "t": "li",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4876,
-    335,
-    25
-   ],
-   "s": {
-    "display": "list-item",
-    "position": "static",
-    "width": "335px",
-    "height": "24.7969px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "a",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4879,
-    74,
-    18
-   ],
-   "s": {
-    "display": "inline",
-    "position": "static",
-    "width": "auto",
-    "height": "auto",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "14.4px",
-    "font-weight": "400",
-    "line-height": "22.32px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.52)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "li",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4912,
-    335,
-    25
-   ],
-   "s": {
-    "display": "list-item",
-    "position": "static",
-    "width": "335px",
-    "height": "24.7969px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "a",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4915,
-    82,
-    18
-   ],
-   "s": {
-    "display": "inline",
-    "position": "static",
-    "width": "auto",
-    "height": "auto",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "14.4px",
-    "font-weight": "400",
-    "line-height": "22.32px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.52)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "li",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4949,
-    335,
-    25
-   ],
-   "s": {
-    "display": "list-item",
-    "position": "static",
-    "width": "335px",
-    "height": "24.7969px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "a",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4952,
-    110,
-    18
-   ],
-   "s": {
-    "display": "inline",
-    "position": "static",
-    "width": "auto",
-    "height": "auto",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "14.4px",
-    "font-weight": "400",
-    "line-height": "22.32px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.52)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "li",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4986,
-    335,
-    25
-   ],
-   "s": {
-    "display": "list-item",
-    "position": "static",
-    "width": "335px",
-    "height": "24.7969px",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "16px",
-    "font-weight": "400",
-    "line-height": "24.8px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.92)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "a",
-   "c": "",
-   "i": "",
-   "g": [
-    20,
-    4989,
-    66,
-    18
-   ],
-   "s": {
-    "display": "inline",
-    "position": "static",
-    "width": "auto",
-    "height": "auto",
-    "margin-top": "0px",
-    "margin-right": "0px",
-    "margin-bottom": "0px",
-    "margin-left": "0px",
-    "padding-top": "0px",
-    "padding-right": "0px",
-    "padding-bottom": "0px",
-    "padding-left": "0px",
-    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
-    "font-size": "14.4px",
-    "font-weight": "400",
-    "line-height": "22.32px",
-    "letter-spacing": "normal",
-    "color": "rgba(255, 255, 255, 0.52)",
-    "background-color": "rgba(0, 0, 0, 0)",
-    "border-top-width": "0px",
-    "border-bottom-width": "0px",
-    "border-radius": "0px",
-    "opacity": "1",
-    "transform": "none",
-    "z-index": "auto",
-    "overflow": "visible",
-    "text-align": "start",
-    "grid-template-columns": "none"
-   }
-  },
-  {
-   "t": "div",
-   "c": "footer-col",
-   "i": "",
-   "g": [
-    20,
-    5051,
+    4967,
     335,
     212
    ],
@@ -22552,7 +22675,7 @@
    "i": "",
    "g": [
     20,
-    5051,
+    4967,
     335,
     18
    ],
@@ -22593,7 +22716,7 @@
    "i": "",
    "g": [
     20,
-    5091,
+    5007,
     335,
     172
    ],
@@ -22634,7 +22757,7 @@
    "i": "",
    "g": [
     20,
-    5091,
+    5007,
     335,
     25
    ],
@@ -22675,8 +22798,8 @@
    "i": "",
    "g": [
     20,
-    5094,
-    39,
+    5010,
+    74,
     18
    ],
    "s": {
@@ -22716,7 +22839,7 @@
    "i": "",
    "g": [
     20,
-    5127,
+    5043,
     335,
     25
    ],
@@ -22757,8 +22880,8 @@
    "i": "",
    "g": [
     20,
-    5130,
-    76,
+    5046,
+    82,
     18
    ],
    "s": {
@@ -22798,7 +22921,7 @@
    "i": "",
    "g": [
     20,
-    5164,
+    5080,
     335,
     25
    ],
@@ -22839,8 +22962,8 @@
    "i": "",
    "g": [
     20,
-    5167,
-    62,
+    5083,
+    61,
     18
    ],
    "s": {
@@ -22880,7 +23003,7 @@
    "i": "",
    "g": [
     20,
-    5201,
+    5117,
     335,
     25
    ],
@@ -22921,8 +23044,8 @@
    "i": "",
    "g": [
     20,
-    5204,
-    54,
+    5120,
+    61,
     18
    ],
    "s": {
@@ -22962,7 +23085,7 @@
    "i": "",
    "g": [
     20,
-    5238,
+    5154,
     335,
     25
    ],
@@ -23003,8 +23126,8 @@
    "i": "",
    "g": [
     20,
-    5241,
-    54,
+    5157,
+    66,
     18
    ],
    "s": {
@@ -23044,15 +23167,15 @@
    "i": "",
    "g": [
     20,
-    5303,
+    5219,
     335,
-    175
+    212
    ],
    "s": {
     "display": "block",
     "position": "static",
     "width": "335px",
-    "height": "175.031px",
+    "height": "211.828px",
     "margin-top": "0px",
     "margin-right": "0px",
     "margin-bottom": "0px",
@@ -23085,7 +23208,7 @@
    "i": "",
    "g": [
     20,
-    5303,
+    5219,
     335,
     18
    ],
@@ -23126,7 +23249,540 @@
    "i": "",
    "g": [
     20,
-    5342,
+    5258,
+    335,
+    172
+   ],
+   "s": {
+    "display": "grid",
+    "position": "static",
+    "width": "335px",
+    "height": "171.984px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "335px"
+   }
+  },
+  {
+   "t": "li",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5258,
+    335,
+    25
+   ],
+   "s": {
+    "display": "list-item",
+    "position": "static",
+    "width": "335px",
+    "height": "24.7969px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "a",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5261,
+    39,
+    18
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "400",
+    "line-height": "22.32px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "li",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5295,
+    335,
+    25
+   ],
+   "s": {
+    "display": "list-item",
+    "position": "static",
+    "width": "335px",
+    "height": "24.7969px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "a",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5298,
+    76,
+    18
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "400",
+    "line-height": "22.32px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "li",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5332,
+    335,
+    25
+   ],
+   "s": {
+    "display": "list-item",
+    "position": "static",
+    "width": "335px",
+    "height": "24.7969px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "a",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5335,
+    62,
+    18
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "400",
+    "line-height": "22.32px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "li",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5369,
+    335,
+    25
+   ],
+   "s": {
+    "display": "list-item",
+    "position": "static",
+    "width": "335px",
+    "height": "24.7969px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "a",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5372,
+    54,
+    18
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "400",
+    "line-height": "22.32px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "li",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5406,
+    335,
+    25
+   ],
+   "s": {
+    "display": "list-item",
+    "position": "static",
+    "width": "335px",
+    "height": "24.7969px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "a",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5409,
+    54,
+    18
+   ],
+   "s": {
+    "display": "inline",
+    "position": "static",
+    "width": "auto",
+    "height": "auto",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "14.4px",
+    "font-weight": "400",
+    "line-height": "22.32px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.52)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "div",
+   "c": "footer-col",
+   "i": "",
+   "g": [
+    20,
+    5470,
+    335,
+    175
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "335px",
+    "height": "175.031px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "0px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Sans\", -apple-system, BlinkMacSystemFont, sans-serif",
+    "font-size": "16px",
+    "font-weight": "400",
+    "line-height": "24.8px",
+    "letter-spacing": "normal",
+    "color": "rgba(255, 255, 255, 0.92)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "h5",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5470,
+    335,
+    18
+   ],
+   "s": {
+    "display": "block",
+    "position": "static",
+    "width": "335px",
+    "height": "17.8438px",
+    "margin-top": "0px",
+    "margin-right": "0px",
+    "margin-bottom": "22px",
+    "margin-left": "0px",
+    "padding-top": "0px",
+    "padding-right": "0px",
+    "padding-bottom": "0px",
+    "padding-left": "0px",
+    "font-family": "\"DM Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+    "font-size": "11.52px",
+    "font-weight": "500",
+    "line-height": "17.856px",
+    "letter-spacing": "1.6128px",
+    "color": "rgb(255, 255, 255)",
+    "background-color": "rgba(0, 0, 0, 0)",
+    "border-top-width": "0px",
+    "border-bottom-width": "0px",
+    "border-radius": "0px",
+    "opacity": "1",
+    "transform": "none",
+    "z-index": "auto",
+    "overflow": "visible",
+    "text-align": "start",
+    "grid-template-columns": "none"
+   }
+  },
+  {
+   "t": "ul",
+   "c": "",
+   "i": "",
+   "g": [
+    20,
+    5510,
     335,
     135
    ],
@@ -23167,7 +23823,7 @@
    "i": "",
    "g": [
     20,
-    5342,
+    5510,
     335,
     25
    ],
@@ -23208,7 +23864,7 @@
    "i": "",
    "g": [
     20,
-    5345,
+    5513,
     98,
     18
    ],
@@ -23249,7 +23905,7 @@
    "i": "",
    "g": [
     20,
-    5379,
+    5547,
     335,
     25
    ],
@@ -23290,7 +23946,7 @@
    "i": "",
    "g": [
     20,
-    5382,
+    5550,
     121,
     18
    ],
@@ -23331,7 +23987,7 @@
    "i": "",
    "g": [
     20,
-    5416,
+    5584,
     335,
     25
    ],
@@ -23372,7 +24028,7 @@
    "i": "",
    "g": [
     20,
-    5419,
+    5587,
     102,
     18
    ],
@@ -23413,7 +24069,7 @@
    "i": "",
    "g": [
     20,
-    5453,
+    5621,
     335,
     25
    ],
@@ -23454,7 +24110,7 @@
    "i": "",
    "g": [
     20,
-    5456,
+    5624,
     70,
     18
    ],
@@ -23495,7 +24151,7 @@
    "i": "",
    "g": [
     20,
-    5539,
+    5706,
     335,
     87
    ],
@@ -23536,7 +24192,7 @@
    "i": "",
    "g": [
     20,
-    5569,
+    5736,
     317,
     20
    ],
@@ -23577,7 +24233,7 @@
    "i": "",
    "g": [
     20,
-    5605,
+    5773,
     212,
     20
    ],
@@ -23618,7 +24274,7 @@
    "i": "",
    "g": [
     20,
-    5605,
+    5773,
     71,
     20
    ],
@@ -23659,7 +24315,7 @@
    "i": "",
    "g": [
     115,
-    5605,
+    5773,
     45,
     20
    ],
@@ -23700,7 +24356,7 @@
    "i": "",
    "g": [
     184,
-    5605,
+    5773,
     49,
     20
    ],
@@ -23777,5 +24433,5 @@
    }
   }
  ],
- "fingerprint": "579:74eb5b84"
+ "fingerprint": "595:9b52ce8a"
 }

@@ -33,6 +33,8 @@ plataforma/finance/index.html    Nexyss Finance
 plataforma/hr/index.html         Nexyss HR
 plataforma/ai/index.html         Nexyss AI
 plataforma/integracoes/index.html  Nexyss Integrações
+solucoes/index.html           Soluções - índice dos quatro caminhos (função, objetivo, porte, setor)
+solucoes/por-setor/index.html Soluções por setor (Educação, Esporte, Turismo, Tecnologia)
 contato/index.html            Contato - formulário (Netlify Forms) + canais diretos
 contato/obrigado.html         Página de sucesso do formulário (noindex)
 form-detect.html              Só para o Netlify registrar o form - não linkar, não apagar

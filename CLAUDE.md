@@ -287,7 +287,8 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/hr/                                       ✅ pronta (14/10/2026 - 22 bullets, todos 🔵)
   /plataforma/ai/                                       ✅ pronta (15/10/2026 - 20 bullets, todos 🔵)
   /plataforma/integracoes/                              ✅ pronta (16/10/2026 - 22 bullets, todos 🔵)
-/solucoes/                 overview                     ⬜
+/solucoes/                 índice, 4 caminhos           ✅ pronta (22/10/2026)
+  /solucoes/por-setor/                                  ✅ pronta (22/10/2026)
   /solucoes/por-funcao/                                 ⬜
   /solucoes/por-objetivo/                               ⬜
   /solucoes/por-porte/                                  ⬜
@@ -1272,6 +1273,52 @@ Controle capturado na `main` antes de editar. Nas 10 páginas existentes: +2 ele
 - **Demo de módulo em roadmap:** definir o que a demo de Integrações mostra.
 - **Perguntas de CTO sem resposta:** limite de uso, retenção de log, residência, autenticação.
 
+## Páginas Soluções (22/10/2026)
+
+`/solucoes/` e `/solucoes/por-setor/`. `<body class="page-institucional page-solucoes">` (a por-setor
+leva também `has-subnav`). **São filtros de navegação, não conteúdo novo:** cor ciano institucional,
+zero token, zero cor, zero keyframe. Reusam `.mod-card`, `.sol-card`, `.consult-grid`, `.subnav`,
+`.founding`, `.cta-final`. Header, drawer e footer são cópias do shell, com caminhos reescritos.
+
+### Estrutura
+- **Índice:** hero compacto · `#eixos` (4 `.mod-card lg`, ids `funcao`, `objetivo`, `porte`, `setor`;
+  status em `.mod-conn`: só Por Setor "Disponível" e com link, os demais "Em breve" e sem link) ·
+  `#plataforma` (faixa que remete à Overview) · `.cta-final`.
+- **Por setor:** hero · `.subnav` · `#por-que` (3 `.sol-card`) · Educação, Esporte, Turismo, Tecnologia
+  · `#outros` (com a linha "Cada página de módulo mostra o status de cada recurso") · `#consultoria`
+  (2 práticas, sem badge, R5.1) · `#clientes` (Founding) · `.cta-final`.
+- **Ordem dos módulos por setor** (decisão de 22/10): Educação = Educação + Marketing + Finance;
+  Esporte e Turismo = Finance + Marketing + CRM; Tecnologia = CRM + Finance + HR + AI.
+  Ressalva: Finance, Marketing, HR e AI são 100% Roadmap; a linha de status e o link para a página de
+  cada módulo são o que impede a ordem de ser lida como disponibilidade.
+
+### Regras de copy
+Linguagem de necessidade ("costumam", "tipicamente precisam"), nunca "usam Nexyss" nem "confiam na
+Nexyss". **Nenhum cliente é nomeado** e nenhum vínculo cliente-módulo é afirmado (R3, R8).
+
+### Correção de registro: Eirway e Excursion LTD
+Eirway é **Tecnologia & Startups** (startup/SaaS que usa a Nexyss como backend operacional), não
+Turismo; Excursion LTD permanece Turismo pelo registro de 11/09/2026. A tabela "Clientes reais" foi
+corrigida. **Corrigido no site em 22/10/2026:** no logo wall da Home o Eirway perdeu a classe `travel` e
+fica sem setor colorido (ícone de código, zero CSS); no Contato ganhou o card `.clients-sector.tech`
+("Tecnologia", ícone `.icn-neutral`) e `.clients-grid` passou a 4 colunas (1 coluna ≤1080).
+
+### Infraestrutura nas 11 páginas
+Mega-menu Soluções (18 itens mantidos): Função, Objetivo e Porte apontam para `solucoes/#funcao`,
+`#objetivo`, `#porte`; Educação para `por-setor/#educacao`; "Outros setores" (agora "Esporte, Turismo e
+Tecnologia") para `por-setor/#esporte`. Drawer: 3 eixos religados mais o item novo "Ver todas as
+soluções" (`sol.todos.*`). Footer Soluções: Por Função, Por Objetivo, Por Porte (era "Por Porte /
+Setor"), Por Setor, Educação. Home: links dos 3 cards e tags do card "Por Porte & Setor" trocadas
+para Educação, Esporte, Turismo, Tecnologia, Finance, Varejo.
+
+### CSS (seção `=== PÁGINAS SOLUÇÕES ===`)
+Hero compacto (mesmo padrão do `.page-contato`) e `.consult-grid.two`, tudo escopado em
+`.page-solucoes`.
+
+### Pendências
+Por Função, Por Objetivo e Por Porte ainda não existem (as âncoras apontam para o índice).
+Baselines em `baselines/README.md`.
+
 ## Bug fix: logo em branco (11/09/2026)
 
 **Sintoma reportado:** logo "em branco/quebrado" no navegador, nas 4 páginas.
@@ -1376,7 +1423,14 @@ em `file://` de qualquer forma).
 |---|---|---|
 | Educação | `--c-edu` ciano | NED College |
 | Esporte | `--c-crm` verde | Dublin Volleyball Club · Volley Point |
-| Turismo | `--c-ai` azul-elétrico | Excursion LTD · Eirway |
+| Turismo | `--c-ai` azul-elétrico | Excursion LTD |
+| Tecnologia & Startups | sem cor própria | Eirway |
+
+> **Correção de 22/10/2026:** o Eirway estava registrado em Turismo. O Jonathan confirmou que é
+> startup/SaaS e usa a Nexyss como backend operacional (CRM, Finance, HR, AI), então o setor dele é
+> **Tecnologia & Startups**. O Excursion LTD segue em Turismo (só há o registro de 11/09/2026 como
+> fonte; o repositório não tem outra evidência). Home e Contato foram ajustados no mesmo dia (ver
+> "Páginas Soluções").
 
 Placeholders textuais (`.client-card > .logo-placeholder`, Sora 600 1.2rem) na
 página de contato e `.logo-item.{edu,sport,travel}` no logo wall da Home

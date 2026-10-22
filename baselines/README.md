@@ -95,17 +95,19 @@ ambiente** contra esta tabela:
 
 | Página | 1280×800 | 375×812 |
 |---|---|---|
-| Home | `784:d3ad6e48` (doc 1280x7877) | `784:885c6e50` (doc 375x13243) |
-| Overview | `857:5889c5e7` (doc 1280x10735) | `857:da3a09c6` (doc 375x17440) |
-| CRM | `893:bdfec214` (doc 1280x9510) | `893:85b820b5` (doc 375x15957) |
-| Educação | `1039:85f858ca` (doc 1280x11702) | `1039:df75c2d3` (doc 375x19284) |
-| Contato | `579:fb38290e` (doc 1280x3714) | `579:74eb5b84` (doc 375x5665) |
-| Obrigado | `438:382341d4` (doc 1280x1287) | `438:c044c0e7` (doc 375x2204) |
-| Marketing | `858:e39582d0` (doc 1280x9437) | `858:c02ce3e8` (doc 375x16290) |
-| Finance | `933:dba60ba9` (doc 1280x9485) | `933:a7bb1a99` (doc 375x16139) |
-| HR | `898:da261697` (doc 1280x9734) | `898:bbbf0534` (doc 375x15983) |
-| AI | `771:a0345d68` (doc 1280x9521) | `771:87b0db42` (doc 375x15863) |
-| **Integrações** (baseline inicial) | `859:1e4aa304` (doc 1280x10838) | `859:3dc4e2e0` (doc 375x17567) |
+| Home | `794:2e659598` (doc 1280x7877) | `794:81042cbd` (doc 375x13319) |
+| Overview | `866:9417ceb0` (doc 1280x10735) | `866:7afa9e2d` (doc 375x17477) |
+| CRM | `902:7e6d6a61` (doc 1280x9510) | `902:23bdc5e1` (doc 375x15994) |
+| Educação | `1048:62bb01ef` (doc 1280x11702) | `1048:f51df686` (doc 375x19321) |
+| Contato | `595:8f91074b` (doc 1280x3736) | `595:9b52ce8a` (doc 375x5833) |
+| Obrigado | `447:f5fd2928` (doc 1280x1287) | `447:82cd9a7d` (doc 375x2240) |
+| Marketing | `867:071d2bbc` (doc 1280x9437) | `867:60d6ff63` (doc 375x16326) |
+| Finance | `942:57d0e804` (doc 1280x9485) | `942:90d115ef` (doc 375x16176) |
+| HR | `907:a1ad50ba` (doc 1280x9734) | `907:2c0fee36` (doc 375x16019) |
+| AI | `780:5ce32281` (doc 1280x9521) | `780:80595fff` (doc 375x15900) |
+| Integrações | `868:32f09424` (doc 1280x10838) | `868:f3f34adc` (doc 375x17604) |
+| **Soluções** (baseline inicial) | `518:bd21afab` (doc 1280x3909) | `518:e8f54afe` (doc 375x5821) |
+| **Soluções por Setor** (baseline inicial) | `656:1a5926c1` (doc 1280x8374) | `656:95b1d978` (doc 375x12474) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -172,3 +174,15 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   com footer novo, +36 ou +37px em 1280 e +36 ou +37px em 375 (coluna Plataforma com 7 itens). Com
   `.rm-note` somado: Overview +104 (1280) e +123 (375), CRM +104 e +124, Educação +104 e +123. Os 22
   JSON foram regravados em Linux.
+- **22/10/2026** - `/solucoes/` e `/solucoes/por-setor/` entram nas ferramentas (`run.js`, `extract.py`).
+  Baseline inicial das 2 páginas (4 capturas), em Linux. Controle capturado numa worktree de `origin/main`
+  (`846a4c7`). As 11 páginas existentes mudam de hash em 1280 e 375: +9 elementos cada, medido por diff
+  elemento a elemento: 7 do item novo "Ver todas as soluções" no drawer (`a.mega-item`, `div.icn-neutral`,
+  `svg`, `path`, `div.txt`, `div.nm`, `div.ds`) e 2 do `li`+`a` "Por Setor" no footer. A Home perde ainda
+  2 `.sol-tag` (8 para 6 tags no card "Por Porte & Setor"), saldo +7. Documento: 1280 idêntico em todas;
+  375 +37px (um `li` a mais no footer) em todas, exceto a Home (-3px, tags com menos quebra de linha).
+- **22/10/2026** (2) - Mesma fase, ajuste final. Home: card "Por Porte & Setor" com 8 tags (4 setores e 4
+  portes, +4 `.sol-tag`) e Eirway sem a classe `travel` no logo wall (ícone trocado, 2 `path` para 1):
+  794 elementos (+3), doc 1280 inalterado (7877), 375 de 13240 para 13319. Contato: novo `.clients-sector.tech`
+  (+7 elementos), `.clients-grid` de 3 para 4 colunas, h2 com "tecnologia": 595 elementos, doc 1280 de 3714
+  para 3736 e 375 de 5702 para 5833. As outras 11 páginas (22 capturas) idênticas à captura anterior.
