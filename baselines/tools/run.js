@@ -21,6 +21,7 @@ const pages = [
   ['porfuncao', ROOT + '/solucoes/por-funcao/index.html'],
   ['porobjetivo', ROOT + '/solucoes/por-objetivo/index.html'],
   ['porporte', ROOT + '/solucoes/por-porte/index.html'],
+  ['consultoria', ROOT + '/consultoria/index.html'],
 ];
 const vps = [[1280, 800], [375, 812]];
 function one(name, page, w, h) {

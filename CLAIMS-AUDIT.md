@@ -831,3 +831,20 @@ unidades, compliance" (Enterprise) e "Visibilidade em tempo real" (agora "Visibi
 a tag "Visibilidade real-time" da Home. As páginas `por-funcao`, `por-objetivo` e `por-porte` seguem a mesma
 regra: sem "tempo real", sem compliance, segurança ou ESG, sem BI como capacidade (a página de função diz
 que não há módulo de BI). Continua aberto o "tempo real" de API e eventos (UNVALIDATED, Overview e CRM).
+
+## Página Nexyss Consultoria (22/10/2026)
+
+`/consultoria/` descreve um **serviço**, não software. As 4 práticas (Strategy & Transformation,
+Implementation & Enablement, Growth & Performance, Managed Services) seguem **sem badge** (R5.1, narrativas de
+serviço) e foram expandidas em passos e "quando faz sentido", sem métrica de resultado, sem garantia, sem
+cliente nomeado e sem concorrente. "30-60 min" e "7 dias úteis" são compromissos do Jonathan (FAQ do Contato).
+
+Correções de registro desta rodada:
+- As linhas 93 e 94 da tabela acima citam "suporte enterprise 24/7" e "customer success com SLA". Esse texto
+  **já foi retirado da Home** antes desta rodada; a Home diz hoje "suporte enterprise e customer success
+  proativo". As duas linhas estão desatualizadas e as perguntas sobre 24/7 e SLA deixam de se aplicar à Home.
+- A pendência `/consultoria/` do AUDIT-REPORT (item 7, "depende de responder o 24/7 e SLA") fica resolvida:
+  a página não usa "24/7", "SLA" nem faixa de tempo.
+- Seguem sem validação: "Semanas, não meses" (Overview `#adocao`) e "disponíveis hoje via consultoria"
+  (Overview `#fluxo`). A página nova não os repete.
+

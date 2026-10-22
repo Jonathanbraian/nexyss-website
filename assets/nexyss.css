@@ -37,6 +37,9 @@
   --c-int: #2E7BFF;          /* Azul elétrico saturado Integrações (matiz 218, distinto do AI 201) */
   --c-int-deep: #2159B8;
   --c-int-text: #629CFF;     /* tom de TEXTO de Integrações: o azul puro dá 4,54 / 4,07 / 3,54 sobre navy-deep / navy / navy-mid; este dá 6,5 / 5,8 / 5,1. Usado só sob .theme-int */
+  --c-con: #8FA6C7;          /* Cinza-azul Nexyss Consultoria (serviço, não software): dessaturado, distinto dos 7 módulos coloridos. Contraste medido sobre navy-deep / navy / navy-mid: 7,11 / 6,37 / 5,54 */
+  --c-con-deep: #4F6687;     /* só para gradiente decorativo (3,02 / 2,70 / 2,35): nunca texto nem ícone */
+  --c-con-text: #B3C4DE;     /* tom de TEXTO de Consultoria: 9,99 / 8,95 / 7,79 sobre navy-deep / navy / navy-mid. Usado só sob .theme-con */
 
   /* Neutros dark */
   --c-white: #FFFFFF;
@@ -312,6 +315,7 @@ header.site.scrolled {
 .icn-hr  { background: rgba(184, 79, 229, 0.15); color: var(--c-hr); }
 .icn-ai  { background: rgba(55, 167, 226, 0.15); color: var(--c-ai); }
 .icn-int { background: rgba(46, 123, 255, 0.15); color: var(--c-int); }
+.icn-con { background: rgba(143, 166, 199, 0.15); color: var(--c-con); }
 .icn-neutral { background: var(--c-line-mid); color: var(--c-text-soft); }
 
 .nav-cta { display: flex; align-items: center; gap: 10px; }
@@ -795,6 +799,7 @@ section.block.deeper {
 .mod-card.hr  { --c-color: var(--c-hr); }
 .mod-card.ai  { --c-color: var(--c-ai); }
 .mod-card.int { --c-color: var(--c-int); }
+.mod-card.con { --c-color: var(--c-con); }
 
 .mod-card.lg { grid-column: span 6; }
 .mod-card.md { grid-column: span 4; }
@@ -1477,6 +1482,8 @@ body.drawer-open { overflow: hidden; }
   --c-color-a08: rgba(55, 167, 226, 0.08);  --c-color-a15: rgba(55, 167, 226, 0.15);  --c-color-a25: rgba(55, 167, 226, 0.25); }
 .theme-int { --c-color: var(--c-int); --c-color-deep: var(--c-int-deep);
   --c-color-a08: rgba(46, 123, 255, 0.08);  --c-color-a15: rgba(46, 123, 255, 0.15);  --c-color-a25: rgba(46, 123, 255, 0.25); }
+.theme-con { --c-color: var(--c-con); --c-color-deep: var(--c-con-deep);
+  --c-color-a08: rgba(143, 166, 199, 0.08); --c-color-a15: rgba(143, 166, 199, 0.15); --c-color-a25: rgba(143, 166, 199, 0.25); }
 
 /* ============================================================
    PAGINA DE PRODUTO - acentos herdam a cor do produto
@@ -3710,3 +3717,155 @@ body.drawer-open { overflow: hidden; }
 
 .page-solucoes .consult-grid.two { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 760px) { .page-solucoes .consult-grid.two { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   === PÁGINA CONSULTORIA === /consultoria/  (22/10/2026)
+   body.theme-con.page-produto. Escopado em .page-produto / .theme-con
+   (o CSS é compartilhado). Zero keyframes novos: reusa floatA.
+   Componentes novos: .cw-* (Visual A, duas pistas no hero), .con-steps
+   (passos numerados dentro do card), .con-when (linha "quando faz
+   sentido"), .m-con / .m-time (cores da linha do tempo). Reusa .dash,
+   .pipe-ai, .acct360, .acct-tl, .fc-head, .attr-note, .mod-card, .sol-card,
+   .consult-grid, .impact-strip, .founding, .cta-final.
+   Sem badge nas práticas (R5.1) e sem valor numérico nos mockups (R3).
+   ============================================================ */
+.theme-con .eyebrow { color: var(--c-con-text); }
+.theme-con .impact-item .n small { color: var(--c-con-text); }
+.theme-con .attr-note b { color: var(--c-con-text); }
+.theme-con .sol-tag:hover { color: var(--c-con-text); }
+.page-produto .acct-tl .m-con { --c-mod: var(--c-con); }
+.page-produto .acct-tl .m-con .src { color: var(--c-con-text); }
+.page-produto .acct-tl .m-time { --c-mod: rgba(255, 255, 255, 0.45); }
+.page-produto .acct-tl .m-time .src { color: var(--c-text-soft); }
+.theme-con .consult-grid.two { grid-template-columns: repeat(2, 1fr); }
+
+/* Passos numerados e linha "quando faz sentido" dentro do .mod-card */
+.page-produto .con-steps {
+  list-style: none;
+  counter-reset: cs;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+.page-produto .con-steps li {
+  counter-increment: cs;
+  display: flex;
+  gap: 12px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--c-text-soft);
+}
+.page-produto .con-steps li::before {
+  content: counter(cs);
+  flex: 0 0 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--c-color-a25);
+  background: var(--c-color-a08);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--c-con-text);
+}
+.page-produto .con-when {
+  position: relative;
+  z-index: 1;
+  margin: 18px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--c-line);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--c-text-mute);
+}
+.page-produto .con-when b {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-con-text);
+}
+
+/* ---------- Visual A: DUAS PISTAS (hero) ----------
+   Quatro etapas (linhas) e duas colunas: o que a Nexyss faz e o que o
+   time do cliente faz. Sem número e sem valor: marca ILUSTRATIVO. */
+.page-produto .cw-board {
+  inset: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: floatA 8s ease-in-out infinite;
+}
+.page-produto .cw-canvas { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; margin: auto 0; }
+.page-produto .cw-col {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-text-mute);
+  padding: 0 2px 2px;
+}
+.page-produto .cw-col.nx { color: var(--c-con-text); }
+.page-produto .cw-stage {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+.page-produto .cw-cell {
+  min-width: 0;
+  padding: 9px 11px;
+  border-radius: 10px;
+  background: var(--c-navy);
+  border: 1px solid var(--c-line-mid);
+  font-family: var(--font-display);
+  font-size: 0.74rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  color: var(--c-white);
+}
+.page-produto .cw-cell.nx { border-left: 3px solid var(--c-con); }
+.page-produto .cw-cell.tm { border-style: dashed; color: var(--c-text-soft); }
+.page-produto .cw-foot {
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--c-text-faint);
+}
+
+@media (max-width: 760px) {
+  .theme-con .consult-grid.two { grid-template-columns: 1fr; }
+  .page-produto .hero-visual.cw-visual { height: auto; }
+  .page-produto .cw-board { position: relative; inset: auto; padding: 14px; gap: 12px; }
+  .page-produto .cw-cell { padding: 7px 8px; font-size: 0.64rem; }
+  .page-produto .cw-col { font-size: 0.5rem; letter-spacing: 0.08em; }
+  .page-produto .cw-visual .pipe-ai { position: relative; right: auto; bottom: auto; margin: 12px 0 0 auto; max-width: 260px; }
+}
+
+/* Botão "Conhecer Nexyss Consultoria" no fim da seção #consultoria
+   (Home e páginas de eixo de Soluções) */
+.consult-cta { margin-top: 36px; }
+@media (max-width: 760px) {
+  .consult-cta .btn { width: 100%; justify-content: center; }
+}
+
+/* Item "Nexyss Consultoria" do header: com o rótulo completo o menu fica com
+   725px e, abaixo de 1340px, espreme o logo (largura 37 a 139px, imagem
+   distorcida) ou empurra o CTA para fora. Até 1340px o prefixo "Nexyss " é
+   omitido; drawer e footer mantêm o nome completo. */
+.nav-menu .nav-con { white-space: nowrap; }
+@media (max-width: 1340px) {
+  .nav-menu .nav-con .nav-nx { display: none; }
+}
