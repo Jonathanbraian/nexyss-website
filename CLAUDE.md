@@ -289,9 +289,9 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
   /plataforma/integracoes/                              ✅ pronta (16/10/2026 - 22 bullets, todos 🔵)
 /solucoes/                 índice, 4 caminhos           ✅ pronta (22/10/2026)
   /solucoes/por-setor/                                  ✅ pronta (22/10/2026)
-  /solucoes/por-funcao/                                 ⬜
-  /solucoes/por-objetivo/                               ⬜
-  /solucoes/por-porte/                                  ⬜
+  /solucoes/por-funcao/                                 ✅ pronta (22/10/2026)
+  /solucoes/por-objetivo/                               ✅ pronta (22/10/2026)
+  /solucoes/por-porte/                                  ✅ pronta (22/10/2026)
 /consultoria/                                           ⬜
 /clientes/                 c/ Founding Customers        ⬜
 /recursos/                 blog, casos, guias, webinars ⬜
@@ -1275,8 +1275,8 @@ Controle capturado na `main` antes de editar. Nas 10 páginas existentes: +2 ele
 
 ## Páginas Soluções (22/10/2026)
 
-`/solucoes/` e `/solucoes/por-setor/`. `<body class="page-institucional page-solucoes">` (a por-setor
-leva também `has-subnav`). **São filtros de navegação, não conteúdo novo:** cor ciano institucional,
+`/solucoes/` e as 4 páginas de eixo (`por-setor`, `por-funcao`, `por-objetivo`, `por-porte`).
+`<body class="page-institucional page-solucoes">` (as de eixo levam também `has-subnav`). **São filtros de navegação, não conteúdo novo:** cor ciano institucional,
 zero token, zero cor, zero keyframe. Reusam `.mod-card`, `.sol-card`, `.consult-grid`, `.subnav`,
 `.founding`, `.cta-final`. Header, drawer e footer são cópias do shell, com caminhos reescritos.
 
@@ -1308,16 +1308,49 @@ Mega-menu Soluções (18 itens mantidos): Função, Objetivo e Porte apontam par
 `#objetivo`, `#porte`; Educação para `por-setor/#educacao`; "Outros setores" (agora "Esporte, Turismo e
 Tecnologia") para `por-setor/#esporte`. Drawer: 3 eixos religados mais o item novo "Ver todas as
 soluções" (`sol.todos.*`). Footer Soluções: Por Função, Por Objetivo, Por Porte (era "Por Porte /
-Setor"), Por Setor, Educação. Home: links dos 3 cards e tags do card "Por Porte & Setor" trocadas
-para Educação, Esporte, Turismo, Tecnologia, Finance, Varejo.
+Setor"), Por Setor, Educação. Home: card "Por Porte & Setor" com 8 tags (Educação, Esporte,
+Turismo, Tecnologia, Startups, Mid-Market, Enterprise, Global). Finance e Varejo ficaram de fora.
 
 ### CSS (seção `=== PÁGINAS SOLUÇÕES ===`)
 Hero compacto (mesmo padrão do `.page-contato`) e `.consult-grid.two`, tudo escopado em
 `.page-solucoes`.
 
+### Por Função, Por Objetivo e Por Porte (22/10/2026)
+Mesma arquitetura da por-setor: hero, `.subnav`, `#por-que` (3 `.sol-card`), seções de eixo em
+`.platform-grid` (cada card linka a página do módulo), `#status` (linha "Cada página de módulo mostra o
+status de cada recurso", no fim, antes da consultoria), `#consultoria` (2 práticas, igual à por-setor),
+Founding e CTA final. Zero CSS novo, zero cliente nomeado, zero afirmação de que a Nexyss atende um porte
+(R3). Âncoras:
+- **Função** (`#comercial`, `#operacoes`, `#financeiro`, `#pessoas`, `#dados`, `#governanca`):
+  Comercial = CRM + Marketing + AI; Operações = Integrações + AI + CRM; Financeiro = Finance + CRM + AI;
+  Pessoas = HR + AI; Dados = AI + CRM + Finance; Governança = A plataforma (`plataforma/#camada`) + AI.
+  Operações, Dados e Governança **não têm módulo dedicado** e a página diz isso no texto ("não há módulo
+  de BI", "não há um módulo dedicado"). Governança sem claim de compliance, segurança ou ESG.
+- **Objetivo** (`#crescer`, `#expandir`, `#consolidar`, `#digitalizar`, `#custo`, `#visibilidade`):
+  Crescer = Marketing + CRM + Finance; Expandir = Finance + CRM + HR; Consolidar = Educação + CRM + Finance;
+  Digitalizar = AI + Integrações + CRM; Custo = A plataforma + Integrações + Finance; Visibilidade = AI +
+  Finance + CRM. Sem cifra de economia e sem "tempo real".
+- **Porte** (`#startups`, `#midmarket`, `#enterprise`, `#global`): Startups = CRM + Finance + HR + AI (mesma
+  ordem da Tecnologia); Mid-Market = CRM + Finance + Marketing; Enterprise = CRM + Integrações + AI;
+  Global = Finance + CRM + Integrações. Só linguagem de necessidade ("costumam").
+
+### Rótulos do mega-menu trocados (22/10/2026)
+Quatro textos com termo de risco, nas 13 páginas (52 trocas) mais 1 tag da Home:
+"Compliance, segurança, ESG" para "Quem vê o quê" (Governança); "BI, analytics, KPIs" para "Leitura única da
+operação" (Dados & Performance); "Múltiplas unidades, compliance" para "Múltiplas unidades e regras de
+acesso" (Enterprise); "Visibilidade em tempo real" para "Visibilidade da operação"; tag da Home
+"Visibilidade real-time" para "Visibilidade". O drawer não tem esses itens (só os 3 eixos).
+
+### Navegação
+Mega-menu: os 16 itens de Função, Objetivo e Porte apontam para a página do eixo com âncora (208 hrefs, 13
+páginas). Drawer e footer continuam nas âncoras do índice (`solucoes/#funcao` etc.), por decisão. Home:
+"Ver soluções por função" e "por objetivo" apontam direto para as páginas novas; o terceiro card (Por Porte &
+Setor) continua em `por-setor/`. Índice: os 4 cards "Disponível" e com link.
+
 ### Pendências
-Por Função, Por Objetivo e Por Porte ainda não existem (as âncoras apontam para o índice).
-Baselines em `baselines/README.md`.
+Home, card 3: só linka Por Setor; `por-porte/` é alcançada pelo menu, drawer, footer e índice. O header das
+páginas internas aponta `#consultoria` e `#clientes`, que só existem nas páginas de eixo e na Home (no índice
+`/solucoes/` os dois links não têm destino). Baselines em `baselines/README.md`.
 
 ## Bug fix: logo em branco (11/09/2026)
 

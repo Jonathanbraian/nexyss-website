@@ -824,3 +824,10 @@ Descrevem necessidade típica de cada setor ("costumam", "tipicamente precisam")
 páginas de módulo, onde o status de cada recurso já está auditado. Nenhum badge R5 aplicado (R5.1:
 descrição narrativa) e nenhum cliente nomeado ou vinculado a módulo (R3, R8).
 
+### Rótulos do mega-menu trocados (22/10/2026)
+Quatro rótulos do menu Soluções tinham termo sem validação e foram trocados nas 13 páginas:
+"Compliance, segurança, ESG" (Governança), "BI, analytics, KPIs" (Dados & Performance), "Múltiplas
+unidades, compliance" (Enterprise) e "Visibilidade em tempo real" (agora "Visibilidade da operação"), mais
+a tag "Visibilidade real-time" da Home. As páginas `por-funcao`, `por-objetivo` e `por-porte` seguem a mesma
+regra: sem "tempo real", sem compliance, segurança ou ESG, sem BI como capacidade (a página de função diz
+que não há módulo de BI). Continua aberto o "tempo real" de API e eventos (UNVALIDATED, Overview e CRM).

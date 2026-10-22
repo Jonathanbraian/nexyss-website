@@ -555,3 +555,19 @@ Duas páginas novas, mais infraestrutura de navegação nas 11 existentes.
   375 +37px (Home -3px). Páginas novas, 1280/375: Soluções 3909/5821px, Por Setor 8374/12474px,
   sem transbordo horizontal.
 - **Backlog que continua aberto:** os mesmos da fase Integrações, mais as 3 páginas de eixo restantes.
+
+## 19. Fase Soluções, eixos restantes (22/10/2026)
+
+- **Páginas:** `/solucoes/por-funcao/` (6 seções), `/solucoes/por-objetivo/` (6) e `/solucoes/por-porte/` (4).
+  Filtros de navegação, zero CSS novo, nenhum badge, nenhum cliente nomeado, sem afirmar atendimento a porte.
+- **Honestidade de mapeamento:** Operações, Dados & Performance e Governança não têm módulo dedicado, e o
+  texto da página diz isso.
+- **Rótulos:** 4 rótulos do mega-menu e 1 tag da Home trocados (53 trocas); ver CLAIMS-AUDIT.md.
+- **Navegação:** 208 hrefs do mega-menu (13 páginas) e 2 links da Home apontam para as páginas novas; os 3
+  cards do índice passam a "Disponível" e com link.
+- **Fingerprint (Linux, controle em worktree limpa de `9cc4b83`):** nas 12 páginas existentes, em 1280,
+  41 elementos do mega-menu Soluções (a coluna Porte cresce 19,3px porque um rótulo quebra em 2 linhas);
+  contagem de elementos e altura do documento idênticas; em 375 só a Home muda (1 tag). Índice +9 elementos.
+  Páginas novas: 9715, 9532 e 7909px em 1280, 13815, 13638 e 11639px em 375, sem transbordo horizontal.
+- **Backlog:** o mesmo da fase anterior; header das páginas internas aponta `#consultoria` e `#clientes`
+  sem destino no índice `/solucoes/`.
