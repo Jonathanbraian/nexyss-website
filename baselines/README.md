@@ -99,7 +99,7 @@ ambiente** contra esta tabela:
 | Overview | `867:69eebd38` (doc 1280x10735) | `867:416006f4` (doc 375x17477) |
 | CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
 | Educação | `1049:1372e9ed` (doc 1280x11702) | `1049:5b62a25b` (doc 375x19321) |
-| Contato | `596:ca9e8b0d` (doc 1280x3736) | `596:d2d6a8f7` (doc 375x5833) |
+| Contato | `597:7f16adb2` (doc 1280x3736) | `597:9672862c` (doc 375x5833) |
 | Obrigado | `448:be53e34c` (doc 1280x1287) | `448:6c494350` (doc 375x2240) |
 | Marketing | `868:175f8d9a` (doc 1280x9437) | `868:8dab60e4` (doc 375x16326) |
 | Finance | `943:b23ef52a` (doc 1280x9485) | `943:0e2989e2` (doc 375x16176) |
@@ -107,11 +107,12 @@ ambiente** contra esta tabela:
 | AI | `781:a8aedd7d` (doc 1280x9521) | `781:b2319f2e` (doc 375x15900) |
 | Integrações | `869:80c999be` (doc 1280x10838) | `869:30a83001` (doc 375x17604) |
 | Soluções | `528:bc9ddfa5` (doc 1280x3906) | `528:f2ccf828` (doc 375x5839) |
-| Soluções por Setor | `661:32770f37` (doc 1280x8458) | `661:020b475c` (doc 375x12558) |
+| Soluções | `528:bc9ddfa5` (doc 1280x3906) | `528:f2ccf828` (doc 375x5839) |
 | **Soluções por Função** (baseline inicial) | `689:762e9e8f` (doc 1280x9799) | `689:e2c53be7` (doc 375x13899) |
 | **Soluções por Objetivo** (baseline inicial) | `701:4b357b3d` (doc 1280x9616) | `701:097cc582` (doc 375x13722) |
 | **Soluções por Porte** (baseline inicial) | `653:601e2163` (doc 1280x7993) | `653:3e70aeaa` (doc 375x11723) |
-| **Nexyss Consultoria** (baseline inicial) | `780:54d73a47` (doc 1280x9858) | `780:0697fe52` (doc 375x16541) |
+| **Nexyss Consultoria** (baseline inicial) | `780:db907155` (doc 1280x9858) | `780:0697fe52` (doc 375x16541) |
+| **Sobre** (baseline inicial) | `616:9ba47bf4` (doc 1280x7105) | `616:d55f66e3` (doc 375x9758) |
 
 **7 hashes mudaram com a remoção dos travessões** (o hífen é mais estreito, então
 houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca:
@@ -120,7 +121,7 @@ houve reflow). Valores anteriores, da captura Linux de 14/10/2026 antes da troca
 |---|---|---|---|---|
 | Overview | `867:69eebd38` (doc 1280x10735) | `867:416006f4` (doc 375x17477) |
 | Educação | `1049:1372e9ed` (doc 1280x11702) | `1049:5b62a25b` (doc 375x19321) |
-| Contato | `596:ca9e8b0d` (doc 1280x3736) | `596:d2d6a8f7` (doc 375x5833) |
+| Contato | `597:7f16adb2` (doc 1280x3736) | `597:9672862c` (doc 375x5833) |
 | CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
 | CRM | `903:c61ea911` (doc 1280x9510) | `903:f3eb3b58` (doc 375x15994) |
 | Marketing | `868:175f8d9a` (doc 1280x9437) | `868:8dab60e4` (doc 375x16326) |
@@ -207,3 +208,8 @@ Na fase HR as 16 capturas das 8 páginas anteriores ficaram **idênticas** ao co
   Antes de limitar o prefixo do header a 1340px, o rótulo completo reduzia o logo de 139 para 37px entre 1181 e
   1299px (medido); a captura final já reflete a correção. `.nav-menu .nav-con` e o `.consult-cta` ficam no CSS
   compartilhado.
+- **23/10/2026** - `/sobre/` entra nas ferramentas (`run.js`, `extract.py`). Baseline inicial (2 viewports), em
+  Linux. Controle capturado numa worktree limpa de `29936c6`. As 17 páginas existentes: contagem de elementos e altura
+  do documento **idênticas**, exceto o Contato (+1 elemento, a opção "Sobre a Nexyss" no select). Os `href` de "Sobre"
+  (header, drawer e footer) não entram no fingerprint. `solucoes` em 1280 variou 0,016px em larguras de texto
+  (ruído subpixel, geometria igual).

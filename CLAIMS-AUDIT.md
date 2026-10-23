@@ -848,3 +848,14 @@ Correções de registro desta rodada:
 - Seguem sem validação: "Semanas, não meses" (Overview `#adocao`) e "disponíveis hoje via consultoria"
   (Overview `#fluxo`). A página nova não os repete.
 
+## Página Sobre (23/10/2026)
+
+`/sobre/` é institucional e descreve a Nexyss em linguagem de necessidade e de método, sem badge (R5.1).
+- **Tirados por consistência com R3:** "25 nacionalidades" (era dado do cliente NED, não da Nexyss) e "10 EUR por
+  módulo" (preço no site, R2). "Doze anos" virou "mais de dez anos", sem nomear a instituição.
+- **Sem pessoas:** nenhum nome, fundador, co-fundador, número de fundadores ou nacionalidade. Regra permanente
+  registrada no CLAUDE.md, com o comando de varredura.
+- **Sem claim de IA:** "modelos de IA de mercado, escolhidos por tarefa", sem fornecedor e sem comparativo.
+- Reaproveita sem alterar o claim de arquitetura da Overview ("um registro só", item 19 da lista não validada) e
+  os compromissos de atendimento da FAQ do Contato (24 horas úteis, 30 a 60 minutos, 7 dias úteis).
+

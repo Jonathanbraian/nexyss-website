@@ -588,3 +588,16 @@ Duas páginas novas, mais infraestrutura de navegação nas 11 existentes.
 - **Correção nesta fase:** o rótulo completo no header espremia o logo até 1340px; resolvido omitindo o prefixo
   "Nexyss " nessa faixa.
 - **Backlog:** o mesmo da fase anterior, mais o nome da prática 01 e a validação das práticas como serviço.
+
+## 21. Página Sobre (23/10/2026)
+
+- **Página:** `/sobre/`, institucional, 9 seções, 537 linhas, zero pessoas (regra permanente).
+- **Varredura preventiva nas 17 páginas servidas:** 1 ocorrência, num comentário HTML (`educacao`, linha 754,
+  "Aguardando validacao do Jonathan"), trocada por "o responsavel pelo produto". Zero ocorrências de Braian, Jhony,
+  fundador, founder, co-fundador ou brasileiro. "Mariana Silva" (aluno de exemplo) e "Founding Customers" (programa)
+  não são pessoas reais.
+- **Navegação:** o item "Sobre" já existia (header, drawer, footer); 51 `href` ligados a `/sobre/`.
+- **Contato:** opção "Sobre a Nexyss" no select, `form-detect.html` e `MAP` sincronizados.
+- **Fingerprint (Linux, controle em worktree de `29936c6`):** 17 páginas com elementos e altura do documento
+  idênticos, exceto o Contato (+1 elemento). Página nova: 7105px em 1280 e 9758px em 375, sem overflow.
+- **Risco:** o texto-base original não estava disponível; a copy é rascunho a validar.
