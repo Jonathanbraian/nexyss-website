@@ -303,7 +303,7 @@ versões em `assets/`. O brand book segue como referência externa, fora do git.
 /clientes/                 c/ Founding Customers        ⬜
 /recursos/                 blog, casos, guias, webinars ⬜
 /parceiros/                                             ⬜
-/sobre/                                                 ⬜
+/sobre/                    Sobre a Nexyss               ✅ pronta (23/10/2026 - institucional, zero pessoas)
 /contato/                  formulário Netlify + canais   ✅ pronta (11/09/2026)
   /contato/obrigado.html   página de sucesso (noindex)   ✅ pronta
 ```
@@ -1444,6 +1444,59 @@ Controle capturado numa worktree de `e205c35`. `baselines/consultoria-*.json` s�
   validação; a página nova não os repete.
 - **As práticas existem como serviço contratável?** Sem registro seu de qual prática entrega o quê.
 - **Header em 761 a 1180px:** logo colapsado (pré-existente).
+
+## Página `/sobre/` (23/10/2026)
+
+`<body class="page-institucional page-sobre has-subnav">` - 9 seções, 537 linhas. Institucional (acento ciano,
+sem tema de módulo). Header, drawer, Founding e footer são cópias exatas (com `../`).
+
+### 🔒 Regra permanente: ZERO pessoas no site
+**Nenhuma página pode citar fundador, co-fundador, número de fundadores, nacionalidade dos donos nem nome de
+pessoa física.** Só linguagem institucional ("a Nexyss", "nosso time", "nós"). Varredura obrigatória antes de
+publicar (tem que dar zero nas páginas servidas):
+```bash
+grep -rniE 'jonathan|braian|jhony|fundador|founder|co-?founder|co-?fundador|brasileir|nacionalidade' --include='*.html' . | grep -v baselines/
+```
+Os `.md` da raiz citam o nome do dono, mas **não são servidos** (404 forçado no `netlify.toml`). Exceções
+conhecidas que não são pessoas reais: "Mariana Silva" (aluno de exemplo nos mockups da Educação) e o termo
+"Founding Customers" (nome do programa). O nome do dono do repositório GitHub e o autor dos commits aparecem nos
+metadados do git, fora do site. Em 23/10/2026 a varredura achou **1** ocorrência (um comentário HTML em
+`plataforma/educacao/index.html`, "Aguardando validacao do Jonathan"), trocada por "o responsavel pelo produto".
+
+### Seções
+Hero compacto · `.subnav` (Origem · Por que confiar · O time · Como trabalhamos · Perguntas) · `#origem`
+(`.story-grid`: texto + `.about-quote`) · `#confianca` (3 `.sol-card`) · `#time` (`.pillars`, 4 áreas de trabalho,
+sem nomes nem números) · `#metodo` (`.consult-grid`, 4 hábitos, e botão para `/consultoria/`) · `#perguntas`
+(`.faq`, 8 perguntas) · `#clientes` (Founding) · `.cta-final` ("O que você precisa?").
+
+### Copy: o que entrou e o que foi tirado
+- "Mais de dez anos", por extenso (não "doze anos"), sem nomear a instituição (R3, R8).
+- **Tirados por consistência com R3:** "25 nacionalidades" (dado do NED, não da Nexyss) e "10 EUR por módulo"
+  (preço no site, R2; fica só no Contato).
+- Voz distintiva adaptada ao português: "Arregaçamos as mangas antes de escrever a primeira linha de código."
+- IA: "modelos de IA de mercado, escolhidos por tarefa", sem fornecedor nem modelo e sem "melhores".
+- "Nexyss" sempre assim (nunca "Nexsyss"), zero travessões, zero cliente nomeado, zero concorrente nomeado.
+- **A copy é um rascunho:** o texto-base original ("pacote") não estava disponível na sessão; a essência (origem
+  na operação, contra os "aplicativos brilhantes", voz direta, pergunta final) foi reconstruída a partir do
+  briefing. Os 3 motivos e as 4 áreas do time são propostas a validar.
+- Compromissos do Jonathan reaproveitados da FAQ do Contato (24 horas úteis, 30 a 60 minutos, 7 dias úteis,
+  Dublin GMT): não são métricas de produto.
+
+### Componentes novos (seção `=== PÁGINA SOBRE ===` ao fim de `nexyss.css`)
+`.story-grid` (2 colunas, 1 coluna até 1080px) · `.about-quote` (citação, sticky no desktop) · `.pillars` /
+`.pillar` (4 colunas, 2 até 1080px, 1 até 760px). Hero compacto escopado em `.page-sobre`. **Zero keyframes.**
+
+### Infraestrutura
+O item "Sobre" **já existia** no header, no drawer e no footer (como `href="#"`); só foi ligado a `/sobre/`
+(51 links nas 17 páginas). Não é mega-menu: é link simples, como "Clientes". `/projetos/` não existe e o item
+"Projetos" não existe no header, então nada foi criado. Contato: opção "Sobre a Nexyss" no select, no
+`form-detect.html` e no `MAP` (`sobre`). Os campos `project`, `role` e `location` ficaram para uma fase própria.
+CTAs: `contato/?interesse=especialista&origem=sobre` e `?interesse=demo&origem=sobre`.
+
+### Pendências registradas aqui
+- Validar a copy do rascunho (origem, 3 motivos, time por áreas, perguntas) contra o texto-base original.
+- "Um registro só" repete o claim de arquitetura da Overview (ainda sem validação técnica).
+- Domínio, sitemap e hreflang continuam pendentes.
 
 ## Bug fix: logo em branco (11/09/2026)
 

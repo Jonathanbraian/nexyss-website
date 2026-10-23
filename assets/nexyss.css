@@ -3869,3 +3869,73 @@ body.drawer-open { overflow: hidden; }
 @media (max-width: 1340px) {
   .nav-menu .nav-con .nav-nx { display: none; }
 }
+
+/* ============================================================
+   === PÁGINA SOBRE === /sobre/  (23/10/2026)
+   body.page-institucional.page-sobre. Página institucional (acento
+   ciano, sem tema de módulo). Regra permanente: nenhuma menção a
+   fundadores, co-fundadores, nacionalidades ou nomes de pessoas.
+   Zero keyframes novos. Reusa .sol-card, .consult-grid, .faq, .subnav,
+   .founding, .cta-final. Componentes novos: .story-grid, .about-quote,
+   .pillars/.pillar. Hero compacto no mesmo padrão do .page-contato.
+   ============================================================ */
+.page-sobre .hero { padding: 170px 0 90px; }
+.page-sobre .hero .hero-inner { grid-template-columns: 1fr; max-width: 840px; gap: 0; }
+.page-sobre .hero-sub { max-width: 640px; }
+
+.page-sobre .story-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.page-sobre .story-grid p {
+  max-width: 620px;
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--c-text-soft);
+}
+.page-sobre .about-quote {
+  position: sticky;
+  top: 120px;
+  margin: 0;
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid var(--c-line-mid);
+  border-left: 3px solid var(--c-edu);
+  background: linear-gradient(180deg, var(--c-glass), transparent);
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.7vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  color: var(--c-white);
+}
+
+.page-sobre .pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.page-sobre .pillar {
+  padding: 28px;
+  border-radius: 24px;
+  border: 1px solid var(--c-line);
+  background: var(--c-glass);
+  transition: background .2s ease, border-color .2s ease;
+}
+.page-sobre .pillar:hover { background: var(--c-glass-hover); border-color: var(--c-line-strong); }
+.page-sobre .pillar h3 { margin: 0 0 10px; }
+.page-sobre .pillar p { margin: 0; font-size: 0.95rem; line-height: 1.6; color: var(--c-text-soft); }
+
+@media (max-width: 1080px) {
+  .page-sobre .story-grid { grid-template-columns: 1fr; gap: 36px; }
+  .page-sobre .about-quote { position: static; }
+  .page-sobre .pillars { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 760px) {
+  .page-sobre .hero { padding: 130px 0 60px; }
+  .page-sobre .pillars { grid-template-columns: 1fr; }
+  .page-sobre .about-quote { padding: 24px; }
+}

@@ -33,6 +33,7 @@ plataforma/finance/index.html    Nexyss Finance
 plataforma/hr/index.html         Nexyss HR
 plataforma/ai/index.html         Nexyss AI
 plataforma/integracoes/index.html  Nexyss Integrações
+sobre/index.html               Sobre a Nexyss (institucional, sem menção a pessoas)
 consultoria/index.html         Nexyss Consultoria (serviço: práticas, método e contratação)
 solucoes/index.html           Soluções - índice dos quatro caminhos (função, objetivo, porte, setor)
 solucoes/por-setor/index.html Soluções por setor (Educação, Esporte, Turismo, Tecnologia)

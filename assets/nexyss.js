@@ -169,7 +169,8 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
     hr: 'Nexyss HR',
     ai: 'Nexyss AI',
     integracoes: 'Nexyss Integrações',
-    consultoria: 'Nexyss Consultoria'
+    consultoria: 'Nexyss Consultoria',
+    sobre: 'Sobre a Nexyss'
   };
 
   const sel    = form.querySelector('select[name="interesse"]');
