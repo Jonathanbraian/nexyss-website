@@ -19,9 +19,11 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
     Uso atual na Home: `© 2026 Nexyss Group. Todos os direitos reservados.`
   - Módulos: `Nexyss CRM`, `Nexyss Educação`, `Nexyss Marketing`,
     `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrações`.
-  - Serviço: `Nexyss Consultoria` (página `/consultoria/`; não é módulo de software e não entra no
+  - Serviço: `Nexyss Consulting` (página `/consultoria/`; não é módulo de software e não entra no
     mega-menu Plataforma). **Sempre com o prefixo `Nexyss`** em identidade; "Consultoria" solto só como
-    título narrativo de seção.
+    título narrativo de seção. **Mudança de marca de 26/10/2026:** antes era `Nexyss Consultoria`; ver
+    a seção "Mudança de marca: Nexyss Consulting" (vale nos 3 idiomas; as seções antigas abaixo
+    descrevem o estado anterior e mantêm o nome antigo como registro histórico).
   - Sub-produtos de IA: `Nexyss Insight`, `Nexyss Assist`, `Nexyss Automate`.
 - **Posicionamento:** enterprise. Padrão de referência = **Salesforce, HubSpot,
   Monday.com, Pipedrive, Stripe**. Copy institucional, densidade real de
@@ -1772,3 +1774,23 @@ HTML equivalentes (mdash, ndash, minus, horbar). Usar hífen ASCII simples (-).
    SLA, cobertura) ou os já aprovados na Home. Na dúvida, perguntar ao Jonathan.
 9. Testar sempre nos dois extremos: **375px** (drawer) e **1280px** (desktop),
    confirmando que o desktop não mudou.
+
+## Mudança de marca: Nexyss Consulting (26/10/2026)
+
+O serviço passa de `Nexyss Consultoria` para **`Nexyss Consulting`** em PT, EN e ES. Decisão do Jonathan,
+aceita conscientemente como mudança de marca: fecha o padrão dos nomes em inglês dos módulos (CRM, Marketing,
+Finance, HR, AI e o serviço). Valores no dicionário i18n (`i18n/{pt,en,es}.json`); o gerador usa o mesmo rótulo
+nas 18 páginas dos 3 idiomas.
+
+- **Muda:** o rótulo visível (header com o `<span class="nav-nx">Nexyss </span>` que some abaixo de 1340px,
+  drawer, footer, `<title>`, metas, botão "Conhecer Nexyss Consulting", select do Contato) e as frases do corpo
+  que citavam o nome ("A Nexyss Consulting ajuda a definir mudanças...").
+- **Não muda:** a URL `/consultoria/`, o arquivo `consultoria/index.html`, as classes CSS (`.theme-con`,
+  `.mod-card.con`, `.icn-con`, `.cw-*`), as chaves i18n (`con.*`, `consultoria.cta.*`) e as palavras
+  "consultoria/consultoría" usadas como substantivo comum ("Consultoria que acompanha o seu setor").
+- **Ainda a ajustar nas fases seguintes:** o `MAP` do `assets/nexyss.js` e o `<option>` do select do Contato
+  seguem com o valor "Nexyss Consultoria" nas páginas servidas (muda junto com os slugs neutros do select, D7,
+  na fase de formulários); `form-detect.html` idem. As páginas servidas só passam a usar o nome novo no merge final.
+- **Pendência de decisão (aberta):** a planilha revisada usa "Nexyss Integrations" em 5 textos de PT e ES, enquanto
+  o resto do site segue com "Nexyss Integrações" (PT) e "Nexyss Integraciones" (ES). "Nexyss Educação/Educación"
+  também segue no idioma local. Falta decidir se Educação e Integrações acompanham a mudança.

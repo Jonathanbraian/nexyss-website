@@ -18,7 +18,7 @@ Chaves e HTML interno nunca mudam; so o texto. Valores com `&` usam `&amp;` em E
 | PT | EN | ES |
 |---|---|---|
 | Nexyss Educação | Nexyss Education | Nexyss Educación |
-| Nexyss Consultoria | Nexyss Consulting | Nexyss Consultoría |
+| Nexyss Consultoria (ate 26/10/2026) | Nexyss Consulting | Nexyss Consulting |
 | Nexyss Integrações | Nexyss Integrations | Nexyss Integraciones |
 | Ativo / Beta / Roadmap | Active / Beta / Roadmap | Activo / Beta / Roadmap |
 | Português, Inglês e Espanhol (R4) | Portuguese, English and Spanish | portugués, inglés y español |
@@ -68,3 +68,9 @@ Chaves e HTML interno nunca mudam; so o texto. Valores com `&` usam `&amp;` em E
 - PT: `Nexyss` + `Group` apenas em rodape/legal.
 - R6: nenhum travessao; hifen simples com espacos ( - ) quando a frase precisa de pausa.
 - E-mails: contact@ (EN), contato@ (PT), contacto@ (ES), so no texto visivel; o `mailto:` entra na sessao de formularios.
+
+## Marca do servico (26/10/2026)
+`Nexyss Consulting` nos 3 idiomas, inclusive no PT (decisao do Jonathan). A URL /consultoria/ nao muda. A palavra
+comum "consultoria/consultoría/consulting" segue como substantivo em frases. O QA reprova "Nexyss Consultoria" e
+"Nexyss Consultoría". Pendente: Educação e Integrações acompanham? (hoje PT/ES mantêm o nome local, com 5 textos
+da planilha usando "Nexyss Integrations").

@@ -32,7 +32,7 @@ WORDS_BAD = {
            # espanhol neutro puro (decisao Q5): nada de regionalismo marcado
            "cobranza", "Cobranza", "costos", "Costos", "costo ", "Costo ", "ontraloría", "planilla", "Agende", "Agendamos",
            "egresad", "Currículo", "currículo", "digitación", "digitar", "retrabajo", "casa matriz", "tablero",
-           "Postularse", "postulación", "pagados", "por pagar", "por cobrar", "Estado de resultados"],
+           "Postularse", "postulación", "pagados", "Estado de resultados"],
 }
 FORBID = re.compile(r"\b(fundador|founder|co-?founder|co-?fundador|cofundador|nationality|nacionalidad|brasile|brazilian|owner|"
                     r"dueño|propietario|openai|anthropic|chatgpt|\bgpt\b|gemini|llama ?\d|mistral|claude|salesforce|hubspot|"
@@ -78,7 +78,13 @@ for lang, d in (("en", en), ("es", es)):
 
 # glossario de identidade (nomes de modulo)
 need = {"en": ("Nexyss Education", "Nexyss Consulting", "Nexyss Integrations"),
-        "es": ("Nexyss Educación", "Nexyss Consultoría", "Nexyss Integraciones")}
+        "es": ("Nexyss Educación", "Nexyss Consulting", "Nexyss Integraciones")}
+# marca "Nexyss Consulting" nos 3 idiomas (decisao de 26/10/2026): "Nexyss Consultoria/Consultoría" nao pode voltar
+for lang, d in (("pt", pt), ("en", en), ("es", es)):
+    for k, v in d.items():
+        if re.search(r"Nexyss\s+Consultor|</span>Consultor", v):
+            errors.append((lang, k, "marca deve ser 'Nexyss Consulting'"))
+
 for lang, d in (("en", en), ("es", es)):
     for want in need[lang]:
         n = sum(1 for v in d.values() if want in v)

@@ -859,3 +859,9 @@ Correções de registro desta rodada:
 - Reaproveita sem alterar o claim de arquitetura da Overview ("um registro só", item 19 da lista não validada) e
   os compromissos de atendimento da FAQ do Contato (24 horas úteis, 30 a 60 minutos, 7 dias úteis).
 
+## Nota de renomeação: Nexyss Consulting (26/10/2026)
+
+O nome do serviço mudou de "Nexyss Consultoria" para "Nexyss Consulting" nos 3 idiomas (mudança de marca, não de
+claim). Nenhum status de recurso, badge ou claim da página `/consultoria/` foi alterado: continua sem badges
+(R5.1), sem prazo, sem resultado e sem preço. A redação refinada da página (H1 "Consultoria mais objetiva porque a
+plataforma já faz o trabalho pesado") manteve "escopo acordado com você, sem garantia de prazos ou resultados".
