@@ -20,6 +20,16 @@ from i18nlib import PAGES, ROOT, read
 
 work = sys.argv[1]
 strip = lambda s: re.sub(r' data-i18n(?:-attr)?="[^"]*"', "", s)
+# Unica divergencia intencional entre src/ e as paginas servidas: o </div> do .container do
+# Founding, que falta em 4 paginas servidas (corrigido so em src/). Aplicado ao lado "atual".
+FIX_DIV = {"index.html", "plataforma/index.html", "plataforma/crm/index.html", "plataforma/educacao/index.html"}
+
+
+def current(rel):
+    s = read(os.path.join(ROOT, rel))
+    if rel in FIX_DIV:
+        s = s.replace("    </div>\n  </section>\n\n<!-- ============ CTA FINAL", "    </div>\n  </div>\n  </section>\n\n<!-- ============ CTA FINAL", 1)
+    return s
 gen = os.path.join(ROOT, "tools", "build-i18n.py")
 
 # ---------- Prova A
@@ -28,7 +38,7 @@ subprocess.run([sys.executable, gen, "--lang", "pt", "--identity", "--strip-attr
                stdout=subprocess.DEVNULL)
 okA = 0
 for rel, _ in PAGES:
-    a, b = strip(read(os.path.join(ROOT, rel))), read(os.path.join(ida, rel))
+    a, b = strip(current(rel)), read(os.path.join(ida, rel))
     if a == b:
         okA += 1
     else:
@@ -66,7 +76,7 @@ tot = collections.Counter()
 unm = []
 changed_pages = 0
 for rel, _ in PAGES:
-    a = strip(read(os.path.join(ROOT, rel))).split("\n")
+    a = strip(current(rel)).split("\n")
     b = read(os.path.join(pt, "pt", rel)).split("\n")
     assert len(a) == len(b), (rel, len(a), len(b))
     n_changed = 0
