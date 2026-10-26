@@ -29,7 +29,11 @@ def current(rel):
     s = read(os.path.join(ROOT, rel))
     if rel in FIX_DIV:
         s = s.replace("    </div>\n  </section>\n\n<!-- ============ CTA FINAL", "    </div>\n  </div>\n  </section>\n\n<!-- ============ CTA FINAL", 1)
+    if rel == "contato/index.html":   # meta description sem WhatsApp/LinkedIn (so em src/; a pagina servida muda no merge final)
+        s = s.replace(", por e-mail, WhatsApp ou LinkedIn.\"", ", por e-mail.\"", 1)
     return s
+
+
 gen = os.path.join(ROOT, "tools", "build-i18n.py")
 
 # ---------- Prova A
