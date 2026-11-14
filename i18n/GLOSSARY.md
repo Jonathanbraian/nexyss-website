@@ -17,9 +17,9 @@ Chaves e HTML interno nunca mudam; so o texto. Valores com `&` usam `&amp;` em E
 ## Identidade traduzida
 | PT | EN | ES |
 |---|---|---|
-| Nexyss Educação | Nexyss Education | Nexyss Educación |
+| Nexyss Educação | Nexyss Education | Nexyss Education |
 | Nexyss Consultoria (ate 26/10/2026) | Nexyss Consulting | Nexyss Consulting |
-| Nexyss Integrações | Nexyss Integrations | Nexyss Integraciones |
+| Nexyss Integrações | Nexyss Integrations | Nexyss Integrations |
 | Ativo / Beta / Roadmap | Active / Beta / Roadmap | Activo / Beta / Roadmap |
 | Português, Inglês e Espanhol (R4) | Portuguese, English and Spanish | portugués, inglés y español |
 | Multi-idioma nativo | Native multilingual | Multiidioma nativo |
@@ -74,3 +74,14 @@ Chaves e HTML interno nunca mudam; so o texto. Valores com `&` usam `&amp;` em E
 comum "consultoria/consultoría/consulting" segue como substantivo em frases. O QA reprova "Nexyss Consultoria" e
 "Nexyss Consultoría". Pendente: Educação e Integrações acompanham? (hoje PT/ES mantêm o nome local, com 5 textos
 da planilha usando "Nexyss Integrations").
+
+## Lista oficial de nomes (padrao total, 26/10/2026)
+Em PT, EN e ES: Nexyss CRM, Nexyss Education, Nexyss Marketing, Nexyss Finance, Nexyss HR, Nexyss AI,
+Nexyss Integrations e Nexyss Consulting. Rotas, arquivos, classes e chaves i18n nao mudam. O QA reprova
+"Nexyss Educação/Educación", "Nexyss Integrações/Integraciones", "Nexyss Consultoria/Consultoría" e
+"consultoria Nexyss".
+
+- Palavra comum fora da marca fica no idioma local: "Educação/Educación" como setor, "Integrações/Integraciones"
+  como titulo de secao, "consultoria/consultoría" como substantivo.
+- PT, artigo antes do nome em ingles: masculino (no Education, ao Education, do Education, dentro do Education).
+- Pendente (Sessao 3): sobre.faq.a3 (lista de modulos ainda com "Integrações/Integraciones") e "Quatro caminhos".

@@ -17,8 +17,9 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
   - `Nexyss` → marca principal. **Sempre title case.** Nunca "NEXYSS", nunca "nexyss".
   - `Nexyss Group` → razão social. **Apenas** em rodapé/legal/copyright/termos.
     Uso atual na Home: `© 2026 Nexyss Group. Todos os direitos reservados.`
-  - Módulos: `Nexyss CRM`, `Nexyss Educação`, `Nexyss Marketing`,
-    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrações`.
+  - Módulos: `Nexyss CRM`, `Nexyss Education`, `Nexyss Marketing`,
+    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrations` (nomes em inglês nos 3 idiomas desde
+    26/10/2026; as seções antigas abaixo mantêm `Educação`/`Integrações` como registro histórico).
   - Serviço: `Nexyss Consulting` (página `/consultoria/`; não é módulo de software e não entra no
     mega-menu Plataforma). **Sempre com o prefixo `Nexyss`** em identidade; "Consultoria" solto só como
     título narrativo de seção. **Mudança de marca de 26/10/2026:** antes era `Nexyss Consultoria`; ver
@@ -1775,22 +1776,31 @@ HTML equivalentes (mdash, ndash, minus, horbar). Usar hífen ASCII simples (-).
 9. Testar sempre nos dois extremos: **375px** (drawer) e **1280px** (desktop),
    confirmando que o desktop não mudou.
 
-## Mudança de marca: Nexyss Consulting (26/10/2026)
+## Mudança de marca: Nexyss Consulting e padrão total de nomes (26/10/2026)
 
-O serviço passa de `Nexyss Consultoria` para **`Nexyss Consulting`** em PT, EN e ES. Decisão do Jonathan,
-aceita conscientemente como mudança de marca: fecha o padrão dos nomes em inglês dos módulos (CRM, Marketing,
-Finance, HR, AI e o serviço). Valores no dicionário i18n (`i18n/{pt,en,es}.json`); o gerador usa o mesmo rótulo
-nas 18 páginas dos 3 idiomas.
+O serviço passa de `Nexyss Consultoria` para **`Nexyss Consulting`** em PT, EN e ES, e Educação e Integrações
+acompanham: o padrão fechado é de **nomes em inglês nos 3 idiomas** - `Nexyss CRM`, `Nexyss Education`,
+`Nexyss Marketing`, `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrations`, `Nexyss Consulting`.
+Decisão do Jonathan, aceita conscientemente como mudança de marca. Os valores vivem em `i18n/{pt,en,es}.json`;
+o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
 
-- **Muda:** o rótulo visível (header com o `<span class="nav-nx">Nexyss </span>` que some abaixo de 1340px,
-  drawer, footer, `<title>`, metas, botão "Conhecer Nexyss Consulting", select do Contato) e as frases do corpo
-  que citavam o nome ("A Nexyss Consulting ajuda a definir mudanças...").
-- **Não muda:** a URL `/consultoria/`, o arquivo `consultoria/index.html`, as classes CSS (`.theme-con`,
-  `.mod-card.con`, `.icn-con`, `.cw-*`), as chaves i18n (`con.*`, `consultoria.cta.*`) e as palavras
-  "consultoria/consultoría" usadas como substantivo comum ("Consultoria que acompanha o seu setor").
-- **Ainda a ajustar nas fases seguintes:** o `MAP` do `assets/nexyss.js` e o `<option>` do select do Contato
-  seguem com o valor "Nexyss Consultoria" nas páginas servidas (muda junto com os slugs neutros do select, D7,
-  na fase de formulários); `form-detect.html` idem. As páginas servidas só passam a usar o nome novo no merge final.
-- **Pendência de decisão (aberta):** a planilha revisada usa "Nexyss Integrations" em 5 textos de PT e ES, enquanto
-  o resto do site segue com "Nexyss Integrações" (PT) e "Nexyss Integraciones" (ES). "Nexyss Educação/Educación"
-  também segue no idioma local. Falta decidir se Educação e Integrações acompanham a mudança.
+- **Muda:** o rótulo visível (header, com o `<span class="nav-nx">Nexyss </span>` que some abaixo de 1340px, drawer,
+  footer, `<title>`, metas, botões "Conhecer Nexyss Consulting" e "Ver Nexyss Integrations", select do Contato), as
+  frases do corpo que citavam o nome, e o nome do módulo dentro de listas em frase corrida ("CRM, Education,
+  Marketing, Finance e HR").
+- **Não muda:** as URLs (`/consultoria/`, `/plataforma/educacao/`, `/plataforma/integracoes/`), os nomes de arquivo,
+  as classes CSS (`.theme-con`, `.theme-edu`, `.theme-int`, `.mod-card.con`, `.cw-*`) e as chaves i18n. A palavra
+  comum fora da marca continua no idioma local: "Educação" como **setor** (Soluções por setor, tags, subnav,
+  cliente no Contato; 9 textos), "Integrações" como título de seção, "consultoria" como substantivo.
+- **Artigo antes do nome em inglês, no PT: masculino**, como já era "no Finance", "ao Marketing", "IA no CRM":
+  "no Education", "ao Education", "do Education", "dentro do Education".
+- **Sessão 2.6:** 74 trocas de "Nexyss Educação/Integrações" (PT e ES); 27 "Educação" solto que era nome de módulo
+  em lista ou rótulo; as 7 frases em PT com a ordem invertida ("consultoria Nexyss"); as metas SEO e 2 textos de
+  Integrações alinhados aos H1 novos; e o card e o botão "Integrações & API" da Overview
+  (`plat.modulos.a7`, `plat.integracoes.a1`), que **fecha a pendência de 16/10** do nome antigo.
+- **Ainda a ajustar nas fases seguintes:** o `MAP` do `assets/nexyss.js` e o `<option>` do select do Contato seguem
+  com o valor em PT ("Nexyss Consultoria", "Nexyss Educação"...) nas páginas servidas (muda junto com os slugs neutros
+  do select, D7); `form-detect.html` idem. As páginas servidas só passam a usar os nomes novos no merge final.
+- **Pausado para a Sessão 3:** `sobre.faq.a3` (a frase lista os módulos e hoje está mista: "Education... e
+  Integrações", só a troca de Integrações foi adiada) e o "Quatro caminhos/Os caminhos" fora das metas (`sol.hero.cta2`,
+  `sol.eixos.eyebrow`, `sol.todos.tag`), enquanto o H1 de Soluções virou "Quatro formas de começar".

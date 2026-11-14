@@ -865,3 +865,12 @@ O nome do serviço mudou de "Nexyss Consultoria" para "Nexyss Consulting" nos 3 
 claim). Nenhum status de recurso, badge ou claim da página `/consultoria/` foi alterado: continua sem badges
 (R5.1), sem prazo, sem resultado e sem preço. A redação refinada da página (H1 "Consultoria mais objetiva porque a
 plataforma já faz o trabalho pesado") manteve "escopo acordado com você, sem garantia de prazos ou resultados".
+
+## Nota: nomes de modulo e servico em ingles nos 3 idiomas (26/10/2026)
+
+"Nexyss Consultoria", "Nexyss Educação/Educación" e "Nexyss Integrações/Integraciones" passam a "Nexyss Consulting",
+"Nexyss Education" e "Nexyss Integrations" em PT, EN e ES (mudanca de nome, nao de claim). Nenhum badge, status,
+numero ou recurso das paginas foi alterado. Em `/consultoria/` segue sem badges (R5.1), sem prazo, sem resultado e
+sem preco; a redacao refinada ("Consultoria mais objetiva porque a plataforma ja faz o trabalho pesado") mantem
+"escopo acordado com voce, sem garantia de prazos ou resultados". Em Integracoes, "Sem integracoes entre modulos"
+repete o claim de arquitetura ja registrado (Overview, Home), ainda sem validacao tecnica.

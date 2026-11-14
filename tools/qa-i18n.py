@@ -78,12 +78,14 @@ for lang, d in (("en", en), ("es", es)):
 
 # glossario de identidade (nomes de modulo)
 need = {"en": ("Nexyss Education", "Nexyss Consulting", "Nexyss Integrations"),
-        "es": ("Nexyss Educación", "Nexyss Consulting", "Nexyss Integraciones")}
-# marca "Nexyss Consulting" nos 3 idiomas (decisao de 26/10/2026): "Nexyss Consultoria/Consultoría" nao pode voltar
+        "es": ("Nexyss Education", "Nexyss Consulting", "Nexyss Integrations")}
+# nomes de modulo e servico em ingles nos 3 idiomas (26/10/2026): as formas locais nao podem voltar
 for lang, d in (("pt", pt), ("en", en), ("es", es)):
     for k, v in d.items():
         if re.search(r"Nexyss\s+Consultor|</span>Consultor", v):
             errors.append((lang, k, "marca deve ser 'Nexyss Consulting'"))
+        if re.search(r"Nexyss\s+(Educa(ção|ción)|Integra(ções|ciones))|consultoria Nexyss", v):
+            errors.append((lang, k, "nome de modulo deve ser 'Nexyss Education' / 'Nexyss Integrations' / 'Nexyss Consulting'"))
 
 for lang, d in (("en", en), ("es", es)):
     for want in need[lang]:
