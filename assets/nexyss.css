@@ -459,6 +459,10 @@ header.site.scrolled {
   color: transparent;
   font-weight: 500;
   font-style: italic;
+  /* O glifo italico se projeta para fora da caixa onde o gradient e pintado (background-clip: text) e a
+     ultima letra era cortada. O padding amplia a area pintada; a margem negativa devolve o espaco entre palavras. */
+  padding-right: 0.08em;
+  margin-right: -0.08em;
 }
 .hero-sub {
   margin-top: 28px;
