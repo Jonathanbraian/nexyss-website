@@ -1865,7 +1865,7 @@ Sessão pós-i18n, em 2 commits sobre `af11a3e` (`8dc2999` e o ajuste visual). A
   `rel="noopener noreferrer"`, `aria-label` por idioma (`footer.social.{instagram,linkedin,facebook}.aria`, título em `footer.social.h5`). Hover ciano
   (`--c-edu`, como os links do footer); centralizados no mobile. CSS na seção `=== REDES SOCIAIS ===` (`.social-links`).
   - Instagram `https://www.instagram.com/nexyss.group/`
-  - **LinkedIn confirmado: `https://linkedin.com/company/nexyss`** (o `nexyss-group` citado na seção do Contato é o endereço antigo/não validado)
+  - **LinkedIn: `https://www.linkedin.com/company/nexyss-group`** (corrigido em 14/11/2026; a primeira versão do footer usava `linkedin.com/company/nexyss`, handle errado). O endereço citado na seção do Contato é o mesmo `nexyss-group`
   - Facebook `https://www.facebook.com/share/19vjxFdUEz/?mibextid=wwXIfr` (**link provisório**, o Jonathan vai trocar)
 - **Logos dos 5 clientes** (Home logo wall e cards do Contato): PNG em `assets/clients/` (`ned-college`, `dublin-volleyball-club`, `volleypoint`,
   `excursions-ltd`, `eirway`), altura máxima 200px, margens transparentes cortadas. Originais em `assets/clients-raw/` (no `.gitignore`: a Excursions tem
