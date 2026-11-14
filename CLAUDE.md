@@ -1852,3 +1852,29 @@ o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
   `en/ pt/ es/`; ~4% das capturas têm jitter de hash, então `--check` tenta até 3 vezes). Os baselines antigos (páginas planas, macOS) e as
   tabelas de hash das seções acima são **históricos**: valem os de `baselines/README.md`. QA do site gerado: `python3 tools/qa-site.py` (R6, R2,
   R3, R8, R5.1, pessoas, links, hreflang, sitemap, robots; R2/R3/R8 comparam com `origin/main` para separar mockup pré-existente de texto novo).
+
+## Menu, redes sociais e logos dos clientes (branch `claude/menu-social-logos`, nov/2026)
+
+Sessão pós-i18n, em 2 commits sobre `af11a3e` (`8dc2999` e o ajuste visual). Ainda **não** mergeada na `main`; baselines de fingerprint **não regravados**
+(aguardam aprovação visual do Jonathan).
+
+- **Menu:** "Recursos" e "Parceiros" saíram do header, do drawer e do footer (em `src/`; as chaves `nav.recursos`, `nav.parceiros`, `footer.parceiros` e
+  `footer.recursos` ficam nos dicionários, sem uso, para quando as páginas existirem). No footer, **a coluna "Recursos" inteira** (4 links mortos) deu lugar
+  à coluna social. Menu do header agora: Plataforma, Soluções, Nexyss Consulting, Clientes, Sobre.
+- **Redes sociais (footer, coluna "Siga a Nexyss / Follow Nexyss / Sigue a Nexyss"):** 3 ícones SVG inline (Phosphor Icons, MIT), `target="_blank"`,
+  `rel="noopener noreferrer"`, `aria-label` por idioma (`footer.social.{instagram,linkedin,facebook}.aria`, título em `footer.social.h5`). Hover ciano
+  (`--c-edu`, como os links do footer); centralizados no mobile. CSS na seção `=== REDES SOCIAIS ===` (`.social-links`).
+  - Instagram `https://www.instagram.com/nexyss.group/`
+  - **LinkedIn confirmado: `https://linkedin.com/company/nexyss`** (o `nexyss-group` citado na seção do Contato é o endereço antigo/não validado)
+  - Facebook `https://www.facebook.com/share/19vjxFdUEz/?mibextid=wwXIfr` (**link provisório**, o Jonathan vai trocar)
+- **Logos dos 5 clientes** (Home logo wall e cards do Contato): PNG em `assets/clients/` (`ned-college`, `dublin-volleyball-club`, `volleypoint`,
+  `excursions-ltd`, `eirway`), altura máxima 200px, margens transparentes cortadas. Originais em `assets/clients-raw/` (no `.gitignore`: a Excursions tem
+  15 MB) e na branch `assets-raw/logos`. VolleyPoint teve o fundo branco removido (limiar suave); os outros 4 já eram transparentes; **NED College fica
+  branca original, sem inversão** (o site é dark-only). Nomes normalizados em todo o site: **VolleyPoint**, **Excursions LTD**, **EIRWAY** (all-caps, marca
+  oficial); os slugs `data-client` antigos (`volley-point`, `excursion-ltd`, `eirway`) não mudaram.
+- **Decisão visual (Jonathan, nov/2026):** `.client-logo` (seção `=== LOGOS DOS CLIENTES ===`) = `filter: brightness(0) invert(1)` + `opacity: .6`, hover
+  `filter: none` + `opacity: 1` (cor original da marca), altura 48px (36px até 768px), mesma regra nos 5 e nos dois locais. O tratamento anterior
+  (`grayscale + brightness(1.5)`) foi descartado: no fundo navy os logos escuros sumiam. **Limite conhecido:** no hover, as partes escuras de VolleyPoint,
+  EIRWAY e Excursions ficam com pouco contraste sobre o navy.
+- **Home:** o logo wall deixou de ser 3+2 e vira uma linha de 5 no desktop (flex com wrap, 4+1 no mobile).
+- **Fingerprint (a regravar):** todas as 108 capturas divergem; −7 elementos por página (menu e footer), Home −16 (logos no lugar de SVG e texto).

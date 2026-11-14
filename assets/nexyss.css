@@ -4028,21 +4028,21 @@ body.drawer-open { overflow: hidden; }
 
 /* ============================================================
    === LOGOS DOS CLIENTES ===
-   Mesmo tratamento nos 5 (consistencia): cinza e esmaecido, cor total no hover.
+   Mesmo tratamento nos 5 (consistencia): branco monocromatico esmaecido, cor original no hover.
    Usado no logo wall da Home e nos .client-card do Contato.
    ============================================================ */
 .client-logo {
   display: block;
   height: 48px;
   width: auto;
-  filter: grayscale(100%) brightness(1.5);
-  opacity: 0.7;
+  filter: brightness(0) invert(1);   /* monocromatico branco: o site e dark-only */
+  opacity: 0.6;
   transition: all 0.3s ease;
 }
 .client-logo:hover,
 .client-card:hover .client-logo,
 .logo-item:hover .client-logo {
-  filter: grayscale(0%) brightness(1);
+  filter: none;                      /* revela a cor original da marca */
   opacity: 1;
 }
 @media (max-width: 768px) { .client-logo { height: 36px; } }
