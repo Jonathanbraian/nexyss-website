@@ -17,11 +17,12 @@ text = {f: open(f, encoding="utf-8").read() for f in files}
 clean = {f: re.sub(r"<!--.*?-->", "", t, flags=re.S) for f, t in text.items()}
 import subprocess
 def main_page(f):
-    """HTML da pagina plana equivalente em origin/main (antes do i18n), para separar pre-existente de novo."""
+    """HTML da pagina plana equivalente nas paginas planas pre-i18n, para separar pre-existente de novo."""
     rest = f.split("/", 1)[1]
-    r = subprocess.run(["git", "show", "origin/main:" + rest], capture_output=True, text=True, cwd=ROOT)
+    r = subprocess.run(["git", "show", PRE_I18N + ":" + rest], capture_output=True, text=True, cwd=ROOT)
     return r.stdout if r.returncode == 0 else ""
 MAIN = {}
+PRE_I18N = "25ba250"   # ultimo commit da main antes do i18n (paginas planas em PT): referencia de mockup/numeros pre-existentes
 def in_main(f, token):
     rest = f.split("/", 1)[1]
     if rest not in MAIN: MAIN[rest] = main_page(f)
