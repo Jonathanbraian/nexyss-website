@@ -1877,4 +1877,4 @@ Sessão pós-i18n, em 2 commits sobre `af11a3e` (`8dc2999` e o ajuste visual). A
   (`grayscale + brightness(1.5)`) foi descartado: no fundo navy os logos escuros sumiam. **Limite conhecido:** no hover, as partes escuras de VolleyPoint,
   EIRWAY e Excursions ficam com pouco contraste sobre o navy.
 - **Home:** o logo wall deixou de ser 3+2 e vira uma linha de 5 no desktop (flex com wrap, 4+1 no mobile).
-- **Fingerprint (a regravar):** todas as 108 capturas divergem; −7 elementos por página (menu e footer), Home −16 (logos no lugar de SVG e texto).
+- **Fingerprint (a regravar):** todas as 108 capturas divergem; -7 elementos por página (menu e footer), Home -16 (logos no lugar de SVG e texto).
