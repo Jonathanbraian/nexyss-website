@@ -1847,6 +1847,8 @@ o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
   `?interesse=` ao slug (aceita também os slugs antigos em PT: `educacao`, `integracoes`, `consultoria`, `plataforma`, mais `demo`, `founding`,
   `especialista`). O `mailto` usa `__MAIL_ADDR__` e `__MAIL_SUBJECT__` (chaves `contato.side.mail.addr` e `.subject`: contact@, contato@, contacto@).
   A mensagem do Founding vem de `data-founding-msg` no `<form>` (chave `contato.form.founding-msg`). Seletor do JS: `form[name^="contato"]`.
-- **Pendente (3e a 3f):** baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
-  para as páginas planas removidas), atualizar esta documentação e fazer o merge.
-
+- **Baselines e QA final (Sessão 3e):** `baselines/{en,pt,es}/<pagina>-<vp>.json` são compactos (`fp`, `doc`, `fonts`; 108 arquivos) e
+  `baselines/pt-full/*.json.gz` guarda o completo só do PT. Regerar/comparar: `node baselines/tools/run.js --all|--check` (Playwright, lê
+  `en/ pt/ es/`; ~4% das capturas têm jitter de hash, então `--check` tenta até 3 vezes). Os baselines antigos (páginas planas, macOS) e as
+  tabelas de hash das seções acima são **históricos**: valem os de `baselines/README.md`. QA do site gerado: `python3 tools/qa-site.py` (R6, R2,
+  R3, R8, R5.1, pessoas, links, hreflang, sitemap, robots; R2/R3/R8 comparam com `origin/main` para separar mockup pré-existente de texto novo).
