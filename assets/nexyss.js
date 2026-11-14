@@ -201,3 +201,27 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
     }
   });
 })();
+
+// ============ SELETOR DE IDIOMA ============
+// Os links sao reais (gerados no build). O JS so grava a escolha manual antes do
+// navegador seguir o href: cookie nx_l_<lang> (lido pelas regras da Netlify no "/")
+// e localStorage. Preserva #ancora e ?query da pagina atual.
+(function () {
+  const LANGS = ['en', 'pt', 'es'];
+  function setLanguage(lang) {
+    if (LANGS.indexOf(lang) < 0) return;
+    LANGS.forEach(function (l) {
+      document.cookie = l === lang
+        ? 'nx_l_' + l + '=1; max-age=31536000; path=/; SameSite=Lax'
+        : 'nx_l_' + l + '=; max-age=0; path=/; SameSite=Lax';
+    });
+    try { localStorage.setItem('nx_lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.lang-menu a[data-lang], .drawer-lang a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      setLanguage(a.dataset.lang);
+      a.search = location.search;
+      a.hash = location.hash;
+    });
+  });
+})();

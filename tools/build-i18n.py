@@ -99,8 +99,36 @@ def page_urls(rel, base):
     return {l: "%s/%s/%s" % (base, l, page_url_path(rel)) for l in LANGS}
 
 
+LANG_NAMES = {"en": "English", "pt": "Portugu\u00eas", "es": "Espa\u00f1ol"}
+ARR = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>'
+
+
+def lang_links(rel, lang, cls_a):
+    """3 links reais para a MESMA pagina nos outros idiomas (gerados no build, nao em runtime)."""
+    path = "" if rel == "404.html" else page_url_path(rel)     # a 404 e servida em qualquer URL: vai para a Home
+    rows = []
+    for l in LANGS:
+        cur = ' aria-current="true"' if l == lang else ""
+        rows.append('<a%s href="/%s/%s" hreflang="%s" lang="%s" data-lang="%s"%s><b>%s</b><span>%s</span></a>'
+                    % (cls_a, l, path, HREFLANG[l], HREFLANG[l], l, cur, l.upper(), LANG_NAMES[l]))
+    return rows
+
+
+def lang_widgets(out, rel, lang):
+    label = dicts[lang]["a11y.idioma"]
+    rows = lang_links(rel, lang, "")
+    menu = "".join("<li>%s</li>" % r for r in rows)
+    header = ('<div class="lang-switch"><button type="button" class="lang-btn" aria-label="%s: %s">'
+              '<span>%s</span>%s</button><ul class="lang-menu">%s</ul></div>'
+              % (label, LANG_NAMES[lang], lang.upper(), ARR, menu))
+    drawer = '<div class="drawer-lang" role="group" aria-label="%s">%s</div>' % (label, "".join(lang_links(rel, lang, "")))
+    out = out.replace("<!--NX:LANGSWITCH-->", header).replace("<!--NX:DRAWERLANG-->", drawer)
+    return out
+
+
 def transform(out, rel, lang, base):
     """Caminho/SEO especifico do idioma (nao roda em --identity)."""
+    out = lang_widgets(out, rel, lang)
     out = re.sub(r'(<html\b[^>]*\blang=")[^"]*(")', r"\g<1>%s\g<2>" % LANG_ATTR[lang], out, count=1)
     out = re.sub(r'((?:href|src)=")((?:\.\./)*assets/)', r"\1../\2", out)     # assets sobem um nivel (so relativos)
     out = out.replace("/__LANG__/", "/%s/" % lang)                              # 404: links absolutos, servida em qualquer URL
@@ -196,7 +224,7 @@ if args.site and not args.check and not errors:
     write(os.path.join(args.out, "sitemap.xml"), sitemap_xml(args.base_url))
     write(os.path.join(args.out, "robots.txt"), robots_txt(args.base_url))
 
-unused = [k for k in pt if k not in all_used]
+unused = [k for k in pt if k not in all_used and k != "a11y.idioma"]   # a11y.idioma e lido pelo gerador (seletor)
 if unused and not errors:
     warnings.append("%d chaves do dicionario nao usadas (ex.: %s)" % (len(unused), unused[:3]))
 for w in warnings:

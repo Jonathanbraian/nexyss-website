@@ -1827,13 +1827,18 @@ o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
 - **URLs planas antigas:** `/plataforma`, `/solucoes`, `/consultoria`, `/sobre`, `/contato` (e `/*`) dão 301 para
   `/pt/...`, preservando a query (`?interesse=demo`). **404 por idioma:** `/en/*`, `/pt/*`, `/es/*` sem arquivo caem na
   `404.html` do idioma (links absolutos, porque é servida em qualquer URL); fora disso vale o `/404.html` da raiz.
-- **A validar no deploy preview:** não consegui testar as regras daqui (o container não alcança a Netlify). Suposições a
-  confirmar: a condição `Cookie` casa por presença do nome; `Language = ["pt"]` casa `pt-BR`; `nf_country` simula o país.
-  Teste: `bash tools/test-redirects.sh <url-do-deploy>` (25 casos, PASS/FAIL por caso).
-- **Plano B (pré-aprovado):** Edge Function em `tools/edge-plan-b/` (`lang.ts` com a lógica `decide`, testada em
-  12 casos). Só entra se o preview reprovar a condição de cookie ou de idioma: copiar para
-  `netlify/edge-functions/`, apagar as 7 regras de `/` e rodar o teste de novo.
-- **Pendente (3c a 3f):** seletor de idioma funcional e `white-space: nowrap` no menu (em ES "Acerca de" quebra a
-  1280px), 3 formulários Netlify e slugs no select, baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
+- **Validado no deploy preview (nov/2026):** `bash tools/test-redirects.sh` deu **25 PASS, 0 FAIL** no deploy da branch. Confirmado: a
+  condição `Cookie` casa por presença do nome (`nx_l_*`), `Language = pt` casa `pt-BR`, `Country = PT` leva Portugal a `/en/`, as 404
+  saem traduzidas nos 3 idiomas e as URLs planas antigas dão 301 preservando a query.
+- **Plano B (Edge Function) NÃO ativado:** ficou pronto em `tools/edge-plan-b/` (`lang.ts`, testado em 12 casos) mas foi dispensado, porque o
+  cookie e o idioma funcionaram nativamente nas regras do `netlify.toml`. Só reativar se a Netlify mudar o comportamento dessas condições.
+- **Seletor de idioma (Sessão 3c):** o `src/` traz só os marcadores `<!--NX:LANGSWITCH-->` (header) e `<!--NX:DRAWERLANG-->` (drawer); o gerador
+  (`lang_widgets` em `tools/build-i18n.py`) os troca por 3 `<a href>` reais para a **mesma página** nos outros idiomas (`hreflang`, `lang`,
+  `aria-current` no ativo; na 404 o destino é a Home). Texto EN / PT / ES, sem bandeira. Desktop: popover por hover e foco (`.lang-switch`,
+  `.lang-btn`, `.lang-menu`, 250 ms, z-index 120 como o mega-menu); ≤760px: 3 pills em `.drawer-lang` no `.drawer-foot`. O `aria-label` vem de
+  `a11y.idioma`. `assets/nexyss.js` só grava a escolha no clique (`setLanguage`: cookie `nx_l_<lang>` por 1 ano, `path=/`, `SameSite=Lax`, apaga os
+  outros dois, `localStorage nx_lang`) e preserva `?query` e `#âncora`; a navegação é a natural do link. A chave `nav.pt` foi removida.
+  CSS compartilhado: `.brand { flex-shrink: 0 }` (logo não encolhe mais) e `white-space: nowrap` nos links do menu ("Acerca de" em ES não quebra).
+- **Pendente (3d a 3f):** 3 formulários Netlify e slugs no select, baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
   para as páginas planas removidas), atualizar esta documentação e fazer o merge.
 
