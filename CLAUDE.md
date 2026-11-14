@@ -1839,6 +1839,14 @@ o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
   `a11y.idioma`. `assets/nexyss.js` só grava a escolha no clique (`setLanguage`: cookie `nx_l_<lang>` por 1 ano, `path=/`, `SameSite=Lax`, apaga os
   outros dois, `localStorage nx_lang`) e preserva `?query` e `#âncora`; a navegação é a natural do link. A chave `nav.pt` foi removida.
   CSS compartilhado: `.brand { flex-shrink: 0 }` (logo não encolhe mais) e `white-space: nowrap` nos links do menu ("Acerca de" em ES não quebra).
-- **Pendente (3d a 3f):** 3 formulários Netlify e slugs no select, baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
+- **Formulários por idioma (Sessão 3d):** o `src/contato/index.html` usa o token `__FORMNAME__` (no `name` do `<form>` e no hidden `form-name`) e o
+  gerador o troca por `contato-en`, `contato-pt` e `contato-es` (3 formulários no painel da Netlify, 100 envios/mês compartilhados; as
+  notificações por e-mail se configuram à mão no painel). O `action` vai para `/<idioma>/contato/obrigado.html`. `form-detect.html` espelha os 3.
+  O `<option value>` do select é um **slug neutro igual nos 3 idiomas** (`crm`, `education`, `marketing`, `finance`, `hr`, `ai`, `integrations`,
+  `consulting`, `sobre`, `platform`, `undecided`): é o valor que chega ao painel; o texto visível vem do dicionário. No `nexyss.js` o `MAP` leva
+  `?interesse=` ao slug (aceita também os slugs antigos em PT: `educacao`, `integracoes`, `consultoria`, `plataforma`, mais `demo`, `founding`,
+  `especialista`). O `mailto` usa `__MAIL_ADDR__` e `__MAIL_SUBJECT__` (chaves `contato.side.mail.addr` e `.subject`: contact@, contato@, contacto@).
+  A mensagem do Founding vem de `data-founding-msg` no `<form>` (chave `contato.form.founding-msg`). Seletor do JS: `form[name^="contato"]`.
+- **Pendente (3e a 3f):** baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
   para as páginas planas removidas), atualizar esta documentação e fazer o merge.
 

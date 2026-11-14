@@ -280,8 +280,8 @@
         <h2 data-i18n="contato.form.h2">Give us the context. We reply with a conversation, not a PDF.</h2>
         <p class="form-lead" data-i18n="contato.form.lead">The more concrete the scenario, the more useful the first reply. It does not need to be complete - we will align on the rest in the conversation.</p>
 
-        <form name="contato" method="POST" action="/en/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contato" />
+        <form name="contato-en" method="POST" action="/en/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field" data-founding-msg="I'm interested in the Founding Customers programme." data-i18n-attr="data-founding-msg:contato.form.founding-msg">
+          <input type="hidden" name="form-name" value="contato-en" />
           <input type="hidden" name="origem" value="" />
           <p class="visually-hidden" aria-hidden="true">
             <label data-i18n="contato.formulario.label1">Do not fill in this field: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
@@ -311,17 +311,17 @@
                 <label for="f-interesse"><span data-i18n="contato.form.interesse">Interest</span><span class="req" aria-hidden="true">*</span></label>
                 <select id="f-interesse" name="interesse" required>
                   <option value="" disabled selected data-i18n="contato.formulario.option1">Select…</option>
-                  <option value="Nexyss CRM" data-i18n="contato.formulario.option2">Nexyss CRM</option>
-                  <option value="Nexyss Educação" data-i18n="contato.formulario.option3">Nexyss Education</option>
-                  <option value="Nexyss Marketing" data-i18n="contato.formulario.option4">Nexyss Marketing</option>
-                  <option value="Nexyss Finance" data-i18n="contato.formulario.option5">Nexyss Finance</option>
-                  <option value="Nexyss HR" data-i18n="contato.formulario.option6">Nexyss HR</option>
-                  <option value="Nexyss AI" data-i18n="contato.formulario.option7">Nexyss AI</option>
-                  <option value="Nexyss Integrações" data-i18n="contato.formulario.option8">Nexyss Integrations</option>
-                  <option value="Nexyss Consultoria" data-i18n="contato.formulario.option9">Nexyss Consulting</option>
-                  <option value="Sobre a Nexyss" data-i18n="contato.formulario.option10">About Nexyss</option>
-                  <option value="Plataforma completa" data-i18n="contato.formulario.option11">Complete platform</option>
-                  <option value="Ainda não tenho certeza" data-i18n="contato.formulario.option12">I am not sure yet</option>
+                  <option value="crm" data-i18n="contato.formulario.option2">Nexyss CRM</option>
+                  <option value="education" data-i18n="contato.formulario.option3">Nexyss Education</option>
+                  <option value="marketing" data-i18n="contato.formulario.option4">Nexyss Marketing</option>
+                  <option value="finance" data-i18n="contato.formulario.option5">Nexyss Finance</option>
+                  <option value="hr" data-i18n="contato.formulario.option6">Nexyss HR</option>
+                  <option value="ai" data-i18n="contato.formulario.option7">Nexyss AI</option>
+                  <option value="integrations" data-i18n="contato.formulario.option8">Nexyss Integrations</option>
+                  <option value="consulting" data-i18n="contato.formulario.option9">Nexyss Consulting</option>
+                  <option value="sobre" data-i18n="contato.formulario.option10">About Nexyss</option>
+                  <option value="platform" data-i18n="contato.formulario.option11">Complete platform</option>
+                  <option value="undecided" data-i18n="contato.formulario.option12">I am not sure yet</option>
                 </select>
                 <span class="err" data-i18n="contato.form.interesse.err">Choose an option.</span>
               </div>
@@ -350,7 +350,7 @@
         <p class="side-lead" data-i18n="contato.side.lead">The email reaches the same team that reads the form. Use whichever feels more natural to you.</p>
 
         <div class="ai-products">
-          <a class="ai-product" href="mailto:contato@nexyss.com?subject=Contato%20via%20site%20Nexyss">
+          <a class="ai-product" href="mailto:contact@nexyss.com?subject=Contact%20via%20Nexyss%20website">
             <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="15" height="11" rx="2"/><path d="M3 6l7 5 7-5"/></svg></div>
             <div class="p-info">
               <div class="nm" data-i18n="contato.formulario.div1">contact@nexyss.com <small data-i18n="contato.side.mail.tag">Email</small></div>

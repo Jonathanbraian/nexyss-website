@@ -280,8 +280,8 @@
         <h2 data-i18n="contato.form.h2">Conte o contexto. Respondemos com uma conversa, não com um PDF.</h2>
         <p class="form-lead" data-i18n="contato.form.lead">Quanto mais concreto o cenário, mais útil é a primeira resposta. Não precisa estar completo - o resto a gente alinha na conversa.</p>
 
-        <form name="contato" method="POST" action="/pt/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contato" />
+        <form name="contato-pt" method="POST" action="/pt/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field" data-founding-msg="Tenho interesse no programa Founding Customers." data-i18n-attr="data-founding-msg:contato.form.founding-msg">
+          <input type="hidden" name="form-name" value="contato-pt" />
           <input type="hidden" name="origem" value="" />
           <p class="visually-hidden" aria-hidden="true">
             <label data-i18n="contato.formulario.label1">Não preencha este campo: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
@@ -311,17 +311,17 @@
                 <label for="f-interesse"><span data-i18n="contato.form.interesse">Interesse</span><span class="req" aria-hidden="true">*</span></label>
                 <select id="f-interesse" name="interesse" required>
                   <option value="" disabled selected data-i18n="contato.formulario.option1">Selecione…</option>
-                  <option value="Nexyss CRM" data-i18n="contato.formulario.option2">Nexyss CRM</option>
-                  <option value="Nexyss Educação" data-i18n="contato.formulario.option3">Nexyss Education</option>
-                  <option value="Nexyss Marketing" data-i18n="contato.formulario.option4">Nexyss Marketing</option>
-                  <option value="Nexyss Finance" data-i18n="contato.formulario.option5">Nexyss Finance</option>
-                  <option value="Nexyss HR" data-i18n="contato.formulario.option6">Nexyss HR</option>
-                  <option value="Nexyss AI" data-i18n="contato.formulario.option7">Nexyss AI</option>
-                  <option value="Nexyss Integrações" data-i18n="contato.formulario.option8">Nexyss Integrations</option>
-                  <option value="Nexyss Consultoria" data-i18n="contato.formulario.option9">Nexyss Consulting</option>
-                  <option value="Sobre a Nexyss" data-i18n="contato.formulario.option10">Sobre a Nexyss</option>
-                  <option value="Plataforma completa" data-i18n="contato.formulario.option11">Plataforma completa</option>
-                  <option value="Ainda não tenho certeza" data-i18n="contato.formulario.option12">Ainda não tenho certeza</option>
+                  <option value="crm" data-i18n="contato.formulario.option2">Nexyss CRM</option>
+                  <option value="education" data-i18n="contato.formulario.option3">Nexyss Education</option>
+                  <option value="marketing" data-i18n="contato.formulario.option4">Nexyss Marketing</option>
+                  <option value="finance" data-i18n="contato.formulario.option5">Nexyss Finance</option>
+                  <option value="hr" data-i18n="contato.formulario.option6">Nexyss HR</option>
+                  <option value="ai" data-i18n="contato.formulario.option7">Nexyss AI</option>
+                  <option value="integrations" data-i18n="contato.formulario.option8">Nexyss Integrations</option>
+                  <option value="consulting" data-i18n="contato.formulario.option9">Nexyss Consulting</option>
+                  <option value="sobre" data-i18n="contato.formulario.option10">Sobre a Nexyss</option>
+                  <option value="platform" data-i18n="contato.formulario.option11">Plataforma completa</option>
+                  <option value="undecided" data-i18n="contato.formulario.option12">Ainda não tenho certeza</option>
                 </select>
                 <span class="err" data-i18n="contato.form.interesse.err">Escolha uma opção.</span>
               </div>

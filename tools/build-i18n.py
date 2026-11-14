@@ -15,6 +15,7 @@ import argparse
 import json
 import os
 import re
+import urllib.parse
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -99,6 +100,7 @@ def page_urls(rel, base):
     return {l: "%s/%s/%s" % (base, l, page_url_path(rel)) for l in LANGS}
 
 
+READ_BY_GENERATOR = {"a11y.idioma", "contato.side.mail.addr", "contato.side.mail.subject"}   # lidas pelo gerador, nao por data-i18n
 LANG_NAMES = {"en": "English", "pt": "Portugu\u00eas", "es": "Espa\u00f1ol"}
 ARR = '<svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>'
 
@@ -129,6 +131,10 @@ def lang_widgets(out, rel, lang):
 def transform(out, rel, lang, base):
     """Caminho/SEO especifico do idioma (nao roda em --identity)."""
     out = lang_widgets(out, rel, lang)
+    # formulario Netlify por idioma (contato-en / contato-pt / contato-es) e mailto por idioma
+    out = out.replace("__FORMNAME__", "contato-" + lang)
+    out = out.replace("__MAIL_ADDR__", dicts[lang]["contato.side.mail.addr"])
+    out = out.replace("__MAIL_SUBJECT__", urllib.parse.quote(dicts[lang]["contato.side.mail.subject"]))
     out = re.sub(r'(<html\b[^>]*\blang=")[^"]*(")', r"\g<1>%s\g<2>" % LANG_ATTR[lang], out, count=1)
     out = re.sub(r'((?:href|src)=")((?:\.\./)*assets/)', r"\1../\2", out)     # assets sobem um nivel (so relativos)
     out = out.replace("/__LANG__/", "/%s/" % lang)                              # 404: links absolutos, servida em qualquer URL
@@ -224,7 +230,7 @@ if args.site and not args.check and not errors:
     write(os.path.join(args.out, "sitemap.xml"), sitemap_xml(args.base_url))
     write(os.path.join(args.out, "robots.txt"), robots_txt(args.base_url))
 
-unused = [k for k in pt if k not in all_used and k != "a11y.idioma"]   # a11y.idioma e lido pelo gerador (seletor)
+unused = [k for k in pt if k not in all_used and k not in READ_BY_GENERATOR]   # a11y.idioma e lido pelo gerador (seletor)
 if unused and not errors:
     warnings.append("%d chaves do dicionario nao usadas (ex.: %s)" % (len(unused), unused[:3]))
 for w in warnings:

@@ -2353,5 +2353,8 @@
  "not-found.h1": "Esta página <span class=\"accent\">não existe.</span>",
  "not-found.sub": "O endereço pode ter mudado ou estar incorreto. Volte ao início ou conheça a plataforma.",
  "not-found.cta": "Conhecer a plataforma",
- "not-found.cta.home": "Voltar ao início"
+ "not-found.cta.home": "Voltar ao início",
+ "contato.side.mail.addr": "contato@nexyss.com",
+ "contato.side.mail.subject": "Contato via site Nexyss",
+ "contato.form.founding-msg": "Tenho interesse no programa Founding Customers."
 }
