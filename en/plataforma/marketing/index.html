@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Nexyss Marketing: automation, multichannel campaigns, pages and attribution in the same system as CRM and Finance. From the first click to revenue, with no exporting between tools."  data-i18n-attr="content:meta.mkt.desc"/>
+<title data-i18n="meta.mkt.title">Nexyss Marketing - Automation, campaigns and attribution on the Nexyss operating platform</title>
+<link rel="icon" type="image/png" href="../../../assets/nexyss-mark.png" />
+<meta name="theme-color" content="#0B1440" />
+
+<!-- BASE_URL provisorio (netlify.app): trocar em tools/build-i18n.py quando o dominio oficial for confirmado -->
+<link rel="canonical" href="https://nexyss-website.netlify.app/en/plataforma/marketing/" />
+<link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/plataforma/marketing/" />
+<link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/plataforma/marketing/" />
+<link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/plataforma/marketing/" />
+<link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/plataforma/marketing/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nexyss" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:url" content="https://nexyss-website.netlify.app/en/plataforma/marketing/" />
+<meta property="og:title" content="Nexyss Marketing - Automation, campaigns and attribution on the Nexyss operating platform"  data-i18n-attr="content:meta.mkt.ogtitle"/>
+<meta property="og:description" content="Automation, campaigns and attribution in one place - already connected to the CRM and to finance. The lead is born, nurtured and reaches the salesperson with its history."  data-i18n-attr="content:meta.mkt.ogdesc"/>
+<!-- TODO: substituir por og-cover 1200x630 dedicado -->
+<meta property="og:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+<meta property="og:image:alt" content="Nexyss Marketing"  data-i18n-attr="content:meta.mkt.ogimgalt"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nexyss Marketing - Automation, campaigns and attribution on the Nexyss platform"  data-i18n-attr="content:meta.mkt.twtitle"/>
+<meta name="twitter:description" content="Automation, campaigns and attribution in one place - already connected to the CRM and to finance."  data-i18n-attr="content:meta.mkt.twdesc"/>
+<meta name="twitter:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/nexyss.css" />
+</head>
+<body class="theme-mkt page-produto has-subnav">
+
+<a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site" id="siteHeader">
+  <div class="container">
+    <nav class="nav">
+      <a href="/en/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss">
+        <img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+      </a>
+
+      <ul class="nav-menu">
+        <li>
+          <button data-i18n="nav.plataforma">
+            Platform
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-plataforma">
+            <div class="mega-grid cols-2">
+              <a class="mega-item" href="../crm/">
+                <div class="icn icn-crm" data-i18n="mega.crm">CRM</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-crm">Nexyss CRM</div><div class="ds" data-i18n="mega.vendas-relacionamento">Sales &amp; relationships</div></div>
+              </a>
+              <a class="mega-item" href="../educacao/">
+                <div class="icn icn-edu" data-i18n="mega.edu">EDU</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-educacao">Nexyss Education</div><div class="ds" data-i18n="mega.gestao-academica-completa">Complete academic management</div></div>
+              </a>
+              <a class="mega-item" href="./">
+                <div class="icn icn-mkt" data-i18n="mega.mkt">MKT</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-marketing">Nexyss Marketing</div><div class="ds" data-i18n="mega.growth-campanhas">Growth &amp; campaigns</div></div>
+              </a>
+              <a class="mega-item" href="../finance/">
+                <div class="icn icn-fin" data-i18n="mega.fin">FIN</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-finance">Nexyss Finance</div><div class="ds" data-i18n="mega.financeiro-controladoria">Finance &amp; controllership</div></div>
+              </a>
+              <a class="mega-item" href="../hr/">
+                <div class="icn icn-hr" data-i18n="mega.hr">HR</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-hr">Nexyss HR</div><div class="ds" data-i18n="mega.pessoas-talentos">People &amp; talent</div></div>
+              </a>
+              <a class="mega-item" href="../ai/">
+                <div class="icn icn-ai" data-i18n="mega.ai">AI</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-ai">Nexyss AI</div><div class="ds" data-i18n="mega.motor-de-inteligencia">Intelligence engine</div></div>
+              </a>
+              <a class="mega-item" href="../integracoes/" style="grid-column:1/-1">
+                <div class="icn icn-int">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+                </div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-integracoes">Nexyss Integrations</div><div class="ds" data-i18n="mega.conecte-a-nexyss-ao-seu-stack-existente">Connect Nexyss to your existing stack</div></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button data-i18n="nav.solucoes">
+            Solutions
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-solucoes">
+            <div class="mega-grid cols-3">
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-funcao">By Function</div>
+                <a class="mega-item" href="../../solucoes/por-funcao/#comercial"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h10M2 7h10M2 10h6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.comercial">Commercial</div><div class="ds" data-i18n="mega.vendas-marketing-cs">Sales, Marketing, CS</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#operacoes"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M7 3v4l3 2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.operacoes">Operations</div><div class="ds" data-i18n="mega.processos-projetos-atendimento">Processes, projects, service</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#financeiro"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10V6l4-3 4 3v4"/><path d="M5 10V8h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.financeiro">Finance</div><div class="ds" data-i18n="mega.finance-cobranca-fp-a">Finance, collections, FP&amp;A</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#pessoas"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="5" r="2.5"/><path d="M2.5 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.pessoas">People</div><div class="ds" data-i18n="mega.rh-cultura-aprendizagem">HR, culture, learning</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#dados"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12V7m4 5V4m4 8v-6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.dados-performance">Data &amp; Performance</div><div class="ds" data-i18n="mega.leitura-unica-da-operacao">A single view of operations</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#governanca"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 1l5 3v4c0 2-2 3.5-5 4-3-.5-5-2-5-4V4l5-3z"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.governanca">Governance</div><div class="ds" data-i18n="mega.quem-ve-o-que">Who sees what</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-objetivo">By Objective</div>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#crescer"><div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l4-4 3 3 3-5"/><path d="M9 5h3v3"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.crescer-receita">Grow revenue</div><div class="ds" data-i18n="mega.aquisicao-retencao-ltv">Acquisition, retention, LTV</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#expandir"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10M7 2c1.5 2 2.2 3.3 2.2 5S8.5 10 7 12"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.expandir-globalmente">Expand globally</div><div class="ds" data-i18n="mega.multi-pais-multi-moeda">Multi-country, multi-currency</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#consolidar"><div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M5 3v8M9 3v8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.consolidar-unidades">Consolidate units</div><div class="ds" data-i18n="mega.m-a-franquia-rede">M&amp;A, franchise, network</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#digitalizar"><div class="icn icn-ai"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><path d="M7 2v2M7 10v2M2 7h2M10 7h2M4 4l1.5 1.5M8.5 8.5L10 10M4 10l1.5-1.5M8.5 5.5L10 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.digitalizar-com-ia">Digitise with AI</div><div class="ds" data-i18n="mega.automacao-inteligente">Intelligent automation</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#custo"><div class="icn icn-hr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l3-3 2 2 5-5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.reduzir-custo">Reduce costs</div><div class="ds" data-i18n="mega.unificar-sistemas-fragmentados">Unify fragmented systems</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#visibilidade"><div class="icn icn-fin"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><circle cx="7" cy="7" r="5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.visibilidade-da-operacao">Operational visibility</div><div class="ds" data-i18n="mega.decisoes-data-driven">Data-driven decisions</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-porte-setor">By Size &amp; Sector</div>
+                <a class="mega-item" href="../../solucoes/por-porte/#startups"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2v6M4 5l3-3 3 3M2 12h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.startups-scale-ups">Startups &amp; Scale-ups</div><div class="ds" data-i18n="mega.crescimento-rapido">Rapid growth</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#midmarket"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><path d="M3 6h8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.mid-market">Mid-Market</div><div class="ds" data-i18n="mega.profissionalizacao">Professionalisation</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#enterprise"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="10" height="7" rx="1"/><path d="M5 4V2h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.enterprise">Enterprise</div><div class="ds" data-i18n="mega.multiplas-unidades-e-regras-de-acesso">Multiple units and access rules</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#global"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.global-multinacional">Global &amp; Multinational</div><div class="ds" data-i18n="mega.operacao-distribuida">Distributed operations</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-setor/#educacao"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2l5 3-5 3-5-3 5-3z"/><path d="M3 6v3c0 1.5 2 2.5 4 2.5s4-1 4-2.5V6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.educacao">Education</div><div class="ds" data-i18n="mega.vertical-live">Live vertical</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-setor/#esporte"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M7 3v8M4.5 5l5 5M9.5 5l-5 5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.outros-setores">Other sectors</div><div class="ds" data-i18n="mega.esporte-turismo-e-tecnologia">Sport, Tourism and Technology</div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../consultoria/" class="nav-con" data-i18n="nav.nexyss-consultoria"><span class="nav-nx">Nexyss </span>Consulting</a></li>
+        <li><a href="#clientes" data-i18n="nav.clientes">Customers</a></li>
+        <li><a href="#" data-i18n="nav.recursos">Resources</a></li>
+        <li><a href="#" data-i18n="nav.parceiros">Partners</a></li>
+        <li><a href="../../sobre/" data-i18n="nav.sobre">About</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="lang-switch">
+          <span class="flag">🇧🇷</span>
+          <span data-i18n="nav.pt">PT</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+        </button>
+        <a href="../../contato/?interesse=marketing&amp;origem=demo" class="btn btn-primary" data-i18n="nav.solicitar-demo">
+          Request a Demo
+          <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileDrawer" data-i18n-attr="aria-label:a11y.menu"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+<aside class="drawer" id="mobileDrawer" aria-hidden="true" aria-label="Navigation menu" data-i18n-attr="aria-label:a11y.menu-de-navegacao">
+  <div class="drawer-head">
+    <a href="/en/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss"><img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu" data-i18n-attr="aria-label:a11y.fechar-menu">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <!-- Plataforma -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accPlataforma">
+      <span data-i18n="nav.plataforma">Platform</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accPlataforma">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../crm/">
+          <div class="icn icn-crm" data-i18n="nav.crm">CRM</div>
+          <div class="txt"><div class="nm" data-i18n="mod.crm.name">Nexyss CRM</div><div class="ds" data-i18n="mod.crm.tag">Sales &amp; relationships</div></div>
+        </a>
+        <a class="mega-item" href="../educacao/">
+          <div class="icn icn-edu" data-i18n="nav.edu">EDU</div>
+          <div class="txt"><div class="nm" data-i18n="mod.edu.name">Nexyss Education</div><div class="ds" data-i18n="mod.edu.tag">Complete academic management</div></div>
+        </a>
+        <a class="mega-item" href="./">
+          <div class="icn icn-mkt" data-i18n="nav.mkt">MKT</div>
+          <div class="txt"><div class="nm" data-i18n="mod.mkt.name">Nexyss Marketing</div><div class="ds" data-i18n="mod.mkt.tag">Growth &amp; campaigns</div></div>
+        </a>
+        <a class="mega-item" href="../finance/">
+          <div class="icn icn-fin" data-i18n="nav.fin">FIN</div>
+          <div class="txt"><div class="nm" data-i18n="mod.fin.name">Nexyss Finance</div><div class="ds" data-i18n="mod.fin.tag">Finance &amp; controllership</div></div>
+        </a>
+        <a class="mega-item" href="../hr/">
+          <div class="icn icn-hr" data-i18n="nav.hr">HR</div>
+          <div class="txt"><div class="nm" data-i18n="mod.hr.name">Nexyss HR</div><div class="ds" data-i18n="mod.hr.tag">People &amp; talent</div></div>
+        </a>
+        <a class="mega-item" href="../ai/">
+          <div class="icn icn-ai" data-i18n="nav.ai">AI</div>
+          <div class="txt"><div class="nm" data-i18n="mod.ai.name">Nexyss AI</div><div class="ds" data-i18n="mod.ai.tag">Intelligence engine</div></div>
+        </a>
+        <a class="mega-item" href="../integracoes/">
+          <div class="icn icn-int">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+          </div>
+          <div class="txt"><div class="nm" data-i18n="mod.int.name">Nexyss Integrations</div><div class="ds" data-i18n="mod.int.tag">Connect Nexyss to your stack</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Soluções -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accSolucoes">
+      <span data-i18n="nav.solucoes">Solutions</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accSolucoes">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../../solucoes/#funcao">
+          <div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.funcao.name">By Function</div><div class="ds" data-i18n="sol.funcao.tag">Commercial · Operations · Finance · People</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/#objetivo">
+          <div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="2"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.objetivo.name">By Objective</div><div class="ds" data-i18n="sol.objetivo.tag">Grow · Expand · Consolidate · Digitise</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/#porte">
+          <div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 12V7l2.5-2M7 12V4.5l2.5-2M12 12V8.5"/><path d="M2 12h10"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.porte.name">By Size &amp; Sector</div><div class="ds" data-i18n="sol.porte.tag">Startups · Mid-Market · Enterprise · Global</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/">
+          <div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.todos.name">View all solutions</div><div class="ds" data-i18n="sol.todos.tag">The four ways</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="drawer-sep"></div>
+
+    <a class="drawer-link" href="../../consultoria/" data-i18n="nav.consultoria">Nexyss Consulting</a>
+    <a class="drawer-link" href="#clientes" data-i18n="nav.clientes">Customers</a>
+    <a class="drawer-link" href="#" data-i18n="nav.recursos">Resources</a>
+    <a class="drawer-link" href="#" data-i18n="nav.parceiros">Partners</a>
+    <a class="drawer-link" href="../../sobre/" data-i18n="nav.sobre">About</a>
+  </nav>
+
+  <div class="drawer-foot">
+    <button class="lang-switch" aria-label="Language" data-i18n-attr="aria-label:a11y.idioma">
+      <span class="flag">🇧🇷</span>
+      <span data-i18n="nav.pt">PT</span>
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+    </button>
+    <a href="../../contato/?interesse=marketing&amp;origem=demo" class="btn btn-primary" data-i18n="cta.demo">
+      Request a Demo
+      <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+    </a>
+  </div>
+</aside>
+
+<!-- ============ HERO - PRODUTO ============ -->
+<main id="conteudo">
+<section class="hero">
+  <div class="hero-layers">
+    <div class="hero-layer l1"></div>
+    <div class="hero-layer l2"></div>
+    <div class="hero-layer l3"></div>
+    <div class="hero-layer l4"></div>
+  </div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span class="pill" data-i18n="mkt.hero.pill">Marketing</span>
+          <span data-i18n="mkt.hero.tag">Module of the Nexyss operating platform</span>
+        </div>
+
+        <h1 data-i18n="mkt.hero.h1">
+          Marketing that proves its value - <span class="accent">from the first click to revenue.</span>
+        </h1>
+
+        <p class="hero-sub" data-i18n="mkt.hero.sub">
+          Automation, multichannel campaigns, landing pages and attribution in the same system as CRM and Finance. Each lead is captured, nurtured and passed to sales with its full history. Revenue data reveals which channels deliver results.
+        </p>
+
+        <div class="hero-cta">
+          <a href="../../contato/?interesse=marketing&amp;origem=demo" class="btn btn-primary" data-i18n="cta.demo">
+            Request a Demo
+            <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+          </a>
+          <a href="../../index.html#plataforma" class="btn btn-ghost" data-i18n="cta.plataforma">See the full platform</a>
+        </div>
+
+        <div class="hero-meta cols-2">
+          <div>
+            <div class="num">1</div>
+            <div class="lbl" data-i18n="mkt.hero.m1">Single record, from lead to invoice</div>
+          </div>
+          <div>
+            <div class="num">4</div>
+            <div class="lbl" data-i18n="mkt.hero.m2">Workstreams in a single module</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VISUAL A - WORKFLOW -->
+      <div class="hero-visual wf-visual" aria-hidden="true">
+        <div class="dash wf-board">
+          <div class="dash-bar">
+            <div class="title" data-i18n="mkt.hero.div1">Nexyss Marketing &middot; Workflow</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="wf-canvas">
+            <svg class="wf-lines" viewBox="0 0 300 262" preserveAspectRatio="none">
+              <path d="M50 48 H150" style="animation-delay:.3s"/>
+              <path d="M150 48 H250" style="animation-delay:.7s"/>
+              <path d="M250 48 V131 H150 V214" style="animation-delay:1.1s"/>
+              <path d="M150 214 H250" style="animation-delay:1.7s"/>
+              <path d="M150 214 H50" style="animation-delay:1.9s"/>
+            </svg>
+            <div class="wf-nodes reveal-stagger">
+              <div class="wf-node n1"><div class="wf-k" data-i18n="mkt.hero.div2">Trigger</div><div class="wf-t" data-i18n="mkt.hero.div3">Form submitted</div><div class="wf-d" data-i18n="mkt.hero.div4">Landing page</div></div>
+              <div class="wf-node n2"><div class="wf-k" data-i18n="mkt.hero.div5">Action</div><div class="wf-t" data-i18n="mkt.hero.div6">Score the lead</div><div class="wf-d" data-i18n="mkt.hero.div7">Profile and behaviour</div></div>
+              <div class="wf-node n3"><div class="wf-k" data-i18n="mkt.hero.div8">Channel</div><div class="wf-t" data-i18n="mkt.hero.div9">Send email</div><div class="wf-d" data-i18n="mkt.hero.div10">Nurture sequence</div></div>
+              <div class="wf-node n4"><div class="wf-k" data-i18n="mkt.hero.div11">Condition</div><div class="wf-t" data-i18n="mkt.hero.div12">Showed interest?</div><div class="wf-d" data-i18n="mkt.hero.div13">Clicks and visits</div></div>
+              <div class="wf-node n5"><span class="wf-tag" data-i18n="mkt.hero.span1">Yes</span><div class="wf-k" data-i18n="mkt.hero.div14">Destination</div><div class="wf-t" data-i18n="mkt.hero.div15">Hand over to the CRM</div><div class="wf-d" data-i18n="mkt.hero.div16">Lead with history</div></div>
+              <div class="wf-node n6"><span class="wf-tag" data-i18n="mkt.hero.span2">No</span><div class="wf-k" data-i18n="mkt.hero.div17">Action</div><div class="wf-t" data-i18n="mkt.hero.div18">Wait and resend</div><div class="wf-d" data-i18n="mkt.hero.div19">Next step in the sequence</div></div>
+            </div>
+          </div>
+          <div class="wf-foot" data-i18n="mkt.hero.div20">Illustrative workflow example</div>
+        </div>
+
+        <div class="pipe-ai">
+          <div class="ai-ic" data-i18n="mkt.hero.div21">AI</div>
+          <div class="ai-tx">
+            <div class="t" data-i18n="mkt.hero.div22">Sales-ready lead</div>
+            <div class="s" data-i18n="mkt.hero.div23">Nexyss AI suggests handing over to the CRM now</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUBNAV ============ -->
+<div class="subnav">
+  <div class="container">
+    <div class="subnav-inner">
+      <span class="subnav-brand" data-i18n="mkt.name">Nexyss Marketing</span>
+      <nav class="subnav-nav" aria-label="On this page" data-i18n-attr="aria-label:mkt.subnav.aria1">
+        <ul class="subnav-links">
+          <li><a href="#problema" data-i18n="mkt.nav.problema">The problem</a></li>
+          <li><a href="#recursos" data-i18n="mkt.nav.recursos">Resources</a></li>
+          <li><a href="#atribuicao" data-i18n="mkt.nav.atribuicao">Attribution</a></li>
+          <li><a href="#ia" data-i18n="mkt.nav.ia">Nexyss AI</a></li>
+          <li><a href="#integracoes" data-i18n="mkt.nav.integracoes">Integrations</a></li>
+        </ul>
+      </nav>
+      <a href="../../contato/?interesse=marketing&amp;origem=demo" class="btn btn-primary" data-i18n="cta.demo">
+        Request a Demo
+        <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ O PROBLEMA ============ -->
+<section class="block tinted" id="problema">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="mkt.prob.eyebrow">The problem</span>
+      <h2 data-i18n="mkt.prob.h2">Your marketing is not wrong.<br>It just cannot see the end of the story.</h2>
+      <p data-i18n="mkt.prob.sub">Most marketing teams run on tools that talk to neither sales nor finance. The result is not a lack of campaigns - it is a lack of a calculation that closes.</p>
+    </div>
+
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h9M9 4l3 3-3 3"/><path d="M19 15h-9M13 12l-3 3 3 3"/></svg>
+        </div>
+        <h3 data-i18n="mkt.prob.c1.t">The lead changes hands and loses its memory</h3>
+        <p data-i18n="mkt.prob.c1.d">Every form becomes a file, every file becomes a spreadsheet. By the time the contact reaches the salesperson, the context of everything they have read and clicked has been left behind.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 17l5-5 3 3 8-8"/><path d="M15 7h4v4"/></svg>
+        </div>
+        <h3 data-i18n="mkt.prob.c2.t">Marketing measures clicks, the company measures revenue</h3>
+        <p data-i18n="mkt.prob.c2.d">The campaign report ends where the contract begins. Nobody closes the books between what was invested and what came back - and next quarter's budget becomes opinion.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="3" width="6" height="6" rx="1.5"/><rect x="13" y="3" width="6" height="6" rx="1.5"/><rect x="8" y="13" width="6" height="6" rx="1.5"/><path d="M6 9v2h10V9M11 11v2"/></svg>
+        </div>
+        <h3 data-i18n="mkt.prob.c3.t">Each channel, a different tool</h3>
+        <p data-i18n="mkt.prob.c3.d">Email in one place, ads in another, pages in a third. Three dashboards, three definitions of &ldquo;qualified lead&rdquo; and no single view of the contact.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECURSOS ============ -->
+<section class="block" id="recursos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="mkt.rec.eyebrow">Resources</span>
+      <h2 data-i18n="mkt.rec.h2">The whole marketing cycle -<br>in a single system.</h2>
+      <p data-i18n="mkt.rec.sub">It is not a campaign tool with integrations. It is a module born inside the same database as your organisation's CRM, finance and education.</p>
+      <p class="rm-note" data-i18n="mkt.rec.note">The features below are on the roadmap. Founding Customers take part in defining the delivery order.</p>
+    </div>
+
+    <div class="platform-grid reveal-stagger">
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="mkt.rec.f1.badge">Automation</div>
+        <h3 class="mod-name" data-i18n="mkt.rec.f1.t">Flows that follow the lead without depending on anyone</h3>
+        <p class="mod-sub" data-i18n="mkt.rec.f1.d">Rules that nurture, score and route each contact, with the context of every module available at each decision.</p>
+        <ul class="mod-features">
+          <li data-i18n="mkt.rec.f1.l1"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Visual workflow builder, no code</li>
+          <li data-i18n="mkt.rec.f1.l2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Triggers by behaviour, lifecycle stage and events from another module</li>
+          <li data-i18n="mkt.rec.f1.l3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Qualified lead handed over to the CRM with complete history</li>
+        </ul>
+      </article>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="mkt.rec.f2.badge">Campaigns</div>
+        <h3 class="mod-name" data-i18n="mkt.rec.f2.t">One campaign, every channel</h3>
+        <p class="mod-sub" data-i18n="mkt.rec.f2.d">Email, SMS, push and ads planned and measured in the same place, on the same contact base.</p>
+        <ul class="mod-features">
+          <li data-i18n="mkt.rec.f2.l1"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Email, SMS and push in the same campaign</li>
+          <li data-i18n="mkt.rec.f2.l2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Audiences synchronised with ad platforms</li>
+          <li data-i18n="mkt.rec.f2.l3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> A/B testing of subject lines and content</li>
+        </ul>
+      </article>
+
+      <article class="mod-card md">
+        <div class="mod-badge" data-i18n="mkt.rec.f3.badge">Content</div>
+        <h3 class="mod-name" data-i18n="mkt.rec.f3.t">Pages, blog and forms in the same system</h3>
+        <p class="mod-sub" data-i18n="mkt.rec.f3.d">Whoever fills in a form goes straight into the single record, with no import.</p>
+        <ul class="mod-features">
+          <li data-i18n="mkt.rec.f3.l1"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Landing pages in a visual editor</li>
+          <li data-i18n="mkt.rec.f3.l2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Built-in blog</li>
+          <li data-i18n="mkt.rec.f3.l3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Native forms that write directly to the lead record</li>
+        </ul>
+      </article>
+
+      <article class="mod-card md">
+        <div class="mod-badge" data-i18n="mkt.rec.f4.badge">Audience</div>
+        <h3 class="mod-name" data-i18n="mkt.rec.f4.t">Segments that update themselves</h3>
+        <p class="mod-sub" data-i18n="mkt.rec.f4.d">Criteria that use data from CRM, Finance and Education, not just from campaigns.</p>
+        <ul class="mod-features">
+          <li data-i18n="mkt.rec.f4.l1"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Dynamic segments with data from every module</li>
+          <li data-i18n="mkt.rec.f4.l2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Lead scoring by profile and behaviour</li>
+          <li data-i18n="mkt.rec.f4.l3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Consent and preference records per contact</li>
+        </ul>
+      </article>
+
+      <article class="mod-card md">
+        <div class="mod-badge" data-i18n="mkt.rec.f5.badge">Reports</div>
+        <h3 class="mod-name" data-i18n="mkt.rec.f5.t">Results by campaign, channel and period</h3>
+        <p class="mod-sub" data-i18n="mkt.rec.f5.d">From investment to closed revenue, in the same view.</p>
+        <ul class="mod-features">
+          <li data-i18n="mkt.rec.f5.l1"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Performance by campaign, channel and period</li>
+          <li data-i18n="mkt.rec.f5.l2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Dashboards by brand, unit and country</li>
+          <li data-i18n="mkt.rec.f5.l3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Cost per channel alongside closed revenue</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATRIBUIÇÃO - VISUAL B ============ -->
+<section class="block deeper" id="atribuicao">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="mkt.atr.eyebrow">Attribution</span>
+        <h2 style="margin-top:24px" data-i18n="mkt.atr.h2">The marketing report that finance signs off.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="mkt.atr.sub">
+          When Marketing, CRM and Finance are the same system, a campaign's revenue is not estimated - it comes from the closed contract and the issued invoice.
+        </p>
+
+        <div class="ai-products prod-tint">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="4.5" cy="10" r="1.8"/><circle cx="10" cy="5" r="1.8"/><circle cx="10" cy="15" r="1.8"/><circle cx="15.5" cy="10" r="1.8"/><path d="M6.2 9l2.4-3M6.2 11l2.4 3M11.6 6l2.4 3M11.6 14l2.4-3"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.atr.p1.t">Multi-touch attribution</div>
+              <div class="ds"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.atr.p1.d">Credit distributed across the touchpoints of the journey, from first contact to contract</span></div>
+            </div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 16V9m4 7V5m4 11v-7m4 7V11"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.atr.p2.t">Revenue by channel and campaign</div>
+              <div class="ds"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.atr.p2.d">Contract closed in the CRM and invoice in Finance, linked to the originating campaign</span></div>
+            </div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><path d="M10 6v8M12.5 7.8c-.6-.6-1.5-.8-2.5-.8s-2 .5-2 1.5S9 10 10 10s2 .5 2 1.5-1 1.5-2 1.5-1.9-.2-2.5-.8"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.atr.p3.t">Acquisition cost by channel</div>
+              <div class="ds"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.atr.p3.d">Channel investment alongside the revenue it generated</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" aria-hidden="true">
+        <div class="acct360">
+          <div>
+            <div class="fc-head">
+              <span class="ttl" data-i18n="mkt.atribuicao.span1">Contact journey</span>
+              <span class="goal" data-i18n="mkt.atribuicao.span2">ILLUSTRATIVE</span>
+            </div>
+            <ul class="acct-tl">
+              <li class="m-mkt" data-i18n="mkt.atribuicao.li1"><span class="src">Nexyss Marketing</span>First touch: blog article via organic search</li>
+              <li class="m-mkt" data-i18n="mkt.atribuicao.li2"><span class="src">Nexyss Marketing</span>Form completed on the landing page</li>
+              <li class="m-mkt" data-i18n="mkt.atribuicao.li3"><span class="src">Nexyss Marketing</span>Nurture email sequence</li>
+              <li class="m-crm" data-i18n="mkt.atribuicao.li4"><span class="src">Nexyss CRM</span>Opportunity created and proposal sent</li>
+              <li class="m-fin" data-i18n="mkt.atribuicao.li5"><span class="src">Nexyss Finance</span>Contract closed and first invoice issued</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="fc-head">
+              <span class="ttl" data-i18n="mkt.atribuicao.span3">Revenue by channel</span>
+              <span class="goal" data-i18n="mkt.atribuicao.span4">ILLUSTRATIVE</span>
+            </div>
+            <div class="attr-bars">
+              <div class="attr-row"><div class="attr-lbl" data-i18n="mkt.atribuicao.div1">Organic search</div><div class="attr-track"><i style="width:82%;animation-delay:.2s"></i></div></div>
+              <div class="attr-row"><div class="attr-lbl" data-i18n="mkt.atribuicao.div2">Email</div><div class="attr-track"><i style="width:64%;animation-delay:.35s"></i></div></div>
+              <div class="attr-row"><div class="attr-lbl" data-i18n="mkt.atribuicao.div3">Paid ads</div><div class="attr-track"><i style="width:47%;animation-delay:.5s"></i></div></div>
+              <div class="attr-row"><div class="attr-lbl" data-i18n="mkt.atribuicao.div4">Referral</div><div class="attr-track"><i style="width:31%;animation-delay:.65s"></i></div></div>
+            </div>
+            <div class="attr-note" data-i18n="mkt.atribuicao.div5"><b>Contract &rarr; campaign.</b> Revenue flows back to the first touch.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEXYSS AI NO MARKETING ============ -->
+<section class="block tinted" id="ia">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="mkt.ia.eyebrow">Nexyss AI &middot; inside Marketing</span>
+        <h2 style="margin-top:24px" data-i18n="mkt.ia.h2">The AI that reads the whole funnel, not just the inbox.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="mkt.ia.sub">
+          The same engine that runs through the whole platform operates inside campaigns - reading what happened in the CRM, in Finance and in Education to decide what to do with each contact.
+        </p>
+
+        <div class="ai-products">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 16V9m4 7V5m4 11v-7m4 7V11"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.ia.div1">Nexyss Insight</div>
+              <div class="ds" data-i18n="mkt.ia.p1">Probability of conversion per lead and audience fatigue alerts</div>
+            </div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h12v9H7l-3 3V6z"/><path d="M7 10h6M7 12h4"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.ia.div2">Nexyss Assist</div>
+              <div class="ds" data-i18n="mkt.ia.p2">Drafts subject-line variations and summarises campaign performance in natural language</div>
+            </div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5h10v10H5z"/><path d="M8 8l4 4M12 8l-4 4"/></svg></div>
+            <div class="p-info">
+              <div class="nm" data-i18n="mkt.ia.div3">Nexyss Automate</div>
+              <div class="ds" data-i18n="mkt.ia.p3">Moves the lead from nurturing to sales when behaviour indicates readiness</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-visual reveal" aria-hidden="true">
+        <div class="ai-orbit"></div>
+        <div class="ai-orbit-2"></div>
+        <div class="ai-orbit-3"></div>
+        <div class="ai-center" data-i18n="mkt.ia.div4">AI</div>
+        <div class="ai-node n1" data-i18n="mkt.ia.div5">Segment</div>
+        <div class="ai-node n2" data-i18n="mkt.ia.div6">Score</div>
+        <div class="ai-node n3" data-i18n="mkt.ia.div7">Draft</div>
+        <div class="ai-node n4" data-i18n="mkt.ia.div8">Alert</div>
+        <div class="ai-node n5" data-i18n="mkt.ia.div9">Summarise</div>
+        <div class="ai-node n6" data-i18n="mkt.ia.div10">Execute</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRACOES ============ -->
+<section class="block" id="integracoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="mkt.int.eyebrow">Integrations &amp; API</span>
+      <h2 data-i18n="mkt.int.h2">Connect what you already use.<br>Retire what you no longer need.</h2>
+      <p data-i18n="mkt.int.sub">Ads, sending, website and API. And anything that is a Nexyss module needs no connector at all - it is already the same system.</p>
+    </div>
+
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="mkt.integracoes.div1">01 &middot; Paid media</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 9v4l9 4V5L3 9z"/><path d="M15 8.5a4 4 0 010 5M6 13l1.5 5"/></svg></div>
+        <div class="consult-title" data-i18n="mkt.int.i1.t">Ad platforms</div>
+        <div class="consult-desc"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.int.i1.d">Synchronised audiences and cost per campaign brought into the same results dashboard.</span></div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="mkt.integracoes.div2">02 &middot; Sending</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="16" height="12" rx="2"/><path d="M3 7l8 5 8-5"/></svg></div>
+        <div class="consult-title" data-i18n="mkt.int.i2.t">Email and SMS</div>
+        <div class="consult-desc"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.int.i2.d">Delivery through sending providers, with an authenticated domain and every event recorded on the contact.</span></div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="mkt.integracoes.div3">03 &middot; Website</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M3 11h16M11 3c2.2 2.4 3.3 5 3.3 8s-1.1 5.6-3.3 8c-2.2-2.4-3.3-5-3.3-8S8.8 5.4 11 3z"/></svg></div>
+        <div class="consult-title" data-i18n="mkt.int.i3.t">Website, pixel and UTM</div>
+        <div class="consult-desc"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.int.i3.d">Visits, source and website events written to the contact record.</span></div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="mkt.integracoes.div4">04 &middot; Extension</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4h6v6H4zM12 12h6v6h-6z"/><path d="M10 7h4v5"/></svg></div>
+        <div class="consult-title" data-i18n="mkt.int.i4.t">Open API and webhooks</div>
+        <div class="consult-desc"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span><span data-i18n="mkt.int.i4.d">Documented REST and real-time events, for whatever your team needs to build on top.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUEM E ============ -->
+<section class="block tinted" id="para-quem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="mkt.pq.eyebrow">Who it is for</span>
+      <h2 data-i18n="mkt.pq.h2">Who executes, who optimises and who answers for the result.</h2>
+      <p data-i18n="mkt.pq.sub">Three roles look at the same system - each finding what they need, without asking anyone for an export.</p>
+    </div>
+
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="4" width="16" height="15" rx="2"/><path d="M3 9h16M8 2v4M14 2v4"/></svg>
+        </div>
+        <h3 data-i18n="mkt.pq.c1.t">For marketing management</h3>
+        <p data-i18n="mkt.pq.c1.d">Campaigns planned and measured on the same base the sales team uses.</p>
+        <div class="sol-tags">
+          <span class="sol-tag" data-i18n="mkt.para-quem.span1">Campaign calendar</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span2">Dynamic segments</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span3">Results by channel</span>
+        </div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="11" r="2.5"/><circle cx="16" cy="5.5" r="2.5"/><circle cx="16" cy="16.5" r="2.5"/><path d="M8.2 10l5.6-3.2M8.2 12l5.6 3.2"/></svg>
+        </div>
+        <h3 data-i18n="mkt.pq.c2.t">For growth and marketing operations</h3>
+        <p data-i18n="mkt.pq.c2.d">Flows and tests running without depending on integration or exports.</p>
+        <div class="sol-tags">
+          <span class="sol-tag" data-i18n="mkt.para-quem.span4">No-code workflows</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span5">A/B testing</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span6">Lead scoring</span>
+        </div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 18V12m5 6V6m5 12V9m5 9V4"/><path d="M2 19h18"/></svg>
+        </div>
+        <h3 data-i18n="mkt.pq.c3.t">For the CMO and the board</h3>
+        <p data-i18n="mkt.pq.c3.d">Revenue attributed from the contract and the invoice, not from an estimate.</p>
+        <div class="sol-tags">
+          <span class="sol-tag" data-i18n="mkt.para-quem.span7">Multi-touch attribution</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span8">Cost per channel</span>
+          <span class="sol-tag" data-i18n="mkt.para-quem.span9">Dashboards by unit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACTO ============ -->
+<section class="block deeper" style="padding:60px 0">
+  <div class="container">
+    <div class="impact-strip cols-3 reveal-stagger">
+      <div class="impact-item">
+        <div class="n">1</div>
+        <div class="l" data-i18n="mkt.imp.1">Source of truth from lead to revenue</div>
+      </div>
+      <div class="impact-item">
+        <div class="n">3</div>
+        <div class="l" data-i18n="mkt.imp.2">Native multilingual</div>
+      </div>
+      <div class="impact-item">
+        <div class="n">99.99<small>%</small></div>
+        <div class="l" data-i18n="mkt.imp.3">Uptime guaranteed by SLA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDING CUSTOMERS ============ -->
+<section class="block" id="clientes">
+  <div class="container">
+    <div class="founding founding-simple reveal">
+      <div class="founding-inner">
+        <div>
+          <div class="fbadge">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>
+            <span data-i18n="founding.badge">Founding Customers Programme</span>
+          </div>
+          <h2 data-i18n="founding.h2">An exclusive invitation.<br>Limited places available.</h2>
+          <p data-i18n="founding.p">We are forming the circle of first customers who will help shape the next generation of Nexyss. If you lead an organisation that values platforms built in partnership, not in transaction, let us talk.</p>
+        </div>
+
+        <div>
+          <a href="../../contato/?interesse=marketing&amp;origem=founding" class="btn btn-primary" data-i18n="cta.candidatar">
+            Apply
+            <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="demo">
+  <div class="container">
+    <h2 class="reveal" data-i18n="mkt.cta.h2">See your lead reach revenue inside a<br><span style="background:linear-gradient(120deg,var(--c-mkt),var(--c-brand-light));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400;">intelligent, connected system.</span></h2>
+    <p class="reveal" data-i18n="mkt.cta.sub">Talk to a specialist about Nexyss Marketing and see how it connects to the rest of the platform.</p>
+    <div class="actions reveal">
+      <a href="../../contato/?interesse=marketing&amp;origem=demo" class="btn btn-primary" data-i18n="cta.demo">
+        Request a Demo
+        <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+      </a>
+      <a href="../../contato/?interesse=marketing&amp;origem=especialista" class="btn btn-ghost" data-i18n="cta.especialista">Speak to an Expert</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+        <p data-i18n="footer.plataforma-operacional-global-com-ia-uma">Global operating platform with AI. One platform. Multiple modules. Infinite possibilities.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.plataforma">Platform</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.nexyss-crm">Nexyss CRM</a></li>
+          <li><a href="#" data-i18n="footer.nexyss-educacao">Nexyss Education</a></li>
+          <li><a href="./" data-i18n="footer.nexyss-marketing">Nexyss Marketing</a></li>
+          <li><a href="../finance/" data-i18n="footer.nexyss-finance">Nexyss Finance</a></li>
+          <li><a href="../hr/" data-i18n="footer.nexyss-hr">Nexyss HR</a></li>
+          <li><a href="../ai/" data-i18n="footer.nexyss-ai">Nexyss AI</a></li>
+          <li><a href="../integracoes/" data-i18n="footer.nexyss-integracoes">Nexyss Integrations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.solucoes">Solutions</h5>
+        <ul>
+          <li><a href="../../solucoes/#funcao" data-i18n="footer.por-funcao">By Function</a></li>
+          <li><a href="../../solucoes/#objetivo" data-i18n="footer.por-objetivo">By Objective</a></li>
+          <li><a href="../../solucoes/#porte" data-i18n="footer.por-porte">By Size</a></li>
+          <li><a href="../../solucoes/por-setor/" data-i18n="footer.por-setor">By Sector</a></li>
+          <li><a href="../../solucoes/por-setor/#educacao" data-i18n="footer.educacao">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.empresa">Company</h5>
+        <ul>
+          <li><a href="../../sobre/" data-i18n="footer.sobre">About</a></li>
+          <li><a href="../../consultoria/" data-i18n="footer.nexyss-consultoria">Nexyss Consulting</a></li>
+          <li><a href="#" data-i18n="footer.parceiros">Partners</a></li>
+          <li><a href="#" data-i18n="footer.clientes">Customers</a></li>
+          <li><a href="../../contato/" data-i18n="footer.contato">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.recursos">Resources</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.blog-insights">Blog &amp; Insights</a></li>
+          <li><a href="#" data-i18n="footer.casos-de-sucesso">Case studies</a></li>
+          <li><a href="#" data-i18n="footer.documentacao">Documentation</a></li>
+          <li><a href="#" data-i18n="footer.seguranca">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal" data-i18n="footer.2026-nexyss-group-todos-os-direitos-rese">© 2026 Nexyss Group. All rights reserved.</div>
+      <div class="links">
+        <a href="#" data-i18n="footer.privacidade">Privacy</a>
+        <a href="#" data-i18n="footer.termos">Terms</a>
+        <a href="#" data-i18n="footer.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/nexyss.js"></script>
+</body>
+</html>

@@ -38,6 +38,7 @@ PAGES = [
     ("sobre/index.html", "sobre"),
     ("contato/index.html", "contato"),
     ("contato/obrigado.html", "obrigado"),
+    ("404.html", "not-found"),
 ]
 
 INLINE = {"span", "a", "b", "strong", "em", "i", "small", "code", "sup", "sub",

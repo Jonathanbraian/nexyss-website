@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Focused consulting backed by a platform that already connects data and processes. Nexyss Consulting helps plan changes and works with your team, with an agreed scope and no guaranteed outcomes."  data-i18n-attr="content:meta.con.desc"/>
+<title data-i18n="meta.con.title">Nexyss Consulting - Focused consulting, built around one platform</title>
+<link rel="icon" type="image/png" href="../../assets/nexyss-mark.png" />
+<meta name="theme-color" content="#0B1440" />
+
+<!-- BASE_URL provisorio (netlify.app): trocar em tools/build-i18n.py quando o dominio oficial for confirmado -->
+<link rel="canonical" href="https://nexyss-website.netlify.app/en/consultoria/" />
+<link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/consultoria/" />
+<link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/consultoria/" />
+<link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/consultoria/" />
+<link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/consultoria/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nexyss" />
+<meta property="og:locale" content="en_GB" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:locale:alternate" content="es_ES" />
+<meta property="og:url" content="https://nexyss-website.netlify.app/en/consultoria/" />
+<meta property="og:title" content="Nexyss Consulting - Focused consulting, built around one platform"  data-i18n-attr="content:meta.con.ogtitle"/>
+<meta property="og:description" content="More focused consulting, because the platform does the heavy lifting. Scope agreed with you, no guaranteed outcomes."  data-i18n-attr="content:meta.con.ogdesc"/>
+<!-- TODO: substituir por og-cover 1200x630 dedicado -->
+<meta property="og:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+<meta property="og:image:alt" content="Nexyss Consulting"  data-i18n-attr="content:meta.con.ogimgalt"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nexyss Consulting - More focused consulting"  data-i18n-attr="content:meta.con.twtitle"/>
+<meta name="twitter:description" content="More focused consulting, because the platform does the heavy lifting."  data-i18n-attr="content:meta.con.twdesc"/>
+<meta name="twitter:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/nexyss.css" />
+</head>
+<body class="theme-con page-produto has-subnav">
+
+<a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Skip to content</a>
+
+<header class="site" id="siteHeader">
+  <div class="container">
+    <nav class="nav">
+      <a href="/en/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss">
+        <img src="../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+      </a>
+
+      <ul class="nav-menu">
+        <li>
+          <button data-i18n="nav.plataforma">
+            Platform
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-plataforma">
+            <div class="mega-grid cols-2">
+              <a class="mega-item" href="../plataforma/crm/">
+                <div class="icn icn-crm" data-i18n="mega.crm">CRM</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-crm">Nexyss CRM</div><div class="ds" data-i18n="mega.vendas-relacionamento">Sales &amp; relationships</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/educacao/">
+                <div class="icn icn-edu" data-i18n="mega.edu">EDU</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-educacao">Nexyss Education</div><div class="ds" data-i18n="mega.gestao-academica-completa">Complete academic management</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/marketing/">
+                <div class="icn icn-mkt" data-i18n="mega.mkt">MKT</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-marketing">Nexyss Marketing</div><div class="ds" data-i18n="mega.growth-campanhas">Growth &amp; campaigns</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/finance/">
+                <div class="icn icn-fin" data-i18n="mega.fin">FIN</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-finance">Nexyss Finance</div><div class="ds" data-i18n="mega.financeiro-controladoria">Finance &amp; controllership</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/hr/">
+                <div class="icn icn-hr" data-i18n="mega.hr">HR</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-hr">Nexyss HR</div><div class="ds" data-i18n="mega.pessoas-talentos">People &amp; talent</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/ai/">
+                <div class="icn icn-ai" data-i18n="mega.ai">AI</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-ai">Nexyss AI</div><div class="ds" data-i18n="mega.motor-de-inteligencia">Intelligence engine</div></div>
+              </a>
+              <a class="mega-item" href="../plataforma/integracoes/" style="grid-column:1/-1">
+                <div class="icn icn-int">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+                </div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-integracoes">Nexyss Integrations</div><div class="ds" data-i18n="mega.conecte-a-nexyss-ao-seu-stack-existente">Connect Nexyss to your existing stack</div></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button data-i18n="nav.solucoes">
+            Solutions
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-solucoes">
+            <div class="mega-grid cols-3">
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-funcao">By Function</div>
+                <a class="mega-item" href="../solucoes/por-funcao/#comercial"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h10M2 7h10M2 10h6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.comercial">Commercial</div><div class="ds" data-i18n="mega.vendas-marketing-cs">Sales, Marketing, CS</div></div></a>
+                <a class="mega-item" href="../solucoes/por-funcao/#operacoes"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M7 3v4l3 2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.operacoes">Operations</div><div class="ds" data-i18n="mega.processos-projetos-atendimento">Processes, projects, service</div></div></a>
+                <a class="mega-item" href="../solucoes/por-funcao/#financeiro"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10V6l4-3 4 3v4"/><path d="M5 10V8h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.financeiro">Finance</div><div class="ds" data-i18n="mega.finance-cobranca-fp-a">Finance, collections, FP&amp;A</div></div></a>
+                <a class="mega-item" href="../solucoes/por-funcao/#pessoas"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="5" r="2.5"/><path d="M2.5 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.pessoas">People</div><div class="ds" data-i18n="mega.rh-cultura-aprendizagem">HR, culture, learning</div></div></a>
+                <a class="mega-item" href="../solucoes/por-funcao/#dados"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12V7m4 5V4m4 8v-6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.dados-performance">Data &amp; Performance</div><div class="ds" data-i18n="mega.leitura-unica-da-operacao">A single view of operations</div></div></a>
+                <a class="mega-item" href="../solucoes/por-funcao/#governanca"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 1l5 3v4c0 2-2 3.5-5 4-3-.5-5-2-5-4V4l5-3z"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.governanca">Governance</div><div class="ds" data-i18n="mega.quem-ve-o-que">Who sees what</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-objetivo">By Objective</div>
+                <a class="mega-item" href="../solucoes/por-objetivo/#crescer"><div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l4-4 3 3 3-5"/><path d="M9 5h3v3"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.crescer-receita">Grow revenue</div><div class="ds" data-i18n="mega.aquisicao-retencao-ltv">Acquisition, retention, LTV</div></div></a>
+                <a class="mega-item" href="../solucoes/por-objetivo/#expandir"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10M7 2c1.5 2 2.2 3.3 2.2 5S8.5 10 7 12"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.expandir-globalmente">Expand globally</div><div class="ds" data-i18n="mega.multi-pais-multi-moeda">Multi-country, multi-currency</div></div></a>
+                <a class="mega-item" href="../solucoes/por-objetivo/#consolidar"><div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M5 3v8M9 3v8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.consolidar-unidades">Consolidate units</div><div class="ds" data-i18n="mega.m-a-franquia-rede">M&amp;A, franchise, network</div></div></a>
+                <a class="mega-item" href="../solucoes/por-objetivo/#digitalizar"><div class="icn icn-ai"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><path d="M7 2v2M7 10v2M2 7h2M10 7h2M4 4l1.5 1.5M8.5 8.5L10 10M4 10l1.5-1.5M8.5 5.5L10 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.digitalizar-com-ia">Digitise with AI</div><div class="ds" data-i18n="mega.automacao-inteligente">Intelligent automation</div></div></a>
+                <a class="mega-item" href="../solucoes/por-objetivo/#custo"><div class="icn icn-hr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l3-3 2 2 5-5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.reduzir-custo">Reduce costs</div><div class="ds" data-i18n="mega.unificar-sistemas-fragmentados">Unify fragmented systems</div></div></a>
+                <a class="mega-item" href="../solucoes/por-objetivo/#visibilidade"><div class="icn icn-fin"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><circle cx="7" cy="7" r="5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.visibilidade-da-operacao">Operational visibility</div><div class="ds" data-i18n="mega.decisoes-data-driven">Data-driven decisions</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-porte-setor">By Size &amp; Sector</div>
+                <a class="mega-item" href="../solucoes/por-porte/#startups"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2v6M4 5l3-3 3 3M2 12h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.startups-scale-ups">Startups &amp; Scale-ups</div><div class="ds" data-i18n="mega.crescimento-rapido">Rapid growth</div></div></a>
+                <a class="mega-item" href="../solucoes/por-porte/#midmarket"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><path d="M3 6h8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.mid-market">Mid-Market</div><div class="ds" data-i18n="mega.profissionalizacao">Professionalisation</div></div></a>
+                <a class="mega-item" href="../solucoes/por-porte/#enterprise"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="10" height="7" rx="1"/><path d="M5 4V2h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.enterprise">Enterprise</div><div class="ds" data-i18n="mega.multiplas-unidades-e-regras-de-acesso">Multiple units and access rules</div></div></a>
+                <a class="mega-item" href="../solucoes/por-porte/#global"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.global-multinacional">Global &amp; Multinational</div><div class="ds" data-i18n="mega.operacao-distribuida">Distributed operations</div></div></a>
+                <a class="mega-item" href="../solucoes/por-setor/#educacao"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2l5 3-5 3-5-3 5-3z"/><path d="M3 6v3c0 1.5 2 2.5 4 2.5s4-1 4-2.5V6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.educacao">Education</div><div class="ds" data-i18n="mega.vertical-live">Live vertical</div></div></a>
+                <a class="mega-item" href="../solucoes/por-setor/#esporte"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M7 3v8M4.5 5l5 5M9.5 5l-5 5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.outros-setores">Other sectors</div><div class="ds" data-i18n="mega.esporte-turismo-e-tecnologia">Sport, Tourism and Technology</div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="./" class="nav-con" data-i18n="nav.nexyss-consultoria"><span class="nav-nx">Nexyss </span>Consulting</a></li>
+        <li><a href="#clientes" data-i18n="nav.clientes">Customers</a></li>
+        <li><a href="#" data-i18n="nav.recursos">Resources</a></li>
+        <li><a href="#" data-i18n="nav.parceiros">Partners</a></li>
+        <li><a href="../sobre/" data-i18n="nav.sobre">About</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="lang-switch">
+          <span class="flag">🇧🇷</span>
+          <span data-i18n="nav.pt">PT</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+        </button>
+        <a href="../contato/?interesse=demo" class="btn btn-primary" data-i18n="nav.solicitar-demo">
+          Request a Demo
+          <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false" aria-controls="mobileDrawer" data-i18n-attr="aria-label:a11y.menu"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+<aside class="drawer" id="mobileDrawer" aria-hidden="true" aria-label="Navigation menu" data-i18n-attr="aria-label:a11y.menu-de-navegacao">
+  <div class="drawer-head">
+    <a href="/en/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss"><img src="../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Close menu" data-i18n-attr="aria-label:a11y.fechar-menu">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <!-- Plataforma -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accPlataforma">
+      <span data-i18n="nav.plataforma">Platform</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accPlataforma">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../plataforma/crm/">
+          <div class="icn icn-crm" data-i18n="nav.crm">CRM</div>
+          <div class="txt"><div class="nm" data-i18n="mod.crm.name">Nexyss CRM</div><div class="ds" data-i18n="mod.crm.tag">Sales &amp; relationships</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/educacao/">
+          <div class="icn icn-edu" data-i18n="nav.edu">EDU</div>
+          <div class="txt"><div class="nm" data-i18n="mod.edu.name">Nexyss Education</div><div class="ds" data-i18n="mod.edu.tag">Complete academic management</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/marketing/">
+          <div class="icn icn-mkt" data-i18n="nav.mkt">MKT</div>
+          <div class="txt"><div class="nm" data-i18n="mod.mkt.name">Nexyss Marketing</div><div class="ds" data-i18n="mod.mkt.tag">Growth &amp; campaigns</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/finance/">
+          <div class="icn icn-fin" data-i18n="nav.fin">FIN</div>
+          <div class="txt"><div class="nm" data-i18n="mod.fin.name">Nexyss Finance</div><div class="ds" data-i18n="mod.fin.tag">Finance &amp; controllership</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/hr/">
+          <div class="icn icn-hr" data-i18n="nav.hr">HR</div>
+          <div class="txt"><div class="nm" data-i18n="mod.hr.name">Nexyss HR</div><div class="ds" data-i18n="mod.hr.tag">People &amp; talent</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/ai/">
+          <div class="icn icn-ai" data-i18n="nav.ai">AI</div>
+          <div class="txt"><div class="nm" data-i18n="mod.ai.name">Nexyss AI</div><div class="ds" data-i18n="mod.ai.tag">Intelligence engine</div></div>
+        </a>
+        <a class="mega-item" href="../plataforma/integracoes/">
+          <div class="icn icn-int">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+          </div>
+          <div class="txt"><div class="nm" data-i18n="mod.int.name">Nexyss Integrations</div><div class="ds" data-i18n="mod.int.tag">Connect Nexyss to your stack</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Soluções -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accSolucoes">
+      <span data-i18n="nav.solucoes">Solutions</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accSolucoes">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../solucoes/#funcao">
+          <div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.funcao.name">By Function</div><div class="ds" data-i18n="sol.funcao.tag">Commercial · Operations · Finance · People</div></div>
+        </a>
+        <a class="mega-item" href="../solucoes/#objetivo">
+          <div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="2"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.objetivo.name">By Objective</div><div class="ds" data-i18n="sol.objetivo.tag">Grow · Expand · Consolidate · Digitise</div></div>
+        </a>
+        <a class="mega-item" href="../solucoes/#porte">
+          <div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 12V7l2.5-2M7 12V4.5l2.5-2M12 12V8.5"/><path d="M2 12h10"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.porte.name">By Size &amp; Sector</div><div class="ds" data-i18n="sol.porte.tag">Startups · Mid-Market · Enterprise · Global</div></div>
+        </a>
+        <a class="mega-item" href="../solucoes/">
+          <div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.todos.name">View all solutions</div><div class="ds" data-i18n="sol.todos.tag">The four ways</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="drawer-sep"></div>
+
+    <a class="drawer-link" href="./" data-i18n="nav.consultoria">Nexyss Consulting</a>
+    <a class="drawer-link" href="#clientes" data-i18n="nav.clientes">Customers</a>
+    <a class="drawer-link" href="#" data-i18n="nav.recursos">Resources</a>
+    <a class="drawer-link" href="#" data-i18n="nav.parceiros">Partners</a>
+    <a class="drawer-link" href="../sobre/" data-i18n="nav.sobre">About</a>
+  </nav>
+
+  <div class="drawer-foot">
+    <button class="lang-switch" aria-label="Language" data-i18n-attr="aria-label:a11y.idioma">
+      <span class="flag">🇧🇷</span>
+      <span data-i18n="nav.pt">PT</span>
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+    </button>
+    <a href="../contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">
+      Request a Demo
+      <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+    </a>
+  </div>
+</aside>
+
+<main id="conteudo">
+<section class="hero">
+  <div class="hero-layers">
+    <div class="hero-layer l1"></div>
+    <div class="hero-layer l2"></div>
+    <div class="hero-layer l3"></div>
+    <div class="hero-layer l4"></div>
+  </div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span class="pill" data-i18n="con.hero.pill">CON</span>
+          <span data-i18n="con.hero.tag">The work that accompanies the Nexyss operating platform</span>
+        </div>
+
+        <h1 data-i18n="con.hero.h1">
+          More focused consulting <span class="accent">because the platform does the heavy lifting.</span>
+        </h1>
+
+        <p class="hero-sub" data-i18n="con.hero.sub">
+          The platform already brings data, identities and permissions together in a shared system. Nexyss Consulting helps define changes, replace existing processes and work alongside your team. Scope is agreed with you, without guaranteed deadlines or outcomes.
+        </p>
+
+        <div class="hero-cta">
+          <a href="../contato/?interesse=consultoria&amp;origem=projeto" class="btn btn-primary" data-i18n="cta.projeto">Discuss a Project <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+          <a href="../contato/?interesse=consultoria&amp;origem=especialista" class="btn btn-ghost" data-i18n="cta.especialista">Speak to an Expert</a>
+        </div>
+
+        <div class="hero-meta cols-2">
+          <div><div class="num">4</div><div class="lbl" data-i18n="con.hero.m1">Complementary practices</div></div>
+          <div><div class="num">7</div><div class="lbl" data-i18n="con.hero.m2">Modules supported</div></div>
+        </div>
+      </div>
+
+      <!-- VISUAL A - DUAS PISTAS (componente novo .cw-*) -->
+      <div class="hero-visual cw-visual" aria-hidden="true">
+        <div class="dash cw-board">
+          <div class="dash-bar">
+            <div class="title" data-i18n="con.hero.div1">Nexyss Consulting &middot; One project</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="cw-canvas">
+            <div class="cw-col nx" data-i18n="con.hero.div2">Nexyss</div>
+            <div class="cw-col" data-i18n="con.hero.div3">Your team</div>
+            <div class="cw-stage" data-i18n="con.hero.div4">Diagnosis</div>
+            <div class="cw-cell nx" data-i18n="con.hero.div5">Maps processes and systems</div>
+            <div class="cw-cell tm" data-i18n="con.hero.div6">Shows how the operation works today</div>
+            <div class="cw-stage" data-i18n="con.hero.div7">Plan</div>
+            <div class="cw-cell nx" data-i18n="con.hero.div8">Proposes order and scope</div>
+            <div class="cw-cell tm" data-i18n="con.hero.div9">Decides what changes first</div>
+            <div class="cw-stage" data-i18n="con.hero.div10">Implementation</div>
+            <div class="cw-cell nx" data-i18n="con.hero.div11">Prepares, migrates and connects</div>
+            <div class="cw-cell tm" data-i18n="con.hero.div12">Validates and learns to use it</div>
+            <div class="cw-stage" data-i18n="con.hero.div13">Operations</div>
+            <div class="cw-cell nx" data-i18n="con.hero.div14">Accompanies, when agreed</div>
+            <div class="cw-cell tm" data-i18n="con.hero.div15">Operates day to day</div>
+          </div>
+          <div class="cw-foot" data-i18n="con.hero.div16">Illustrative example of a division of work</div>
+        </div>
+
+        <div class="pipe-ai">
+          <div class="ai-ic" data-i18n="con.hero.div17">CON</div>
+          <div class="ai-tx">
+            <div class="t" data-i18n="con.hero.div18">Scope agreed before starting</div>
+            <div class="s" data-i18n="con.hero.div19">Every stage has someone accountable, on both sides</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="subnav">
+  <div class="container">
+    <div class="subnav-inner">
+      <span class="subnav-brand" data-i18n="con.name">Nexyss Consulting</span>
+      <nav class="subnav-nav" aria-label="On this page" data-i18n-attr="aria-label:con.subnav.aria1">
+        <ul class="subnav-links">
+          <li><a href="#problema" data-i18n="con.nav.problema">The problem</a></li>
+          <li><a href="#praticas" data-i18n="con.nav.praticas">Practices</a></li>
+          <li><a href="#metodo" data-i18n="con.nav.metodo">How it works</a></li>
+          <li><a href="#quando" data-i18n="con.nav.quando">When it makes sense</a></li>
+          <li><a href="#contratacao" data-i18n="con.nav.contratacao">Engagement</a></li>
+        </ul>
+      </nav>
+      <a href="../contato/?interesse=consultoria&amp;origem=projeto" class="btn btn-primary" data-i18n="cta.projeto">Discuss a Project <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<section class="block tinted" id="problema">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.prob.eyebrow">The problem</span>
+      <h2 data-i18n="con.prob.h2">The software arrives. The decision about what changes has not.</h2>
+      <p data-i18n="con.prob.sub">After choosing the platform, the hard part is usually human: design, switchover and routine. That is where consulting comes in.</p>
+    </div>
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 3v6M11 13v6M3 11h6M13 11h6"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3 data-i18n="con.prob.c1.t">Nobody has the full design</h3>
+        <p data-i18n="con.prob.c1.d">More than one system, more than one area and nobody who owns the whole. Each team knows its own part.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h9M9 4l3 3-3 3"/><path d="M19 15h-9M13 12l-3 3 3 3"/></svg></div>
+        <h3 data-i18n="con.prob.c2.t">The new system lives alongside the old one</h3>
+        <p data-i18n="con.prob.c2.d">Without a cut-over plan, the switch becomes two systems running at the same time, indefinitely.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 11l4 4 10-10"/></svg></div>
+        <h3 data-i18n="con.prob.c3.t">Deployed is not the same as operated</h3>
+        <p data-i18n="con.prob.c3.d">After deployment, someone has to maintain, adjust and teach. Agreeing this beforehand avoids surprises later.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="praticas">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.prat.eyebrow">The four practices</span>
+      <h2 data-i18n="con.prat.h2">Four practices, one natural order.</h2>
+      <p data-i18n="con.prat.sub">Each practice can be engaged on its own. Together, they cover everything from diagnosis to operation. The scope of each is agreed with you.</p>
+    </div>
+    <div class="platform-grid reveal-stagger">
+      <article class="mod-card lg con">
+        <div class="mod-badge" data-i18n="con.p1.n">01 &middot; Strategy</div>
+        <h3 class="mod-name" data-i18n="con.praticas.h31">Strategy &amp; Transformation</h3>
+        <p class="mod-sub" data-i18n="con.p1.d">Before implementing, decide what changes. Organisational diagnosis, order of entry and redesign of the processes the platform will support.</p>
+        <ol class="con-steps">
+          <li data-i18n="con.p1.s1">Map how the operation works today: processes, systems and who decides.</li>
+          <li data-i18n="con.p1.s2">Define what the platform takes on, in what order, and what stays out.</li>
+          <li data-i18n="con.p1.s3">Deliver a plan your team can carry out, with someone accountable for each stage.</li>
+        </ol>
+        <p class="con-when" data-i18n="con.p1.w"><b>When it makes sense</b>When more than one system or area is involved and nobody has the full design.</p>
+      </article>
+      <article class="mod-card lg con">
+        <div class="mod-badge" data-i18n="con.p2.n">02 &middot; Implementation</div>
+        <h3 class="mod-name" data-i18n="con.praticas.h32">Implementation &amp; Enablement</h3>
+        <p class="mod-sub" data-i18n="con.p2.d">Platform deployment, legacy system migration, integration with the existing stack and support through the switchover.</p>
+        <ol class="con-steps">
+          <li data-i18n="con.p2.s1">Prepare the environment and bring across the data that will be used.</li>
+          <li data-i18n="con.p2.s2">Connect what remains outside, with the current system still running.</li>
+          <li data-i18n="con.p2.s3">Train and support the switchover at your team's pace.</li>
+        </ol>
+        <p class="con-when" data-i18n="con.p2.w"><b>When it makes sense</b>When there is a legacy system to replace or to keep for a while.</p>
+      </article>
+      <article class="mod-card lg con">
+        <div class="mod-badge" data-i18n="con.p3.n">03 &middot; Growth</div>
+        <h3 class="mod-name" data-i18n="con.praticas.h33">Growth &amp; Performance</h3>
+        <p class="mod-sub" data-i18n="con.p3.d">Marketing, sales and operations consulting, with small squads alongside your team and sector playbooks.</p>
+        <ol class="con-steps">
+          <li data-i18n="con.p3.s1">Choose a front: marketing, sales or operations.</li>
+          <li data-i18n="con.p3.s2">Set up a small squad with people from your team.</li>
+          <li data-i18n="con.p3.s3">Run short cycles and record the learning in a playbook.</li>
+        </ol>
+        <p class="con-when" data-i18n="con.p3.w"><b>When it makes sense</b>When the platform is already running and the question has become "what to improve first".</p>
+      </article>
+      <article class="mod-card lg con">
+        <div class="mod-badge" data-i18n="con.p4.n">04 &middot; Operations</div>
+        <h3 class="mod-name" data-i18n="con.praticas.h34">Managed Services</h3>
+        <p class="mod-sub" data-i18n="con.p4.d">Assisted platform operation, support and ongoing follow-up, with the division of work agreed.</p>
+        <ol class="con-steps">
+          <li data-i18n="con.p4.s1">Agree what Nexyss operates and what your team operates.</li>
+          <li data-i18n="con.p4.s2">Follow the platform day to day.</li>
+          <li data-i18n="con.p4.s3">Review with the customer periodically.</li>
+        </ol>
+        <p class="con-when" data-i18n="con.p4.w"><b>When it makes sense</b>When the team does not want to, or cannot, maintain the operation alone.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block deeper" id="metodo">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="con.met.eyebrow">How it works</span>
+        <h2 style="margin-top:24px" data-i18n="con.met.h2">A project has stages.<br>Each one has someone accountable.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="con.met.sub">
+          At each stage, what Nexyss does and what your team does are written down before starting. When the agreement changes, it changes in writing, on both sides.
+        </p>
+      </div>
+
+      <div class="reveal" aria-hidden="true">
+        <div class="acct360">
+          <div>
+            <div class="fc-head"><span class="ttl" data-i18n="con.metodo.span1">Stages 1 and 2</span><span class="goal" data-i18n="con.metodo.span2">ILLUSTRATIVE</span></div>
+            <ul class="acct-tl">
+              <li class="m-con" data-i18n="con.metodo.li1"><span class="src">Nexyss</span>Maps the operation and proposes the order of entry</li>
+              <li class="m-time" data-i18n="con.metodo.li2"><span class="src">Your team</span>Shows the processes and decides what changes first</li>
+            </ul>
+            <div class="attr-note" data-i18n="con.metodo.div1"><b>Diagnosis and plan.</b> What stays out is also written down.</div>
+          </div>
+          <div>
+            <div class="fc-head"><span class="ttl" data-i18n="con.metodo.span3">Stages 3 and 4</span><span class="goal" data-i18n="con.metodo.span4">ILLUSTRATIVE</span></div>
+            <ul class="acct-tl">
+              <li class="m-con" data-i18n="con.metodo.li3"><span class="src">Nexyss</span>Prepares, migrates, connects and supports the switchover</li>
+              <li class="m-time" data-i18n="con.metodo.li4"><span class="src">Your team</span>Validates, learns to use it and operates day to day</li>
+            </ul>
+            <div class="attr-note" data-i18n="con.metodo.div2"><b>Implementation and operation.</b> The division of work is agreed with you.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted" id="quando">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.qua.eyebrow">When it makes sense</span>
+      <h2 data-i18n="con.qua.h2">Not every project needs consulting.</h2>
+      <p data-i18n="con.qua.sub">The platform was designed to reduce implementation work. In some cases it is still there, and that is what consulting is for.</p>
+    </div>
+    <div class="consult-grid two reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.quando.div1">01 &middot; When it makes sense</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 11l4 4 10-10"/></svg></div>
+        <div class="consult-title" data-i18n="con.qua.c1.t">When the conversation is worthwhile</div>
+        <div class="consult-desc" data-i18n="con.qua.c1.d">There is a system switch. Several areas depend on the same data. Your team wants the platform working without becoming experts in it.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.quando.div2">02 &middot; We never</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5l12 12M17 5L5 17"/></svg></div>
+        <div class="consult-title" data-i18n="con.qua.c2.t">What we do not do</div>
+        <div class="consult-desc" data-i18n="con.qua.c2.d">We never promise a result. We never start without an agreed scope. We never take over the operation without agreeing who owns what.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contratacao">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.ctr.eyebrow">Engagement</span>
+      <h2 data-i18n="con.ctr.h2">How it starts: with a conversation.</h2>
+      <p data-i18n="con.ctr.sub">Consulting is sold by project and made to measure. There is no list price.</p>
+    </div>
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.contratacao.div1">01 &middot; Conversation</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 3v8l4 3"/></svg></div>
+        <div class="consult-title" data-i18n="con.ctr.c1.t">Consultative conversation</div>
+        <div class="consult-desc" data-i18n="con.ctr.c1.d">From 30 to 60 minutes, to understand the operation, the pain points and the priorities.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.contratacao.div2">02 &middot; Proposal</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 4h12v14H5zM8 8h6M8 12h6"/></svg></div>
+        <div class="consult-title" data-i18n="con.ctr.c2.t">Customised proposal</div>
+        <div class="consult-desc" data-i18n="con.ctr.c2.d">Where there is a fit, we prepare the proposal within 7 working days.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.contratacao.div3">03 &middot; Project</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 11l4 4 10-10"/></svg></div>
+        <div class="consult-title" data-i18n="con.ctr.c3.t">Project with an agreed scope</div>
+        <div class="consult-desc" data-i18n="con.ctr.c3.d">What Nexyss does and what your team does are written down before starting.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="con.contratacao.div4">04 &middot; Operations</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 3l7 4v5c0 3-3 5-7 6-4-1-7-3-7-6V7l7-4z"/></svg></div>
+        <div class="consult-title" data-i18n="con.ctr.c4.t">Operation, when agreed</div>
+        <div class="consult-desc" data-i18n="con.ctr.c4.d">If it makes sense, Nexyss accompanies the platform after implementation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block tinted" id="modulos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.mod.eyebrow">The modules</span>
+      <h2 data-i18n="con.mod.h2">Consulting accompanies the implementation of each module.</h2>
+      <p data-i18n="con.mod.sub">Each module page describes how that module is entered. Consulting works with that same sequence.</p>
+    </div>
+    <div class="platform-grid reveal-stagger">
+      <article class="mod-card md crm">
+        <div class="mod-badge" data-i18n="mod.crm.name">Nexyss CRM</div>
+        <p class="mod-sub" data-i18n="con.mod.crm">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/crm/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md edu">
+        <div class="mod-badge" data-i18n="mod.edu.name">Nexyss Education</div>
+        <p class="mod-sub" data-i18n="con.mod.edu">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/educacao/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card md mkt">
+        <div class="mod-badge" data-i18n="mod.mkt.name">Nexyss Marketing</div>
+        <p class="mod-sub" data-i18n="con.mod.mkt">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/marketing/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card sm fin">
+        <div class="mod-badge" data-i18n="mod.fin.name">Nexyss Finance</div>
+        <p class="mod-sub" data-i18n="con.mod.fin">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/finance/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card sm hr">
+        <div class="mod-badge" data-i18n="mod.hr.name">Nexyss HR</div>
+        <p class="mod-sub" data-i18n="con.mod.hr">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/hr/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card sm ai">
+        <div class="mod-badge" data-i18n="mod.ai.name">Nexyss AI</div>
+        <p class="mod-sub" data-i18n="con.mod.ai">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/ai/#integracoes" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+      <article class="mod-card sm int">
+        <div class="mod-badge" data-i18n="mod.int.name">Nexyss Integrations</div>
+        <p class="mod-sub" data-i18n="con.mod.int">Entry plan, migration of what exists and support through the switchover.</p>
+        <a href="../plataforma/integracoes/#implantacao" class="mod-link" data-i18n="con.mod.link">View the implementation <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h6m-2-2 2 2-2 2"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="para-quem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="con.pq.eyebrow">Who it is for</span>
+      <h2 data-i18n="con.pq.h2">Who decides, who executes.</h2>
+      <p data-i18n="con.pq.sub">The conversation starts with whoever decides what changes and continues with whoever will carry out the switchover.</p>
+    </div>
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 3v6M11 13v6M3 11h6M13 11h6"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3 data-i18n="con.pq.c1.t">For the board and the CEO</h3>
+        <p data-i18n="con.pq.c1.d">Decide what changes and follow along without the implementation becoming a project with nobody accountable.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h9M9 4l3 3-3 3"/><path d="M19 15h-9M13 12l-3 3 3 3"/></svg></div>
+        <h3 data-i18n="con.pq.c2.t">For operations</h3>
+        <p data-i18n="con.pq.c2.d">A switchover plan with stages, people responsible and what stays out, written down before starting.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 11l4 4 10-10"/></svg></div>
+        <h3 data-i18n="con.pq.c3.t">For the CFO and the CHRO</h3>
+        <p data-i18n="con.pq.c3.d">What will be migrated, in what order and with what follow-up, with no surprises along the way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block deeper" style="padding:60px 0">
+  <div class="container">
+    <div class="impact-strip cols-3 reveal-stagger">
+      <div class="impact-item"><div class="n">4</div><div class="l" data-i18n="con.imp.1">Complementary practices</div></div>
+      <div class="impact-item"><div class="n">7</div><div class="l" data-i18n="con.imp.2">Modules supported</div></div>
+      <div class="impact-item"><div class="n">30-60<small data-i18n="con.sec.small1"> min</small></div><div class="l" data-i18n="con.imp.3">From an initial consultative conversation</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="clientes">
+  <div class="container">
+    <div class="founding founding-simple reveal">
+      <div class="founding-inner">
+        <div>
+          <div class="fbadge">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>
+            <span data-i18n="founding.badge">Founding Customers Programme</span>
+          </div>
+          <h2 data-i18n="founding.h2">An exclusive invitation.<br>Limited places available.</h2>
+          <p data-i18n="founding.p">We are forming the circle of first customers who will help shape the next generation of Nexyss. If you lead an organisation that values platforms built in partnership, not in transaction, let us talk.</p>
+        </div>
+        <div>
+          <a href="../contato/?interesse=consultoria&amp;origem=founding" class="btn btn-primary" data-i18n="cta.candidatar">Apply <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="demo">
+  <div class="container">
+    <h2 class="reveal" data-i18n="con.cta.h2">Start with<br><span style="background:linear-gradient(120deg,var(--c-edu),var(--c-brand-light));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400;">a conversation.</span></h2>
+    <p class="reveal" data-i18n="con.cta.sub">Tell us how your operation works today. We will say whether consulting makes sense and, if it does not, we will say that too.</p>
+    <div class="actions reveal">
+      <a href="../contato/?interesse=consultoria&amp;origem=projeto" class="btn btn-primary" data-i18n="cta.projeto">Discuss a Project <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+      <a href="../contato/?interesse=consultoria&amp;origem=especialista" class="btn btn-ghost" data-i18n="cta.especialista">Speak to an Expert</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+        <p data-i18n="footer.plataforma-operacional-global-com-ia-uma">Global operating platform with AI. One platform. Multiple modules. Infinite possibilities.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.plataforma">Platform</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.nexyss-crm">Nexyss CRM</a></li>
+          <li><a href="#" data-i18n="footer.nexyss-educacao">Nexyss Education</a></li>
+          <li><a href="../plataforma/marketing/" data-i18n="footer.nexyss-marketing">Nexyss Marketing</a></li>
+          <li><a href="../plataforma/finance/" data-i18n="footer.nexyss-finance">Nexyss Finance</a></li>
+          <li><a href="../plataforma/hr/" data-i18n="footer.nexyss-hr">Nexyss HR</a></li>
+          <li><a href="../plataforma/ai/" data-i18n="footer.nexyss-ai">Nexyss AI</a></li>
+          <li><a href="../plataforma/integracoes/" data-i18n="footer.nexyss-integracoes">Nexyss Integrations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.solucoes">Solutions</h5>
+        <ul>
+          <li><a href="../solucoes/#funcao" data-i18n="footer.por-funcao">By Function</a></li>
+          <li><a href="../solucoes/#objetivo" data-i18n="footer.por-objetivo">By Objective</a></li>
+          <li><a href="../solucoes/#porte" data-i18n="footer.por-porte">By Size</a></li>
+          <li><a href="../solucoes/por-setor/" data-i18n="footer.por-setor">By Sector</a></li>
+          <li><a href="../solucoes/por-setor/#educacao" data-i18n="footer.educacao">Education</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.empresa">Company</h5>
+        <ul>
+          <li><a href="../sobre/" data-i18n="footer.sobre">About</a></li>
+          <li><a href="./" data-i18n="footer.nexyss-consultoria">Nexyss Consulting</a></li>
+          <li><a href="#" data-i18n="footer.parceiros">Partners</a></li>
+          <li><a href="#" data-i18n="footer.clientes">Customers</a></li>
+          <li><a href="../contato/" data-i18n="footer.contato">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.recursos">Resources</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.blog-insights">Blog &amp; Insights</a></li>
+          <li><a href="#" data-i18n="footer.casos-de-sucesso">Case studies</a></li>
+          <li><a href="#" data-i18n="footer.documentacao">Documentation</a></li>
+          <li><a href="#" data-i18n="footer.seguranca">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal" data-i18n="footer.2026-nexyss-group-todos-os-direitos-rese">© 2026 Nexyss Group. All rights reserved.</div>
+      <div class="links">
+        <a href="#" data-i18n="footer.privacidade">Privacy</a>
+        <a href="#" data-i18n="footer.termos">Terms</a>
+        <a href="#" data-i18n="footer.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../../assets/nexyss.js"></script>
+</body>
+</html>

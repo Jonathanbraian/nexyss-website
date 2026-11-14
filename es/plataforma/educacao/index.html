@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Nexyss Education: admisiones, vida académica, finanzas académicas y experiencia del estudiante en una sola plataforma - multicampus, multiprograma, multimoneda y multiidioma."  data-i18n-attr="content:meta.edu.desc"/>
+<title data-i18n="meta.edu.title">Nexyss Education - La operación completa de su red de enseñanza</title>
+<link rel="icon" type="image/png" href="../../../assets/nexyss-mark.png" />
+<meta name="theme-color" content="#0B1440" />
+
+<!-- BASE_URL provisorio (netlify.app): trocar em tools/build-i18n.py quando o dominio oficial for confirmado -->
+<link rel="canonical" href="https://nexyss-website.netlify.app/es/plataforma/educacao/" />
+<link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/plataforma/educacao/" />
+<link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/plataforma/educacao/" />
+<link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/plataforma/educacao/" />
+<link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/plataforma/educacao/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Nexyss" />
+<meta property="og:locale" content="es_ES" />
+<meta property="og:locale:alternate" content="en_GB" />
+<meta property="og:locale:alternate" content="pt_BR" />
+<meta property="og:url" content="https://nexyss-website.netlify.app/es/plataforma/educacao/" />
+<meta property="og:title" content="Nexyss Education - La operación completa de su red de enseñanza"  data-i18n-attr="content:meta.edu.ogtitle"/>
+<meta property="og:description" content="Cada estudiante tiene una trayectoria. Su red necesita conocerla completa. Admisiones, gestión académica, finanzas y experiencia del estudiante en una sola plataforma."  data-i18n-attr="content:meta.edu.ogdesc"/>
+<!-- TODO: substituir por og-cover 1200x630 dedicado -->
+<meta property="og:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+<meta property="og:image:alt" content="Nexyss Education"  data-i18n-attr="content:meta.edu.ogimgalt"/>
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Nexyss Education - La operación completa de su red de enseñanza"  data-i18n-attr="content:meta.edu.twtitle"/>
+<meta name="twitter:description" content="Cada estudiante tiene una trayectoria. Su red necesita conocerla completa."  data-i18n-attr="content:meta.edu.twdesc"/>
+<meta name="twitter:image" content="https://nexyss-website.netlify.app/assets/nexyss-logo.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../../assets/nexyss.css" />
+</head>
+<body class="theme-edu page-produto has-subnav">
+
+<a class="skip-link" href="#conteudo" data-i18n="a11y.skip">Saltar al contenido</a>
+
+<header class="site" id="siteHeader">
+  <div class="container">
+    <nav class="nav">
+      <a href="/es/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss">
+        <img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+      </a>
+
+      <ul class="nav-menu">
+        <li>
+          <button data-i18n="nav.plataforma">
+            Plataforma
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-plataforma">
+            <div class="mega-grid cols-2">
+              <a class="mega-item" href="../crm/">
+                <div class="icn icn-crm" data-i18n="mega.crm">CRM</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-crm">Nexyss CRM</div><div class="ds" data-i18n="mega.vendas-relacionamento">Ventas y relaciones con clientes</div></div>
+              </a>
+              <a class="mega-item" href="./">
+                <div class="icn icn-edu" data-i18n="mega.edu">EDU</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-educacao">Nexyss Education</div><div class="ds" data-i18n="mega.gestao-academica-completa">Gestión académica completa</div></div>
+              </a>
+              <a class="mega-item" href="../marketing/">
+                <div class="icn icn-mkt" data-i18n="mega.mkt">MKT</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-marketing">Nexyss Marketing</div><div class="ds" data-i18n="mega.growth-campanhas">Growth y campañas</div></div>
+              </a>
+              <a class="mega-item" href="../finance/">
+                <div class="icn icn-fin" data-i18n="mega.fin">FIN</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-finance">Nexyss Finance</div><div class="ds" data-i18n="mega.financeiro-controladoria">Finanzas y control de gestión</div></div>
+              </a>
+              <a class="mega-item" href="../hr/">
+                <div class="icn icn-hr" data-i18n="mega.hr">HR</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-hr">Nexyss HR</div><div class="ds" data-i18n="mega.pessoas-talentos">Personas y talento</div></div>
+              </a>
+              <a class="mega-item" href="../ai/">
+                <div class="icn icn-ai" data-i18n="mega.ai">AI</div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-ai">Nexyss AI</div><div class="ds" data-i18n="mega.motor-de-inteligencia">Motor de inteligencia</div></div>
+              </a>
+              <a class="mega-item" href="../integracoes/" style="grid-column:1/-1">
+                <div class="icn icn-int">
+                  <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+                </div>
+                <div class="txt"><div class="nm" data-i18n="mega.nexyss-integracoes">Nexyss Integrations</div><div class="ds" data-i18n="mega.conecte-a-nexyss-ao-seu-stack-existente">Conecte Nexyss a su stack actual</div></div>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <button data-i18n="nav.solucoes">
+            Soluciones
+            <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="mega mega-solucoes">
+            <div class="mega-grid cols-3">
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-funcao">Por función</div>
+                <a class="mega-item" href="../../solucoes/por-funcao/#comercial"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4h10M2 7h10M2 10h6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.comercial">Comercial</div><div class="ds" data-i18n="mega.vendas-marketing-cs">Ventas, Marketing, CS</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#operacoes"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M7 3v4l3 2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.operacoes">Operaciones</div><div class="ds" data-i18n="mega.processos-projetos-atendimento">Procesos, proyectos, atención</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#financeiro"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 10V6l4-3 4 3v4"/><path d="M5 10V8h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.financeiro">Finanzas</div><div class="ds" data-i18n="mega.finance-cobranca-fp-a">Finanzas, cobro, FP&amp;A</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#pessoas"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="5" r="2.5"/><path d="M2.5 12c0-2.5 2-4 4.5-4s4.5 1.5 4.5 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.pessoas">Personas</div><div class="ds" data-i18n="mega.rh-cultura-aprendizagem">RR. HH., cultura, aprendizaje</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#dados"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12V7m4 5V4m4 8v-6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.dados-performance">Datos y rendimiento</div><div class="ds" data-i18n="mega.leitura-unica-da-operacao">Una lectura única de la operación</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-funcao/#governanca"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 1l5 3v4c0 2-2 3.5-5 4-3-.5-5-2-5-4V4l5-3z"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.governanca">Gobernanza</div><div class="ds" data-i18n="mega.quem-ve-o-que">Quién ve qué</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-objetivo">Por objetivo</div>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#crescer"><div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l4-4 3 3 3-5"/><path d="M9 5h3v3"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.crescer-receita">Aumentar los ingresos</div><div class="ds" data-i18n="mega.aquisicao-retencao-ltv">Adquisición, retención, LTV</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#expandir"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10M7 2c1.5 2 2.2 3.3 2.2 5S8.5 10 7 12"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.expandir-globalmente">Expandirse a nivel global</div><div class="ds" data-i18n="mega.multi-pais-multi-moeda">Multipaís, multimoneda</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#consolidar"><div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="3" width="10" height="8" rx="1"/><path d="M5 3v8M9 3v8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.consolidar-unidades">Consolidar unidades</div><div class="ds" data-i18n="mega.m-a-franquia-rede">M&amp;A, franquicia, red</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#digitalizar"><div class="icn icn-ai"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><path d="M7 2v2M7 10v2M2 7h2M10 7h2M4 4l1.5 1.5M8.5 8.5L10 10M4 10l1.5-1.5M8.5 5.5L10 4"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.digitalizar-com-ia">Digitalizar con IA</div><div class="ds" data-i18n="mega.automacao-inteligente">Automatización inteligente</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#custo"><div class="icn icn-hr"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 11l3-3 2 2 5-5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.reduzir-custo">Reducir costes</div><div class="ds" data-i18n="mega.unificar-sistemas-fragmentados">Unificar sistemas fragmentados</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-objetivo/#visibilidade"><div class="icn icn-fin"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="2"/><circle cx="7" cy="7" r="5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.visibilidade-da-operacao">Visibilidad de la operación</div><div class="ds" data-i18n="mega.decisoes-data-driven">Decisiones basadas en datos</div></div></a>
+              </div>
+              <div>
+                <div class="mega-col-head" data-i18n="mega.por-porte-setor">Por tamaño y sector</div>
+                <a class="mega-item" href="../../solucoes/por-porte/#startups"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2v6M4 5l3-3 3 3M2 12h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.startups-scale-ups">Startups y scale-ups</div><div class="ds" data-i18n="mega.crescimento-rapido">Crecimiento rápido</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#midmarket"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="8" height="8" rx="1"/><path d="M3 6h8"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.mid-market">Mid-Market</div><div class="ds" data-i18n="mega.profissionalizacao">Profesionalización</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#enterprise"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="10" height="7" rx="1"/><path d="M5 4V2h4v2"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.enterprise">Enterprise</div><div class="ds" data-i18n="mega.multiplas-unidades-e-regras-de-acesso">Múltiples unidades y reglas de acceso</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-porte/#global"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><path d="M2 7h10"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.global-multinacional">Global y multinacional</div><div class="ds" data-i18n="mega.operacao-distribuida">Operación distribuida</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-setor/#educacao"><div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 2l5 3-5 3-5-3 5-3z"/><path d="M3 6v3c0 1.5 2 2.5 4 2.5s4-1 4-2.5V6"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.educacao">Educación</div><div class="ds" data-i18n="mega.vertical-live">Vertical activa</div></div></a>
+                <a class="mega-item" href="../../solucoes/por-setor/#esporte"><div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 7h10M7 3v8M4.5 5l5 5M9.5 5l-5 5"/></svg></div><div class="txt"><div class="nm" data-i18n="mega.outros-setores">Otros sectores</div><div class="ds" data-i18n="mega.esporte-turismo-e-tecnologia">Deporte, turismo y tecnología</div></div></a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li><a href="../../consultoria/" class="nav-con" data-i18n="nav.nexyss-consultoria"><span class="nav-nx">Nexyss </span>Consulting</a></li>
+        <li><a href="#clientes" data-i18n="nav.clientes">Clientes</a></li>
+        <li><a href="#" data-i18n="nav.recursos">Recursos</a></li>
+        <li><a href="#" data-i18n="nav.parceiros">Socios</a></li>
+        <li><a href="../../sobre/" data-i18n="nav.sobre">Acerca de</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <button class="lang-switch">
+          <span class="flag">🇧🇷</span>
+          <span data-i18n="nav.pt">PT</span>
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+        </button>
+        <a href="../../contato/?interesse=demo" class="btn btn-primary" data-i18n="nav.solicitar-demo">
+          Solicitar una demo
+          <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+        </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menú" aria-expanded="false" aria-controls="mobileDrawer" data-i18n-attr="aria-label:a11y.menu"><span></span></button>
+      </div>
+    </nav>
+  </div>
+</header>
+<div class="drawer-overlay" id="drawerOverlay" hidden></div>
+
+<aside class="drawer" id="mobileDrawer" aria-hidden="true" aria-label="Menú de navegación" data-i18n-attr="aria-label:a11y.menu-de-navegacao">
+  <div class="drawer-head">
+    <a href="/es/" class="brand" aria-label="Nexyss" data-i18n-attr="aria-label:a11y.nexyss"><img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/></a>
+    <button class="drawer-close" id="drawerClose" aria-label="Cerrar menú" data-i18n-attr="aria-label:a11y.fechar-menu">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+    </button>
+  </div>
+
+  <nav class="drawer-nav">
+    <!-- Plataforma -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accPlataforma">
+      <span data-i18n="nav.plataforma">Plataforma</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accPlataforma">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../crm/">
+          <div class="icn icn-crm" data-i18n="nav.crm">CRM</div>
+          <div class="txt"><div class="nm" data-i18n="mod.crm.name">Nexyss CRM</div><div class="ds" data-i18n="mod.crm.tag">Ventas y relaciones con clientes</div></div>
+        </a>
+        <a class="mega-item" href="./">
+          <div class="icn icn-edu" data-i18n="nav.edu">EDU</div>
+          <div class="txt"><div class="nm" data-i18n="mod.edu.name">Nexyss Education</div><div class="ds" data-i18n="mod.edu.tag">Gestión académica completa</div></div>
+        </a>
+        <a class="mega-item" href="../marketing/">
+          <div class="icn icn-mkt" data-i18n="nav.mkt">MKT</div>
+          <div class="txt"><div class="nm" data-i18n="mod.mkt.name">Nexyss Marketing</div><div class="ds" data-i18n="mod.mkt.tag">Growth y campañas</div></div>
+        </a>
+        <a class="mega-item" href="../finance/">
+          <div class="icn icn-fin" data-i18n="nav.fin">FIN</div>
+          <div class="txt"><div class="nm" data-i18n="mod.fin.name">Nexyss Finance</div><div class="ds" data-i18n="mod.fin.tag">Finanzas y control de gestión</div></div>
+        </a>
+        <a class="mega-item" href="../hr/">
+          <div class="icn icn-hr" data-i18n="nav.hr">HR</div>
+          <div class="txt"><div class="nm" data-i18n="mod.hr.name">Nexyss HR</div><div class="ds" data-i18n="mod.hr.tag">Personas y talento</div></div>
+        </a>
+        <a class="mega-item" href="../ai/">
+          <div class="icn icn-ai" data-i18n="nav.ai">AI</div>
+          <div class="txt"><div class="nm" data-i18n="mod.ai.name">Nexyss AI</div><div class="ds" data-i18n="mod.ai.tag">Motor de inteligencia</div></div>
+        </a>
+        <a class="mega-item" href="../integracoes/">
+          <div class="icn icn-int">
+            <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 7h4M8 7h4M4 4l3 3-3 3M10 4l-3 3 3 3"/></svg>
+          </div>
+          <div class="txt"><div class="nm" data-i18n="mod.int.name">Nexyss Integrations</div><div class="ds" data-i18n="mod.int.tag">Conecte Nexyss a su stack</div></div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Soluções -->
+    <button class="drawer-acc" aria-expanded="false" aria-controls="accSolucoes">
+      <span data-i18n="nav.solucoes">Soluciones</span>
+      <svg class="chev" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l3 3 3-3"/></svg>
+    </button>
+    <div class="drawer-panel" id="accSolucoes">
+      <div class="drawer-panel-inner">
+        <a class="mega-item" href="../../solucoes/#funcao">
+          <div class="icn icn-crm"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="2" width="4.5" height="4.5" rx="1"/><rect x="2" y="7.5" width="4.5" height="4.5" rx="1"/><rect x="7.5" y="7.5" width="4.5" height="4.5" rx="1"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.funcao.name">Por función</div><div class="ds" data-i18n="sol.funcao.tag">Comercial · Operaciones · Finanzas · Personas</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/#objetivo">
+          <div class="icn icn-edu"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><circle cx="7" cy="7" r="2"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.objetivo.name">Por objetivo</div><div class="ds" data-i18n="sol.objetivo.tag">Crecer · Expandir · Consolidar · Digitalizar</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/#porte">
+          <div class="icn icn-mkt"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M2 12V7l2.5-2M7 12V4.5l2.5-2M12 12V8.5"/><path d="M2 12h10"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.porte.name">Por tamaño y sector</div><div class="ds" data-i18n="sol.porte.tag">Startups · Mid-Market · Enterprise · Global</div></div>
+        </a>
+        <a class="mega-item" href="../../solucoes/">
+          <div class="icn icn-neutral"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></div>
+          <div class="txt"><div class="nm" data-i18n="sol.todos.name">Ver todas las soluciones</div><div class="ds" data-i18n="sol.todos.tag">Las cuatro formas</div></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="drawer-sep"></div>
+
+    <a class="drawer-link" href="../../consultoria/" data-i18n="nav.consultoria">Nexyss Consulting</a>
+    <a class="drawer-link" href="#clientes" data-i18n="nav.clientes">Clientes</a>
+    <a class="drawer-link" href="#" data-i18n="nav.recursos">Recursos</a>
+    <a class="drawer-link" href="#" data-i18n="nav.parceiros">Socios</a>
+    <a class="drawer-link" href="../../sobre/" data-i18n="nav.sobre">Acerca de</a>
+  </nav>
+
+  <div class="drawer-foot">
+    <button class="lang-switch" aria-label="Idioma" data-i18n-attr="aria-label:a11y.idioma">
+      <span class="flag">🇧🇷</span>
+      <span data-i18n="nav.pt">PT</span>
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2.5 4l2.5 2.5L7.5 4"/></svg>
+    </button>
+    <a href="../../contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">
+      Solicitar una demo
+      <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+    </a>
+  </div>
+</aside>
+
+<!-- ============ HERO ============ -->
+<main id="conteudo">
+<section class="hero">
+  <div class="hero-layers">
+    <div class="hero-layer l1"></div><div class="hero-layer l2"></div>
+    <div class="hero-layer l3"></div><div class="hero-layer l4"></div>
+  </div>
+  <div class="hero-glow g1"></div>
+  <div class="hero-glow g2"></div>
+
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">
+          <span class="dot"></span>
+          <span class="pill" data-i18n="edu.hero.pill">EDU</span>
+          <span data-i18n="edu.hero.tag">Módulo de la plataforma operativa Nexyss</span>
+        </div>
+
+        <h1 data-i18n="edu.hero.h1">
+          Cada estudiante tiene una trayectoria. <span class="accent">Su red educativa necesita conocerla.</span>
+        </h1>
+
+        <p class="hero-sub" data-i18n="edu.hero.sub">
+          Admisiones, gestión académica, finanzas y experiencia del estudiante en una sola plataforma - replicable en cada campus, cada programa, cada moneda y cada idioma, sin que ninguna unidad se convierta en un sistema independiente.
+        </p>
+
+        <div class="hero-cta">
+          <a href="../../contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">Solicitar una demo <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+          <a href="../" class="btn btn-ghost" data-i18n="cta.plataforma">Ver la plataforma completa</a>
+        </div>
+
+        <div class="hero-meta">
+          <div><div class="num">1</div><div class="lbl" data-i18n="edu.hero.m1">Historial por estudiante, del ingreso a la graduación</div></div>
+          <div><div class="num">3</div><div class="lbl" data-i18n="edu.hero.m2">Multiidioma nativo</div></div>
+          <div><div class="num">0</div><div class="lbl" data-i18n="edu.hero.m3">Sistemas paralelos por campus</div></div>
+        </div>
+      </div>
+
+      <!-- VISUAL A - TRAJETORIA DO ALUNO -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="dash jr-board">
+          <div class="dash-bar">
+            <div class="title" data-i18n="edu.hero.div1">Nexyss Education &middot; Trayectoria</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+
+          <div class="jr-id">
+            <div class="jr-avatar" data-i18n="edu.hero.div2">MS</div>
+            <div class="jr-info">
+              <div class="nm" data-i18n="edu.hero.div3">Mariana Silva</div>
+              <div class="ds" data-i18n="edu.hero.div4">Ingeniería &middot; Campus São Paulo</div>
+            </div>
+            <div class="jr-tag" data-i18n="edu.hero.div5">Activa</div>
+          </div>
+
+          <div class="jr-track">
+            <div class="jr-rail"><i></i></div>
+            <div class="jr-nodes reveal-stagger">
+              <div class="jr-node mark"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span1">S1</span></div>
+              <div class="jr-node mark"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span2">S2</span></div>
+              <div class="jr-node mark"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span3">S3</span></div>
+              <div class="jr-node mark"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span4">S4</span></div>
+              <div class="jr-node mark"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span5">S5</span></div>
+              <div class="jr-node"><span class="dot"></span><span class="lb" data-i18n="edu.hero.span6">S6</span></div>
+            </div>
+          </div>
+
+          <div class="jr-events">
+            <div class="jr-ev m-fin" data-i18n="edu.hero.div6"><span class="k">S2</span>Beca del 40% concedida</div>
+            <div class="jr-ev m-edu" data-i18n="edu.hero.div7"><span class="k">S3</span>Traslado: Dublin &rarr; São Paulo</div>
+            <div class="jr-ev m-hr" data-i18n="edu.hero.div8"><span class="k">S4</span>Suspensión de matrícula solicitada</div>
+            <div class="jr-ev m-edu" data-i18n="edu.hero.div9"><span class="k">S5</span>Regreso - historial preservado</div>
+          </div>
+
+          <div class="jr-stats">
+            <div><span class="lb" data-i18n="edu.hero.span7">Asistencia</span><span class="vl">87%</span></div>
+            <div><span class="lb" data-i18n="edu.hero.span8">Promedio</span><span class="vl">8.4</span></div>
+            <div><span class="lb" data-i18n="edu.hero.span9">Finanzas</span><span class="vl" data-i18n="edu.hero.span10">Al día</span></div>
+          </div>
+        </div>
+
+        <div class="pipe-ai">
+          <div class="ai-ic" data-i18n="edu.hero.div10">AI</div>
+          <div class="ai-tx">
+            <div class="t" data-i18n="edu.hero.div11">Riesgo de deserción: bajo</div>
+            <div class="s" data-i18n="edu.hero.div12">Nexyss AI &middot; recalculado hoy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUBNAV ============ -->
+<div class="subnav">
+  <div class="container">
+    <div class="subnav-inner">
+      <span class="subnav-brand" data-i18n="edu.name">Nexyss Education</span>
+      <nav class="subnav-nav" aria-label="En esta página" data-i18n-attr="aria-label:edu.subnav.aria1">
+        <ul class="subnav-links">
+          <li><a href="#recursos" data-i18n="edu.nav.rec">Recursos</a></li>
+          <li><a href="#rede" data-i18n="edu.nav.rede">La red</a></li>
+          <li><a href="#jornada" data-i18n="edu.nav.jor">Trayectoria</a></li>
+          <li><a href="#ia" data-i18n="edu.nav.ia">Nexyss AI</a></li>
+          <li><a href="#integracoes" data-i18n="edu.nav.int">Integraciones</a></li>
+        </ul>
+      </nav>
+      <a href="../../contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">Solicitar una demo <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============ O PROBLEMA ============ -->
+<section class="block tinted" id="problema">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="edu.prob.eyebrow">El problema</span>
+      <h2 data-i18n="edu.prob.h2">Su red creció.<br>Sus sistemas no crecieron con ella.</h2>
+      <p data-i18n="edu.prob.sub">Cada campus resolvió su propio problema con su propia herramienta. Hoy la entidad titular tiene ocho hojas de cálculo de cierre, tres definiciones de &ldquo;estudiante activo&rdquo; y ninguna respuesta rápida cuando el consejo pregunta cómo está la red.</p>
+    </div>
+
+    <div class="solucoes-grid reveal-stagger">
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4h6v6H4zM12 12h6v6h-6zM12 4h6v4h-6zM4 14h6v4H4z"/></svg>
+        </div>
+        <h3 data-i18n="edu.prob.c1.t">El historial del estudiante vive en pedazos</h3>
+        <p data-i18n="edu.prob.c1.d">La secretaría tiene lo académico, finanzas tiene la mensualidad, la coordinación tiene la asistencia. Reconstruir la trayectoria de un estudiante se volvió un trabajo de arqueología.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="16" cy="6" r="3"/><circle cx="6" cy="16" r="3"/><circle cx="16" cy="16" r="3"/></svg>
+        </div>
+        <h3 data-i18n="edu.prob.c2.t">Cada campus es una isla</h3>
+        <p data-i18n="edu.prob.c2.d">Misma institución, procesos distintos, calendarios distintos, informes que no suman. Consolidar la red se vuelve un proyecto de fin de semestre.</p>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">
+          <svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 5l5 5-5 5"/><path d="M11 15h8M11 11h8M11 7h8"/></svg>
+        </div>
+        <h3 data-i18n="edu.prob.c3.t">La deserción aparece demasiado tarde</h3>
+        <p data-i18n="edu.prob.c3.d">Cuando el estudiante deja de pagar o desaparece de clase, la señal ya existía meses antes - dispersa en sistemas que no se hablan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECURSOS - 3 CLUSTERS ============ -->
+<section class="block" id="recursos">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="edu.rec.eyebrow">Recursos</span>
+      <h2 data-i18n="edu.rec.h2">Una institución hace muchas cosas.<br>Todo eso es la misma plataforma.</h2>
+      <p data-i18n="edu.rec.sub">Del primer contacto del candidato a la emisión del certificado del graduado - sin cambiar de sistema, sin exportar hojas de cálculo, sin conciliar números a fin de mes.</p>
+    </div>
+
+    <div class="platform-grid reveal">
+      <div class="cluster-label" data-i18n="edu.rec.g1">Académico</div>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div1">Vida académica</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h31">Del ingreso a la graduación, en un único registro</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p1">Plan de estudios, malla, grupos, asistencia, evaluación y certificado oficial - en la misma estructura en todos los campus de la red.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li1"><span class="status-badge status-badge--live" data-i18n="badge.live">Activo</span> Plan de estudios y oferta versionados por período</li>
+          <li data-i18n="edu.recursos.li2"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Asistencia y evaluación con reglas por programa</li>
+          <li data-i18n="edu.recursos.li3"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Certificado oficial generado a partir del registro, no introducido a mano</li>
+        </ul>
+      </article>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div2">Admisiones</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h32">Captación, selección y matrícula de punta a punta</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p2">Inscripción, proceso de selección, documentación y matrícula, con embudo propio por campus y por programa.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li4"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Embudo de admisión por unidad y oferta</li>
+          <li data-i18n="edu.recursos.li5"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Documentación y validación sin papel</li>
+          <li data-i18n="edu.recursos.li6"><span class="status-badge status-badge--live" data-i18n="badge.live">Activo</span> Matrícula que nace con plan de pago</li>
+        </ul>
+      </article>
+
+      <div class="cluster-label" data-i18n="edu.rec.g2">Finanzas académicas</div>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div3">Ingresos</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h33">Mensualidades, becas y convenios</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p3">Planes de pago, descuentos, becas, financiación estudiantil y convenios corporativos - cada uno con su propia regla, en la moneda de la unidad.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li7"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Política de becas por campus y por programa</li>
+          <li data-i18n="edu.recursos.li8"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Convenio corporativo con facturación propia</li>
+          <li data-i18n="edu.recursos.li9"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Reajuste y rematrícula en lote</li>
+        </ul>
+      </article>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div4">Morosidad</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h34">Cobro tratado como un proceso, no como una hoja de cálculo</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p4">Secuencia de cobro, negociación, acuerdo y conciliación automática del pago - con reflejo en la situación académica cuando la política de la institución lo exija.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li10"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Secuencia configurable por perfil de estudiante</li>
+          <li data-i18n="edu.recursos.li11"><span class="status-badge status-badge--live" data-i18n="badge.live">Activo</span> Acuerdo y cuotas con seguimiento</li>
+          <li data-i18n="edu.recursos.li12"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Situación financiera visible para la coordinación</li>
+        </ul>
+      </article>
+
+      <div class="cluster-label" data-i18n="edu.rec.g3">Experiencia y red</div>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div5">Portales</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h35">Estudiante, docente y tutor - cada uno con su propia vista</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p5">En el idioma de cada uno, con el tutor legal viendo exactamente lo que le corresponde y nada más.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li13"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Portal del estudiante con historial, finanzas y oferta</li>
+          <li data-i18n="edu.recursos.li14"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Portal del docente con registro de clase y evaluación</li>
+          <li data-i18n="edu.recursos.li15"><span class="status-badge status-badge--live" data-i18n="badge.live">Activo</span> Portal del tutor con alcance restringido</li>
+        </ul>
+      </article>
+
+      <article class="mod-card lg">
+        <div class="mod-badge" data-i18n="edu.recursos.div6">Red</div>
+        <h3 class="mod-name" data-i18n="edu.recursos.h36">Multicampus, multiprograma, multiidioma</h3>
+        <p class="mod-sub" data-i18n="edu.recursos.p6">Misma plataforma, autonomía local, consolidación automática por encima. Abrir una unidad nueva no abre un proyecto nuevo.</p>
+        <ul class="mod-features">
+          <li data-i18n="edu.recursos.li16"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Calendario y oferta por unidad</li>
+          <li data-i18n="edu.recursos.li17"><span class="status-badge status-badge--roadmap" data-i18n="badge.roadmap">Roadmap</span> Moneda y política de precios locales</li>
+          <li data-i18n="edu.recursos.li18"><span class="status-badge status-badge--live" data-i18n="badge.live">Activo</span> Permiso por campus, programa y función</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- Pipeline Board reaproveitado: o funil de admissao e um funil de verdade -->
+    <div class="ai-inner reveal" style="margin-top:80px">
+      <div>
+        <span class="eyebrow" data-i18n="edu.adm.eyebrow">Admisiones</span>
+        <h3 style="margin-top:22px;font-size:1.6rem" data-i18n="edu.adm.t">El embudo de admisiones, campus por campus.</h3>
+        <p style="margin-top:18px;color:var(--c-text-soft);font-size:1rem;max-width:480px" data-i18n="edu.adm.d">
+          Cada unidad acompaña su propio proceso de selección, con etapas y plazos propios. La entidad titular ve el total de la red sin pedirle un informe a nadie - y el candidato que se convierte en estudiante ya entra con plan de pago y acceso al portal.
+        </p>
+      </div>
+      <div class="viz-box" aria-hidden="true">
+        <div class="dash pipe-board">
+          <div class="dash-bar">
+            <div class="title" data-i18n="edu.recursos.div7">Admisiones &middot; 2027.1</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="pipe-cols reveal-stagger">
+            <div class="pipe-col">
+              <div class="pipe-col-head"><span class="st" data-i18n="edu.recursos.span1">Inscritos</span><span class="amt">1.284</span></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span2">Ingeniería</span><i class="pc-dot" data-i18n="edu.recursos.i1">SP</i></div><div class="pc-val">486</div><div class="pipe-bar"><i style="width:38%;animation-delay:.2s"></i></div></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span3">Derecho</span><i class="pc-dot" data-i18n="edu.recursos.i2">SP</i></div><div class="pc-val">312</div><div class="pipe-bar"><i style="width:31%;animation-delay:.3s"></i></div></div>
+            </div>
+            <div class="pipe-col">
+              <div class="pipe-col-head"><span class="st" data-i18n="edu.recursos.span4">Admitidos</span><span class="amt">742</span></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span5">Ingeniería</span><i class="pc-dot" data-i18n="edu.recursos.i3">SP</i></div><div class="pc-val">281</div><div class="pipe-bar"><i style="width:58%;animation-delay:.4s"></i></div></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span6">Medicina</span><i class="pc-dot" data-i18n="edu.recursos.i4">DB</i></div><div class="pc-val">96</div><div class="pipe-bar"><i style="width:52%;animation-delay:.5s"></i></div></div>
+            </div>
+            <div class="pipe-col">
+              <div class="pipe-col-head"><span class="st" data-i18n="edu.recursos.span7">Matriculados</span><span class="amt">598</span></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span8">Ingeniería</span><i class="pc-dot" data-i18n="edu.recursos.i5">SP</i></div><div class="pc-val">224</div><div class="pipe-bar"><i style="width:79%;animation-delay:.6s"></i></div></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span9">Derecho</span><i class="pc-dot" data-i18n="edu.recursos.i6">TK</i></div><div class="pc-val">148</div><div class="pipe-bar"><i style="width:74%;animation-delay:.7s"></i></div></div>
+            </div>
+            <div class="pipe-col">
+              <div class="pipe-col-head"><span class="st" data-i18n="edu.recursos.span10">Confirmados</span><span class="amt">571</span></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span11">Red &middot; total</span><i class="pc-dot" data-i18n="edu.recursos.i7">GL</i></div><div class="pc-val">571</div><div class="pipe-bar"><i style="width:95%;animation-delay:.8s"></i></div></div>
+              <div class="pipe-card"><div class="pc-top"><span class="pc-name" data-i18n="edu.recursos.span12">Con beca</span><i class="pc-dot" data-i18n="edu.recursos.i8">BS</i></div><div class="pc-val">163</div><div class="pipe-bar"><i style="width:29%;animation-delay:.9s"></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ A REDE - VISUAL B ============ -->
+<section class="block tinted" id="rede">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="edu.rede.eyebrow">La red</span>
+        <h2 style="margin-top:24px" data-i18n="edu.rede.h2">Autonomía en cada campus.<br>Una sola lectura arriba.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="edu.rede.sub">
+          Cada unidad tiene calendario, oferta, moneda, idioma y política de becas propios - porque tiene que tenerlos. La entidad titular tiene un único número, actualizado, sin pedirle una hoja de cálculo a nadie.
+        </p>
+
+        <div class="ai-products prod-tint">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="4" width="14" height="13" rx="2"/><path d="M3 8h14M7 4V2M13 4V2"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.rede.p1.t">Calendario y oferta por unidad</div><div class="ds" data-i18n="edu.rede.p1.d">Los semestres, los feriados y la malla siguen la realidad local, no un estándar impuesto</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="7"/><path d="M8 7.5h4M8 12.5h4M10 6v8"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.rede.p2.t">Moneda y política de precios locales</div><div class="ds" data-i18n="edu.rede.p2.d">Mensualidad, beca y convenio en la moneda de la unidad, consolidados en la moneda de la red</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 16V8m4.5 8V4M12 16v-5m4.5 5V6"/><path d="M2 17h16"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.rede.p3.t">Consolidación automática</div><div class="ds" data-i18n="edu.rede.p3.d">El número de la red no espera el cierre manual de cada campus</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.rede.p4.t">Una unidad nueva entra sin un proyecto nuevo</div><div class="ds" data-i18n="edu.rede.p4.d">Una adquisición o apertura hereda estructura, permisos y estándar de informes desde el primer día</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" aria-hidden="true">
+        <div class="netpanel">
+          <div class="dash-bar">
+            <div class="title" data-i18n="edu.rede.div1">Nexyss &middot; Red</div>
+            <div class="dots"><i></i><i></i><i></i></div>
+          </div>
+          <div class="np-rows">
+            <div class="np-row">
+              <div class="np-city" data-i18n="edu.rede.div2">São Paulo <span>BRL</span></div>
+              <div class="np-n">3.482</div>
+              <div class="np-bar"><i style="width:86%;animation-delay:.15s"></i></div>
+              <div class="np-pct">86%</div>
+            </div>
+            <div class="np-row">
+              <div class="np-city" data-i18n="edu.rede.div3">Dublin <span>EUR</span></div>
+              <div class="np-n">1.724</div>
+              <div class="np-bar"><i style="width:71%;animation-delay:.3s"></i></div>
+              <div class="np-pct">71%</div>
+            </div>
+            <div class="np-row">
+              <div class="np-city" data-i18n="edu.rede.div4">Tokyo <span>JPY</span></div>
+              <div class="np-n">2.913</div>
+              <div class="np-bar"><i style="width:94%;animation-delay:.45s"></i></div>
+              <div class="np-pct">94%</div>
+            </div>
+            <div class="np-row">
+              <div class="np-city" data-i18n="edu.rede.div5">Ulaanbaatar <span>MNT</span></div>
+              <div class="np-n">1.293</div>
+              <div class="np-bar"><i style="width:63%;animation-delay:.6s"></i></div>
+              <div class="np-pct">63%</div>
+            </div>
+          </div>
+          <div class="np-total">
+            <span data-i18n="edu.rede.span1">Red consolidada</span>
+            <b data-i18n="edu.rede.b1">9.412 estudiantes</b>
+            <small data-i18n="edu.rede.small1">consolidado automáticamente</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRAJETORIA - acct360 reaproveitado ============ -->
+<section class="block deeper" id="jornada">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="edu.jor.eyebrow">Trayectoria</span>
+        <h2 style="margin-top:24px" data-i18n="edu.jor.h2">Toda la trayectoria de un estudiante, en una sola línea de tiempo.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="edu.jor.sub">
+          Seis semestres, un cambio de campus, una beca concedida, una suspensión de matrícula y un regreso. En sistemas separados son cinco registros que nadie logra costurar. Aquí es una sola persona.
+        </p>
+
+        <div class="ai-products prod-tint">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4v12h12"/><path d="M7 12l3-4 2.5 2L16 6"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.jor.p1.t">Evolución a lo largo de los períodos</div><div class="ds" data-i18n="edu.jor.p1.d">Asistencia y desempeño comparables de semestre a semestre, incluso con cambio de campus</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 10h4l2-5 2 10 2-5h4"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.jor.p2.t">Eventos marcados por origen</div><div class="ds" data-i18n="edu.jor.p2.d">Cada registro guarda de qué módulo vino - académico, financiero o de relacionamiento</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 3l6 3v5c0 3-2.6 5.2-6 6-3.4-.8-6-3-6-6V6l6-3z"/><path d="M7.5 10l2 2 3.5-3.5"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.jor.p3.t">Un historial que no se pierde</div><div class="ds" data-i18n="edu.jor.p3.d">La suspensión de matrícula, el regreso y el traslado preservan la trayectoria en lugar de reiniciarla</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" aria-hidden="true">
+        <div class="acct360">
+          <div>
+            <div class="acct-head">
+              <div class="acct-avatar" data-i18n="edu.jornada.div1">MS</div>
+              <div class="acct-id">
+                <div class="nm" data-i18n="edu.jornada.div2">Mariana Silva</div>
+                <div class="ds" data-i18n="edu.jornada.div3">Ingeniería &middot; S6</div>
+              </div>
+              <div class="acct-ring">
+                <svg viewBox="0 0 54 54">
+                  <circle class="ring-bg" cx="27" cy="27" r="22"/>
+                  <circle class="ring-fg" cx="27" cy="27" r="22"/>
+                </svg>
+                <div class="rv">87</div>
+              </div>
+            </div>
+            <ul class="acct-tl">
+              <li class="m-edu" data-i18n="edu.jornada.li1"><span class="src">Nexyss Education</span>Rematrícula 2027.1 confirmada - 6 asignaturas</li>
+              <li class="m-fin" data-i18n="edu.jornada.li2"><span class="src">Nexyss Finance</span>Beca del 40% activa - mensualidad al día</li>
+              <li class="m-crm" data-i18n="edu.jornada.li3"><span class="src">Nexyss CRM</span>Contacto del coordinador registrado tras el regreso</li>
+              <li class="m-mkt" data-i18n="edu.jornada.li4"><span class="src">Nexyss Marketing</span>Elegible para el programa de posgrado</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="fc-head">
+              <span class="ttl" data-i18n="edu.jornada.span1">Asistencia &middot; por semestre</span>
+              <span class="goal" data-i18n="edu.jornada.span2">MÍN. 75%</span>
+            </div>
+            <svg class="fc-svg" viewBox="0 0 320 130" preserveAspectRatio="none">
+              <line x1="0" y1="52" x2="320" y2="52" stroke="rgba(255,255,255,0.28)" stroke-dasharray="3 5"/>
+              <path class="band b1" d="M0,46 L64,40 L128,58 L192,86 L256,50 L320,34 L320,120 L0,120 Z" fill="rgba(3,219,255,0.16)"/>
+              <path class="fc-line" d="M0,46 L64,40 L128,58 L192,86 L256,50 L320,34"/>
+            </svg>
+            <div class="fc-legend">
+              <span data-i18n="edu.jornada.span3"><i style="background:rgba(3,219,255,.85)"></i>Asistencia</span>
+              <span data-i18n="edu.jornada.span4"><i style="background:rgba(255,255,255,.3)"></i>Mínimo exigido</span>
+            </div>
+            <div class="fc-total">
+              <b>87%</b>
+              <small data-i18n="edu.jornada.small1">promedio de los 6 períodos</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEXYSS AI ============ -->
+<section class="block" id="ia">
+  <div class="container">
+    <div class="ai-inner">
+      <div class="reveal">
+        <span class="eyebrow" data-i18n="edu.ia.eyebrow">Nexyss AI &middot; dentro de Education</span>
+        <h2 style="margin-top:24px" data-i18n="edu.ia.h2">La deserción da señales meses antes.<br>La IA las lee todas.</h2>
+        <p style="margin-top:24px;color:var(--c-text-soft);font-size:1.05rem;max-width:520px" data-i18n="edu.ia.sub">
+          Asistencia en baja, notas oscilando, mensualidad atrasándose, portal sin acceso hace tres semanas. Cada señal aislada es ruido. Juntas son un estudiante a punto de irse - y tiempo suficiente para hacer algo.
+        </p>
+        <p class="rm-note" data-i18n="edu.ia.note">Los recursos a continuación están en roadmap. Los Founding Customers participan en la definición del orden de entrega.</p>
+
+        <div class="ai-products">
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 16V9m4 7V5m4 11v-7m4 7V11"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.ia.div1">Nexyss Insight</div><div class="ds" data-i18n="edu.ia.p1">Riesgo de deserción por estudiante y previsión de ingresos por cohorte y por campus</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 6h12v9H7l-3 3V6z"/><path d="M7 10h6M7 12h4"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.ia.div2">Nexyss Assist</div><div class="ds" data-i18n="edu.ia.p2">La secretaría pregunta &ldquo;¿qué estudiantes del 3.º período están en riesgo?&rdquo; y recibe la lista</div></div>
+          </div>
+          <div class="ai-product">
+            <div class="p-icon"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M5 5h10v10H5z"/><path d="M8 8l4 4M12 8l-4 4"/></svg></div>
+            <div class="p-info"><div class="nm" data-i18n="edu.ia.div3">Nexyss Automate</div><div class="ds" data-i18n="edu.ia.p3">Activa la tutoría, avisa a la coordinación y dispara el contacto de finanzas, sin que nadie lo orqueste</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-visual reveal" aria-hidden="true">
+        <div class="ai-orbit"></div><div class="ai-orbit-2"></div><div class="ai-orbit-3"></div>
+        <div class="ai-center" data-i18n="edu.ia.div4">AI</div>
+        <div class="ai-node n1" data-i18n="edu.ia.div5">Asistencia</div>
+        <div class="ai-node n2" data-i18n="edu.ia.div6">Notas</div>
+        <div class="ai-node n3" data-i18n="edu.ia.div7">Finanzas</div>
+        <div class="ai-node n4" data-i18n="edu.ia.div8">Acceso</div>
+        <div class="ai-node n5" data-i18n="edu.ia.div9">Tutoría</div>
+        <div class="ai-node n6" data-i18n="edu.ia.div10">Cohorte</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTEGRACOES ============ -->
+<section class="block tinted" id="integracoes">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="edu.int.eyebrow">Integraciones y API</span>
+      <h2 data-i18n="edu.int.h2">Conecte el LMS, el torniquete y el banco.<br>Lo demás ya es la plataforma.</h2>
+      <p data-i18n="edu.int.sub">Lo que es módulo Nexyss no necesita conector. La integración queda reservada para lo que realmente vive fuera de la institución.</p>
+      <p class="rm-note" data-i18n="edu.int.note">Los recursos a continuación están en roadmap. Los Founding Customers participan en la definición del orden de entrega.</p>
+    </div>
+
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.integracoes.div1">01 &middot; Enseñanza</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 4l8 4-8 4-8-4 8-4z"/><path d="M5 10v4c0 2 2.7 3.5 6 3.5s6-1.5 6-3.5v-4"/></svg></div>
+        <div class="consult-title" data-i18n="edu.int.i1.t">LMS y contenido</div>
+        <div class="consult-desc" data-i18n="edu.int.i1.d">Preparada para conectarse al entorno virtual de aprendizaje que la institución ya usa.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.integracoes.div2">02 &middot; Presencia</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="4" y="3" width="14" height="16" rx="2"/><circle cx="11" cy="9" r="2.5"/><path d="M7 16c0-2 1.8-3.2 4-3.2s4 1.2 4 3.2"/></svg></div>
+        <div class="consult-title" data-i18n="edu.int.i2.t">Acceso y asistencia</div>
+        <div class="consult-desc" data-i18n="edu.int.i2.d">Asistencia que acepta un origen externo - torniquete, biometría o credencial - en lugar de introducción manual en un registro de clase.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.integracoes.div3">03 &middot; Pagos</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="16" height="12" rx="2"/><path d="M3 9h16M6 13h4"/></svg></div>
+        <div class="consult-title" data-i18n="edu.int.i3.t">Medios de pago</div>
+        <div class="consult-desc" data-i18n="edu.int.i3.d">Medios de pago locales por país, con conciliación automática del pago.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.integracoes.div4">04 &middot; Extensión</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4h6v6H4zM12 12h6v6h-6z"/><path d="M10 7h4v5"/></svg></div>
+        <div class="consult-title" data-i18n="edu.int.i4.t">API abierta y webhooks</div>
+        <div class="consult-desc" data-i18n="edu.int.i4.d">Para lo que la institución necesite construir encima - portal propio, app o informe específico.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECAO #compliance - NAO PUBLICADA
+     Aguardando validacao do responsavel pelo produto sobre o que a Nexyss faz
+     de fato hoje. Regra acordada: SIM -> afirma; ROADMAP -> so
+     com data; NAO -> nao menciona. Sem as respostas, nao ha o
+     que afirmar, entao a secao foi omitida em vez de preenchida
+     com copy nao verificada.
+     Itens a validar:
+       1. Guarda de historico com trilha de auditoria
+       2. Consentimento LGPD para menores + portal do responsavel
+       3. Exportacao e-MEC / Educacenso
+       4. Residencia de dado por regiao
+     Ao responder: criar a secao usando .consult-grid com o id
+     "compliance" e reinserir o link correspondente na .subnav-links.
+     ============================================================ -->
+
+<!-- ============ PARA QUEM E - 4 PERSONAS ============ -->
+<section class="block" id="para-quem">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="edu.pq.eyebrow">Para quién es</span>
+      <h2 data-i18n="edu.pq.h2">Cuatro lecturas del mismo sistema.</h2>
+      <p data-i18n="edu.pq.sub">De la secretaría al consejo, nadie necesita pedirle un informe a otra área para saber qué está pasando.</p>
+    </div>
+
+    <div class="consult-grid reveal-stagger">
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.para-quem.div1">01 &middot; Operación</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 3h10v16H6z"/><path d="M9 7h4M9 11h4M9 15h2"/></svg></div>
+        <div class="consult-title" data-i18n="edu.pq.c1.t">Secretaría y coordinación</div>
+        <div class="consult-desc" data-i18n="edu.pq.c1.d">Menos entrada manual de datos, más estudiante. La matrícula, la asistencia, el historial y los documentos dejan de ser trabajo repetido entre sistemas que no conversan.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.para-quem.div2">02 &middot; Académico</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M11 4l8 4-8 4-8-4 8-4z"/><path d="M17 9v5"/><path d="M5 10v4c0 2 2.7 3.5 6 3.5s6-1.5 6-3.5"/></svg></div>
+        <div class="consult-title" data-i18n="edu.pq.c2.t">Dirección académica</div>
+        <div class="consult-desc" data-i18n="edu.pq.c2.d">Toda la red con el mismo estándar. Plan de estudios, oferta y desempeño comparables entre campus porque nacen de la misma estructura.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.para-quem.div3">03 &middot; Financiero</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="M9 8.5h4M9 13.5h4M11 7v8"/></svg></div>
+        <div class="consult-title" data-i18n="edu.pq.c3.t">Dirección financiera</div>
+        <div class="consult-desc" data-i18n="edu.pq.c3.d">Ingresos predecibles, morosidad visible. Mensualidad, beca y acuerdo en el mismo lugar que la situación académica del estudiante.</div>
+      </div>
+      <div class="consult-item">
+        <div class="consult-num" data-i18n="edu.para-quem.div4">04 &middot; Entidad titular</div>
+        <div class="consult-icon"><svg viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 18V9l4-3 4 3v9"/><path d="M11 18v-6l4-3 4 3v6"/><path d="M2 18h18"/></svg></div>
+        <div class="consult-title" data-i18n="edu.pq.c4.t">Entidad titular y consejo</div>
+        <div class="consult-desc" data-i18n="edu.pq.c4.d">Un número, actualizado, auditable. Consolidación de la red en cualquier moneda, sin esperar el cierre manual de cada unidad.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACTO ============ -->
+<section class="block deeper" style="padding:60px 0">
+  <div class="container">
+    <div class="impact-strip reveal-stagger">
+      <div class="impact-item"><div class="n">1</div><div class="l" data-i18n="edu.imp.1">Historial por estudiante, del ingreso a la graduación</div></div>
+      <div class="impact-item"><div class="n">3</div><div class="l" data-i18n="edu.imp.2">Multiidioma nativo</div></div>
+      <div class="impact-item"><div class="n">0</div><div class="l" data-i18n="edu.imp.3">Sistemas paralelos por campus</div></div>
+      <div class="impact-item"><div class="n">99.99<small>%</small></div><div class="l" data-i18n="edu.imp.4">Uptime garantizado por SLA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDING CUSTOMERS ============ -->
+<section class="block" id="clientes">
+  <div class="container">
+    <div class="founding founding-simple reveal">
+      <div class="founding-inner">
+        <div>
+          <div class="fbadge">
+            <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>
+            <span data-i18n="founding.badge">Programa Founding Customers</span>
+          </div>
+          <h2 data-i18n="founding.h2">Una invitación especial.<br>Plazas limitadas.</h2>
+          <p data-i18n="founding.p">Estamos formando el círculo de primeros clientes que ayudarán a moldear la próxima generación de Nexyss. Si usted lidera una organización que valora las plataformas construidas en alianza, no en transacción, conversemos.</p>
+        </div>
+
+        <div>
+          <a href="../../contato/?interesse=founding" class="btn btn-primary" data-i18n="cta.candidatar">
+            Presentar candidatura
+            <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final" id="demo">
+  <div class="container">
+    <h2 class="reveal" data-i18n="edu.cta.h2">Del primer contacto al diploma<br><span style="background:linear-gradient(120deg,var(--c-edu),var(--c-crm));-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic;font-weight:400;">en un solo sistema.</span></h2>
+    <p class="reveal" data-i18n="edu.cta.sub">Programe una demo de Nexyss Education y vea la operación de su red funcionando como una sola cosa - campus por campus, del candidato al graduado.</p>
+    <div class="actions reveal">
+      <a href="../../contato/?interesse=demo" class="btn btn-primary" data-i18n="cta.demo">Solicitar una demo <svg class="arr" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h8m-3-3 3 3-3 3"/></svg></a>
+      <a href="../../contato/?interesse=especialista" class="btn btn-ghost" data-i18n="cta.especialista">Hablar con un especialista</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../../../assets/nexyss-logo-white.png" alt="Nexyss"  data-i18n-attr="alt:a11y.nexyss"/>
+        <p data-i18n="footer.plataforma-operacional-global-com-ia-uma">Plataforma operativa global con IA. Una plataforma. Múltiples módulos. Posibilidades infinitas.</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.plataforma">Plataforma</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.nexyss-crm">Nexyss CRM</a></li>
+          <li><a href="#" data-i18n="footer.nexyss-educacao">Nexyss Education</a></li>
+          <li><a href="../marketing/" data-i18n="footer.nexyss-marketing">Nexyss Marketing</a></li>
+          <li><a href="../finance/" data-i18n="footer.nexyss-finance">Nexyss Finance</a></li>
+          <li><a href="../hr/" data-i18n="footer.nexyss-hr">Nexyss HR</a></li>
+          <li><a href="../ai/" data-i18n="footer.nexyss-ai">Nexyss AI</a></li>
+          <li><a href="../integracoes/" data-i18n="footer.nexyss-integracoes">Nexyss Integrations</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.solucoes">Soluciones</h5>
+        <ul>
+          <li><a href="../../solucoes/#funcao" data-i18n="footer.por-funcao">Por función</a></li>
+          <li><a href="../../solucoes/#objetivo" data-i18n="footer.por-objetivo">Por objetivo</a></li>
+          <li><a href="../../solucoes/#porte" data-i18n="footer.por-porte">Por tamaño</a></li>
+          <li><a href="../../solucoes/por-setor/" data-i18n="footer.por-setor">Por sector</a></li>
+          <li><a href="../../solucoes/por-setor/#educacao" data-i18n="footer.educacao">Educación</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.empresa">Empresa</h5>
+        <ul>
+          <li><a href="../../sobre/" data-i18n="footer.sobre">Acerca de</a></li>
+          <li><a href="../../consultoria/" data-i18n="footer.nexyss-consultoria">Nexyss Consulting</a></li>
+          <li><a href="#" data-i18n="footer.parceiros">Socios</a></li>
+          <li><a href="#" data-i18n="footer.clientes">Clientes</a></li>
+          <li><a href="../../contato/" data-i18n="footer.contato">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="footer.recursos">Recursos</h5>
+        <ul>
+          <li><a href="#" data-i18n="footer.blog-insights">Blog e Insights</a></li>
+          <li><a href="#" data-i18n="footer.casos-de-sucesso">Casos de éxito</a></li>
+          <li><a href="#" data-i18n="footer.documentacao">Documentación</a></li>
+          <li><a href="#" data-i18n="footer.seguranca">Seguridad</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="legal" data-i18n="footer.2026-nexyss-group-todos-os-direitos-rese">© 2026 Nexyss Group. Todos los derechos reservados.</div>
+      <div class="links">
+        <a href="#" data-i18n="footer.privacidade">Privacidad</a>
+        <a href="#" data-i18n="footer.termos">Términos</a>
+        <a href="#" data-i18n="footer.cookies">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="../../../assets/nexyss.js"></script>
+</body>
+</html>

@@ -22,7 +22,12 @@ from i18nlib import *  # noqa
 
 LANG_ATTR = {"en": "en", "pt": "pt-BR", "es": "es"}
 OG_LOCALE = {"en": "en_GB", "pt": "pt_BR", "es": "es_ES"}
-BASE_URL = "https://www.nexyss.com"          # placeholder do dominio (TODO do CLAUDE.md)
+BASE_URL = "https://nexyss-website.netlify.app"   # dominio provisorio (decisao D1, 26/10/2026): trocar aqui quando o dominio oficial existir
+PLACEHOLDER = "https://www.nexyss.com"            # dominio placeholder que ainda esta nos templates de src/
+LANGS = ["en", "pt", "es"]
+HREFLANG = {"en": "en", "pt": "pt", "es": "es"}
+X_DEFAULT = "en"
+NO_SEO = {"contato/obrigado.html", "404.html"}    # noindex: sem hreflang, fora do sitemap
 # travessoes (U+2013/2014/2015/2212) e as entidades equivalentes; montados por codigo para este arquivo passar na propria checagem R6
 DASH = re.compile("[" + "".join(chr(c) for c in (0x2013, 0x2014, 0x2015, 0x2212)) + "]|&(?:" + "|".join(("m", "n")[j] + "dash" for j in (0, 1)) + "|mi" + "nus|hor" + "bar);")
 
@@ -33,6 +38,7 @@ ap.add_argument("--check", action="store_true")
 ap.add_argument("--identity", action="store_true")
 ap.add_argument("--strip-attrs", action="store_true")
 ap.add_argument("--base-url", default=BASE_URL)
+ap.add_argument("--site", action="store_true", help="tambem gera sitemap.xml e robots.txt em --out")
 args = ap.parse_args()
 langs = ["en", "pt", "es"] if args.lang == "all" else [args.lang]
 if not args.check and not args.out:
@@ -88,17 +94,58 @@ def page_url_path(rel):
     return rel[:-len("index.html")] if rel.endswith("/index.html") else rel
 
 
+def page_urls(rel, base):
+    """URL absoluta de cada versao (idioma) da pagina."""
+    return {l: "%s/%s/%s" % (base, l, page_url_path(rel)) for l in LANGS}
+
+
 def transform(out, rel, lang, base):
     """Caminho/SEO especifico do idioma (nao roda em --identity)."""
     out = re.sub(r'(<html\b[^>]*\blang=")[^"]*(")', r"\g<1>%s\g<2>" % LANG_ATTR[lang], out, count=1)
-    out = re.sub(r'((?:href|src)=")((?:\.\./)*assets/)', r"\1../\2", out)
+    out = re.sub(r'((?:href|src)=")((?:\.\./)*assets/)', r"\1../\2", out)     # assets sobem um nivel (so relativos)
+    out = out.replace("/__LANG__/", "/%s/" % lang)                              # 404: links absolutos, servida em qualquer URL
     out = out.replace('href="/"', 'href="/%s/"' % lang)
     out = out.replace('action="/contato/obrigado.html"', 'action="/%s/contato/obrigado.html"' % lang)
-    url = "%s/%s/%s" % (base, lang, page_url_path(rel))
-    out = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + url + m.group(2), out, count=1)
-    out = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + url + m.group(2), out, count=1)
-    out = re.sub(r'(<meta property="og:locale" content=")[^"]*(")', r"\g<1>%s\g<2>" % OG_LOCALE[lang], out, count=1)
+    urls = page_urls(rel, base)
+    out = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + urls[lang] + m.group(2), out, count=1)
+    out = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + urls[lang] + m.group(2), out, count=1)
+    # og:locale + alternates
+    alts = "".join('\n<meta property="og:locale:alternate" content="%s" />' % OG_LOCALE[l] for l in LANGS if l != lang)
+    out = re.sub(r'(<meta property="og:locale" content=")[^"]*("[^>]*>)',
+                 lambda m: m.group(1) + OG_LOCALE[lang] + m.group(2) + alts, out, count=1)
+    # hreflang (+ x-default) logo apos o canonical; nao em paginas noindex
+    if rel not in NO_SEO:
+        tags = "".join('\n<link rel="alternate" hreflang="%s" href="%s" />' % (HREFLANG[l], urls[l]) for l in LANGS)
+        tags += '\n<link rel="alternate" hreflang="x-default" href="%s" />' % urls[X_DEFAULT]
+        out = re.sub(r'(<link rel="canonical" href="[^"]*" />)', lambda m: m.group(1) + tags, out, count=1)
+    # dominio placeholder remanescente (og:image, twitter:image) e comentario
+    out = out.replace(PLACEHOLDER, base)
+    out = re.sub(r"<!-- TODO: confirmar dominio oficial antes de publicar \(placeholder: nexyss\.com\) -->",
+                 "<!-- BASE_URL provisorio (netlify.app): trocar em tools/build-i18n.py quando o dominio oficial for confirmado -->", out)
     return out
+
+
+def sitemap_xml(base):
+    rows = ['<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">']
+    for rel, _prefix in PAGES:
+        if rel in NO_SEO:
+            continue
+        urls = page_urls(rel, base)
+        for l in LANGS:
+            rows.append("  <url>")
+            rows.append("    <loc>%s</loc>" % urls[l])
+            for m in LANGS:
+                rows.append('    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (HREFLANG[m], urls[m]))
+            rows.append('    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>' % urls[X_DEFAULT])
+            rows.append("  </url>")
+    rows.append("</urlset>")
+    return "\n".join(rows) + "\n"
+
+
+def robots_txt(base):
+    # obrigado.html e 404 ficam FORA do Disallow de proposito: o noindex so funciona se o robo puder ler a pagina
+    return "User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % base
 
 
 errors, warnings = [], []
@@ -144,6 +191,10 @@ for lang in langs:
                 out = strip_i18n_attrs(out)
             dest = os.path.join(args.out, lang, rel)
         write(dest, out)
+
+if args.site and not args.check and not errors:
+    write(os.path.join(args.out, "sitemap.xml"), sitemap_xml(args.base_url))
+    write(os.path.join(args.out, "robots.txt"), robots_txt(args.base_url))
 
 unused = [k for k in pt if k not in all_used]
 if unused and not errors:

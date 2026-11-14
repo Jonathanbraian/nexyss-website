@@ -105,7 +105,7 @@
  "sol.porte.name": "By Size &amp; Sector",
  "sol.porte.tag": "Startups · Mid-Market · Enterprise · Global",
  "sol.todos.name": "View all solutions",
- "sol.todos.tag": "The four paths",
+ "sol.todos.tag": "The four ways",
  "nav.consultoria": "Nexyss Consulting",
  "a11y.idioma": "Language",
  "cta.demo": "Request a Demo",
@@ -1708,8 +1708,8 @@
  "sol.hero.eyebrow": "Solutions",
  "sol.hero.h1": "One platform. <span class=\"accent\">Four ways</span> to get started.",
  "sol.hero.sub": "There is one platform. What changes is where you come in: through the function you lead, the objective you pursue, the size of your organisation or the sector you work in.",
- "sol.hero.cta2": "View the paths",
- "sol.eixos.eyebrow": "The paths",
+ "sol.hero.cta2": "View the ways",
+ "sol.eixos.eyebrow": "The ways",
  "sol.eixos.h2": "Choose where to start.",
  "sol.eixos.sub": "Every path leads to the same modules, combined according to your question.",
  "sol.eixos.funcao.n": "By Function",
@@ -2347,5 +2347,12 @@
  "obrigado.h1": "Thank you. The conversation <span class=\"accent\">starts now.</span>",
  "obrigado.sub": "We have received your contact and will respond within 24 working hours, at the email address you provided. In the meantime, the platform is open for you to explore.",
  "obrigado.cta.plataforma": "Discover the platform",
- "obrigado.cta.home": "Back to the homepage"
+ "obrigado.cta.home": "Back to the homepage",
+ "meta.not-found.desc": "The address may have changed or been mistyped. Go back to the homepage or discover the platform.",
+ "meta.not-found.title": "Page not found - Nexyss",
+ "not-found.eyebrow": "Page not found",
+ "not-found.h1": "This page <span class=\"accent\">does not exist.</span>",
+ "not-found.sub": "The address may have changed or been mistyped. Go back to the homepage or discover the platform.",
+ "not-found.cta": "Discover the platform",
+ "not-found.cta.home": "Back to the homepage"
 }
