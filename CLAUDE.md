@@ -1878,3 +1878,9 @@ Sessão pós-i18n, em 2 commits sobre `af11a3e` (`8dc2999` e o ajuste visual). A
   EIRWAY e Excursions ficam com pouco contraste sobre o navy.
 - **Home:** o logo wall deixou de ser 3+2 e vira uma linha de 5 no desktop (flex com wrap, 4+1 no mobile).
 - **Fingerprint (a regravar):** todas as 108 capturas divergem; -7 elementos por página (menu e footer), Home -16 (logos no lugar de SVG e texto).
+
+### Link "Clientes" (header, drawer e footer), 14/11/2026
+`href="/__LANG__/#clientes"` nos 3 lugares de todas as 19 páginas de `src/` (o gerador troca `/__LANG__/` por `/en/`, `/pt/` ou `/es/`): leva sempre
+ao logo wall da Home (`id="clientes"` existe só lá, igual nos 3 idiomas). Resolve a pendência antiga do menu que apontava `#clientes` e `#consultoria`
+para âncoras inexistentes fora da Home (`#consultoria` já era `/consultoria/` desde 22/10). Seguem como `href="#"` no footer: CRM, Education, Privacidade,
+Termos e Cookies.
