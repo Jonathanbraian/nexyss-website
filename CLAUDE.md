@@ -17,11 +17,14 @@ Home aprovada: `index.html` (1956 linhas, single-file, CSS+JS inline)
   - `Nexyss` → marca principal. **Sempre title case.** Nunca "NEXYSS", nunca "nexyss".
   - `Nexyss Group` → razão social. **Apenas** em rodapé/legal/copyright/termos.
     Uso atual na Home: `© 2026 Nexyss Group. Todos os direitos reservados.`
-  - Módulos: `Nexyss CRM`, `Nexyss Educação`, `Nexyss Marketing`,
-    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrações`.
-  - Serviço: `Nexyss Consultoria` (página `/consultoria/`; não é módulo de software e não entra no
+  - Módulos: `Nexyss CRM`, `Nexyss Education`, `Nexyss Marketing`,
+    `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrations` (nomes em inglês nos 3 idiomas desde
+    26/10/2026; as seções antigas abaixo mantêm `Educação`/`Integrações` como registro histórico).
+  - Serviço: `Nexyss Consulting` (página `/consultoria/`; não é módulo de software e não entra no
     mega-menu Plataforma). **Sempre com o prefixo `Nexyss`** em identidade; "Consultoria" solto só como
-    título narrativo de seção.
+    título narrativo de seção. **Mudança de marca de 26/10/2026:** antes era `Nexyss Consultoria`; ver
+    a seção "Mudança de marca: Nexyss Consulting" (vale nos 3 idiomas; as seções antigas abaixo
+    descrevem o estado anterior e mantêm o nome antigo como registro histórico).
   - Sub-produtos de IA: `Nexyss Insight`, `Nexyss Assist`, `Nexyss Automate`.
 - **Posicionamento:** enterprise. Padrão de referência = **Salesforce, HubSpot,
   Monday.com, Pipedrive, Stripe**. Copy institucional, densidade real de
@@ -1772,3 +1775,80 @@ HTML equivalentes (mdash, ndash, minus, horbar). Usar hífen ASCII simples (-).
    SLA, cobertura) ou os já aprovados na Home. Na dúvida, perguntar ao Jonathan.
 9. Testar sempre nos dois extremos: **375px** (drawer) e **1280px** (desktop),
    confirmando que o desktop não mudou.
+
+## Mudança de marca: Nexyss Consulting e padrão total de nomes (26/10/2026)
+
+O serviço passa de `Nexyss Consultoria` para **`Nexyss Consulting`** em PT, EN e ES, e Educação e Integrações
+acompanham: o padrão fechado é de **nomes em inglês nos 3 idiomas** - `Nexyss CRM`, `Nexyss Education`,
+`Nexyss Marketing`, `Nexyss Finance`, `Nexyss HR`, `Nexyss AI`, `Nexyss Integrations`, `Nexyss Consulting`.
+Decisão do Jonathan, aceita conscientemente como mudança de marca. Os valores vivem em `i18n/{pt,en,es}.json`;
+o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
+
+- **Muda:** o rótulo visível (header, com o `<span class="nav-nx">Nexyss </span>` que some abaixo de 1340px, drawer,
+  footer, `<title>`, metas, botões "Conhecer Nexyss Consulting" e "Ver Nexyss Integrations", select do Contato), as
+  frases do corpo que citavam o nome, e o nome do módulo dentro de listas em frase corrida ("CRM, Education,
+  Marketing, Finance e HR").
+- **Não muda:** as URLs (`/consultoria/`, `/plataforma/educacao/`, `/plataforma/integracoes/`), os nomes de arquivo,
+  as classes CSS (`.theme-con`, `.theme-edu`, `.theme-int`, `.mod-card.con`, `.cw-*`) e as chaves i18n. A palavra
+  comum fora da marca continua no idioma local: "Educação" como **setor** (Soluções por setor, tags, subnav,
+  cliente no Contato; 9 textos), "Integrações" como título de seção, "consultoria" como substantivo.
+- **Artigo antes do nome em inglês, no PT: masculino**, como já era "no Finance", "ao Marketing", "IA no CRM":
+  "no Education", "ao Education", "do Education", "dentro do Education".
+- **Sessão 2.6:** 74 trocas de "Nexyss Educação/Integrações" (PT e ES); 27 "Educação" solto que era nome de módulo
+  em lista ou rótulo; as 7 frases em PT com a ordem invertida ("consultoria Nexyss"); as metas SEO e 2 textos de
+  Integrações alinhados aos H1 novos; e o card e o botão "Integrações & API" da Overview
+  (`plat.modulos.a7`, `plat.integracoes.a1`), que **fecha a pendência de 16/10** do nome antigo.
+- **Ainda a ajustar nas fases seguintes:** o `MAP` do `assets/nexyss.js` e o `<option>` do select do Contato seguem
+  com o valor em PT ("Nexyss Consultoria", "Nexyss Educação"...) nas páginas servidas (muda junto com os slugs neutros
+  do select, D7); `form-detect.html` idem. As páginas servidas só passam a usar os nomes novos no merge final.
+- **Pausado para a Sessão 3:** `sobre.faq.a3` (a frase lista os módulos e hoje está mista: "Education... e
+  Integrações", só a troca de Integrações foi adiada) e o "Quatro caminhos/Os caminhos" fora das metas (`sol.hero.cta2`,
+  `sol.eixos.eyebrow`, `sol.todos.tag`), enquanto o H1 de Soluções virou "Quatro formas de começar".
+
+## i18n em 3 idiomas: arquitetura, redirects da Netlify e plano B (Sessões 3a e 3b, nov/2026)
+
+> Esta seção **substitui** o que as seções antigas dizem sobre "URLs flat", "idioma default pt-BR" e `.lang-switch`
+> estático. O texto antigo fica como registro histórico. Estado: na branch `claude/blissful-dirac-wgklsz`; vai ao ar
+> no merge final (Sessão 3f).
+
+- **Fonte:** `src/` (18 páginas PT + `src/404.html`) e `i18n/{pt,en,es}.json`. O site publicado é **saída gerada e
+  commitada** em `/en/`, `/pt/` e `/es/` (19 arquivos cada), mais `sitemap.xml` e `robots.txt`.
+  `python3 tools/build-i18n.py --lang all --site --out .` gera tudo; `python3 tools/check-built.py` reprova se alguém
+  editar HTML gerado à mão. **Nunca editar `en/`, `pt/`, `es/` diretamente:** editar `src/` ou o dicionário e regerar.
+- **URLs:** `/<idioma>/<mesmo slug em PT>/` (`/en/plataforma/crm/`). `BASE_URL` provisório
+  `https://nexyss-website.netlify.app` (uma linha em `tools/build-i18n.py`; trocar quando o domínio oficial existir).
+  `hreflang` en, pt, es + `x-default` = en; `html lang` en / pt-BR / es; `og:locale` en_GB, pt_BR, es_ES. Páginas
+  `noindex` (obrigado, 404) ficam sem hreflang e fora do sitemap (51 URLs).
+- **Raiz `/`:** só ela detecta idioma (302, `force = true`), nunca as páginas internas (o Googlebot, sem
+  `Accept-Language`, cai em `/en/`). Ordem das 7 regras do `netlify.toml`, a primeira que casa vence:
+  cookie `nx_l_pt` / `nx_l_es` / `nx_l_en` (escolha manual, só a presença do cookie conta) → `Language = es` →
+  `Country = PT` (vai para EN) → `Language = pt` → o resto (`/en/`). Espanhol vence a regra da UE (Espanha vai para
+  `/es/`); Portugal vai para `/en/`. O `index.html` da raiz é o fallback com 3 botões, sem JS, se as regras falharem.
+- **URLs planas antigas:** `/plataforma`, `/solucoes`, `/consultoria`, `/sobre`, `/contato` (e `/*`) dão 301 para
+  `/pt/...`, preservando a query (`?interesse=demo`). **404 por idioma:** `/en/*`, `/pt/*`, `/es/*` sem arquivo caem na
+  `404.html` do idioma (links absolutos, porque é servida em qualquer URL); fora disso vale o `/404.html` da raiz.
+- **Validado no deploy preview (nov/2026):** `bash tools/test-redirects.sh` deu **25 PASS, 0 FAIL** no deploy da branch. Confirmado: a
+  condição `Cookie` casa por presença do nome (`nx_l_*`), `Language = pt` casa `pt-BR`, `Country = PT` leva Portugal a `/en/`, as 404
+  saem traduzidas nos 3 idiomas e as URLs planas antigas dão 301 preservando a query.
+- **Plano B (Edge Function) NÃO ativado:** ficou pronto em `tools/edge-plan-b/` (`lang.ts`, testado em 12 casos) mas foi dispensado, porque o
+  cookie e o idioma funcionaram nativamente nas regras do `netlify.toml`. Só reativar se a Netlify mudar o comportamento dessas condições.
+- **Seletor de idioma (Sessão 3c):** o `src/` traz só os marcadores `<!--NX:LANGSWITCH-->` (header) e `<!--NX:DRAWERLANG-->` (drawer); o gerador
+  (`lang_widgets` em `tools/build-i18n.py`) os troca por 3 `<a href>` reais para a **mesma página** nos outros idiomas (`hreflang`, `lang`,
+  `aria-current` no ativo; na 404 o destino é a Home). Texto EN / PT / ES, sem bandeira. Desktop: popover por hover e foco (`.lang-switch`,
+  `.lang-btn`, `.lang-menu`, 250 ms, z-index 120 como o mega-menu); ≤760px: 3 pills em `.drawer-lang` no `.drawer-foot`. O `aria-label` vem de
+  `a11y.idioma`. `assets/nexyss.js` só grava a escolha no clique (`setLanguage`: cookie `nx_l_<lang>` por 1 ano, `path=/`, `SameSite=Lax`, apaga os
+  outros dois, `localStorage nx_lang`) e preserva `?query` e `#âncora`; a navegação é a natural do link. A chave `nav.pt` foi removida.
+  CSS compartilhado: `.brand { flex-shrink: 0 }` (logo não encolhe mais) e `white-space: nowrap` nos links do menu ("Acerca de" em ES não quebra).
+- **Formulários por idioma (Sessão 3d):** o `src/contato/index.html` usa o token `__FORMNAME__` (no `name` do `<form>` e no hidden `form-name`) e o
+  gerador o troca por `contato-en`, `contato-pt` e `contato-es` (3 formulários no painel da Netlify, 100 envios/mês compartilhados; as
+  notificações por e-mail se configuram à mão no painel). O `action` vai para `/<idioma>/contato/obrigado.html`. `form-detect.html` espelha os 3.
+  O `<option value>` do select é um **slug neutro igual nos 3 idiomas** (`crm`, `education`, `marketing`, `finance`, `hr`, `ai`, `integrations`,
+  `consulting`, `sobre`, `platform`, `undecided`): é o valor que chega ao painel; o texto visível vem do dicionário. No `nexyss.js` o `MAP` leva
+  `?interesse=` ao slug (aceita também os slugs antigos em PT: `educacao`, `integracoes`, `consultoria`, `plataforma`, mais `demo`, `founding`,
+  `especialista`). O `mailto` usa `__MAIL_ADDR__` e `__MAIL_SUBJECT__` (chaves `contato.side.mail.addr` e `.subject`: contact@, contato@, contacto@).
+  A mensagem do Founding vem de `data-founding-msg` no `<form>` (chave `contato.form.founding-msg`). Seletor do JS: `form[name^="contato"]`.
+- **Baselines e QA final (Sessão 3e):** `baselines/{en,pt,es}/<pagina>-<vp>.json` são compactos (`fp`, `doc`, `fonts`; 108 arquivos) e
+  `baselines/pt-full/*.json.gz` guarda o completo só do PT. Regerar/comparar: `node baselines/tools/run.js --all|--check` (Playwright, lê
+  `en/ pt/ es/`; ~4% das capturas têm jitter de hash, então `--check` tenta até 3 vezes). Os baselines antigos (páginas planas, macOS) e as
+  tabelas de hash das seções acima são **históricos**: valem os de `baselines/README.md`. QA do site gerado: `python3 tools/qa-site.py` (R6, R2,
+  R3, R8, R5.1, pessoas, links, hreflang, sitemap, robots; R2/R3/R8 comparam com `origin/main` para separar mockup pré-existente de texto novo).

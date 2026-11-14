@@ -203,6 +203,7 @@ header.site.scrolled {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 .brand img { height: 34px; width: auto; opacity: 1; }
 
@@ -225,6 +226,7 @@ header.site.scrolled {
   color: var(--c-text-soft);
   transition: color .2s ease, background .2s ease;
   font-family: var(--font-sans);
+  white-space: nowrap;
 }
 .nav-menu > li > a:hover,
 .nav-menu > li > button:hover { color: var(--c-white); background: rgba(255, 255, 255, 0.06); }
@@ -319,20 +321,7 @@ header.site.scrolled {
 .icn-neutral { background: var(--c-line-mid); color: var(--c-text-soft); }
 
 .nav-cta { display: flex; align-items: center; gap: 10px; }
-.lang-switch {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--c-line-mid);
-  font-size: 0.85rem;
-  color: var(--c-text-soft);
-  background: transparent;
-  cursor: pointer;
-  transition: border-color .2s ease, color .2s ease;
-}
-.lang-switch:hover { border-color: var(--c-line-strong); color: var(--c-white); }
+/* .lang-switch: ver a secao "=== SELETOR DE IDIOMA ===" no fim do arquivo */
 
 .nav-toggle {
   display: none;
@@ -3938,4 +3927,88 @@ body.drawer-open { overflow: hidden; }
   .page-sobre .hero { padding: 130px 0 60px; }
   .page-sobre .pillars { grid-template-columns: 1fr; }
   .page-sobre .about-quote { padding: 24px; }
+}
+
+/* ============================================================
+   === SELETOR DE IDIOMA ===
+   Desktop: popover por hover e foco (mesmo padrao do mega-menu).
+   Mobile (<=760px): 3 pills visiveis no rodape do drawer.
+   Os links sao reais (um por idioma), gerados no build.
+   ============================================================ */
+.lang-switch { position: relative; }
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--c-line-mid);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: .08em;
+  color: var(--c-text-soft);
+  background: transparent;
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease;
+}
+.lang-btn svg { transition: transform .25s ease; }
+.lang-switch:hover .lang-btn,
+.lang-switch:focus-within .lang-btn { border-color: var(--c-line-strong); color: var(--c-white); }
+.lang-switch:hover .lang-btn svg,
+.lang-switch:focus-within .lang-btn svg { transform: rotate(180deg); }
+.lang-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin: 0;
+  padding: 14px 0 0;            /* ponte de hover entre botao e painel */
+  list-style: none;
+  min-width: 170px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+  z-index: 120;
+}
+.lang-switch:hover .lang-menu,
+.lang-switch:focus-within .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.lang-menu li {
+  background: rgba(11, 20, 64, 0.96);
+  border-left: 1px solid var(--c-line-mid);
+  border-right: 1px solid var(--c-line-mid);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+.lang-menu li:first-child { border-top: 1px solid var(--c-line-mid); border-radius: 14px 14px 0 0; padding-top: 6px; }
+.lang-menu li:last-child { border-bottom: 1px solid var(--c-line-mid); border-radius: 0 0 14px 14px; padding-bottom: 6px; }
+.lang-menu a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  padding: 9px 16px;
+  font-size: 0.9rem;
+  color: var(--c-text-soft);
+  transition: color .2s ease, background .2s ease;
+}
+.lang-menu a b { font-family: var(--font-mono); font-weight: 500; font-size: 0.74rem; letter-spacing: .08em; min-width: 22px; }
+.lang-menu a:hover { color: var(--c-white); background: rgba(255, 255, 255, 0.06); }
+.lang-menu a[aria-current] { color: var(--c-edu); }
+.drawer-lang { display: none; }
+@media (max-width: 760px) {
+  .drawer-foot { flex-wrap: wrap; }
+  .drawer-lang { display: flex; gap: 8px; width: 100%; }
+  .drawer-lang a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-radius: 999px;
+    border: 1px solid var(--c-line-mid);
+    color: var(--c-text-soft);
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+  }
+  .drawer-lang a b { font-family: var(--font-mono); font-weight: 500; font-size: 0.8rem; letter-spacing: .08em; }
+  .drawer-lang a span { display: none; }
+  .drawer-lang a[aria-current] { border-color: var(--c-edu); color: var(--c-edu); background: rgba(3, 219, 255, 0.08); }
 }

@@ -83,6 +83,162 @@
   status = 404
   force = true
 
+# i18n: templates, dicionários e gerador (a Netlify não roda build; só o HTML gerado é servido)
+[[redirects]]
+  from = "/src/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/i18n/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# ------------------------------------------------------------
+# I18N - DETECCAO DE IDIOMA SO NA RAIZ "/" (302)
+# ------------------------------------------------------------
+# O site e gerado em /en/, /pt/ e /es/ (ver tools/build-i18n.py). So a raiz decide o idioma: nenhuma
+# pagina interna redireciona por idioma (o Googlebot, sem Accept-Language, so toca em "/" e cai em /en/).
+# A ordem importa, a primeira regra que casa vence. `force = true` e obrigatorio porque /index.html existe
+# (e o fallback com os 3 botoes de idioma, usado se estas regras falharem).
+#   1-3  escolha manual anterior: o seletor grava o cookie nx_l_<idioma> (a PRESENCA do cookie decide)
+#   4    espanhol em qualquer pais, Espanha incluida
+#   5    Portugal vai para EN (o PT do site e o do Brasil)
+#   6    portugues nos demais paises
+#   7    todo o resto, e quem nao envia Accept-Language
+# VALIDAR NO DEPLOY PREVIEW com tools/test-redirects.sh. Se a condicao Cookie ou Language falhar,
+# plano B: Edge Function em tools/edge-plan-b/ (README la dentro).
+[[redirects]]
+  from = "/"
+  to = "/pt/"
+  status = 302
+  force = true
+  conditions = {Cookie = ["nx_l_pt"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Cookie = ["nx_l_es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+  conditions = {Cookie = ["nx_l_en"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es/"
+  status = 302
+  force = true
+  conditions = {Language = ["es"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+  conditions = {Country = ["PT"]}
+
+[[redirects]]
+  from = "/"
+  to = "/pt/"
+  status = 302
+  force = true
+  conditions = {Language = ["pt"]}
+
+[[redirects]]
+  from = "/"
+  to = "/en/"
+  status = 302
+  force = true
+
+# ------------------------------------------------------------
+# I18N - URLs PLANAS ANTIGAS (301 para o PT, que era o unico idioma)
+# ------------------------------------------------------------
+# /plataforma/crm/?interesse=demo -> /pt/plataforma/crm/?interesse=demo. Cada secao tem duas regras:
+# a do diretorio sem barra final e a do curinga.
+[[redirects]]
+  from = "/plataforma"
+  to = "/pt/plataforma/"
+  status = 301
+
+[[redirects]]
+  from = "/plataforma/*"
+  to = "/pt/plataforma/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/solucoes"
+  to = "/pt/solucoes/"
+  status = 301
+
+[[redirects]]
+  from = "/solucoes/*"
+  to = "/pt/solucoes/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/consultoria"
+  to = "/pt/consultoria/"
+  status = 301
+
+[[redirects]]
+  from = "/consultoria/*"
+  to = "/pt/consultoria/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/sobre"
+  to = "/pt/sobre/"
+  status = 301
+
+[[redirects]]
+  from = "/sobre/*"
+  to = "/pt/sobre/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/contato"
+  to = "/pt/contato/"
+  status = 301
+
+[[redirects]]
+  from = "/contato/*"
+  to = "/pt/contato/:splat"
+  status = 301
+
+# ------------------------------------------------------------
+# I18N - 404 POR IDIOMA
+# ------------------------------------------------------------
+# Sem `force`: so vale quando o arquivo nao existe. A 404 de cada idioma usa caminhos absolutos
+# (e servida em qualquer URL). Fora desses prefixos vale o /404.html da raiz.
+[[redirects]]
+  from = "/en/*"
+  to = "/en/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/pt/*"
+  to = "/pt/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/es/*"
+  to = "/es/404.html"
+  status = 404
+
 # ------------------------------------------------------------
 # HEADERS DE SEGURANÇA - aplicados a todas as respostas
 # ------------------------------------------------------------

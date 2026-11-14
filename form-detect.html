@@ -1,8 +1,8 @@
 <!-- Netlify Forms detection: do not link, do not delete -->
 <!--
-  Este arquivo existe só para o Netlify registrar o formulário "contato" no
+  Este arquivo existe só para o Netlify registrar os 3 formulários "contato-en", "contato-pt" e "contato-es" no
   deploy. Precisa ter EXATAMENTE os mesmos campos (name=) do <form> real em
-  /contato/index.html - se divergirem, o painel mostra o último conjunto lido.
+  /<idioma>/contato/index.html - se divergirem, o painel mostra o último conjunto lido.
   Não é linkado em lugar nenhum e retorna 404 via netlify.toml.
 -->
 <!DOCTYPE html>
@@ -13,25 +13,71 @@
 <title>Nexyss - form detection</title>
 </head>
 <body>
-<form name="contato" method="POST" action="/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
-  <input type="hidden" name="form-name" value="contato" />
+<form name="contato-en" method="POST" action="/en/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contato-en" />
   <input type="hidden" name="origem" value="" />
   <input name="bot-field" />
   <input name="nome" type="text" />
   <input name="email" type="email" />
   <input name="empresa" type="text" />
   <select name="interesse">
-    <option value="Nexyss CRM">Nexyss CRM</option>
-    <option value="Nexyss Educação">Nexyss Educação</option>
-    <option value="Nexyss Marketing">Nexyss Marketing</option>
-    <option value="Nexyss Finance">Nexyss Finance</option>
-    <option value="Nexyss HR">Nexyss HR</option>
-    <option value="Nexyss AI">Nexyss AI</option>
-    <option value="Nexyss Integrações">Nexyss Integrações</option>
-    <option value="Nexyss Consultoria">Nexyss Consultoria</option>
-    <option value="Sobre a Nexyss">Sobre a Nexyss</option>
-    <option value="Plataforma completa">Plataforma completa</option>
-    <option value="Ainda não tenho certeza">Ainda não tenho certeza</option>
+    <option value="crm">crm</option>
+    <option value="education">education</option>
+    <option value="marketing">marketing</option>
+    <option value="finance">finance</option>
+    <option value="hr">hr</option>
+    <option value="ai">ai</option>
+    <option value="integrations">integrations</option>
+    <option value="consulting">consulting</option>
+    <option value="sobre">sobre</option>
+    <option value="platform">platform</option>
+    <option value="undecided">undecided</option>
+  </select>
+  <textarea name="mensagem"></textarea>
+  <button type="submit">Enviar</button>
+</form>
+<form name="contato-pt" method="POST" action="/pt/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contato-pt" />
+  <input type="hidden" name="origem" value="" />
+  <input name="bot-field" />
+  <input name="nome" type="text" />
+  <input name="email" type="email" />
+  <input name="empresa" type="text" />
+  <select name="interesse">
+    <option value="crm">crm</option>
+    <option value="education">education</option>
+    <option value="marketing">marketing</option>
+    <option value="finance">finance</option>
+    <option value="hr">hr</option>
+    <option value="ai">ai</option>
+    <option value="integrations">integrations</option>
+    <option value="consulting">consulting</option>
+    <option value="sobre">sobre</option>
+    <option value="platform">platform</option>
+    <option value="undecided">undecided</option>
+  </select>
+  <textarea name="mensagem"></textarea>
+  <button type="submit">Enviar</button>
+</form>
+<form name="contato-es" method="POST" action="/es/contato/obrigado.html" data-netlify="true" netlify-honeypot="bot-field">
+  <input type="hidden" name="form-name" value="contato-es" />
+  <input type="hidden" name="origem" value="" />
+  <input name="bot-field" />
+  <input name="nome" type="text" />
+  <input name="email" type="email" />
+  <input name="empresa" type="text" />
+  <select name="interesse">
+    <option value="crm">crm</option>
+    <option value="education">education</option>
+    <option value="marketing">marketing</option>
+    <option value="finance">finance</option>
+    <option value="hr">hr</option>
+    <option value="ai">ai</option>
+    <option value="integrations">integrations</option>
+    <option value="consulting">consulting</option>
+    <option value="sobre">sobre</option>
+    <option value="platform">platform</option>
+    <option value="undecided">undecided</option>
   </select>
   <textarea name="mensagem"></textarea>
   <button type="submit">Enviar</button>

@@ -145,7 +145,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
 // ============ CONTATO - pré-seleção via querystring + estado de erro ============
 // Só roda na página que tem o formulário. Nenhum efeito nas outras.
 (function () {
-  const form = document.querySelector('form[name="contato"]');
+  const form = document.querySelector('form[name^="contato"]');   // contato-en / contato-pt / contato-es
   if (!form) return;
 
   const params    = new URLSearchParams(location.search);
@@ -154,23 +154,17 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
   // Links por produto usam os dois: ?interesse=marketing&origem=demo.
   const origemCta = (params.get('origem') || '').trim().toLowerCase();
 
-  // ?interesse= (vindo das CTAs do site) → opção do dropdown.
-  // demo/founding → "Plataforma completa" · especialista → "Ainda não tenho certeza".
-  // Slugs de módulo também funcionam, para links futuros por produto.
+  // ?interesse= (vindo das CTAs do site) → slug neutro do <option value>.
+  // O valor enviado ao Netlify é sempre o slug (igual nos 3 idiomas); o texto
+  // exibido vem do dicionário, já traduzido no build. Os slugs antigos em PT
+  // (educacao, integracoes, consultoria, plataforma) seguem aceitos como alias.
   const MAP = {
-    demo: 'Plataforma completa',
-    founding: 'Plataforma completa',
-    especialista: 'Ainda não tenho certeza',
-    plataforma: 'Plataforma completa',
-    crm: 'Nexyss CRM',
-    educacao: 'Nexyss Educação',
-    marketing: 'Nexyss Marketing',
-    finance: 'Nexyss Finance',
-    hr: 'Nexyss HR',
-    ai: 'Nexyss AI',
-    integracoes: 'Nexyss Integrações',
-    consultoria: 'Nexyss Consultoria',
-    sobre: 'Sobre a Nexyss'
+    demo: 'platform', founding: 'platform', plataforma: 'platform', platform: 'platform',
+    especialista: 'undecided', undecided: 'undecided',
+    crm: 'crm', marketing: 'marketing', finance: 'finance', hr: 'hr', ai: 'ai', sobre: 'sobre',
+    educacao: 'education', education: 'education',
+    integracoes: 'integrations', integrations: 'integrations',
+    consultoria: 'consulting', consulting: 'consulting'
   };
 
   const sel    = form.querySelector('select[name="interesse"]');
@@ -188,7 +182,7 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
 
   // Founding Customers: abre a mensagem já contextualizada (editável)
   if ((interesse === 'founding' || origemCta === 'founding') && msg && !msg.value) {
-    msg.value = 'Tenho interesse no programa Founding Customers.';
+    msg.value = form.dataset.foundingMsg || '';   // texto traduzido no build (data-founding-msg)
   }
 
   // Estado de erro: o evento "invalid" dispara por campo antes de o navegador
@@ -199,5 +193,29 @@ document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(e
     if (form.classList.contains('show-errors') && form.checkValidity()) {
       form.classList.remove('show-errors');
     }
+  });
+})();
+
+// ============ SELETOR DE IDIOMA ============
+// Os links sao reais (gerados no build). O JS so grava a escolha manual antes do
+// navegador seguir o href: cookie nx_l_<lang> (lido pelas regras da Netlify no "/")
+// e localStorage. Preserva #ancora e ?query da pagina atual.
+(function () {
+  const LANGS = ['en', 'pt', 'es'];
+  function setLanguage(lang) {
+    if (LANGS.indexOf(lang) < 0) return;
+    LANGS.forEach(function (l) {
+      document.cookie = l === lang
+        ? 'nx_l_' + l + '=1; max-age=31536000; path=/; SameSite=Lax'
+        : 'nx_l_' + l + '=; max-age=0; path=/; SameSite=Lax';
+    });
+    try { localStorage.setItem('nx_lang', lang); } catch (e) {}
+  }
+  document.querySelectorAll('.lang-menu a[data-lang], .drawer-lang a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      setLanguage(a.dataset.lang);
+      a.search = location.search;
+      a.hash = location.hash;
+    });
   });
 })();
