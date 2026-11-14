@@ -1804,3 +1804,36 @@ o gerador usa o mesmo rótulo nas 18 páginas dos 3 idiomas.
 - **Pausado para a Sessão 3:** `sobre.faq.a3` (a frase lista os módulos e hoje está mista: "Education... e
   Integrações", só a troca de Integrações foi adiada) e o "Quatro caminhos/Os caminhos" fora das metas (`sol.hero.cta2`,
   `sol.eixos.eyebrow`, `sol.todos.tag`), enquanto o H1 de Soluções virou "Quatro formas de começar".
+
+## i18n em 3 idiomas: arquitetura, redirects da Netlify e plano B (Sessões 3a e 3b, nov/2026)
+
+> Esta seção **substitui** o que as seções antigas dizem sobre "URLs flat", "idioma default pt-BR" e `.lang-switch`
+> estático. O texto antigo fica como registro histórico. Estado: na branch `claude/blissful-dirac-wgklsz`; vai ao ar
+> no merge final (Sessão 3f).
+
+- **Fonte:** `src/` (18 páginas PT + `src/404.html`) e `i18n/{pt,en,es}.json`. O site publicado é **saída gerada e
+  commitada** em `/en/`, `/pt/` e `/es/` (19 arquivos cada), mais `sitemap.xml` e `robots.txt`.
+  `python3 tools/build-i18n.py --lang all --site --out .` gera tudo; `python3 tools/check-built.py` reprova se alguém
+  editar HTML gerado à mão. **Nunca editar `en/`, `pt/`, `es/` diretamente:** editar `src/` ou o dicionário e regerar.
+- **URLs:** `/<idioma>/<mesmo slug em PT>/` (`/en/plataforma/crm/`). `BASE_URL` provisório
+  `https://nexyss-website.netlify.app` (uma linha em `tools/build-i18n.py`; trocar quando o domínio oficial existir).
+  `hreflang` en, pt, es + `x-default` = en; `html lang` en / pt-BR / es; `og:locale` en_GB, pt_BR, es_ES. Páginas
+  `noindex` (obrigado, 404) ficam sem hreflang e fora do sitemap (51 URLs).
+- **Raiz `/`:** só ela detecta idioma (302, `force = true`), nunca as páginas internas (o Googlebot, sem
+  `Accept-Language`, cai em `/en/`). Ordem das 7 regras do `netlify.toml`, a primeira que casa vence:
+  cookie `nx_l_pt` / `nx_l_es` / `nx_l_en` (escolha manual, só a presença do cookie conta) → `Language = es` →
+  `Country = PT` (vai para EN) → `Language = pt` → o resto (`/en/`). Espanhol vence a regra da UE (Espanha vai para
+  `/es/`); Portugal vai para `/en/`. O `index.html` da raiz é o fallback com 3 botões, sem JS, se as regras falharem.
+- **URLs planas antigas:** `/plataforma`, `/solucoes`, `/consultoria`, `/sobre`, `/contato` (e `/*`) dão 301 para
+  `/pt/...`, preservando a query (`?interesse=demo`). **404 por idioma:** `/en/*`, `/pt/*`, `/es/*` sem arquivo caem na
+  `404.html` do idioma (links absolutos, porque é servida em qualquer URL); fora disso vale o `/404.html` da raiz.
+- **A validar no deploy preview:** não consegui testar as regras daqui (o container não alcança a Netlify). Suposições a
+  confirmar: a condição `Cookie` casa por presença do nome; `Language = ["pt"]` casa `pt-BR`; `nf_country` simula o país.
+  Teste: `bash tools/test-redirects.sh <url-do-deploy>` (25 casos, PASS/FAIL por caso).
+- **Plano B (pré-aprovado):** Edge Function em `tools/edge-plan-b/` (`lang.ts` com a lógica `decide`, testada em
+  12 casos). Só entra se o preview reprovar a condição de cookie ou de idioma: copiar para
+  `netlify/edge-functions/`, apagar as 7 regras de `/` e rodar o teste de novo.
+- **Pendente (3c a 3f):** seletor de idioma funcional e `white-space: nowrap` no menu (em ES "Acerca de" quebra a
+  1280px), 3 formulários Netlify e slugs no select, baselines nos 3 idiomas (o `baselines/tools/run.js` ainda aponta
+  para as páginas planas removidas), atualizar esta documentação e fazer o merge.
+
