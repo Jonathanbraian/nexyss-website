@@ -36,6 +36,7 @@ PAGES = [
     ("solucoes/por-porte/index.html", "solp"),
     ("consultoria/index.html", "con"),
     ("sobre/index.html", "sobre"),
+    ("clientes/index.html", "clientes"),
     ("contato/index.html", "contato"),
     ("contato/obrigado.html", "obrigado"),
     ("404.html", "not-found"),

@@ -337,6 +337,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/sobre/"/>
   </url>
   <url>
+    <loc>https://nexyss-website.netlify.app/en/clientes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/clientes/"/>
+  </url>
+  <url>
+    <loc>https://nexyss-website.netlify.app/pt/clientes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/clientes/"/>
+  </url>
+  <url>
+    <loc>https://nexyss-website.netlify.app/es/clientes/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nexyss-website.netlify.app/es/clientes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nexyss-website.netlify.app/en/clientes/"/>
+  </url>
+  <url>
     <loc>https://nexyss-website.netlify.app/en/contato/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://nexyss-website.netlify.app/en/contato/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://nexyss-website.netlify.app/pt/contato/"/>

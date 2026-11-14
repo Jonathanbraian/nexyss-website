@@ -210,6 +210,16 @@
   status = 301
 
 [[redirects]]
+  from = "/clientes"
+  to = "/pt/clientes/"
+  status = 301
+
+[[redirects]]
+  from = "/clientes/*"
+  to = "/pt/clientes/:splat"
+  status = 301
+
+[[redirects]]
   from = "/contato"
   to = "/pt/contato/"
   status = 301

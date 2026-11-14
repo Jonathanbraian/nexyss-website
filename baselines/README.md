@@ -9,16 +9,16 @@ foram removidos: o histórico do git os guarda.
 
 ```
 baselines/
-  en/<pagina>-<vp>.json      compacto, 36 arquivos
-  pt/<pagina>-<vp>.json      compacto, 36 arquivos
-  es/<pagina>-<vp>.json      compacto, 36 arquivos
-  pt-full/<pagina>-<vp>.json.gz   completo (todo elemento), só PT, 36 arquivos, backup forense
+  en/<pagina>-<vp>.json      compacto, 38 arquivos
+  pt/<pagina>-<vp>.json      compacto, 38 arquivos
+  es/<pagina>-<vp>.json      compacto, 38 arquivos
+  pt-full/<pagina>-<vp>.json.gz   completo (todo elemento), só PT, 38 arquivos, backup forense
   tools/run.js               gerador e comparador
 ```
 
-18 páginas × 2 viewports (1280×800 e 375×812) × 3 idiomas = **108 baselines compactos**. As 18 páginas são as da
+19 páginas × 2 viewports (1280×800 e 375×812) × 3 idiomas = **114 baselines compactos**. As 19 páginas são as da
 árvore (home, overview, crm, educacao, marketing, finance, hr, ai, integracoes, contato, obrigado, solucoes, porsetor,
-porfuncao, porobjetivo, porporte, consultoria, sobre). A `404.html` não entra (é servida em qualquer URL).
+porfuncao, porobjetivo, porporte, consultoria, sobre, clientes). A `404.html` não entra (é servida em qualquer URL).
 
 ## Formato
 
@@ -43,7 +43,7 @@ quando um hash do PT divergir. EN e ES derivam do PT: se um hash de EN/ES diverg
 ## Comandos
 
 ```bash
-node baselines/tools/run.js --check                        # captura as 108 e compara (exit 1 se divergir ou houver overflow horizontal)
+node baselines/tools/run.js --check                        # captura as 114 e compara (exit 1 se divergir ou houver overflow horizontal)
 node baselines/tools/run.js --check --lang es --page crm   # um recorte
 node baselines/tools/run.js --all                          # REGRAVA (só depois de aprovação humana da mudança visual)
 ```

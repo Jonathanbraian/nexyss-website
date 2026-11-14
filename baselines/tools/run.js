@@ -16,7 +16,7 @@ const PAGES = {
   integracoes: 'plataforma/integracoes/index.html', contato: 'contato/index.html', obrigado: 'contato/obrigado.html',
   solucoes: 'solucoes/index.html', porsetor: 'solucoes/por-setor/index.html', porfuncao: 'solucoes/por-funcao/index.html',
   porobjetivo: 'solucoes/por-objetivo/index.html', porporte: 'solucoes/por-porte/index.html',
-  consultoria: 'consultoria/index.html', sobre: 'sobre/index.html',
+  consultoria: 'consultoria/index.html', sobre: 'sobre/index.html', clientes: 'clientes/index.html',
 };
 const VPS = [[1280, 800], [375, 812]];
 const PROPS = ['display','position','width','height','margin-top','margin-right','margin-bottom','margin-left','padding-top','padding-right','padding-bottom','padding-left','font-family','font-size','font-weight','line-height','letter-spacing','color','background-color','border-top-width','border-bottom-width','border-radius','opacity','transform','z-index','overflow','text-align','grid-template-columns'];

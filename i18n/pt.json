@@ -2360,5 +2360,15 @@
  "footer.social.h5": "Siga a Nexyss",
  "footer.social.instagram.aria": "Instagram",
  "footer.social.linkedin.aria": "LinkedIn",
- "footer.social.facebook.aria": "Facebook"
+ "footer.social.facebook.aria": "Facebook",
+ "meta.clientes.title": "Nossos clientes - Nexyss",
+ "meta.clientes.desc": "Cinco clientes iniciais em educação, esporte, turismo e tecnologia. Cada um operando com a plataforma Nexyss.",
+ "meta.clientes.ogtitle": "Nossos clientes - Nexyss",
+ "meta.clientes.ogdesc": "Cinco clientes iniciais em educação, esporte, turismo e tecnologia, operando com a plataforma Nexyss.",
+ "meta.clientes.ogimgalt": "Clientes da Nexyss",
+ "meta.clientes.twtitle": "Nossos clientes - Nexyss",
+ "meta.clientes.twdesc": "Cinco clientes iniciais em educação, esporte, turismo e tecnologia, operando com a plataforma Nexyss.",
+ "clientes.hero.eyebrow": "Clientes",
+ "clientes.hero.h1": "As organizações que <span class=\"accent\">constroem com a Nexyss.</span>",
+ "clientes.hero.sub": "Cinco clientes iniciais em educação, esporte, turismo e tecnologia. Cada um operando com a plataforma Nexyss."
 }

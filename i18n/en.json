@@ -2360,5 +2360,15 @@
  "footer.social.h5": "Follow Nexyss",
  "footer.social.instagram.aria": "Instagram",
  "footer.social.linkedin.aria": "LinkedIn",
- "footer.social.facebook.aria": "Facebook"
+ "footer.social.facebook.aria": "Facebook",
+ "meta.clientes.title": "Our customers - Nexyss",
+ "meta.clientes.desc": "Five early customers across education, sport, tourism and technology. Each running their operation on the Nexyss platform.",
+ "meta.clientes.ogtitle": "Our customers - Nexyss",
+ "meta.clientes.ogdesc": "Five early customers across education, sport, tourism and technology, running on the Nexyss platform.",
+ "meta.clientes.ogimgalt": "Nexyss customers",
+ "meta.clientes.twtitle": "Our customers - Nexyss",
+ "meta.clientes.twdesc": "Five early customers across education, sport, tourism and technology, running on the Nexyss platform.",
+ "clientes.hero.eyebrow": "Customers",
+ "clientes.hero.h1": "The organisations <span class=\"accent\">building with Nexyss.</span>",
+ "clientes.hero.sub": "Five early customers across education, sport, tourism and technology. Each running their operation on the Nexyss platform."
 }

@@ -1884,3 +1884,17 @@ Sessão pós-i18n, em 2 commits sobre `af11a3e` (`8dc2999` e o ajuste visual). A
 ao logo wall da Home (`id="clientes"` existe só lá, igual nos 3 idiomas). Resolve a pendência antiga do menu que apontava `#clientes` e `#consultoria`
 para âncoras inexistentes fora da Home (`#consultoria` já era `/consultoria/` desde 22/10). Seguem como `href="#"` no footer: CRM, Education, Privacidade,
 Termos e Cookies.
+
+## Página `/clientes/` (14/11/2026)
+
+`<body class="page-institucional page-clientes">`, em `src/clientes/index.html` (molde: Sobre) e gerada nos 3 idiomas (`/en/clientes/`, `/pt/clientes/`, `/es/clientes/`; entra no
+sitemap e no hreflang, 54 URLs). Seções: hero compacto (H1 com `.accent`: "constroem com a Nexyss.", "building with Nexyss.", "construyen con Nexyss.") ·
+`#logos` (os 5 logos, mesmas chaves `home.logos.*` e mesmo `.client-logo` da Home) · `#founding` (o bloco Founding Customers, movido da Home; chaves
+`founding.*` e `cta.candidatar`, compartilhadas com as outras páginas) · `.cta-final` (chaves `home.cta-final.*`, com `origem=clientes`). Sem subnav.
+CSS novo: só a seção `=== PÁGINA CLIENTES ===` (hero compacto). Chaves novas: `meta.clientes.*` (7) e `clientes.hero.eyebrow/h1/sub` (3) por idioma.
+- **Links "Clientes"** (header, drawer e footer das 20 páginas) agora são `href="/__LANG__/clientes/"` (antes `/__LANG__/#clientes`).
+- **Home:** o bloco Founding saiu; o logo wall fica sem id. As outras 17 páginas de conteúdo (módulos, Soluções, Consulting, Sobre, Contato) **continuam com o próprio bloco
+  Founding** no fim (id `clientes` nelas), por decisão de escopo: só a Home foi alterada.
+- **URL plana antiga:** `/clientes` e `/clientes/*` dão 301 para `/pt/clientes/` (`netlify.toml`). `baselines/tools/run.js` e `tools/i18nlib.py` (`PAGES`) incluem a página; baselines agora
+  são 114 compactos (19 páginas × 2 viewports × 3 idiomas).
+

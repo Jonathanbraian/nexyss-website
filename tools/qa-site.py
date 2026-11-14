@@ -123,7 +123,7 @@ try:
     t = ET.parse("sitemap.xml").getroot(); locs = [u.find("s:loc", ns).text for u in t.findall("s:url", ns)]
     base = re.search(r"Sitemap: (.*)/sitemap.xml", open("robots.txt").read()).group(1)
     miss = [l for l in locs if not (os.path.isfile(l.replace(base, "").lstrip("/").rstrip("/") + "/index.html") or os.path.isfile(l.replace(base, "").lstrip("/")))]
-    check("Sitemap valido (%d URLs, todas existem, sem duplicata)" % len(locs), miss or len(locs) != len(set(locs)) or len(locs) != 51, miss[:3])
+    check("Sitemap valido (%d URLs, todas existem, sem duplicata, = paginas indexaveis x 3 idiomas)" % len(locs), miss or len(locs) != len(set(locs)) or len(locs) != (len([f for f in files if f.startswith("en/")]) - 2) * 3, miss[:3])
 except Exception as e:
     check("Sitemap valido", True, e)
 rb = open("robots.txt").read()

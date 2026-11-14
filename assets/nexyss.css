@@ -4055,3 +4055,15 @@ body.drawer-open { overflow: hidden; }
   opacity: 1;
 }
 @media (max-width: 768px) { .client-logo { height: 36px; } }
+
+/* ============================================================
+   === PÁGINA CLIENTES ===
+   body.page-institucional.page-clientes. Hero compacto (mesmo padrao do
+   .page-sobre); logo wall e Founding reusam .logos, .client-logo e .founding.
+   ============================================================ */
+.page-clientes .hero { padding: 170px 0 90px; }
+.page-clientes .hero .hero-inner { grid-template-columns: 1fr; max-width: 840px; gap: 0; }
+.page-clientes .hero-sub { max-width: 640px; }
+@media (max-width: 760px) {
+  .page-clientes .hero { padding: 130px 0 60px; }
+}
